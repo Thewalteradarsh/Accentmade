@@ -164,68 +164,41 @@
       animation: floatSlow 4.5s ease-in-out 1.5s infinite;
     }
 
-    @keyframes zeroGFloat1 {
-      0%, 100% { transform: translate3d(0px, 0px, 0px) rotateZ(0deg); }
-      33% { transform: translate3d(6px, -14px, 22px) rotateZ(1.2deg); }
-      66% { transform: translate3d(-6px, -8px, 14px) rotateZ(-1.2deg); }
-    }
-    @keyframes zeroGFloat2 {
-      0%, 100% { transform: translate3d(0px, 0px, 0px) rotateZ(0deg); }
-      50% { transform: translate3d(-8px, -16px, 28px) rotateZ(-1.5deg); }
-    }
-    body.antigravity-mode .tilt-card,
-    body.antigravity-mode .flip-card {
-      animation: zeroGFloat1 5.5s ease-in-out infinite;
-      box-shadow: 0 20px 40px -12px rgba(2, 132, 199, 0.22);
-    }
-    body.antigravity-mode .tilt-card:nth-child(even),
-    body.antigravity-mode .flip-card:nth-child(even) {
-      animation: zeroGFloat2 6.2s ease-in-out 0.8s infinite;
-    }
+
   </style>
 </head>
 <body class="min-h-screen selection:bg-amber-100 selection:text-amber-900 bg-white text-slate-900">
 
   <!-- Sticky Responsive Navigation -->
-  <header class="fixed top-0 inset-x-0 z-50 glass-panel border-b border-slate-800/40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
-      <a href="#hero" class="flex items-center gap-2.5 group">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 via-amber-500 to-indigo-600 flex items-center justify-center text-slate-950 font-extrabold text-lg shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform">
+  <header class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-xs">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-2 sm:gap-3">
+      <a href="#hero" class="flex items-center gap-2.5 group shrink-0 min-h-[44px]">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-amber-400 via-amber-500 to-indigo-600 flex items-center justify-center text-slate-950 font-extrabold text-base sm:text-lg shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform">
           AM
         </div>
         <div>
-          <span class="font-bold tracking-tight text-base sm:text-lg block leading-none">Accent Made</span>
-          <span class="text-[11px] text-amber-400 font-medium tracking-wider uppercase">Carys George • UK</span>
+          <span class="font-bold tracking-tight text-sm sm:text-base text-slate-900 block leading-none">Accent Made</span>
+          <span class="text-[10px] sm:text-[11px] text-amber-600 font-semibold tracking-wider uppercase hidden xs:block min-[350px]:block">Carys George • UK</span>
         </div>
       </a>
 
       <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-        <a href="#hero" class="hover:text-amber-400 transition-colors">3D Stage</a>
-        <a href="#about" class="hover:text-amber-400 transition-colors">Credentials (3D Flip)</a>
-        <a href="#courses" class="hover:text-amber-400 transition-colors">Courses (3D Tilt)</a>
-        <a href="#pricing" class="hover:text-amber-400 transition-colors">3D Estimator</a>
-        <a href="#placement" class="hover:text-amber-400 transition-colors">3D Quiz & E-Guide</a>
-        <a href="#faq" class="hover:text-amber-400 transition-colors">FAQ</a>
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold">
+        <a href="#hero" class="text-slate-600 hover:text-amber-600 transition-colors py-2">Stage</a>
+        <a href="#about" class="text-slate-600 hover:text-amber-600 transition-colors py-2">Credentials</a>
+        <a href="#courses" class="text-slate-600 hover:text-amber-600 transition-colors py-2">Courses</a>
+        <a href="#pricing" class="text-slate-600 hover:text-amber-600 transition-colors py-2">Estimator</a>
+        <a href="#placement" class="text-slate-600 hover:text-amber-600 transition-colors py-2">Quiz & E-Guide</a>
+        <a href="#faq" class="text-slate-600 hover:text-amber-600 transition-colors py-2">FAQ</a>
       </nav>
 
       <!-- Action Controls -->
-      <div class="flex items-center gap-2">
-        <button id="antigravityNavBtn" onclick="toggleAntigravityMode()" type="button" class="px-3 py-1.5 rounded-lg bg-sky-500/20 border border-sky-400/50 text-sky-300 text-xs font-semibold hover:bg-sky-500/30 transition-all flex items-center gap-1.5" title="Toggle Antigravity Zero-G Physics & Magnetic Particles">
-          <span>🚀</span>
-          <span id="antigravityNavLabel" class="hidden sm:inline">Antigravity: ON</span>
-        </button>
-
-        <button id="themeToggleBtn" onclick="toggleSiteTheme()" type="button" class="px-3 py-1.5 rounded-lg glass-panel text-xs font-semibold hover:border-amber-400/50 transition-all flex items-center gap-1.5" title="Switch Dark / Light 3D Studio Theme">
-          <span id="themeIcon">☀️</span>
-          <span id="themeLabel" class="hidden sm:inline">Light Mode</span>
-        </button>
-
-        <button onclick="openInquiryModal('Free Language Evaluation Request')" type="button" class="px-3.5 py-2 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-semibold text-xs sm:text-sm shadow-lg shadow-amber-500/25 hover:brightness-110 active:scale-95 transition-all">
+      <div class="flex items-center gap-2 shrink-0">
+        <button onclick="openInquiryModal('Free Language Evaluation Request')" type="button" class="min-h-[44px] px-3.5 sm:px-4 py-2 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-bold text-xs sm:text-sm shadow-md shadow-amber-500/20 hover:brightness-105 active:scale-95 transition-all flex items-center justify-center whitespace-nowrap">
           Free Evaluation
         </button>
 
-        <button id="mobileMenuBtn" onclick="toggleMobileMenu()" type="button" class="md:hidden p-2 rounded-lg glass-panel" aria-label="Toggle Menu">
+        <button id="mobileMenuBtn" onclick="toggleMobileMenu()" type="button" class="lg:hidden min-h-[44px] min-w-[44px] p-2.5 rounded-xl border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 flex items-center justify-center shadow-xs" aria-label="Toggle Menu" aria-expanded="false">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
@@ -234,130 +207,121 @@
     </div>
 
     <!-- Mobile Nav Drawer -->
-    <div id="mobileMenu" class="hidden md:hidden glass-panel border-t border-slate-800/40 px-4 pt-3 pb-4 space-y-2 text-sm">
-      <a href="#hero" onclick="closeMobileMenu()" class="block py-1.5 hover:text-amber-400">3D Hero Stage</a>
-      <a href="#about" onclick="closeMobileMenu()" class="block py-1.5 hover:text-amber-400">About Carys & 3D Flip Credentials</a>
-      <a href="#courses" onclick="closeMobileMenu()" class="block py-1.5 hover:text-amber-400">3D Course Explorer</a>
-      <a href="#pricing" onclick="closeMobileMenu()" class="block py-1.5 hover:text-amber-400">3D Monthly Tuition Estimator</a>
-      <a href="#placement" onclick="closeMobileMenu()" class="block py-1.5 hover:text-amber-400">3D Placement Quiz & E-Guide</a>
-      <a href="#faq" onclick="closeMobileMenu()" class="block py-1.5 hover:text-amber-400">FAQ & Direct Inquiry</a>
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-slate-200 px-4 pt-3 pb-4 space-y-1 text-sm shadow-xl">
+      <a href="#hero" onclick="closeMobileMenu()" class="block py-2.5 px-3 rounded-xl hover:bg-amber-50 text-slate-700 hover:text-amber-700 font-semibold min-h-[44px] flex items-center transition-colors">Stage</a>
+      <a href="#about" onclick="closeMobileMenu()" class="block py-2.5 px-3 rounded-xl hover:bg-amber-50 text-slate-700 hover:text-amber-700 font-semibold min-h-[44px] flex items-center transition-colors">Credentials</a>
+      <a href="#courses" onclick="closeMobileMenu()" class="block py-2.5 px-3 rounded-xl hover:bg-amber-50 text-slate-700 hover:text-amber-700 font-semibold min-h-[44px] flex items-center transition-colors">Courses</a>
+      <a href="#pricing" onclick="closeMobileMenu()" class="block py-2.5 px-3 rounded-xl hover:bg-amber-50 text-slate-700 hover:text-amber-700 font-semibold min-h-[44px] flex items-center transition-colors">Estimator</a>
+      <a href="#placement" onclick="closeMobileMenu()" class="block py-2.5 px-3 rounded-xl hover:bg-amber-50 text-slate-700 hover:text-amber-700 font-semibold min-h-[44px] flex items-center transition-colors">Quiz & E-Guide</a>
+      <a href="#faq" onclick="closeMobileMenu()" class="block py-2.5 px-3 rounded-xl hover:bg-amber-50 text-slate-700 hover:text-amber-700 font-semibold min-h-[44px] flex items-center transition-colors">FAQ</a>
     </div>
   </header>
 
   <!-- HERO SECTION WITH LIVE INTERACTIVE THREE.JS 3D STAGE -->
-  <section id="hero" class="relative min-h-screen pt-24 pb-16 flex items-center overflow-hidden">
+  <section id="hero" class="relative min-h-screen pt-24 pb-16 flex items-center overflow-hidden bg-white">
     <!-- Interactive Three.js WebGL Canvas Container -->
-    <div id="threeHeroContainer" class="absolute inset-0 z-0 cursor-grab active:cursor-grabbing"></div>
-
-    <!-- Subtle radial gradient vignette for readability -->
-    <div class="absolute inset-0 z-0 pointer-events-none bg-gradient-to-b from-transparent via-transparent to-slate-950/70"></div>
+    <div id="threeHeroContainer" class="absolute inset-0 z-0 cursor-grab active:cursor-grabbing overflow-hidden"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
       <!-- Interactive 3D Scene Mode Switcher Bar -->
-      <div class="flex flex-wrap items-center justify-between gap-3 mb-8 glass-panel p-2.5 rounded-2xl max-w-3xl">
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-8 bg-slate-50/90 border border-slate-200 shadow-sm p-2.5 rounded-2xl max-w-3xl">
         <div class="flex items-center gap-2 pl-2">
-          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span class="text-xs font-semibold uppercase tracking-wider text-amber-400">Interactive 3D Stage:</span>
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-700">Interactive 3D Stage:</span>
         </div>
         <div class="flex flex-wrap items-center gap-1.5">
-          <button id="sceneBtnWave" onclick="setThreeSceneMode('wave')" type="button" class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-amber-400 text-slate-950 shadow transition-all">
-            1. 3D Voice & Phonetic Sphere
+          <button id="sceneBtnGlobe" onclick="setThreeSceneMode('globe')" type="button" class="px-3 py-2 min-h-[44px] rounded-xl text-xs font-bold bg-amber-400 text-slate-950 shadow-sm transition-all flex items-center justify-center">
+            1. UK–Dubai–Global Globe
           </button>
-          <button id="sceneBtnGlobe" onclick="setThreeSceneMode('globe')" type="button" class="px-3 py-1.5 rounded-xl text-xs font-semibold hover:bg-slate-800/60 transition-all">
-            2. 3D UK–Dubai–Global Globe
+          <button id="sceneBtnSphere" onclick="setThreeSceneMode('sphere')" type="button" class="px-3 py-2 min-h-[44px] rounded-xl text-xs font-semibold text-slate-700 hover:bg-slate-200/70 transition-all flex items-center justify-center">
+            2. Voice & Phonetic Sphere
           </button>
-          <button id="sceneBtnStudio" onclick="setThreeSceneMode('studio')" type="button" class="px-3 py-1.5 rounded-xl text-xs font-semibold hover:bg-slate-800/60 transition-all">
-            3. 3D Orbital Rings
-          </button>
-          <button id="sceneBtnAntigravity" onclick="setThreeSceneMode('antigravity')" type="button" class="px-3 py-1.5 rounded-xl text-xs font-semibold hover:bg-slate-800/60 transition-all">
-            4. 🚀 Antigravity Field
-          </button>
-          <button id="voicePulseBtn" onclick="triggerVoicePulse()" type="button" class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-sky-500/20 border border-sky-400/40 text-sky-300 hover:bg-sky-500/30 transition-all flex items-center gap-1">
-            <span>🔊</span> <span id="voicePulseText">Test 3D Accent Pulse</span>
+          <button id="voicePulseBtn" onclick="triggerVoicePulse()" type="button" class="px-3 py-2 min-h-[44px] rounded-xl text-xs font-semibold bg-sky-50 border border-sky-300 text-sky-800 hover:bg-sky-100 transition-all flex items-center justify-center gap-1">
+            <span>🔊</span> <span id="voicePulseText">Test Voice Pulse</span>
           </button>
         </div>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+      <div class="flex flex-col lg:grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
         <!-- Left Column: Hero Copy & Conversion CTAs -->
         <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border-amber-400/30 text-xs font-medium text-amber-300">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-xs font-semibold text-amber-800">
             <span>🇬🇧 Native UK Accredited Trainer</span>
             <span>•</span>
             <span>CELTA, TEFL & Master's Qualified</span>
           </div>
 
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1]">
-            Master British <span class="font-serif-display italic font-normal text-amber-400">Clarity,</span> Fluency & Accent Confidence.
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] text-slate-900">
+            Master British <span class="font-serif-display italic font-normal text-amber-600">Clarity,</span> Fluency & Accent Confidence.
           </h1>
 
-          <p class="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
-            Learn directly with <strong class="text-white font-semibold">Carys George</strong> — a native UK English specialist with over 10 years of global teaching experience, including 5+ years in Dubai training the UAE military, police, and navy. Tailored Group (€5/class), Semi-Private (€10/class), and bespoke 1-on-1 coaching with zero online payment friction.
+          <p class="text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
+            Learn directly with <strong class="text-slate-900 font-semibold">Carys George</strong> — a native UK English specialist with over 10 years of global teaching experience, including 5+ years in Dubai training the UAE military, police, and navy. Tailored Group (€5/class), Semi-Private (€10/class), and bespoke 1-on-1 coaching with zero online payment friction.
           </p>
 
           <!-- Primary Hero CTAs (Inquiry-First, No Payment Gateway) -->
-          <div class="flex flex-wrap items-center gap-3.5 pt-2">
-            <button onclick="openInquiryModal('Free Language Evaluation')" type="button" class="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-amber-400 via-amber-500 to-orange-500 text-slate-950 font-bold text-sm sm:text-base shadow-xl shadow-amber-500/25 hover:scale-[1.02] active:scale-95 transition-all flex items-center gap-2">
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2 w-full">
+            <button onclick="openInquiryModal('Free Language Evaluation')" type="button" class="w-full sm:w-auto px-6 py-3.5 min-h-[44px] rounded-2xl bg-gradient-to-r from-amber-400 via-amber-500 to-orange-500 text-slate-950 font-extrabold text-sm sm:text-base shadow-lg shadow-amber-500/25 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2">
               <span>Book Free Language Evaluation</span>
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </button>
 
-            <a href="#placement" class="px-5 py-3.5 rounded-2xl glass-panel font-semibold text-sm sm:text-base hover:border-amber-400/50 transition-all flex items-center gap-2">
-              <span>Take 3D Placement Quiz</span>
-              <span class="text-xs px-2 py-0.5 rounded-full bg-sky-500/20 text-sky-300">Free</span>
+            <a href="#placement" class="w-full sm:w-auto px-5 py-3.5 min-h-[44px] rounded-2xl bg-white border border-slate-200 text-slate-800 font-bold text-sm sm:text-base hover:border-amber-400 shadow-sm transition-all flex items-center justify-center gap-2">
+              <span>Take Placement Quiz</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-sky-100 text-sky-800 font-semibold">Free</span>
             </a>
 
-            <a href="#eguide" class="px-4 py-3.5 rounded-2xl glass-panel text-xs sm:text-sm font-medium hover:text-amber-400 transition-colors">
+            <a href="#eguide" class="w-full sm:w-auto px-4 py-3.5 min-h-[44px] rounded-2xl bg-white border border-slate-200 text-slate-700 font-semibold text-xs sm:text-sm hover:text-amber-600 shadow-sm transition-colors flex items-center justify-center">
               📘 Free E-Guide
             </a>
           </div>
 
           <!-- Quick Trust Metrics Bar -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4">
-            <div class="glass-panel p-3.5 rounded-2xl">
-              <div class="text-xl sm:text-2xl font-extrabold text-amber-400">10+ Yrs</div>
-              <div class="text-xs text-slate-400 mt-0.5">UK & Global Teaching</div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3 pt-4">
+            <div class="bg-white border border-slate-200 shadow-sm p-3.5 rounded-2xl">
+              <div class="text-xl sm:text-2xl font-extrabold text-amber-600">10+ Yrs</div>
+              <div class="text-xs text-slate-600 font-medium mt-0.5">UK & Global Teaching</div>
             </div>
-            <div class="glass-panel p-3.5 rounded-2xl">
-              <div class="text-xl sm:text-2xl font-extrabold text-sky-400">5+ Yrs</div>
-              <div class="text-xs text-slate-400 mt-0.5">Dubai UAE Defense Trainer</div>
+            <div class="bg-white border border-slate-200 shadow-sm p-3.5 rounded-2xl">
+              <div class="text-xl sm:text-2xl font-extrabold text-sky-600">5+ Yrs</div>
+              <div class="text-xs text-slate-600 font-medium mt-0.5">Dubai UAE Defense Trainer</div>
             </div>
-            <div class="glass-panel p-3.5 rounded-2xl">
-              <div class="text-xl sm:text-2xl font-extrabold text-emerald-400">€5 / class</div>
-              <div class="text-xs text-slate-400 mt-0.5">Small Group Starting Rate</div>
+            <div class="bg-white border border-slate-200 shadow-sm p-3.5 rounded-2xl">
+              <div class="text-xl sm:text-2xl font-extrabold text-emerald-600">€5 / class</div>
+              <div class="text-xs text-slate-600 font-medium mt-0.5">Small Group Starting Rate</div>
             </div>
-            <div class="glass-panel p-3.5 rounded-2xl">
-              <div class="text-xl sm:text-2xl font-extrabold text-purple-400">CELTA</div>
-              <div class="text-xs text-slate-400 mt-0.5">Cambridge Accredited</div>
+            <div class="bg-white border border-slate-200 shadow-sm p-3.5 rounded-2xl">
+              <div class="text-xl sm:text-2xl font-extrabold text-purple-600">CELTA</div>
+              <div class="text-xs text-slate-600 font-medium mt-0.5">Cambridge Accredited</div>
             </div>
           </div>
         </div>
 
         <!-- Right Column: Interactive 3D Perspective-Tilt Instructor Studio Card -->
-        <div class="lg:col-span-5 flex justify-center perspective-1400">
-          <div id="heroInstructorCard" class="tilt-card relative w-full max-w-md glass-panel rounded-3xl p-5 sm:p-6 shadow-2xl border border-amber-400/30">
+        <div class="lg:col-span-5 flex justify-center perspective-1400 w-full mt-2 lg:mt-0">
+          <div id="heroInstructorCard" class="tilt-card relative w-full max-w-md bg-white rounded-3xl p-5 sm:p-6 shadow-xl shadow-slate-200/70 border border-slate-200/90">
             <!-- Floating 3D Phonetic Badge Top-Left -->
-            <div class="float-badge absolute -top-4 -left-3 sm:-left-5 px-3.5 py-2 rounded-2xl bg-slate-900/95 border border-sky-400/40 shadow-xl flex items-center gap-2 z-20">
-              <span class="text-sky-400 font-mono font-bold text-sm">/ˈæk.sənt/</span>
-              <span class="text-[11px] text-slate-300 font-medium">RP & Modern British</span>
+            <div class="float-badge absolute -top-4 left-1 sm:-left-5 px-3.5 py-2 rounded-2xl bg-white/95 border border-sky-300 shadow-lg flex items-center gap-2 z-20 max-w-[calc(100%-1rem)] sm:max-w-none">
+              <span class="text-sky-700 font-mono font-bold text-xs sm:text-sm shrink-0">/ˈæk.sənt/</span>
+              <span class="text-[10px] sm:text-[11px] text-slate-700 font-medium truncate sm:overflow-visible">RP & Modern British</span>
             </div>
 
             <!-- Floating 3D Credential Badge Bottom-Right -->
-            <div class="float-badge-delayed absolute -bottom-4 -right-2 sm:-right-4 px-3.5 py-2 rounded-2xl bg-slate-900/95 border border-amber-400/40 shadow-xl flex items-center gap-2 z-20">
-              <span class="text-amber-400 text-sm">🎓</span>
-              <span class="text-xs font-semibold text-white">MA • BA (Hons) • CELTA • TEFL</span>
+            <div class="float-badge-delayed absolute -bottom-4 right-1 sm:-right-4 px-3.5 py-2 rounded-2xl bg-white/95 border border-amber-300 shadow-lg flex items-center gap-2 z-20 max-w-[calc(100%-1rem)] sm:max-w-none">
+              <span class="text-amber-600 text-xs sm:text-sm shrink-0">🎓</span>
+              <span class="text-[10px] sm:text-xs font-bold text-slate-800 truncate sm:overflow-visible">MA • BA (Hons) • CELTA • TEFL</span>
             </div>
 
             <!-- Instructor Portrait with 3D Depth -->
-            <div class="relative rounded-2xl overflow-hidden aspect-square mb-5 border border-slate-700/60 tilt-depth-20">
+            <div class="relative rounded-2xl overflow-hidden aspect-square mb-5 border border-slate-200 shadow-inner tilt-depth-20">
               <img src="assets/carys_portrait.jpg" alt="Carys George — Accredited British English Language Trainer" class="w-full h-full object-cover" />
               <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent p-4">
                 <div class="flex items-center justify-between">
                   <div>
                     <h2 class="text-lg font-bold text-white">Carys George</h2>
-                    <p class="text-xs text-amber-300">Accredited English Language Trainer (UK)</p>
+                    <p class="text-xs text-amber-300 font-medium">Accredited English Language Trainer (UK)</p>
                   </div>
-                  <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 text-[11px] font-semibold">
+                  <span class="px-2.5 py-1 rounded-full bg-emerald-500/25 border border-emerald-400/50 text-emerald-300 text-[11px] font-bold">
                     Accepting Students
                   </span>
                 </div>
@@ -366,22 +330,22 @@
 
             <!-- Included In Every Class Mini-Grid -->
             <div class="space-y-2.5 tilt-depth-40">
-              <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Included in Every Class Package:</div>
+              <div class="text-xs font-bold uppercase tracking-wider text-slate-500">Included in Every Class Package:</div>
               <div class="grid grid-cols-2 gap-2 text-xs">
-                <div class="p-2.5 rounded-xl bg-slate-900/60 border border-slate-800 flex items-center gap-2">
-                  <span class="text-amber-400">🎯</span>
+                <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 flex items-center gap-2 font-medium">
+                  <span class="text-amber-600">🎯</span>
                   <span>Free Placement Test</span>
                 </div>
-                <div class="p-2.5 rounded-xl bg-slate-900/60 border border-slate-800 flex items-center gap-2">
-                  <span class="text-sky-400">📝</span>
+                <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 flex items-center gap-2 font-medium">
+                  <span class="text-sky-600">📝</span>
                   <span>Weekly Homework</span>
                 </div>
-                <div class="p-2.5 rounded-xl bg-slate-900/60 border border-slate-800 flex items-center gap-2">
-                  <span class="text-emerald-400">💬</span>
+                <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 flex items-center gap-2 font-medium">
+                  <span class="text-emerald-600">💬</span>
                   <span>WhatsApp Support</span>
                 </div>
-                <div class="p-2.5 rounded-xl bg-slate-900/60 border border-slate-800 flex items-center gap-2">
-                  <span class="text-purple-400">🏅</span>
+                <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 flex items-center gap-2 font-medium">
+                  <span class="text-purple-600">🏅</span>
                   <span>Course Certificate</span>
                 </div>
               </div>
@@ -393,14 +357,14 @@
   </section>
 
   <!-- SECTION 2: 3D FLIP CREDENTIALS & INTERNATIONAL EXPERIENCE -->
-  <section id="about" class="py-20 relative">
+  <section id="about" class="py-20 relative bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
         <div>
-          <span class="text-xs font-bold uppercase tracking-widest text-amber-400">3D Interactive Element #2 • Flip Cards</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold mt-1">Meet Carys George & Flip Her Credentials in 3D</h2>
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-700">3D Interactive Element #2 • Flip Cards</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold mt-1 text-slate-900">Meet Carys George & Flip Her Credentials in 3D</h2>
         </div>
-        <p class="text-sm text-slate-400 max-w-md">
+        <p class="text-sm text-slate-600 max-w-md">
           Click or tap any qualification card below to rotate it 180° in 3D space and see how Carys's background shapes your training.
         </p>
       </div>
@@ -411,27 +375,27 @@
         <div class="flip-card h-72 perspective-1000 cursor-pointer" onclick="toggleFlipCard(this)">
           <div class="flip-card-inner relative w-full h-full">
             <!-- Front -->
-            <div class="backface-hidden absolute inset-0 glass-panel rounded-3xl p-6 flex flex-col justify-between border border-amber-400/25 hover:border-amber-400/60 transition-colors">
-              <div class="w-12 h-12 rounded-2xl bg-amber-400/15 border border-amber-400/30 flex items-center justify-center text-2xl">
+            <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-slate-200/90 shadow-md hover:border-amber-400 hover:shadow-lg transition-all">
+              <div class="w-12 h-12 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-center text-2xl">
                 🏛️
               </div>
               <div>
-                <div class="text-xs font-semibold text-amber-400 uppercase tracking-wider">Cambridge Qualified</div>
-                <h3 class="text-xl font-bold mt-1">CELTA Certified Trainer</h3>
-                <p class="text-xs text-slate-400 mt-2">Cambridge English Language Teaching to Adults</p>
+                <div class="text-xs font-bold text-amber-800 uppercase tracking-wider">Cambridge Qualified</div>
+                <h3 class="text-xl font-extrabold text-slate-900 mt-1">CELTA Certified Trainer</h3>
+                <p class="text-xs text-slate-600 mt-2">Cambridge English Language Teaching to Adults</p>
               </div>
-              <div class="text-xs font-semibold text-sky-400 flex items-center justify-between pt-2 border-t border-slate-800/60">
+              <div class="text-xs font-bold text-sky-700 flex items-center justify-between pt-2 border-t border-slate-100">
                 <span>Tap to flip in 3D</span>
                 <span>↻ 180°</span>
               </div>
             </div>
             <!-- Back -->
-            <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-gradient-to-br from-amber-500/20 via-slate-900 to-slate-950 border border-amber-400/60 flex flex-col justify-between">
-              <div class="text-xs font-bold uppercase tracking-wider text-amber-400">Why CELTA Matters for You</div>
-              <p class="text-sm text-slate-200 leading-relaxed">
+            <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-amber-50 border-2 border-amber-400 shadow-lg flex flex-col justify-between">
+              <div class="text-xs font-extrabold uppercase tracking-wider text-amber-900">Why CELTA Matters for You</div>
+              <p class="text-sm text-slate-800 leading-relaxed font-medium">
                 Issued by Cambridge Assessment English, CELTA is the gold-standard qualification for teaching adult learners—ensuring every lesson is diagnostic, communicative, and tailored to your exact fluency goals.
               </p>
-              <div class="text-xs text-amber-300 font-medium">✓ Elementary to C2 Advanced Adults</div>
+              <div class="text-xs text-amber-900 font-bold">✓ Elementary to C2 Advanced Adults</div>
             </div>
           </div>
         </div>
@@ -440,27 +404,27 @@
         <div class="flip-card h-72 perspective-1000 cursor-pointer" onclick="toggleFlipCard(this)">
           <div class="flip-card-inner relative w-full h-full">
             <!-- Front -->
-            <div class="backface-hidden absolute inset-0 glass-panel rounded-3xl p-6 flex flex-col justify-between border border-sky-400/25 hover:border-sky-400/60 transition-colors">
-              <div class="w-12 h-12 rounded-2xl bg-sky-400/15 border border-sky-400/30 flex items-center justify-center text-2xl">
+            <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-slate-200/90 shadow-md hover:border-sky-400 hover:shadow-lg transition-all">
+              <div class="w-12 h-12 rounded-2xl bg-sky-50 border border-sky-200 flex items-center justify-center text-2xl">
                 🌍
               </div>
               <div>
-                <div class="text-xs font-semibold text-sky-400 uppercase tracking-wider">Dubai & Global Career</div>
-                <h3 class="text-xl font-bold mt-1">5+ Years in Dubai (UAE)</h3>
-                <p class="text-xs text-slate-400 mt-2">Trained UAE Military, Police & Navy Personnel</p>
+                <div class="text-xs font-bold text-sky-800 uppercase tracking-wider">Dubai & Global Career</div>
+                <h3 class="text-xl font-extrabold text-slate-900 mt-1">5+ Years in Dubai (UAE)</h3>
+                <p class="text-xs text-slate-600 mt-2">Trained UAE Military, Police & Navy Personnel</p>
               </div>
-              <div class="text-xs font-semibold text-sky-400 flex items-center justify-between pt-2 border-t border-slate-800/60">
+              <div class="text-xs font-bold text-sky-700 flex items-center justify-between pt-2 border-t border-slate-100">
                 <span>Tap to flip in 3D</span>
                 <span>↻ 180°</span>
               </div>
             </div>
             <!-- Back -->
-            <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-gradient-to-br from-sky-500/20 via-slate-900 to-slate-950 border border-sky-400/60 flex flex-col justify-between">
-              <div class="text-xs font-bold uppercase tracking-wider text-sky-400">High-Performance Coaching</div>
-              <p class="text-sm text-slate-200 leading-relaxed">
+            <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-sky-50 border-2 border-sky-400 shadow-lg flex flex-col justify-between">
+              <div class="text-xs font-extrabold uppercase tracking-wider text-sky-900">High-Performance Coaching</div>
+              <p class="text-sm text-slate-800 leading-relaxed font-medium">
                 Over 10 years of industry teaching experience across nationalities, including 5+ years in Dubai delivering disciplined, results-driven English and pronunciation coaching to the UAE military, police, and navy.
               </p>
-              <div class="text-xs text-sky-300 font-medium">✓ Speaking, Listening, Reading & Writing</div>
+              <div class="text-xs text-sky-900 font-bold">✓ Speaking, Listening, Reading & Writing</div>
             </div>
           </div>
         </div>
@@ -469,27 +433,27 @@
         <div class="flip-card h-72 perspective-1000 cursor-pointer" onclick="toggleFlipCard(this)">
           <div class="flip-card-inner relative w-full h-full">
             <!-- Front -->
-            <div class="backface-hidden absolute inset-0 glass-panel rounded-3xl p-6 flex flex-col justify-between border border-purple-400/25 hover:border-purple-400/60 transition-colors">
-              <div class="w-12 h-12 rounded-2xl bg-purple-400/15 border border-purple-400/30 flex items-center justify-center text-2xl">
+            <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-slate-200/90 shadow-md hover:border-purple-400 hover:shadow-lg transition-all">
+              <div class="w-12 h-12 rounded-2xl bg-purple-50 border border-purple-200 flex items-center justify-center text-2xl">
                 💼
               </div>
               <div>
-                <div class="text-xs font-semibold text-purple-400 uppercase tracking-wider">Postgraduate Degree</div>
-                <h3 class="text-xl font-bold mt-1">Master's in Business & HRM</h3>
-                <p class="text-xs text-slate-400 mt-2">Executive & Workplace English Mastery</p>
+                <div class="text-xs font-bold text-purple-800 uppercase tracking-wider">Postgraduate Degree</div>
+                <h3 class="text-xl font-extrabold text-slate-900 mt-1">Master's in Business & HRM</h3>
+                <p class="text-xs text-slate-600 mt-2">Executive & Workplace English Mastery</p>
               </div>
-              <div class="text-xs font-semibold text-sky-400 flex items-center justify-between pt-2 border-t border-slate-800/60">
+              <div class="text-xs font-bold text-sky-700 flex items-center justify-between pt-2 border-t border-slate-100">
                 <span>Tap to flip in 3D</span>
                 <span>↻ 180°</span>
               </div>
             </div>
             <!-- Back -->
-            <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-gradient-to-br from-purple-500/20 via-slate-900 to-slate-950 border border-purple-400/60 flex flex-col justify-between">
-              <div class="text-xs font-bold uppercase tracking-wider text-purple-400">Career & Interview Edge</div>
-              <p class="text-sm text-slate-200 leading-relaxed">
+            <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-purple-50 border-2 border-purple-400 shadow-lg flex flex-col justify-between">
+              <div class="text-xs font-extrabold uppercase tracking-wider text-purple-900">Career & Interview Edge</div>
+              <p class="text-sm text-slate-800 leading-relaxed font-medium">
                 With a Master's in Business and Human Resource Management, Carys coaches professionals on job interviews, boardroom presentations, executive negotiations, and leadership communication.
               </p>
-              <div class="text-xs text-purple-300 font-medium">✓ Ideal for Corporate Professionals</div>
+              <div class="text-xs text-purple-900 font-bold">✓ Ideal for Corporate Professionals</div>
             </div>
           </div>
         </div>
@@ -498,27 +462,27 @@
         <div class="flip-card h-72 perspective-1000 cursor-pointer" onclick="toggleFlipCard(this)">
           <div class="flip-card-inner relative w-full h-full">
             <!-- Front -->
-            <div class="backface-hidden absolute inset-0 glass-panel rounded-3xl p-6 flex flex-col justify-between border border-emerald-400/25 hover:border-emerald-400/60 transition-colors">
-              <div class="w-12 h-12 rounded-2xl bg-emerald-400/15 border border-emerald-400/30 flex items-center justify-center text-2xl">
+            <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-slate-200/90 shadow-md hover:border-emerald-400 hover:shadow-lg transition-all">
+              <div class="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-2xl">
                 🎙️
               </div>
               <div>
-                <div class="text-xs font-semibold text-emerald-400 uppercase tracking-wider">Honours & TEFL</div>
-                <h3 class="text-xl font-bold mt-1">BA (Hons) Media, PR & TEFL</h3>
-                <p class="text-xs text-slate-400 mt-2">Communication, Public Relations & Advertising</p>
+                <div class="text-xs font-bold text-emerald-800 uppercase tracking-wider">Honours & TEFL</div>
+                <h3 class="text-xl font-extrabold text-slate-900 mt-1">BA (Hons) Media, PR & TEFL</h3>
+                <p class="text-xs text-slate-600 mt-2">Communication, Public Relations & Advertising</p>
               </div>
-              <div class="text-xs font-semibold text-sky-400 flex items-center justify-between pt-2 border-t border-slate-800/60">
+              <div class="text-xs font-bold text-sky-700 flex items-center justify-between pt-2 border-t border-slate-100">
                 <span>Tap to flip in 3D</span>
                 <span>↻ 180°</span>
               </div>
             </div>
             <!-- Back -->
-            <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-gradient-to-br from-emerald-500/20 via-slate-900 to-slate-950 border border-emerald-400/60 flex flex-col justify-between">
-              <div class="text-xs font-bold uppercase tracking-wider text-emerald-400">Articulation & Persuasion</div>
-              <p class="text-sm text-slate-200 leading-relaxed">
+            <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-emerald-50 border-2 border-emerald-400 shadow-lg flex flex-col justify-between">
+              <div class="text-xs font-extrabold uppercase tracking-wider text-emerald-900">Articulation & Persuasion</div>
+              <p class="text-sm text-slate-800 leading-relaxed font-medium">
                 Combining a BA (Hons) in Communication, PR & Advertising with TEFL certification, Carys helps both adult learners and high school students (ages 12–18) speak with natural rhythm, tone, and confidence.
               </p>
-              <div class="text-xs text-emerald-300 font-medium">✓ Adults & High School (Ages 12–18)</div>
+              <div class="text-xs text-emerald-900 font-bold">✓ Adults & High School (Ages 12–18)</div>
             </div>
           </div>
         </div>
@@ -527,26 +491,26 @@
   </section>
 
   <!-- SECTION 3: 3D PERSPECTIVE-TILT COURSE EXPLORER -->
-  <section id="courses" class="py-20 relative bg-slate-900/30">
+  <section id="courses" class="py-20 relative bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
         <div>
-          <span class="text-xs font-bold uppercase tracking-widest text-sky-400">3D Interactive Element #3 • Spatial Tilt Cards</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold mt-1">Tailored English & Accent Programs</h2>
+          <span class="text-xs font-bold uppercase tracking-widest text-sky-700">3D Interactive Element #3 • Spatial Tilt Cards</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold mt-1 text-slate-900">Tailored English & Accent Programs</h2>
         </div>
 
         <!-- Audience Filter Tabs -->
         <div class="flex flex-wrap gap-2">
-          <button onclick="filterCourses('all')" id="courseTab-all" type="button" class="px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-amber-400 text-slate-950 transition-all">
+          <button onclick="filterCourses('all')" id="courseTab-all" type="button" class="px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-bold bg-amber-400 text-slate-950 transition-all flex items-center justify-center shadow-xs">
             All Programs (4)
           </button>
-          <button onclick="filterCourses('adults')" id="courseTab-adults" type="button" class="px-3.5 py-1.5 rounded-xl text-xs font-semibold glass-panel hover:border-amber-400/40 transition-all">
+          <button onclick="filterCourses('adults')" id="courseTab-adults" type="button" class="px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:border-amber-400 transition-all flex items-center justify-center shadow-xs">
             Adult Learners
           </button>
-          <button onclick="filterCourses('highschool')" id="courseTab-highschool" type="button" class="px-3.5 py-1.5 rounded-xl text-xs font-semibold glass-panel hover:border-amber-400/40 transition-all">
+          <button onclick="filterCourses('highschool')" id="courseTab-highschool" type="button" class="px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:border-amber-400 transition-all flex items-center justify-center shadow-xs">
             High School (12–18)
           </button>
-          <button onclick="filterCourses('exams')" id="courseTab-exams" type="button" class="px-3.5 py-1.5 rounded-xl text-xs font-semibold glass-panel hover:border-amber-400/40 transition-all">
+          <button onclick="filterCourses('exams')" id="courseTab-exams" type="button" class="px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:border-amber-400 transition-all flex items-center justify-center shadow-xs">
             IELTS / TOEFL / Business
           </button>
         </div>
@@ -560,12 +524,12 @@
   </section>
 
   <!-- SECTION 4: 3D INTERACTIVE TUITION ESTIMATOR & FLIP SUMMARY (NO PAYMENT GATEWAY) -->
-  <section id="pricing" class="py-20 relative">
+  <section id="pricing" class="py-20 relative bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="text-xs font-bold uppercase tracking-widest text-amber-400">3D Interactive Element #4 • Dynamic 3D Pricing Calculator</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold mt-1">Transparent Monthly Pricing — Zero Checkout Friction</h2>
-        <p class="text-sm sm:text-base text-slate-400 mt-2">
+        <span class="text-xs font-bold uppercase tracking-widest text-amber-700">3D Interactive Element #4 • Dynamic 3D Pricing Calculator</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold mt-1 text-slate-900">Transparent Monthly Pricing — Zero Checkout Friction</h2>
+        <p class="text-sm sm:text-base text-slate-600 mt-2">
           Select your preferred class format and weekly frequency below. Instead of an online payment gateway, lock in your schedule by sending a direct inquiry to Carys for a free placement evaluation first.
         </p>
       </div>
@@ -575,57 +539,57 @@
         <div class="lg:col-span-7 space-y-6">
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <!-- Group Tier -->
-            <button id="tierBtn-group" onclick="selectPricingTier('group')" type="button" class="text-left p-5 rounded-3xl glass-panel border-2 border-amber-400 transition-all relative">
-              <span class="px-2.5 py-0.5 rounded-full bg-amber-400/20 text-amber-300 text-[11px] font-bold">Most Popular</span>
-              <h3 class="text-lg font-bold mt-2">Group Classes</h3>
-              <p class="text-xs text-slate-400">6 People per Group</p>
+            <button id="tierBtn-group" onclick="selectPricingTier('group')" type="button" class="text-left p-5 rounded-3xl bg-white border-2 border-amber-500 shadow-sm transition-all relative">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 text-[11px] font-bold">Most Popular</span>
+              <h3 class="text-lg font-extrabold text-slate-900 mt-2">Group Classes</h3>
+              <p class="text-xs text-slate-500 font-medium">6 People per Group</p>
               <div class="mt-4">
-                <span class="text-2xl font-extrabold text-amber-400">€5</span>
-                <span class="text-xs text-slate-400"> / class per person</span>
+                <span class="text-2xl font-extrabold text-amber-600">€5</span>
+                <span class="text-xs text-slate-500"> / class per person</span>
               </div>
-              <div class="text-xs text-emerald-400 font-semibold mt-1">€20 / month (4 classes)</div>
+              <div class="text-xs text-emerald-700 font-bold mt-1">€20 / month (4 classes)</div>
             </button>
 
             <!-- Semi-Private Tier -->
-            <button id="tierBtn-semi" onclick="selectPricingTier('semi')" type="button" class="text-left p-5 rounded-3xl glass-panel border-2 border-transparent hover:border-slate-700 transition-all relative">
-              <span class="px-2.5 py-0.5 rounded-full bg-sky-400/20 text-sky-300 text-[11px] font-bold">3-Student Trio</span>
-              <h3 class="text-lg font-bold mt-2">Semi-Private</h3>
-              <p class="text-xs text-slate-400">3 People per Class</p>
+            <button id="tierBtn-semi" onclick="selectPricingTier('semi')" type="button" class="text-left p-5 rounded-3xl bg-white border-2 border-slate-200 hover:border-slate-300 shadow-xs transition-all relative">
+              <span class="px-2.5 py-0.5 rounded-full bg-sky-100 text-sky-900 text-[11px] font-bold">3-Student Trio</span>
+              <h3 class="text-lg font-extrabold text-slate-900 mt-2">Semi-Private</h3>
+              <p class="text-xs text-slate-500 font-medium">3 People per Class</p>
               <div class="mt-4">
-                <span class="text-2xl font-extrabold text-sky-400">€10</span>
-                <span class="text-xs text-slate-400"> / class per person</span>
+                <span class="text-2xl font-extrabold text-sky-600">€10</span>
+                <span class="text-xs text-slate-500"> / class per person</span>
               </div>
-              <div class="text-xs text-sky-300 font-semibold mt-1">€40 / month (4 classes)</div>
+              <div class="text-xs text-sky-700 font-bold mt-1">€40 / month (4 classes)</div>
             </button>
 
             <!-- Private 1-on-1 Tier -->
-            <button id="tierBtn-private" onclick="selectPricingTier('private')" type="button" class="text-left p-5 rounded-3xl glass-panel border-2 border-transparent hover:border-slate-700 transition-all relative">
-              <span class="px-2.5 py-0.5 rounded-full bg-purple-400/20 text-purple-300 text-[11px] font-bold">1-on-1 Bespoke</span>
-              <h3 class="text-lg font-bold mt-2">Private Coaching</h3>
-              <p class="text-xs text-slate-400">One-on-One Tailored</p>
+            <button id="tierBtn-private" onclick="selectPricingTier('private')" type="button" class="text-left p-5 rounded-3xl bg-white border-2 border-slate-200 hover:border-slate-300 shadow-xs transition-all relative">
+              <span class="px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-900 text-[11px] font-bold">1-on-1 Bespoke</span>
+              <h3 class="text-lg font-extrabold text-slate-900 mt-2">Private Coaching</h3>
+              <p class="text-xs text-slate-500 font-medium">One-on-One Tailored</p>
               <div class="mt-4">
-                <span class="text-xl font-extrabold text-purple-400">Custom</span>
-                <span class="text-xs text-slate-400"> hourly rate</span>
+                <span class="text-xl font-extrabold text-purple-600">Custom</span>
+                <span class="text-xs text-slate-500"> hourly rate</span>
               </div>
-              <div class="text-xs text-purple-300 font-semibold mt-1">Bespoke 4-class package</div>
+              <div class="text-xs text-purple-700 font-bold mt-1">Bespoke 4-class package</div>
             </button>
           </div>
 
           <!-- Weekly Frequency Interactive Control -->
-          <div class="glass-panel p-6 rounded-3xl space-y-4">
+          <div class="bg-slate-50 border border-slate-200 p-6 rounded-3xl space-y-4">
             <div class="flex items-center justify-between">
               <div>
-                <label for="weeklyFreqRange" class="text-sm font-bold block">Classes Per Week Frequency</label>
-                <span class="text-xs text-slate-400">If you require more than 1 class/week, monthly fees scale directly by class count.</span>
+                <label for="weeklyFreqRange" class="text-sm font-bold text-slate-900 block">Classes Per Week Frequency</label>
+                <span class="text-xs text-slate-600">If you require more than 1 class/week, monthly fees scale directly by class count.</span>
               </div>
-              <div class="px-3.5 py-1.5 rounded-xl bg-amber-400/15 border border-amber-400/40 text-amber-300 font-bold text-sm">
+              <div class="px-3.5 py-1.5 rounded-xl bg-amber-100 border border-amber-300 text-amber-900 font-bold text-sm">
                 <span id="freqDisplayBadge">1 Class / Week (4 / mo)</span>
               </div>
             </div>
 
-            <input id="weeklyFreqRange" type="range" min="1" max="5" value="1" oninput="updateFrequencySlider(this.value)" class="w-full accent-amber-400 cursor-pointer h-2 rounded-lg bg-slate-800" />
+            <input id="weeklyFreqRange" type="range" min="1" max="5" value="1" oninput="updateFrequencySlider(this.value)" class="w-full accent-amber-500 cursor-pointer h-2 rounded-lg bg-slate-200" />
 
-            <div class="flex justify-between text-xs text-slate-400 font-medium">
+            <div class="flex justify-between text-xs text-slate-600 font-semibold">
               <span>1x / wk (4 classes)</span>
               <span>2x / wk (8 classes)</span>
               <span>3x / wk (12 classes)</span>
@@ -637,38 +601,38 @@
 
         <!-- Right 5 Columns: 3D Animated Summary Card -->
         <div class="lg:col-span-5 perspective-1400">
-          <div id="pricing3dCard" class="tilt-card glass-panel rounded-3xl p-7 border border-amber-400/40 shadow-2xl space-y-6 transition-transform duration-500">
-            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+          <div id="pricing3dCard" class="tilt-card bg-white rounded-3xl p-7 border-2 border-amber-400 shadow-xl shadow-slate-200/80 space-y-6 transition-transform duration-500">
+            <div class="flex items-center justify-between border-b border-slate-200 pb-4">
               <div>
-                <span class="text-xs uppercase tracking-wider text-amber-400 font-bold">3D Live Schedule Estimate</span>
-                <h3 id="summaryTierTitle" class="text-2xl font-extrabold mt-0.5">Group Classes (6 People)</h3>
+                <span class="text-xs uppercase tracking-wider text-amber-700 font-bold">3D Live Schedule Estimate</span>
+                <h3 id="summaryTierTitle" class="text-2xl font-extrabold text-slate-900 mt-0.5">Group Classes (6 People)</h3>
               </div>
-              <div class="w-12 h-12 rounded-2xl bg-amber-400/20 border border-amber-400/40 flex items-center justify-center text-xl">
+              <div class="w-12 h-12 rounded-2xl bg-amber-100 border border-amber-300 flex items-center justify-center text-xl">
                 ✨
               </div>
             </div>
 
             <div class="grid grid-cols-2 gap-4">
-              <div class="p-4 rounded-2xl bg-slate-900/70 border border-slate-800">
-                <div class="text-xs text-slate-400">Price Per Class</div>
-                <div id="summaryPerClass" class="text-2xl font-extrabold text-white mt-1">€5</div>
-                <div class="text-[11px] text-slate-400">per person</div>
+              <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+                <div class="text-xs text-slate-500 font-medium">Price Per Class</div>
+                <div id="summaryPerClass" class="text-2xl font-extrabold text-slate-900 mt-1">€5</div>
+                <div class="text-[11px] text-slate-500 font-medium">per person</div>
               </div>
-              <div class="p-4 rounded-2xl bg-amber-400/15 border border-amber-400/40">
-                <div class="text-xs text-amber-300 font-medium">Monthly Total (<span id="summaryClassCount">4</span> Classes)</div>
-                <div id="summaryMonthlyTotal" class="text-2xl font-extrabold text-amber-400 mt-1">€20</div>
-                <div id="summaryBillingNote" class="text-[11px] text-amber-200/80">billed monthly after evaluation</div>
+              <div class="p-4 rounded-2xl bg-amber-50 border border-amber-300">
+                <div class="text-xs text-amber-900 font-bold">Monthly Total (<span id="summaryClassCount">4</span> Classes)</div>
+                <div id="summaryMonthlyTotal" class="text-2xl font-extrabold text-amber-600 mt-1">€20</div>
+                <div id="summaryBillingNote" class="text-[11px] text-amber-800 font-medium">billed monthly after evaluation</div>
               </div>
             </div>
 
-            <ul class="space-y-2 text-xs sm:text-sm text-slate-300">
-              <li class="flex items-center gap-2"><span class="text-emerald-400">✔</span> Free Online Placement Test included before you start</li>
-              <li class="flex items-center gap-2"><span class="text-emerald-400">✔</span> Weekly homework & all learning materials provided</li>
-              <li class="flex items-center gap-2"><span class="text-emerald-400">✔</span> Direct WhatsApp support throughout the week</li>
-              <li class="flex items-center gap-2"><span class="text-emerald-400">✔</span> Certificate of Completion awarded</li>
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-700 font-medium">
+              <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✔</span> Free Online Placement Test included before you start</li>
+              <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✔</span> Weekly homework & all learning materials provided</li>
+              <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✔</span> Direct WhatsApp support throughout the week</li>
+              <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✔</span> Certificate of Completion awarded</li>
             </ul>
 
-            <button onclick="requestSelectedPricingSchedule()" type="button" class="w-full py-4 rounded-2xl bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-extrabold text-sm sm:text-base shadow-lg shadow-amber-500/25 hover:brightness-110 active:scale-95 transition-all">
+            <button onclick="requestSelectedPricingSchedule()" type="button" class="w-full py-4 min-h-[44px] rounded-2xl bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-extrabold text-sm sm:text-base shadow-md shadow-amber-500/20 hover:brightness-105 active:scale-95 transition-all flex items-center justify-center">
               Request This Schedule (No Payment Needed) →
             </button>
           </div>
@@ -678,16 +642,16 @@
   </section>
 
   <!-- SECTION 5: 3D STACKED-CARD PLACEMENT QUIZ & 3D ROTATING E-GUIDE BOOK -->
-  <section id="placement" class="py-20 relative bg-slate-900/30">
+  <section id="placement" class="py-20 relative bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
         <!-- Left 7 Columns: 3D Stacked-Card Placement Quiz -->
         <div class="lg:col-span-7 space-y-6">
           <div>
-            <span class="text-xs font-bold uppercase tracking-widest text-sky-400">3D Interactive Element #5 • 3D Card-Stack Assessment</span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold mt-1">Interactive 3D English & Accent Placement Check</h2>
-            <p class="text-sm text-slate-400 mt-1">
+            <span class="text-xs font-bold uppercase tracking-widest text-sky-700">3D Interactive Element #5 • 3D Card-Stack Assessment</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold mt-1 text-slate-900">Interactive 3D English & Accent Placement Check</h2>
+            <p class="text-sm text-slate-600 mt-1">
               Not sure where you stand? Try this quick 5-card 3D self-check, then send your result to Carys to receive your full complimentary placement evaluation.
             </p>
           </div>
@@ -698,10 +662,10 @@
         </div>
 
         <!-- Right 5 Columns: 3D Rotating Hardcover E-Guide Mockup -->
-        <div id="eguide" class="lg:col-span-5 glass-panel rounded-3xl p-6 sm:p-8 border border-amber-400/30 flex flex-col items-center text-center space-y-6">
-          <span class="text-xs font-bold uppercase tracking-widest text-amber-400">3D Interactive Element #6 • 3D Hardcover Book</span>
-          <h3 class="text-2xl font-extrabold">Download Your Free Accent & Fluency E-Guide</h3>
-          <p class="text-xs sm:text-sm text-slate-400">
+        <div id="eguide" class="lg:col-span-5 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xl shadow-slate-200/60 flex flex-col items-center text-center space-y-6">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-700">3D Interactive Element #6 • 3D Hardcover Book</span>
+          <h3 class="text-2xl font-extrabold text-slate-900">Download Your Free Accent & Fluency E-Guide</h3>
+          <p class="text-xs sm:text-sm text-slate-600">
             Hover, tap, or click the button below to rotate the 3D E-Guide cover and request your free instant copy.
           </p>
 
@@ -719,7 +683,7 @@
                   <h4 class="font-serif-display text-xl font-bold text-white leading-snug">
                     British Accent & Fluency Blueprint
                   </h4>
-                  <p class="text-[11px] text-slate-300">
+                  <p class="text-[11px] text-slate-200 font-medium">
                     Phonetics, Rhythm & Everyday Confidence for Adult Learners
                   </p>
                 </div>
@@ -754,10 +718,10 @@
           </div>
 
           <div class="flex flex-wrap gap-2 justify-center w-full">
-            <button onclick="spin3dBook()" type="button" class="px-4 py-2.5 rounded-xl glass-panel text-xs font-semibold hover:border-amber-400/50 transition-all">
+            <button onclick="spin3dBook()" type="button" class="px-4 py-2.5 min-h-[44px] rounded-xl border border-slate-200 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold transition-all flex items-center justify-center shadow-xs">
               🔄 Flip 3D Book Cover
             </button>
-            <button onclick="openInquiryModal('Free E-Guide Instant Download')" type="button" class="px-5 py-2.5 rounded-xl bg-amber-400 text-slate-950 font-bold text-xs sm:text-sm hover:brightness-110 transition-all">
+            <button onclick="openInquiryModal('Free E-Guide Instant Download')" type="button" class="px-5 py-2.5 min-h-[44px] rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-extrabold text-xs sm:text-sm hover:brightness-105 shadow-md shadow-amber-500/20 transition-all flex items-center justify-center">
               📥 Get Free E-Guide Copy
             </button>
           </div>
@@ -768,29 +732,29 @@
   </section>
 
   <!-- SECTION 6: CLEAN CATEGORIZED FAQ & DIRECT INQUIRY HUB -->
-  <section id="faq" class="py-20 relative">
+  <section id="faq" class="py-20 relative bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
 
         <!-- Left 7 Columns: All 15 FAQs Extracted from accentmade.com -->
         <div class="lg:col-span-7 space-y-6">
           <div>
-            <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Complete Site FAQ Inventory</span>
-            <h2 class="text-3xl font-extrabold mt-1">Frequently Asked Questions</h2>
+            <span class="text-xs font-bold uppercase tracking-widest text-amber-700">Complete Site FAQ Inventory</span>
+            <h2 class="text-3xl font-extrabold mt-1 text-slate-900">Frequently Asked Questions</h2>
           </div>
 
           <!-- FAQ Filter Buttons -->
           <div class="flex flex-wrap gap-2">
-            <button onclick="filterFaq('all')" id="faqTab-all" type="button" class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-amber-400 text-slate-950">
+            <button onclick="filterFaq('all')" id="faqTab-all" type="button" class="px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-bold bg-amber-400 text-slate-950 flex items-center justify-center shadow-xs">
               All Questions (15)
             </button>
-            <button onclick="filterFaq('general')" id="faqTab-general" type="button" class="px-3 py-1.5 rounded-xl text-xs font-semibold glass-panel">
+            <button onclick="filterFaq('general')" id="faqTab-general" type="button" class="px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-700 flex items-center justify-center shadow-xs">
               General & Level (4)
             </button>
-            <button onclick="filterFaq('course')" id="faqTab-course" type="button" class="px-3 py-1.5 rounded-xl text-xs font-semibold glass-panel">
+            <button onclick="filterFaq('course')" id="faqTab-course" type="button" class="px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-700 flex items-center justify-center shadow-xs">
               Course Details (9)
             </button>
-            <button onclick="filterFaq('special')" id="faqTab-special" type="button" class="px-3 py-1.5 rounded-xl text-xs font-semibold glass-panel">
+            <button onclick="filterFaq('special')" id="faqTab-special" type="button" class="px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-700 flex items-center justify-center shadow-xs">
               Private & Exams (2)
             </button>
           </div>
@@ -802,29 +766,29 @@
 
         <!-- Right 5 Columns: Direct Contact & Inquiry Form ("Let's Learn Together!") -->
         <div id="contact" class="lg:col-span-5">
-          <div class="glass-panel rounded-3xl p-6 sm:p-8 border border-amber-400/30 sticky top-24 space-y-5">
+          <div class="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-md sticky top-24 space-y-5">
             <div>
-              <span class="text-xs font-bold uppercase tracking-widest text-emerald-400">No Payment Gateway Required</span>
-              <h3 class="text-2xl font-extrabold mt-1">Let's Learn Together!</h3>
-              <p class="text-xs sm:text-sm text-slate-400 mt-1">
+              <span class="text-xs font-bold uppercase tracking-widest text-emerald-700">No Payment Gateway Required</span>
+              <h3 class="text-2xl font-extrabold mt-1 text-slate-900">Let's Learn Together!</h3>
+              <p class="text-xs sm:text-sm text-slate-600 mt-1">
                 Fill in the form below to request your free placement test, ask about class schedules, or book a 1-on-1 evaluation with Carys.
               </p>
             </div>
 
             <form id="mainContactForm" onsubmit="handleContactSubmit(event)" class="space-y-4">
               <div>
-                <label for="contactName" class="text-xs font-semibold block mb-1">Your Full Name *</label>
-                <input id="contactName" type="text" required placeholder="e.g., Priya Sharma" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/80 border border-slate-700 text-sm text-white focus:outline-none focus:border-amber-400" />
+                <label for="contactName" class="text-xs font-bold text-slate-700 block mb-1">Your Full Name *</label>
+                <input id="contactName" type="text" required placeholder="e.g., Priya Sharma" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500" />
               </div>
 
               <div>
-                <label for="contactEmail" class="text-xs font-semibold block mb-1">Email Address *</label>
-                <input id="contactEmail" type="email" required placeholder="you@example.com" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/80 border border-slate-700 text-sm text-white focus:outline-none focus:border-amber-400" />
+                <label for="contactEmail" class="text-xs font-bold text-slate-700 block mb-1">Email Address *</label>
+                <input id="contactEmail" type="email" required placeholder="you@example.com" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500" />
               </div>
 
               <div>
-                <label for="contactTopic" class="text-xs font-semibold block mb-1">Interested Program / Tier</label>
-                <select id="contactTopic" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/80 border border-slate-700 text-sm text-white focus:outline-none focus:border-amber-400">
+                <label for="contactTopic" class="text-xs font-bold text-slate-700 block mb-1">Interested Program / Tier</label>
+                <select id="contactTopic" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 text-sm text-slate-900 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500">
                   <option value="Free Placement Test & Language Evaluation">Free Placement Test & Language Evaluation</option>
                   <option value="Group Classes (€5/class • €20/month)">Group Classes (€5/class • €20/month)</option>
                   <option value="Semi-Private Classes (€10/class • €40/month)">Semi-Private Classes (€10/class • €40/month)</option>
@@ -836,35 +800,35 @@
               </div>
 
               <div>
-                <label for="contactMessage" class="text-xs font-semibold block mb-1">Your Goals or Preferred Schedule *</label>
-                <textarea id="contactMessage" rows="3" required placeholder="Tell Carys about your current English level, goals, and preferred weekly schedule..." class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/80 border border-slate-700 text-sm text-white focus:outline-none focus:border-amber-400"></textarea>
+                <label for="contactMessage" class="text-xs font-bold text-slate-700 block mb-1">Your Goals or Preferred Schedule *</label>
+                <textarea id="contactMessage" rows="3" required placeholder="Tell Carys about your current English level, goals, and preferred weekly schedule..." class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500"></textarea>
               </div>
 
-              <button type="submit" class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-extrabold text-sm shadow-lg shadow-amber-500/20 hover:brightness-110 transition-all">
+              <button type="submit" class="w-full py-3.5 min-h-[44px] rounded-2xl bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-extrabold text-sm shadow-md shadow-amber-500/20 hover:brightness-105 transition-all flex items-center justify-center">
                 Send Inquiry to Carys George →
               </button>
             </form>
 
-            <div id="contactSuccessBox" class="hidden p-4 rounded-2xl bg-emerald-500/15 border border-emerald-400/40 text-xs sm:text-sm text-emerald-200 space-y-2">
-              <div class="font-bold text-emerald-300">✓ Inquiry Ready for Carys!</div>
-              <p id="contactSuccessSummary"></p>
+            <div id="contactSuccessBox" class="hidden p-4 rounded-2xl bg-emerald-50 border border-emerald-300 text-xs sm:text-sm text-emerald-900 space-y-2">
+              <div class="font-bold text-emerald-800">✓ Inquiry Ready for Carys!</div>
+              <p id="contactSuccessSummary" class="text-emerald-950"></p>
               <div class="flex flex-wrap gap-2 pt-1">
-                <a id="mailtoDirectLink" href="mailto:improvemyaccent@gmail.com" class="px-3 py-1.5 rounded-lg bg-emerald-400 text-slate-950 font-bold text-xs">
+                <a id="mailtoDirectLink" href="mailto:improvemyaccent@gmail.com" class="px-3.5 py-2 rounded-lg bg-emerald-600 text-white font-bold text-xs hover:bg-emerald-700 transition-colors">
                   Open in Email Client
                 </a>
-                <button onclick="copyInquiryEmail()" type="button" class="px-3 py-1.5 rounded-lg glass-panel text-xs font-semibold">
+                <button onclick="copyInquiryEmail()" type="button" class="px-3.5 py-2 rounded-lg bg-white border border-slate-300 text-slate-800 font-semibold text-xs hover:bg-slate-50 transition-colors">
                   Copy Email: improvemyaccent@gmail.com
                 </button>
               </div>
             </div>
 
             <!-- Direct Contact Channels Footer -->
-            <div class="pt-4 border-t border-slate-800/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs text-slate-400">
+            <div class="pt-4 border-t border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs text-slate-600">
               <div>
-                📧 <a href="mailto:improvemyaccent@gmail.com" class="text-amber-400 hover:underline font-medium">improvemyaccent@gmail.com</a>
+                📧 <a href="mailto:improvemyaccent@gmail.com" class="text-amber-700 hover:underline font-bold">improvemyaccent@gmail.com</a>
               </div>
               <div>
-                📸 Instagram: <a href="https://www.instagram.com/hello_accentmade/" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:underline font-medium">@hello_accentmade</a>
+                📸 Instagram: <a href="https://www.instagram.com/hello_accentmade/" target="_blank" rel="noopener noreferrer" class="text-sky-700 hover:underline font-bold">@hello_accentmade</a>
               </div>
             </div>
           </div>
@@ -875,35 +839,35 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="py-10 border-t border-slate-800/60 text-xs text-slate-400">
+  <footer class="py-10 border-t border-slate-200 bg-slate-50 text-xs text-slate-600">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-2">
-        <span class="font-bold text-white">AccentMade.com</span>
+        <span class="font-bold text-slate-900">AccentMade.com</span>
         <span>•</span>
-        <span>Carys George (CELTA, TEFL, MA, BA Hons)</span>
+        <span class="text-slate-600">Carys George (CELTA, TEFL, MA, BA Hons)</span>
       </div>
-      <div>
+      <div class="text-slate-500">
         Copyright © 2024–2026 AccentMade.com. All rights reserved.
       </div>
     </div>
   </footer>
 
   <!-- INQUIRY MODAL -->
-  <div id="inquiryModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
-    <div class="glass-panel rounded-3xl max-w-md w-full p-6 border border-amber-400/40 shadow-2xl space-y-4 relative">
-      <button onclick="closeInquiryModal()" type="button" class="absolute top-4 right-4 w-8 h-8 rounded-full glass-panel flex items-center justify-center text-slate-300 hover:text-white">
+  <div id="inquiryModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-900/50 backdrop-blur-sm">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 border border-slate-200 shadow-2xl space-y-4 relative text-slate-900">
+      <button onclick="closeInquiryModal()" type="button" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-600 hover:text-slate-900 transition-colors" aria-label="Close modal">
         ✕
       </button>
-      <div class="text-xs font-bold uppercase tracking-wider text-amber-400">Direct Inquiry • No Payment Required</div>
-      <h3 id="modalTitleText" class="text-xl font-extrabold">Request Free Language Evaluation</h3>
-      <p class="text-xs text-slate-300">
+      <div class="text-xs font-bold uppercase tracking-wider text-amber-700">Direct Inquiry • No Payment Required</div>
+      <h3 id="modalTitleText" class="text-xl font-extrabold text-slate-900">Request Free Language Evaluation</h3>
+      <p class="text-xs text-slate-600">
         Your request will pre-fill the inquiry form below so Carys can send your free placement test or confirm your class schedule via email or WhatsApp.
       </p>
       <div class="space-y-3">
-        <input id="modalNameInput" type="text" placeholder="Your Name" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-sm text-white" />
-        <input id="modalEmailInput" type="email" placeholder="Your Email Address" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-sm text-white" />
-        <textarea id="modalNotesInput" rows="3" placeholder="Any specific goals (e.g., Accent Reduction, IELTS, Business English)?" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-sm text-white"></textarea>
-        <button onclick="submitModalInquiry()" type="button" class="w-full py-3 rounded-xl bg-amber-400 text-slate-950 font-extrabold text-sm hover:brightness-110 transition-all">
+        <input id="modalNameInput" type="text" placeholder="Your Name" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500" />
+        <input id="modalEmailInput" type="email" placeholder="Your Email Address" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500" />
+        <textarea id="modalNotesInput" rows="3" placeholder="Any specific goals (e.g., Accent Reduction, IELTS, Business English)?" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500"></textarea>
+        <button onclick="submitModalInquiry()" type="button" class="w-full py-3.5 min-h-[44px] rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-extrabold text-sm hover:brightness-105 shadow-md shadow-amber-500/20 transition-all flex items-center justify-center">
           Confirm & Prepare Inquiry
         </button>
       </div>
@@ -1026,8 +990,8 @@
     // ==========================================
     // 2. THREE.JS 3D HERO STAGE
     // ==========================================
-    var scene, camera, renderer, mainGroup, waveMesh, coreSphere, globeGroup, ringGroup;
-    var currentSceneMode = 'wave';
+    var scene, camera, renderer, mainGroup, coreSphere, globeGroup;
+    var currentSceneMode = 'globe';
     var mouseX = 0, mouseY = 0;
     var pulseIntensity = 0;
     var audioCtx = null;
@@ -1064,65 +1028,23 @@
       mainGroup = new THREE.Group();
       scene.add(mainGroup);
 
-      // 1. Acoustic Phonetic Wireframe Sphere + Soundwave Particles
-      var sphereGeo = new THREE.IcosahedronGeometry(2.3, 1);
-      var sphereMat = new THREE.MeshStandardMaterial({
-        color: 0xf59e0b,
-        wireframe: true,
-        transparent: true,
-        opacity: 0.45,
-        emissive: 0xf59e0b,
-        emissiveIntensity: 0.25
-      });
-      coreSphere = new THREE.Mesh(sphereGeo, sphereMat);
-      coreSphere.position.set(2.2, 0.2, 0);
-      mainGroup.add(coreSphere);
-
-      // Soundwave Ribbon Points
-      var waveGeo = new THREE.BufferGeometry();
-      var count = 220;
-      var positions = new Float32Array(count * 3);
-      var colors = new Float32Array(count * 3);
-      for (var i = 0; i < count; i++) {
-        var x = (i / count) * 18 - 9;
-        var y = Math.sin(x * 1.2) * 1.1;
-        var z = Math.cos(x * 0.8) * 1.2;
-        positions[i * 3] = x;
-        positions[i * 3 + 1] = y;
-        positions[i * 3 + 2] = z;
-
-        colors[i * 3] = 0.96;
-        colors[i * 3 + 1] = 0.62 + (i / count) * 0.25;
-        colors[i * 3 + 2] = 0.2 + (1 - i / count) * 0.75;
-      }
-      waveGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-      waveGeo.setAttribute('color', new THREE.BufferAttribute(colors, 3));
-      var waveMat = new THREE.PointsMaterial({
-        size: 0.09,
-        vertexColors: true,
-        transparent: true,
-        opacity: 0.85
-      });
-      waveMesh = new THREE.Points(waveGeo, waveMat);
-      mainGroup.add(waveMesh);
-
-      // 2. UK - Dubai - Worldwide 3D Globe Group
+      // 1. UK - Dubai - Worldwide 3D Globe Group (Clean, without orbital or wave lines)
       globeGroup = new THREE.Group();
       globeGroup.position.set(2.0, 0.2, 0);
-      var globeGeo = new THREE.SphereGeometry(2.6, 18, 18);
+      var globeGeo = new THREE.SphereGeometry(2.6, 22, 22);
       var globeMat = new THREE.MeshStandardMaterial({
-        color: 0x38bdf8,
+        color: 0x0284c7,
         wireframe: true,
         transparent: true,
-        opacity: 0.35
+        opacity: 0.4
       });
       var globeSphere = new THREE.Mesh(globeGeo, globeMat);
       globeGroup.add(globeSphere);
 
-      // Hub Markers (UK, Dubai, Global)
+      // Hub Markers (UK: Amber, Dubai: Emerald)
       var markerGeo = new THREE.SphereGeometry(0.14, 16, 16);
-      var ukMat = new THREE.MeshBasicMaterial({ color: 0xf59e0b });
-      var dubaiMat = new THREE.MeshBasicMaterial({ color: 0x10b981 });
+      var ukMat = new THREE.MeshBasicMaterial({ color: 0xd97706 });
+      var dubaiMat = new THREE.MeshBasicMaterial({ color: 0x059669 });
       var ukMarker = new THREE.Mesh(markerGeo, ukMat);
       ukMarker.position.set(0.4, 2.1, 1.4);
       var dubaiMarker = new THREE.Mesh(markerGeo, dubaiMat);
@@ -1130,31 +1052,34 @@
       globeGroup.add(ukMarker);
       globeGroup.add(dubaiMarker);
 
-      globeGroup.visible = false;
+      globeGroup.visible = true;
       mainGroup.add(globeGroup);
 
-      // 3. Orbital Rings Group
-      ringGroup = new THREE.Group();
-      ringGroup.position.set(2.2, 0.2, 0);
-      var torus1 = new THREE.Mesh(
-        new THREE.TorusGeometry(3.1, 0.03, 16, 100),
-        new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.45 })
-      );
-      torus1.rotation.x = Math.PI / 3;
-      var torus2 = new THREE.Mesh(
-        new THREE.TorusGeometry(3.6, 0.025, 16, 100),
-        new THREE.MeshBasicMaterial({ color: 0xf59e0b, transparent: true, opacity: 0.35 })
-      );
-      torus2.rotation.y = Math.PI / 4;
-      ringGroup.add(torus1);
-      ringGroup.add(torus2);
-      mainGroup.add(ringGroup);
+      // 2. Alternate Clean Phonetic Sphere
+      var sphereGeo = new THREE.IcosahedronGeometry(2.3, 1);
+      var sphereMat = new THREE.MeshStandardMaterial({
+        color: 0xd97706,
+        wireframe: true,
+        transparent: true,
+        opacity: 0.55
+      });
+      coreSphere = new THREE.Mesh(sphereGeo, sphereMat);
+      coreSphere.position.set(2.0, 0.2, 0);
+      coreSphere.visible = false;
+      mainGroup.add(coreSphere);
 
       // Pointer interactivity
       window.addEventListener('mousemove', function(e) {
         mouseX = (e.clientX / window.innerWidth) * 2 - 1;
         mouseY = -(e.clientY / window.innerHeight) * 2 + 1;
       });
+
+      window.addEventListener('touchmove', function(e) {
+        if (e.touches && e.touches.length > 0) {
+          mouseX = (e.touches[0].clientX / window.innerWidth) * 2 - 1;
+          mouseY = -(e.touches[0].clientY / window.innerHeight) * 2 + 1;
+        }
+      }, { passive: true });
 
       window.addEventListener('resize', onWindowResize);
       animateThreeHero();
@@ -1183,49 +1108,17 @@
         pulseIntensity = 0;
       }
 
-      if (coreSphere) {
+      if (globeGroup && globeGroup.visible) {
+        globeGroup.rotation.y = t * 0.45;
+        var gs = 1 + pulseIntensity * 0.18;
+        globeGroup.scale.set(gs, gs, gs);
+      }
+
+      if (coreSphere && coreSphere.visible) {
         coreSphere.rotation.y = t * 0.35;
         coreSphere.rotation.x = t * 0.2;
         var s = 1 + Math.sin(t * 3) * 0.04 + pulseIntensity * 0.35;
         coreSphere.scale.set(s, s, s);
-      }
-
-      if (waveMesh && waveMesh.geometry) {
-        var pos = waveMesh.geometry.attributes.position;
-        var amp = 1.0 + pulseIntensity * 1.8;
-        var cursorWorldX = mouseX * 7.5;
-        var cursorWorldY = mouseY * 4.5;
-        for (var i = 0; i < pos.count; i++) {
-          var x = pos.getX(i);
-          var baseY = Math.sin(x * 1.1 + t * 2.2) * 0.9 * amp + Math.cos(x * 2.5 - t) * 0.25;
-          var baseZ = Math.cos(x * 0.9 + t * 1.6) * 0.9 * amp;
-          if (currentSceneMode === 'antigravity' || document.body.classList.contains('antigravity-mode')) {
-            var floatY = Math.sin(i * 1.7 + t * 1.4) * 2.6;
-            var dx = x - cursorWorldX;
-            var dy = floatY - cursorWorldY;
-            var distSq = dx * dx + dy * dy;
-            if (distSq < 6.5 && distSq > 0.001) {
-              var force = (6.5 - distSq) * 0.35;
-              floatY += (dy / Math.sqrt(distSq)) * force;
-              baseZ += force * 0.6;
-            }
-            pos.setY(i, floatY);
-            pos.setZ(i, baseZ);
-          } else {
-            pos.setY(i, baseY);
-            pos.setZ(i, baseZ);
-          }
-        }
-        pos.needsUpdate = true;
-      }
-
-      if (globeGroup && globeGroup.visible) {
-        globeGroup.rotation.y = t * 0.45;
-      }
-
-      if (ringGroup) {
-        ringGroup.rotation.z = t * 0.25;
-        ringGroup.rotation.x = Math.sin(t * 0.5) * 0.3;
       }
 
       if (mainGroup) {
@@ -1238,43 +1131,27 @@
 
     window.setThreeSceneMode = function(mode) {
       currentSceneMode = mode;
-      var btnWave = document.getElementById('sceneBtnWave');
       var btnGlobe = document.getElementById('sceneBtnGlobe');
-      var btnStudio = document.getElementById('sceneBtnStudio');
-      var btnAntigravity = document.getElementById('sceneBtnAntigravity');
-      var allBtns = [btnWave, btnGlobe, btnStudio, btnAntigravity];
+      var btnSphere = document.getElementById('sceneBtnSphere');
+      var allBtns = [btnGlobe, btnSphere];
       allBtns.forEach(function(b) {
-        if (b) b.className = 'px-3 py-1.5 rounded-xl text-xs font-semibold hover:bg-slate-800/60 transition-all';
+        if (b) b.className = 'px-3 py-2 min-h-[44px] rounded-xl text-xs font-semibold text-slate-700 hover:bg-slate-200/70 transition-all flex items-center justify-center';
       });
 
-      var activeBtn = mode === 'wave' ? btnWave : (mode === 'globe' ? btnGlobe : (mode === 'antigravity' ? btnAntigravity : btnStudio));
-      if (mode === 'antigravity' && !document.body.classList.contains('antigravity-mode')) {
-        document.body.classList.add('antigravity-mode');
-        var navLbl = document.getElementById('antigravityNavLabel');
-        if (navLbl) navLbl.textContent = 'Antigravity: ON';
-      }
+      var activeBtn = mode === 'sphere' ? btnSphere : btnGlobe;
       if (activeBtn) {
-        activeBtn.className = 'px-3 py-1.5 rounded-xl text-xs font-semibold bg-amber-400 text-slate-950 shadow transition-all';
+        activeBtn.className = 'px-3 py-2 min-h-[44px] rounded-xl text-xs font-bold bg-amber-400 text-slate-950 shadow-sm transition-all flex items-center justify-center';
       }
 
-      if (!coreSphere || !globeGroup || !waveMesh || !ringGroup) return;
-      if (mode === 'wave') {
+      if (!coreSphere || !globeGroup) return;
+      if (mode === 'sphere') {
         coreSphere.visible = true;
-        waveMesh.visible = true;
         globeGroup.visible = false;
-        ringGroup.visible = true;
-      } else if (mode === 'globe') {
-        coreSphere.visible = false;
-        waveMesh.visible = false;
-        globeGroup.visible = true;
-        ringGroup.visible = true;
       } else {
-        coreSphere.visible = true;
-        waveMesh.visible = true;
+        coreSphere.visible = false;
         globeGroup.visible = true;
-        ringGroup.visible = true;
       }
-      showToast('Switched 3D Stage to: ' + (mode === 'wave' ? 'Voice & Phonetic Sphere' : mode === 'globe' ? 'UK–Dubai–Global Classroom Globe' : 'Hybrid 3D Orbital Studio'));
+      showToast('Switched 3D Stage to: ' + (mode === 'sphere' ? 'Voice & Phonetic Sphere' : 'UK–Dubai–Global Classroom Globe'));
     };
 
     window.triggerVoicePulse = function() {
@@ -1343,9 +1220,9 @@
         var tab = document.getElementById('courseTab-' + key);
         if (!tab) return;
         if (key === cat) {
-          tab.className = 'px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-amber-400 text-slate-950 transition-all';
+          tab.className = 'px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-bold bg-amber-400 text-slate-950 transition-all flex items-center justify-center shadow-xs';
         } else {
-          tab.className = 'px-3.5 py-1.5 rounded-xl text-xs font-semibold glass-panel hover:border-amber-400/40 transition-all';
+          tab.className = 'px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:border-amber-400 transition-all flex items-center justify-center shadow-xs';
         }
       });
 
@@ -1358,24 +1235,24 @@
 
       grid.innerHTML = filtered.map(function(c) {
         var bullets = c.highlights.map(function(h) {
-          return '<li class="flex items-center gap-2 text-xs text-slate-300"><span class="text-amber-400">✦</span><span>' + h + '</span></li>';
+          return '<li class="flex items-center gap-2 text-xs text-slate-700 font-medium"><span class="text-amber-600 font-bold">✦</span><span>' + h + '</span></li>';
         }).join('');
 
         return (
-          '<div class="tilt-card glass-panel rounded-3xl p-6 sm:p-7 border border-slate-800 hover:border-amber-400/50 flex flex-col justify-between space-y-5 shadow-xl">' +
+          '<div class="tilt-card bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 hover:border-amber-400 hover:shadow-lg flex flex-col justify-between space-y-5 shadow-xs transition-all">' +
             '<div class="space-y-3">' +
               '<div class="flex items-center justify-between gap-2">' +
-                '<span class="px-3 py-1 rounded-full bg-amber-400/15 border border-amber-400/30 text-amber-300 text-xs font-semibold">' + c.badge + '</span>' +
-                '<span class="font-mono text-xs text-sky-400">' + c.phonetic + '</span>' +
+                '<span class="px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold">' + c.badge + '</span>' +
+                '<span class="font-mono text-xs text-sky-700 font-bold">' + c.phonetic + '</span>' +
               '</div>' +
-              '<h3 class="text-xl sm:text-2xl font-extrabold">' + c.title + '</h3>' +
-              '<div class="text-xs font-medium text-emerald-400">Suitable for: ' + c.audience + '</div>' +
-              '<p class="text-sm text-slate-300 leading-relaxed">' + c.desc + '</p>' +
+              '<h3 class="text-xl sm:text-2xl font-extrabold text-slate-900">' + c.title + '</h3>' +
+              '<div class="text-xs font-bold text-emerald-700">Suitable for: ' + c.audience + '</div>' +
+              '<p class="text-sm text-slate-600 leading-relaxed font-normal">' + c.desc + '</p>' +
               '<ul class="space-y-1.5 pt-2">' + bullets + '</ul>' +
             '</div>' +
-            '<div class="pt-4 border-t border-slate-800/80 flex items-center justify-between gap-3">' +
-              '<span class="text-xs text-slate-400">Group (€5) • Trio (€10) • 1-on-1</span>' +
-              '<button type="button" onclick="openInquiryModal(\'' + c.title.replace(/'/g, "\\'") + '\')" class="px-4 py-2 rounded-xl bg-amber-400/20 border border-amber-400/40 text-amber-300 hover:bg-amber-400 hover:text-slate-950 font-bold text-xs transition-all">' +
+            '<div class="pt-4 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3">' +
+              '<span class="text-xs text-slate-500 font-medium">Group (€5) • Trio (€10) • 1-on-1</span>' +
+              '<button type="button" onclick="openInquiryModal(\'' + c.title.replace(/'/g, "\\'") + '\')" class="px-4 py-2.5 min-h-[44px] rounded-xl bg-amber-50 border border-amber-300 text-amber-900 hover:bg-amber-400 hover:text-slate-950 font-bold text-xs transition-all flex items-center justify-center">' +
                 'Inquire About Course →' +
               '</button>' +
             '</div>' +
@@ -1398,9 +1275,9 @@
         var btn = document.getElementById('tierBtn-' + t);
         if (!btn) return;
         if (t === tier) {
-          btn.className = 'text-left p-5 rounded-3xl glass-panel border-2 border-amber-400 transition-all relative scale-[1.02]';
+          btn.className = 'text-left p-5 rounded-3xl bg-white border-2 border-amber-500 shadow-md transition-all relative scale-[1.02]';
         } else {
-          btn.className = 'text-left p-5 rounded-3xl glass-panel border-2 border-transparent hover:border-slate-700 transition-all relative';
+          btn.className = 'text-left p-5 rounded-3xl bg-white border-2 border-slate-200 hover:border-slate-300 shadow-xs transition-all relative';
         }
       });
       updatePricingSummaryCard(true);
@@ -1476,20 +1353,20 @@
       if (currentQuizIndex >= QUIZ_QUESTIONS.length) {
         var level = quizScore >= 4 ? 'B2–C1 Upper-Intermediate / Advanced' : (quizScore >= 2 ? 'B1 Intermediate' : 'A1–A2 Elementary / Pre-Intermediate');
         stage.innerHTML =
-          '<div class="glass-panel rounded-3xl p-7 border-2 border-emerald-400/50 space-y-4 shadow-2xl">' +
+          '<div class="bg-white rounded-3xl p-7 border-2 border-emerald-500 shadow-xl space-y-4 text-slate-900">' +
             '<div class="flex items-center justify-between">' +
-              '<span class="px-3 py-1 rounded-full bg-emerald-400/20 text-emerald-300 text-xs font-bold">3D Assessment Complete</span>' +
-              '<span class="text-sm font-bold text-amber-400">Score: ' + quizScore + ' / 4 Core Items</span>' +
+              '<span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">Assessment Complete</span>' +
+              '<span class="text-sm font-bold text-amber-600">Score: ' + quizScore + ' / 4 Core Items</span>' +
             '</div>' +
-            '<h3 class="text-2xl font-extrabold">Estimated Level: ' + level + '</h3>' +
-            '<p class="text-sm text-slate-300">Primary Goal Selected: <strong class="text-white">' + (quizSelectedGoal || 'British Accent & Fluency') + '</strong></p>' +
-            '<p class="text-xs text-slate-400">Send this snapshot to Carys to receive your full complimentary placement test and personalized class recommendation.</p>' +
+            '<h3 class="text-2xl font-black text-slate-900">Estimated Level: ' + level + '</h3>' +
+            '<p class="text-sm text-slate-600">Primary Goal Selected: <strong class="text-slate-900">' + (quizSelectedGoal || 'British Accent & Fluency') + '</strong></p>' +
+            '<p class="text-xs text-slate-500">Send this snapshot to Carys to receive your full complimentary placement test and personalized class recommendation.</p>' +
             '<div class="flex flex-wrap gap-3 pt-2">' +
-              '<button type="button" onclick="openInquiryModal(\'Placement Check Result: ' + level.replace(/'/g, "\\'") + ' — Goal: ' + (quizSelectedGoal || 'General Fluency').replace(/'/g, "\\'") + '\')" class="px-5 py-3 rounded-xl bg-amber-400 text-slate-950 font-extrabold text-xs sm:text-sm">' +
+              '<button type="button" onclick="openInquiryModal(\'Placement Check Result: ' + level.replace(/'/g, "\\'") + ' — Goal: ' + (quizSelectedGoal || 'General Fluency').replace(/'/g, "\\'") + '\')" class="px-5 py-3 min-h-[44px] rounded-xl bg-amber-400 hover:bg-amber-500 text-slate-950 font-extrabold text-xs sm:text-sm shadow-sm transition-colors flex items-center justify-center">' +
                 'Send Result to Carys for Free Evaluation →' +
               '</button>' +
-              '<button type="button" onclick="resetQuizDeck()" class="px-4 py-3 rounded-xl glass-panel text-xs font-semibold">' +
-                '↻ Retake 3D Quiz' +
+              '<button type="button" onclick="resetQuizDeck()" class="px-4 py-3 min-h-[44px] rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-800 text-xs font-bold transition-colors flex items-center justify-center">' +
+                '↻ Retake Quiz' +
               '</button>' +
             '</div>' +
           '</div>';
@@ -1499,20 +1376,20 @@
       var item = QUIZ_QUESTIONS[currentQuizIndex];
       var optionsHtml = item.options.map(function(opt, idx) {
         return (
-          '<button type="button" onclick="answerQuizCard(' + idx + ')" class="w-full text-left p-3.5 rounded-2xl bg-slate-900/80 hover:bg-amber-400/20 border border-slate-700 hover:border-amber-400/60 text-xs sm:text-sm font-medium transition-all flex items-center justify-between group">' +
+          '<button type="button" onclick="answerQuizCard(' + idx + ')" class="w-full text-left p-3.5 sm:p-4 rounded-2xl bg-slate-50 hover:bg-amber-50 border border-slate-200 hover:border-amber-400 text-xs sm:text-sm font-semibold text-slate-800 hover:text-slate-950 transition-all flex items-center justify-between group min-h-[44px]">' +
             '<span>' + opt + '</span>' +
-            '<span class="text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity">Select →</span>' +
+            '<span class="text-amber-600 font-bold opacity-0 group-hover:opacity-100 transition-opacity">Select →</span>' +
           '</button>'
         );
       }).join('');
 
       stage.innerHTML =
-        '<div id="activeQuizCard" class="quiz-card-3d glass-panel rounded-3xl p-6 sm:p-7 border border-sky-400/40 shadow-2xl space-y-4">' +
-          '<div class="flex items-center justify-between text-xs text-slate-400">' +
-            '<span class="font-bold text-sky-400 uppercase tracking-wider">Card ' + (currentQuizIndex + 1) + ' of ' + QUIZ_QUESTIONS.length + '</span>' +
-            '<span>3D Interactive Placement Deck</span>' +
+        '<div id="activeQuizCard" class="quiz-card-3d bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-xl space-y-4 text-slate-900">' +
+          '<div class="flex items-center justify-between text-xs text-slate-500">' +
+            '<span class="font-bold text-sky-700 uppercase tracking-wider">Card ' + (currentQuizIndex + 1) + ' of ' + QUIZ_QUESTIONS.length + '</span>' +
+            '<span class="font-medium text-slate-500">Interactive Placement Deck</span>' +
           '</div>' +
-          '<h3 class="text-lg sm:text-xl font-bold text-white">' + item.q + '</h3>' +
+          '<h3 class="text-lg sm:text-xl font-bold text-slate-900">' + item.q + '</h3>' +
           '<div class="space-y-2.5">' + optionsHtml + '</div>' +
         '</div>';
     }
@@ -1560,8 +1437,8 @@
         var btn = document.getElementById('faqTab-' + k);
         if (!btn) return;
         btn.className = (k === cat)
-          ? 'px-3 py-1.5 rounded-xl text-xs font-semibold bg-amber-400 text-slate-950'
-          : 'px-3 py-1.5 rounded-xl text-xs font-semibold glass-panel';
+          ? 'px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-bold bg-amber-400 text-slate-950 flex items-center justify-center shadow-xs'
+          : 'px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-700 flex items-center justify-center shadow-xs';
       });
 
       var list = document.getElementById('faqAccordionList');
@@ -1573,12 +1450,12 @@
 
       list.innerHTML = items.map(function(f, idx) {
         return (
-          '<div class="glass-panel rounded-2xl border border-slate-800 overflow-hidden">' +
-            '<button type="button" onclick="toggleFaqItem(' + idx + ')" class="w-full text-left px-5 py-4 flex items-center justify-between gap-3 font-semibold text-sm hover:text-amber-400 transition-colors">' +
+          '<div class="bg-white rounded-2xl border border-slate-200 shadow-xs overflow-hidden transition-all">' +
+            '<button type="button" onclick="toggleFaqItem(' + idx + ')" class="w-full text-left px-5 py-4 flex items-center justify-between gap-3 font-bold text-slate-900 text-sm hover:text-amber-700 transition-colors min-h-[44px]">' +
               '<span>Q. ' + f.q + '</span>' +
-              '<span id="faqIcon-' + idx + '" class="text-amber-400 font-bold text-base">+</span>' +
+              '<span id="faqIcon-' + idx + '" class="text-amber-600 font-bold text-lg leading-none">+</span>' +
             '</button>' +
-            '<div id="faqBody-' + idx + '" class="hidden px-5 pb-4 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-3">' +
+            '<div id="faqBody-' + idx + '" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3 bg-slate-50/50">' +
               f.a +
             '</div>' +
           '</div>'
@@ -1596,7 +1473,7 @@
     };
 
     // ==========================================
-    // 9. INQUIRY MODAL, CONTACT FORM & THEME
+    // 9. INQUIRY MODAL, CONTACT FORM & CONTROLS
     // ==========================================
     var currentModalTopic = 'Free Language Evaluation';
 
@@ -1618,6 +1495,22 @@
         modal.classList.remove('flex');
       }
     };
+
+    // Close modal when clicking backdrop
+    window.addEventListener('click', function(e) {
+      var modal = document.getElementById('inquiryModal');
+      if (modal && e.target === modal) {
+        closeInquiryModal();
+      }
+    });
+
+    // Close on Escape key
+    window.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeInquiryModal();
+        closeMobileMenu();
+      }
+    });
 
     window.submitModalInquiry = function() {
       var name = (document.getElementById('modalNameInput') || {}).value || '';
@@ -1680,36 +1573,21 @@
       showToast('📋 Copied improvemyaccent@gmail.com to clipboard!');
     };
 
-    window.toggleAntigravityMode = function() {
-      document.body.classList.toggle('antigravity-mode');
-      var isOn = document.body.classList.contains('antigravity-mode');
-      var lbl = document.getElementById('antigravityNavLabel');
-      if (lbl) lbl.textContent = isOn ? 'Antigravity: ON' : 'Antigravity: OFF';
-      if (isOn) {
-        setThreeSceneMode('antigravity');
-      } else {
-        setThreeSceneMode('wave');
-      }
-      showToast(isOn ? '🚀 Antigravity Zero-G Mode Enabled!' : '⚓ Standard Gravity Restored');
-    };
-
-    window.toggleSiteTheme = function() {
-      document.body.classList.toggle('light-theme');
-      var isLight = document.body.classList.contains('light-theme');
-      var icon = document.getElementById('themeIcon');
-      var label = document.getElementById('themeLabel');
-      if (icon) icon.textContent = isLight ? '🌙' : '☀️';
-      if (label) label.textContent = isLight ? 'Dark 3D Studio' : 'Light Mode';
-    };
-
     window.toggleMobileMenu = function() {
       var menu = document.getElementById('mobileMenu');
-      if (menu) menu.classList.toggle('hidden');
+      var btn = document.getElementById('mobileMenuBtn');
+      if (menu) {
+        var isHidden = menu.classList.contains('hidden');
+        menu.classList.toggle('hidden');
+        if (btn) btn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+      }
     };
 
     window.closeMobileMenu = function() {
       var menu = document.getElementById('mobileMenu');
+      var btn = document.getElementById('mobileMenuBtn');
       if (menu) menu.classList.add('hidden');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
     };
 
     function showToast(msg) {
