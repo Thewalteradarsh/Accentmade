@@ -221,30 +221,35 @@
 
   <!-- HERO SECTION WITH LIVE INTERACTIVE THREE.JS 3D STAGE -->
   <section id="hero" class="relative min-h-screen pt-24 pb-16 flex items-center overflow-hidden bg-white">
-    <!-- Interactive Three.js WebGL Canvas Container -->
-    <div id="threeHeroContainer" class="absolute inset-0 z-0 cursor-grab active:cursor-grabbing overflow-hidden opacity-30 md:opacity-100 transition-opacity duration-300"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col">
 
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-      <!-- Interactive 3D Scene Mode Switcher Bar -->
-      <div class="flex flex-wrap items-center justify-between gap-3 mb-8 bg-slate-50/90 border border-slate-200 shadow-sm p-2.5 rounded-2xl max-w-3xl select-none">
-        <div class="flex items-center gap-2 pl-2">
-          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-          <span class="text-xs font-bold uppercase tracking-wider text-amber-700">Interactive 3D Stage:</span>
+      <!-- 3D Stage Controls + Docked Canvas — order-last on mobile -->
+      <div class="order-2 md:order-none">
+        <!-- Interactive 3D Scene Mode Switcher Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-3 mt-10 md:mt-0 mb-4 md:mb-8 bg-slate-50/90 border border-slate-200 shadow-sm p-2.5 rounded-2xl max-w-3xl select-none">
+          <div class="flex items-center gap-2 pl-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-700">Interactive 3D Stage:</span>
+          </div>
+          <div class="flex flex-wrap items-center gap-1.5">
+            <button id="sceneBtnGlobe" onclick="setThreeSceneMode('globe')" type="button" class="px-3 py-2 min-h-[44px] rounded-xl text-xs font-bold bg-amber-400 text-slate-950 shadow-sm transition-all flex items-center justify-center select-none">
+              1. UK–Dubai–Global Globe
+            </button>
+            <button id="sceneBtnSphere" onclick="setThreeSceneMode('sphere')" type="button" class="px-3 py-2 min-h-[44px] rounded-xl text-xs font-semibold text-slate-700 border border-slate-200 bg-slate-50/80 hover:bg-slate-200/70 transition-all flex items-center justify-center select-none">
+              2. Voice & Phonetic Sphere
+            </button>
+            <button id="voicePulseBtn" onclick="triggerVoicePulse()" type="button" class="px-3 py-2 min-h-[44px] rounded-xl text-xs font-semibold bg-sky-50 border border-sky-300 text-sky-800 hover:bg-sky-100 transition-all flex items-center justify-center gap-1 select-none">
+              <span>🔊</span> <span id="voicePulseText">Test Voice Pulse</span>
+            </button>
+          </div>
         </div>
-        <div class="flex flex-wrap items-center gap-1.5">
-          <button id="sceneBtnGlobe" onclick="setThreeSceneMode('globe')" type="button" class="px-3 py-2 min-h-[44px] rounded-xl text-xs font-bold bg-amber-400 text-slate-950 shadow-sm transition-all flex items-center justify-center select-none">
-            1. UK–Dubai–Global Globe
-          </button>
-          <button id="sceneBtnSphere" onclick="setThreeSceneMode('sphere')" type="button" class="px-3 py-2 min-h-[44px] rounded-xl text-xs font-semibold text-slate-700 hover:bg-slate-200/70 transition-all flex items-center justify-center select-none">
-            2. Voice & Phonetic Sphere
-          </button>
-          <button id="voicePulseBtn" onclick="triggerVoicePulse()" type="button" class="px-3 py-2 min-h-[44px] rounded-xl text-xs font-semibold bg-sky-50 border border-sky-300 text-sky-800 hover:bg-sky-100 transition-all flex items-center justify-center gap-1 select-none">
-            <span>🔊</span> <span id="voicePulseText">Test Voice Pulse</span>
-          </button>
-        </div>
+
+        <!-- Interactive Three.js WebGL Canvas Container — docked on mobile, absolute background on desktop -->
+        <div id="threeHeroContainer" class="w-full h-[260px] rounded-2xl overflow-hidden cursor-grab active:cursor-grabbing transition-opacity duration-300 md:absolute md:inset-0 md:h-auto md:w-auto md:rounded-none md:z-0"></div>
       </div>
 
-      <div class="flex flex-col lg:grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+      <!-- Hero Copy + Instructor Card — order-first on mobile -->
+      <div class="order-1 md:order-none flex flex-col lg:grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
         <!-- Left Column: Hero Copy & Conversion CTAs -->
         <div class="lg:col-span-7 space-y-6">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-xs font-semibold text-amber-800 select-none">
@@ -1043,7 +1048,7 @@
       // 1. UK - Dubai - Worldwide 3D Globe Group (Clean, without orbital or wave lines)
       globeGroup = new THREE.Group();
       var isMobile = window.innerWidth < 768;
-      globeGroup.position.set(isMobile ? 1.0 : 2.0, isMobile ? -1.2 : 0.2, 0);
+      globeGroup.position.set(isMobile ? 0.0 : 2.0, isMobile ? 0.0 : 0.2, 0);
       var globeGeo = new THREE.SphereGeometry(2.6, 22, 22);
       var globeMat = new THREE.MeshStandardMaterial({
         color: 0x0284c7,
@@ -1077,7 +1082,7 @@
         opacity: 0.55
       });
       coreSphere = new THREE.Mesh(sphereGeo, sphereMat);
-      coreSphere.position.set(isMobile ? 1.0 : 2.0, isMobile ? -1.2 : 0.2, 0);
+      coreSphere.position.set(isMobile ? 0.0 : 2.0, isMobile ? 0.0 : 0.2, 0);
       coreSphere.visible = false;
       mainGroup.add(coreSphere);
 
@@ -1108,8 +1113,8 @@
       renderer.setSize(w, h);
 
       var isMob = w < 768;
-      if (globeGroup) globeGroup.position.set(isMob ? 1.0 : 2.0, isMob ? -1.2 : 0.2, 0);
-      if (coreSphere) coreSphere.position.set(isMob ? 1.0 : 2.0, isMob ? -1.2 : 0.2, 0);
+      if (globeGroup) globeGroup.position.set(isMob ? 0.0 : 2.0, isMob ? 0.0 : 0.2, 0);
+      if (coreSphere) coreSphere.position.set(isMob ? 0.0 : 2.0, isMob ? 0.0 : 0.2, 0);
     }
 
     var clock = typeof THREE !== 'undefined' ? new THREE.Clock() : null;
@@ -1152,7 +1157,7 @@
       var btnSphere = document.getElementById('sceneBtnSphere');
       var allBtns = [btnGlobe, btnSphere];
       allBtns.forEach(function(b) {
-        if (b) b.className = 'px-3 py-2 min-h-[44px] rounded-xl text-xs font-semibold text-slate-700 hover:bg-slate-200/70 transition-all flex items-center justify-center select-none';
+        if (b) b.className = 'px-3 py-2 min-h-[44px] rounded-xl text-xs font-semibold text-slate-700 border border-slate-200 bg-slate-50/80 hover:bg-slate-200/70 transition-all flex items-center justify-center select-none';
       });
 
       var activeBtn = mode === 'sphere' ? btnSphere : btnGlobe;
