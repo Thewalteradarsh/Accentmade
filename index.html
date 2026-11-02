@@ -9,7 +9,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Raleway:wght@700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg-primary: #ffffff;
@@ -37,6 +37,12 @@
       overflow-x: hidden;
     }
 
+    .font-raleway {
+      font-family: 'Raleway', sans-serif;
+    }
+    .font-montserrat {
+      font-family: 'Montserrat', sans-serif;
+    }
     .font-serif-display {
       font-family: 'Playfair Display', serif;
     }
@@ -214,31 +220,36 @@
 </head>
 <body class="min-h-screen selection:bg-amber-100 selection:text-amber-900 bg-white text-slate-900">
 
-  <!-- Sticky Responsive Navigation -->
-  <header class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-xs">
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-2 sm:gap-3">
-      <a href="#hero" class="flex items-center gap-2.5 sm:gap-3 group shrink-0 min-h-[44px]">
-        <img src="assets/logo.png" alt="Accent Made Logo" class="w-11 h-11 sm:w-12 sm:h-12 md:w-14 md:h-14 shrink-0 rounded-xl object-contain border border-slate-200/90 shadow-xs bg-white p-0.5 group-hover:scale-105 transition-transform" />
-        <span class="font-bold tracking-tight text-lg sm:text-[19px] md:text-xl lg:text-2xl text-slate-900 leading-none whitespace-nowrap">Accent Made</span>
+  <!-- Split-Aware Transparent Navigation (Tomasz Gajda Reference) -->
+  <header class="absolute top-0 inset-x-0 z-50 bg-transparent py-6 px-6 sm:px-8 lg:px-16">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+      <!-- Left Brand (Positioned Over #D7D7D7 Background) -->
+      <a href="#hero" class="flex items-center gap-3 group shrink-0 min-h-[44px]">
+        <img src="assets/logo.png" alt="Accent Made Logo" class="w-10 h-10 md:w-11 md:h-11 rounded-xl object-contain border border-black/15 shadow-xs bg-white p-0.5 group-hover:scale-105 transition-transform" />
+        <span class="font-['Montserrat'] font-extrabold tracking-tight text-xl sm:text-2xl text-[#000000] leading-none whitespace-nowrap">Accent Made</span>
       </a>
 
-      <!-- Desktop Nav -->
-      <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold">
-        <a href="#hero" class="text-slate-600 hover:text-amber-600 transition-colors py-2">Stage</a>
-        <a href="#about" class="text-slate-600 hover:text-amber-600 transition-colors py-2">Credentials</a>
-        <a href="#courses" class="text-slate-600 hover:text-amber-600 transition-colors py-2">Courses</a>
-        <a href="#pricing" class="text-slate-600 hover:text-amber-600 transition-colors py-2">Estimator</a>
-        <a href="#placement" class="text-slate-600 hover:text-amber-600 transition-colors py-2">Quiz & E-Guide</a>
-        <a href="#faq" class="text-slate-600 hover:text-amber-600 transition-colors py-2">FAQ</a>
-      </nav>
+      <!-- Desktop Nav & Action (Positioned over Right Black Diagonal) -->
+      <div class="hidden lg:flex items-center gap-8">
+        <nav class="flex items-center gap-7 text-sm font-semibold font-['Montserrat'] tracking-wide">
+          <a href="#about" class="text-white hover:text-neutral-300 transition-colors py-2">Credentials</a>
+          <a href="#courses" class="text-white hover:text-neutral-300 transition-colors py-2">Courses</a>
+          <a href="#pricing" class="text-white hover:text-neutral-300 transition-colors py-2">Estimator</a>
+          <a href="#placement" class="text-white hover:text-neutral-300 transition-colors py-2">Quiz &amp; E-Guide</a>
+          <a href="#faq" class="text-white hover:text-neutral-300 transition-colors py-2">FAQ</a>
+        </nav>
 
-      <!-- Action Controls -->
-      <div class="flex items-center gap-2 shrink-0">
-        <button onclick="openInquiryModal('Free Language Evaluation Request')" type="button" class="min-h-[44px] px-3.5 sm:px-4 py-2 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-bold text-xs sm:text-sm shadow-md shadow-amber-500/20 hover:brightness-105 active:scale-95 transition-all flex items-center justify-center whitespace-nowrap">
-          Free Evaluation
+        <button onclick="openInquiryModal('Free Language Evaluation Request')" type="button" class="bg-white text-black font-['Montserrat'] font-bold uppercase text-xs tracking-wider px-6 py-3 rounded-full hover:bg-neutral-200 transition shadow-sm active:scale-95">
+          FREE EVALUATION
         </button>
+      </div>
 
-        <button id="mobileMenuBtn" onclick="toggleMobileMenu()" type="button" class="lg:hidden min-h-[44px] min-w-[44px] p-2.5 rounded-xl border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 flex items-center justify-center shadow-xs" aria-label="Toggle Menu" aria-expanded="false">
+      <!-- Mobile Right Actions -->
+      <div class="flex items-center gap-2.5 lg:hidden">
+        <button onclick="openInquiryModal('Free Language Evaluation Request')" type="button" class="px-4 py-2 rounded-full bg-black text-white font-['Montserrat'] font-bold text-xs uppercase tracking-wider shadow-sm hover:bg-neutral-800 transition active:scale-95">
+          Evaluation
+        </button>
+        <button id="mobileMenuBtn" onclick="toggleMobileMenu()" type="button" class="min-h-[40px] min-w-[40px] p-2 rounded-xl border border-black/20 bg-white/90 text-black flex items-center justify-center shadow-xs active:scale-95" aria-label="Toggle Menu" aria-expanded="false">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
@@ -247,142 +258,108 @@
     </div>
 
     <!-- Mobile Nav Drawer -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-slate-200 px-4 pt-3 pb-4 space-y-1 text-sm shadow-xl">
-      <a href="#hero" onclick="closeMobileMenu()" class="block py-2.5 px-3 rounded-xl hover:bg-amber-50 text-slate-700 hover:text-amber-700 font-semibold min-h-[44px] flex items-center transition-colors">Stage</a>
-      <a href="#about" onclick="closeMobileMenu()" class="block py-2.5 px-3 rounded-xl hover:bg-amber-50 text-slate-700 hover:text-amber-700 font-semibold min-h-[44px] flex items-center transition-colors">Credentials</a>
-      <a href="#courses" onclick="closeMobileMenu()" class="block py-2.5 px-3 rounded-xl hover:bg-amber-50 text-slate-700 hover:text-amber-700 font-semibold min-h-[44px] flex items-center transition-colors">Courses</a>
-      <a href="#pricing" onclick="closeMobileMenu()" class="block py-2.5 px-3 rounded-xl hover:bg-amber-50 text-slate-700 hover:text-amber-700 font-semibold min-h-[44px] flex items-center transition-colors">Estimator</a>
-      <a href="#placement" onclick="closeMobileMenu()" class="block py-2.5 px-3 rounded-xl hover:bg-amber-50 text-slate-700 hover:text-amber-700 font-semibold min-h-[44px] flex items-center transition-colors">Quiz & E-Guide</a>
-      <a href="#faq" onclick="closeMobileMenu()" class="block py-2.5 px-3 rounded-xl hover:bg-amber-50 text-slate-700 hover:text-amber-700 font-semibold min-h-[44px] flex items-center transition-colors">FAQ</a>
+    <div id="mobileMenu" class="hidden lg:hidden bg-neutral-950/95 backdrop-blur-md border border-neutral-800 mt-3 rounded-2xl px-5 py-4 space-y-1 text-sm shadow-2xl text-white font-['Montserrat']">
+      <a href="#about" onclick="closeMobileMenu()" class="block py-2.5 px-3 rounded-xl hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold transition-colors">Credentials</a>
+      <a href="#courses" onclick="closeMobileMenu()" class="block py-2.5 px-3 rounded-xl hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold transition-colors">Courses</a>
+      <a href="#pricing" onclick="closeMobileMenu()" class="block py-2.5 px-3 rounded-xl hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold transition-colors">Estimator</a>
+      <a href="#placement" onclick="closeMobileMenu()" class="block py-2.5 px-3 rounded-xl hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold transition-colors">Quiz &amp; E-Guide</a>
+      <a href="#faq" onclick="closeMobileMenu()" class="block py-2.5 px-3 rounded-xl hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold transition-colors">FAQ</a>
     </div>
   </header>
 
-  <!-- HERO SECTION WITH LIVE INTERACTIVE THREE.JS 3D STAGE -->
-  <section id="hero" class="relative min-h-screen pt-24 pb-16 flex items-center overflow-hidden bg-white">
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col">
+  <!-- HERO SECTION WITH TOMASZ GAJDA DIAGONAL SPLIT REFERENCE -->
+  <section id="hero" class="relative min-h-screen w-full bg-[#D7D7D7] overflow-hidden flex items-center">
 
-      <!-- 3D Stage Controls + Docked Canvas — order-last on mobile -->
-      <div class="order-2 md:order-none">
-        <!-- Interactive 3D Scene Mode Switcher Bar -->
-        <div class="flex flex-wrap items-center justify-between gap-3 mt-10 md:mt-0 mb-4 md:mb-8 bg-slate-50/90 border border-slate-200 shadow-sm p-2.5 rounded-2xl max-w-3xl select-none">
-          <div class="flex items-center gap-2 pl-2">
-            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span class="text-xs font-bold uppercase tracking-wider text-amber-700">Interactive 3D Stage:</span>
-          </div>
-          <div class="flex flex-wrap items-center gap-1.5">
-            <button id="sceneBtnGlobe" onclick="setThreeSceneMode('globe')" type="button" class="px-3 py-2 min-h-[44px] rounded-xl text-xs font-bold bg-amber-400 text-slate-950 shadow-sm transition-all flex items-center justify-center select-none">
-              1. UK–Dubai–Global Globe
+    <!-- Hidden container preserving 3D stage and Three.js hooks to prevent console errors -->
+    <div class="hidden" style="display: none;" aria-hidden="true">
+      <div id="threeHeroContainer"></div>
+      <button id="sceneBtnGlobe"></button>
+      <button id="sceneBtnSphere"></button>
+      <button id="voicePulseBtn"></button>
+      <span id="voicePulseText"></span>
+    </div>
+
+    <!-- Black Right Diagonal Panel (Desktop) -->
+    <div class="absolute inset-y-0 right-0 w-[56%] bg-black z-10 pointer-events-none hidden lg:block" style="clip-path: polygon(18% 0, 100% 0, 100% 100%, 0% 100%); -webkit-clip-path: polygon(18% 0, 100% 0, 100% 100%, 0% 100%);"></div>
+
+    <!-- Black Bottom Diagonal Panel (Mobile & Tablet) -->
+    <div class="absolute inset-x-0 bottom-0 h-[48%] sm:h-[52%] bg-black z-10 pointer-events-none lg:hidden" style="clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%); -webkit-clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);"></div>
+
+    <!-- Content Grid Container -->
+    <div class="max-w-7xl mx-auto w-full px-6 sm:px-8 lg:px-16 relative z-20 grid grid-cols-1 lg:grid-cols-12 items-center min-h-screen">
+
+      <!-- Left Column: Typography & CTAs (on #D7D7D7 Background) -->
+      <div class="lg:col-span-6 pt-28 pb-8 lg:py-0 flex flex-col justify-center">
+        <!-- 1. Intro Line -->
+        <p class="font-['Raleway'] font-bold text-[#000000] text-2xl md:text-[36px] leading-tight mb-2 sm:mb-3">
+          Hi, I am
+        </p>
+
+        <!-- 2. Main Name Heading -->
+        <h1 class="font-['Raleway'] font-extrabold text-[#000000] text-5xl sm:text-6xl xl:text-[72px] tracking-tight leading-[1.05] mb-3">
+          Carys George
+        </h1>
+
+        <!-- 3. Role / Value Subtitle -->
+        <p class="font-['Montserrat'] font-bold text-[#808080] text-base sm:text-lg md:text-[21px] leading-snug mb-5">
+          Native UK Accredited Trainer / CELTA &amp; UAE Military Specialist
+        </p>
+
+        <!-- 4. Concise Secondary Copy -->
+        <p class="font-['Montserrat'] font-medium text-neutral-700 text-sm md:text-base max-w-md mb-7 leading-relaxed">
+          Master British clarity, fluency &amp; accent confidence. 10+ years global experience with tailored Group (€5/class) and 1-on-1 coaching.
+        </p>
+
+        <!-- 5. Primary CTAs + Square Icon Tiles -->
+        <div class="space-y-5">
+          <!-- 3 Square Icon Tiles (Tomasz Gajda Reference Style) -->
+          <div class="flex items-center gap-4">
+            <!-- Tile 1: Book Evaluation (@/Email) -->
+            <button onclick="openInquiryModal('Free Language Evaluation')" title="Book Free Evaluation" type="button" class="w-[52px] h-[52px] bg-[#C4C4C4] hover:bg-[#b0b0b0] text-black flex items-center justify-center rounded-sm shadow-[0_4px_8px_rgba(0,0,0,0.18)] transition active:scale-95">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
             </button>
-            <button id="sceneBtnSphere" onclick="setThreeSceneMode('sphere')" type="button" class="px-3 py-2 min-h-[44px] rounded-xl text-xs font-semibold text-slate-700 border border-slate-200 bg-slate-50/80 hover:bg-slate-200/70 transition-all flex items-center justify-center select-none">
-              2. Voice & Phonetic Sphere
-            </button>
-            <button id="voicePulseBtn" onclick="triggerVoicePulse()" type="button" class="px-3 py-2 min-h-[44px] rounded-xl text-xs font-semibold bg-sky-50 border border-sky-300 text-sky-800 hover:bg-sky-100 transition-all flex items-center justify-center gap-1 select-none">
-              <span>🔊</span> <span id="voicePulseText">Test Voice Pulse</span>
-            </button>
-          </div>
-        </div>
 
-        <!-- Interactive Three.js WebGL Canvas Container — docked on mobile, absolute background on desktop -->
-        <div id="threeHeroContainer" class="w-full h-[260px] rounded-2xl overflow-hidden cursor-grab active:cursor-grabbing transition-opacity duration-300 md:absolute md:inset-0 md:h-auto md:w-auto md:rounded-none md:z-0"></div>
-      </div>
-
-      <!-- Hero Copy + Instructor Card — order-first on mobile -->
-      <div class="order-1 md:order-none flex flex-col lg:grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
-        <!-- Left Column: Hero Copy & Conversion CTAs -->
-        <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-xs font-semibold text-amber-800 select-none">
-            <span>🇬🇧 Native UK Accredited Trainer</span>
-            <span>•</span>
-            <span>CELTA, TEFL & Master's Qualified</span>
-          </div>
-
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] text-slate-900">
-            Master British <span class="font-serif-display italic font-normal text-amber-600">Clarity,</span> Fluency & Accent Confidence.
-          </h1>
-
-          <p class="text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
-            Learn directly with <strong class="text-slate-900 font-semibold">Carys George</strong> — a native UK English specialist with over 10 years of global teaching experience, including 5+ years in Dubai training the UAE military, police, and navy. Tailored Group (€5/class), Semi-Private (€10/class), and bespoke 1-on-1 coaching with zero online payment friction.
-          </p>
-
-          <!-- Primary Hero CTAs (Inquiry-First, No Payment Gateway) -->
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2 w-full">
-            <button onclick="openInquiryModal('Free Language Evaluation')" type="button" class="w-full sm:w-auto px-6 py-3.5 min-h-[44px] rounded-2xl bg-gradient-to-r from-amber-400 via-amber-500 to-orange-500 text-slate-950 font-extrabold text-sm sm:text-base shadow-lg shadow-amber-500/25 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2">
-              <span>Book Free Language Evaluation</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </button>
-
-            <a href="#placement" class="w-full sm:w-auto px-5 py-3.5 min-h-[44px] rounded-2xl bg-white border border-slate-200 text-slate-800 font-bold text-sm sm:text-base hover:border-amber-400 shadow-sm transition-all flex items-center justify-center gap-2">
-              <span>Take Placement Quiz</span>
-              <span class="text-xs px-2 py-0.5 rounded-full bg-sky-100 text-sky-800 font-semibold">Free</span>
+            <!-- Tile 2: Take Placement Quiz -->
+            <a href="#placement" title="Take Placement Quiz" class="w-[52px] h-[52px] bg-[#C4C4C4] hover:bg-[#b0b0b0] text-black flex items-center justify-center rounded-sm shadow-[0_4px_8px_rgba(0,0,0,0.18)] transition active:scale-95">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+              </svg>
             </a>
 
-            <a href="#eguide" class="w-full sm:w-auto px-4 py-3.5 min-h-[44px] rounded-2xl bg-white border border-slate-200 text-slate-700 font-semibold text-xs sm:text-sm hover:text-amber-600 shadow-sm transition-colors flex items-center justify-center">
-              📘 Free E-Guide
+            <!-- Tile 3: Free E-Guide -->
+            <a href="#placement" title="Free Accent E-Guide" class="w-[52px] h-[52px] bg-[#C4C4C4] hover:bg-[#b0b0b0] text-black flex items-center justify-center rounded-sm shadow-[0_4px_8px_rgba(0,0,0,0.18)] transition active:scale-95">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+              </svg>
             </a>
           </div>
 
-          <!-- Quick Trust Metrics Bar -->
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-3 pt-4">
-            <div class="bg-white border border-slate-200 shadow-sm p-3.5 rounded-2xl">
-              <div class="text-xl sm:text-2xl font-extrabold text-amber-600">10+ Yrs</div>
-              <div class="text-xs text-slate-600 font-medium mt-0.5">UK & Global Teaching</div>
-            </div>
-            <div class="bg-white border border-slate-200 shadow-sm p-3.5 rounded-2xl">
-              <div class="text-xl sm:text-2xl font-extrabold text-sky-600">5+ Yrs</div>
-              <div class="text-xs text-slate-600 font-medium mt-0.5">Dubai UAE Defense Trainer</div>
-            </div>
-            <div class="bg-white border border-slate-200 shadow-sm p-3.5 rounded-2xl">
-              <div class="text-xl sm:text-2xl font-extrabold text-emerald-600">€5 / class</div>
-              <div class="text-xs text-slate-600 font-medium mt-0.5">Small Group Starting Rate</div>
-            </div>
-            <div class="bg-white border border-slate-200 shadow-sm p-3.5 rounded-2xl">
-              <div class="text-xl sm:text-2xl font-extrabold text-purple-600">CELTA</div>
-              <div class="text-xs text-slate-600 font-medium mt-0.5">Cambridge Accredited</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Column: Interactive 3D Parallax Cutout Portrait -->
-        <div id="heroInstructorWrapper" class="lg:col-span-5 flex justify-center items-end w-full mt-4 lg:mt-0 relative perspective-1000">
-          <div id="heroInstructorCard" class="relative w-full max-w-sm sm:max-w-md lg:max-w-none flex flex-col items-center justify-end" style="transform-style: preserve-3d; perspective: 1000px;">
-
-            <!-- Layer 2 (Front): Glassmorphic Badges Over Shoulder (Z: 60px) -->
-            <div class="absolute top-4 sm:top-8 left-1 sm:left-4 lg:-left-4 z-30 flex flex-col gap-2.5 sm:gap-3 pointer-events-auto" style="transform-style: preserve-3d; transform: translateZ(60px);">
-              <!-- Badge 1: Phonetic RP & Modern British -->
-              <div class="badge-float-1 px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-2xl bg-white/85 backdrop-blur-md border border-white/80 shadow-lg shadow-sky-950/10 flex items-center gap-2 select-none">
-                <span class="text-sky-700 font-mono font-bold text-xs sm:text-sm shrink-0">/ˈæk.sənt/</span>
-                <span class="text-[11px] sm:text-xs text-slate-700 font-semibold whitespace-nowrap">RP &amp; Modern British</span>
-              </div>
-
-              <!-- Badge 2: CELTA Qualified -->
-              <div class="badge-float-2 px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-2xl bg-white/85 backdrop-blur-md border border-white/80 shadow-lg shadow-amber-950/10 flex items-center gap-2 select-none">
-                <span class="text-amber-600 text-xs sm:text-sm shrink-0">🎓</span>
-                <span class="text-[11px] sm:text-xs font-bold text-slate-800 whitespace-nowrap">CELTA Qualified • UK Native</span>
-              </div>
-            </div>
-
-            <!-- Floating Status Pill Bottom-Right (Z: 40px) -->
-            <div class="absolute bottom-3 sm:bottom-6 right-2 sm:right-4 lg:-right-2 z-30 px-3.5 py-2 rounded-2xl bg-white/90 backdrop-blur-md border border-white/80 shadow-lg shadow-slate-900/10 flex items-center gap-2 select-none" style="transform-style: preserve-3d; transform: translateZ(40px);">
-              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              <div class="flex flex-col">
-                <span class="text-xs font-extrabold text-slate-900 leading-tight">Carys George</span>
-                <span class="text-[10px] text-amber-700 font-semibold leading-tight">Accredited UK Trainer</span>
-              </div>
-            </div>
-
-            <!-- Layer 1 (Middle): Transparent Cutout Portrait with Strong Drop Shadow (Z: 20px) -->
-            <div class="relative z-10 flex items-end justify-center w-full" style="transform-style: preserve-3d; transform: translateZ(20px);">
-              <img
-                src="assets/carys-portrait.png"
-                alt="Carys George — Accredited British English Language Trainer"
-                class="w-auto h-[45vh] max-h-[400px] md:h-[50vh] md:max-h-[500px] lg:h-[75vh] lg:max-h-[680px] object-contain object-bottom select-none pointer-events-none portrait-3d-shadow"
-                loading="eager"
-              />
-            </div>
-
+          <!-- Trigger Links / Buttons -->
+          <div class="flex flex-wrap items-center gap-4 pt-1">
+            <button onclick="openInquiryModal('Free Language Evaluation')" type="button" class="px-7 py-3.5 rounded-full bg-black text-white font-['Montserrat'] font-bold text-xs uppercase tracking-wider hover:bg-neutral-800 shadow-md transition-all active:scale-95">
+              Book Evaluation
+            </button>
+            <a href="#courses" class="text-xs font-['Montserrat'] font-bold text-black uppercase tracking-wider hover:underline flex items-center gap-1.5 py-2">
+              Explore Courses <span class="text-sm">&rarr;</span>
+            </a>
           </div>
         </div>
       </div>
+
+      <!-- Right Column: Carys Portrait Anchored on the Black Diagonal -->
+      <div id="heroInstructorWrapper" class="lg:col-span-6 relative h-full flex items-end justify-center lg:justify-end self-end pt-8 lg:pt-12">
+        <div id="heroInstructorCard" class="relative w-full flex justify-center lg:justify-end items-end" style="transform-style: preserve-3d; perspective: 1000px;">
+          <img
+            src="assets/carys-portrait.png"
+            alt="Carys George — Native UK British English Language Trainer"
+            class="w-auto h-[50vh] sm:h-[62vh] lg:h-[84vh] max-h-[780px] object-contain object-bottom select-none drop-shadow-[0_20px_30px_rgba(0,0,0,0.85)] pointer-events-none"
+            loading="eager"
+          />
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -1039,6 +1016,7 @@
     function initThreeHero() {
       var container = document.getElementById('threeHeroContainer');
       if (!container || typeof THREE === 'undefined') return;
+      if (container.offsetParent === null || container.clientWidth === 0) return;
 
       scene = new THREE.Scene();
       var width = container.clientWidth || window.innerWidth;
@@ -1254,8 +1232,8 @@
         deltaX = Math.max(-1, Math.min(1, deltaX));
         deltaY = Math.max(-1, Math.min(1, deltaY));
 
-        // Subtle rotateX & rotateY (max 8 degrees)
-        var maxDegrees = 8;
+        // Subtle rotateX & rotateY (max 5 degrees)
+        var maxDegrees = 5;
         var rotateX = -deltaY * maxDegrees;
         var rotateY = deltaX * maxDegrees;
 
