@@ -216,12 +216,74 @@
       will-change: transform;
     }
 
+    /* Navbar Scroll Morph */
+    header.header-scrolled {
+      background-color: rgba(215, 215, 215, 0.94) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.12) !important;
+      padding-top: 0.85rem !important;
+      padding-bottom: 0.85rem !important;
+    }
+
+    header.header-scrolled nav a {
+      color: #000000 !important;
+    }
+
+    header.header-scrolled nav a:hover {
+      color: #525252 !important;
+    }
+
+    header.header-scrolled #headerCtaBtn {
+      background-color: #000000 !important;
+      color: #ffffff !important;
+    }
+
+    header.header-scrolled #headerCtaBtn:hover {
+      background-color: #262626 !important;
+    }
+
+    /* Staggered Scroll-Reveal System */
+    .reveal-up {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-36px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(36px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal-visible {
+      opacity: 1 !important;
+      transform: translate(0, 0) !important;
+    }
+
+    .delay-100 { transition-delay: 100ms; }
+    .delay-200 { transition-delay: 200ms; }
+    .delay-300 { transition-delay: 300ms; }
+    .delay-400 { transition-delay: 400ms; }
+
   </style>
 </head>
 <body class="min-h-screen selection:bg-amber-100 selection:text-amber-900 bg-white text-slate-900">
 
-  <!-- Split-Aware Transparent Navigation (Tomasz Gajda Reference) -->
-  <header class="absolute top-0 inset-x-0 z-50 bg-transparent px-4 py-3.5 sm:px-8 sm:py-6 lg:px-16">
+  <!-- Top Scroll Progress Bar -->
+  <div id="scrollProgressBar" class="fixed top-0 left-0 h-[3px] bg-black z-[60] pointer-events-none transition-[width] duration-75" style="width: 0%;"></div>
+
+  <!-- Split-Aware Transparent Navigation (Tomasz Gajda Reference with Scroll Morph) -->
+  <header id="mainHeader" class="fixed top-0 inset-x-0 z-50 bg-transparent px-4 py-3.5 sm:px-8 sm:py-6 lg:px-16 transition-all duration-300">
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
       <!-- Left Brand (Positioned Over #D7D7D7 Background) -->
       <a href="#hero" class="flex items-center gap-2.5 sm:gap-3 group shrink-0 min-h-[44px]">
@@ -239,7 +301,7 @@
           <a href="#faq" class="text-white hover:text-neutral-300 transition-colors py-2">FAQ</a>
         </nav>
 
-        <button onclick="openInquiryModal('Free Language Evaluation Request')" type="button" class="bg-white text-black font-['Montserrat'] font-bold uppercase text-xs tracking-wider px-6 py-3 rounded-full hover:bg-neutral-200 transition shadow-sm active:scale-95">
+        <button id="headerCtaBtn" onclick="openInquiryModal('Free Language Evaluation Request')" type="button" class="bg-white text-black font-['Montserrat'] font-bold uppercase text-xs tracking-wider px-6 py-3 rounded-full hover:bg-neutral-200 transition-all duration-200 shadow-sm active:scale-95">
           FREE EVALUATION
         </button>
       </div>
@@ -289,7 +351,7 @@
     <div class="max-w-7xl mx-auto w-full px-5 sm:px-8 lg:px-16 relative z-20 flex flex-col justify-between lg:grid lg:grid-cols-12 lg:items-center min-h-[100svh] lg:min-h-screen">
 
       <!-- Left Column: Typography & CTAs (on #D7D7D7 Background) -->
-      <div class="lg:col-span-6 pt-20 pb-4 sm:pt-24 md:pt-28 md:pb-8 lg:py-0 flex flex-col justify-center">
+      <div id="heroLeftColumn" class="lg:col-span-6 pt-20 pb-4 sm:pt-24 md:pt-28 md:pb-8 lg:py-0 flex flex-col justify-center will-change-transform">
         <!-- 1. Intro Line -->
         <p class="font-['Raleway'] font-bold text-[#000000] text-xl md:text-[36px] leading-tight mb-1 md:mb-3">
           Hi, I am
@@ -350,13 +412,15 @@
 
       <!-- Right Column: Carys Portrait Anchored on the Black Diagonal -->
       <div id="heroInstructorWrapper" class="lg:col-span-6 relative h-[38svh] sm:h-[42svh] lg:h-full w-full flex items-end justify-center lg:justify-end self-end z-20">
-        <div id="heroInstructorCard" class="relative w-full flex justify-center lg:justify-end items-end" style="transform-style: preserve-3d; perspective: 1000px;">
-          <img
-            src="assets/carys-portrait.png"
-            alt="Carys George — Native UK British English Language Trainer"
-            class="-mt-10 sm:-mt-14 lg:mt-0 w-auto h-[38svh] max-h-[320px] sm:h-[42svh] sm:max-h-[380px] lg:h-[84vh] lg:max-h-[780px] object-contain object-bottom select-none drop-shadow-[0_20px_30px_rgba(0,0,0,0.85)] pointer-events-none"
-            loading="eager"
-          />
+        <div id="heroPortraitParallax" class="w-full flex justify-center lg:justify-end items-end will-change-transform">
+          <div id="heroInstructorCard" class="relative w-full flex justify-center lg:justify-end items-end" style="transform-style: preserve-3d; perspective: 1000px;">
+            <img
+              src="assets/carys-portrait.png"
+              alt="Carys George — Native UK British English Language Trainer"
+              class="-mt-10 sm:-mt-14 lg:mt-0 w-auto h-[38svh] max-h-[320px] sm:h-[42svh] sm:max-h-[380px] lg:h-[84vh] lg:max-h-[780px] object-contain object-bottom select-none drop-shadow-[0_20px_30px_rgba(0,0,0,0.85)] pointer-events-none"
+              loading="eager"
+            />
+          </div>
         </div>
       </div>
 
@@ -366,10 +430,10 @@
   <!-- SECTION 2: 3D FLIP CREDENTIALS & INTERNATIONAL EXPERIENCE -->
   <section id="about" class="py-20 relative bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+      <div class="reveal-up flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
         <div>
           <span class="text-xs font-bold uppercase tracking-widest text-amber-700">3D Interactive Element #2 • Flip Cards</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold mt-1 text-slate-900">Meet Carys George & Flip Her Credentials in 3D</h2>
+          <h2 class="text-3xl sm:text-4xl font-extrabold mt-1 text-slate-900">Meet Carys George &amp; Flip Her Credentials in 3D</h2>
         </div>
         <p class="text-sm text-slate-600 max-w-md">
           Click or tap any qualification card below to rotate it 180° in 3D space and see how Carys's background shapes your training.
@@ -379,119 +443,147 @@
       <!-- 4 Interactive 3D Flip Cards -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- Flip Card 1 -->
-        <div class="flip-card h-72 perspective-1000 cursor-pointer" onclick="toggleFlipCard(this)">
-          <div class="flip-card-inner relative w-full h-full">
-            <!-- Front -->
-            <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-slate-200/90 shadow-md hover:border-amber-400 hover:shadow-lg transition-all">
-              <div class="w-12 h-12 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-center text-2xl">
-                🏛️
+        <div class="reveal-up delay-100">
+          <div class="flip-card h-72 perspective-1000 cursor-pointer" onclick="toggleFlipCard(this)">
+            <div class="flip-card-inner relative w-full h-full">
+              <!-- Front -->
+              <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-slate-200/90 shadow-md hover:border-amber-400 hover:shadow-lg transition-all">
+                <div class="w-12 h-12 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-center text-2xl">
+                  🏛️
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-amber-800 uppercase tracking-wider">Cambridge Qualified</div>
+                  <h3 class="text-xl font-extrabold text-slate-900 mt-1">CELTA Certified Trainer</h3>
+                  <p class="text-xs text-slate-600 mt-2">Cambridge English Language Teaching to Adults</p>
+                </div>
+                <div class="text-xs font-bold text-sky-700 flex items-center justify-between pt-2 border-t border-slate-100">
+                  <span>Tap to flip in 3D</span>
+                  <span>↻ 180°</span>
+                </div>
               </div>
-              <div>
-                <div class="text-xs font-bold text-amber-800 uppercase tracking-wider">Cambridge Qualified</div>
-                <h3 class="text-xl font-extrabold text-slate-900 mt-1">CELTA Certified Trainer</h3>
-                <p class="text-xs text-slate-600 mt-2">Cambridge English Language Teaching to Adults</p>
+              <!-- Back -->
+              <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-amber-50 border-2 border-amber-400 shadow-lg flex flex-col justify-between">
+                <div class="text-xs font-extrabold uppercase tracking-wider text-amber-900">Why CELTA Matters for You</div>
+                <p class="text-sm text-slate-800 leading-relaxed font-medium">
+                  Issued by Cambridge Assessment English, CELTA is the gold-standard qualification for teaching adult learners—ensuring every lesson is diagnostic, communicative, and tailored to your exact fluency goals.
+                </p>
+                <div class="text-xs text-amber-900 font-bold">✓ Elementary to C2 Advanced Adults</div>
               </div>
-              <div class="text-xs font-bold text-sky-700 flex items-center justify-between pt-2 border-t border-slate-100">
-                <span>Tap to flip in 3D</span>
-                <span>↻ 180°</span>
-              </div>
-            </div>
-            <!-- Back -->
-            <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-amber-50 border-2 border-amber-400 shadow-lg flex flex-col justify-between">
-              <div class="text-xs font-extrabold uppercase tracking-wider text-amber-900">Why CELTA Matters for You</div>
-              <p class="text-sm text-slate-800 leading-relaxed font-medium">
-                Issued by Cambridge Assessment English, CELTA is the gold-standard qualification for teaching adult learners—ensuring every lesson is diagnostic, communicative, and tailored to your exact fluency goals.
-              </p>
-              <div class="text-xs text-amber-900 font-bold">✓ Elementary to C2 Advanced Adults</div>
             </div>
           </div>
         </div>
 
         <!-- Flip Card 2 -->
-        <div class="flip-card h-72 perspective-1000 cursor-pointer" onclick="toggleFlipCard(this)">
-          <div class="flip-card-inner relative w-full h-full">
-            <!-- Front -->
-            <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-slate-200/90 shadow-md hover:border-sky-400 hover:shadow-lg transition-all">
-              <div class="w-12 h-12 rounded-2xl bg-sky-50 border border-sky-200 flex items-center justify-center text-2xl">
-                🌍
+        <div class="reveal-up delay-200">
+          <div class="flip-card h-72 perspective-1000 cursor-pointer" onclick="toggleFlipCard(this)">
+            <div class="flip-card-inner relative w-full h-full">
+              <!-- Front -->
+              <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-slate-200/90 shadow-md hover:border-sky-400 hover:shadow-lg transition-all">
+                <div class="w-12 h-12 rounded-2xl bg-sky-50 border border-sky-200 flex items-center justify-center text-2xl">
+                  🌍
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-sky-800 uppercase tracking-wider">Dubai & Global Career</div>
+                  <h3 class="text-xl font-extrabold text-slate-900 mt-1">5+ Years in Dubai (UAE)</h3>
+                  <p class="text-xs text-slate-600 mt-2">Trained UAE Military, Police & Navy Personnel</p>
+                </div>
+                <div class="text-xs font-bold text-sky-700 flex items-center justify-between pt-2 border-t border-slate-100">
+                  <span>Tap to flip in 3D</span>
+                  <span>↻ 180°</span>
+                </div>
               </div>
-              <div>
-                <div class="text-xs font-bold text-sky-800 uppercase tracking-wider">Dubai & Global Career</div>
-                <h3 class="text-xl font-extrabold text-slate-900 mt-1">5+ Years in Dubai (UAE)</h3>
-                <p class="text-xs text-slate-600 mt-2">Trained UAE Military, Police & Navy Personnel</p>
+              <!-- Back -->
+              <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-sky-50 border-2 border-sky-400 shadow-lg flex flex-col justify-between">
+                <div class="text-xs font-extrabold uppercase tracking-wider text-sky-900">High-Performance Coaching</div>
+                <p class="text-sm text-slate-800 leading-relaxed font-medium">
+                  Over 10 years of industry teaching experience across nationalities, including 5+ years in Dubai delivering disciplined, results-driven English and pronunciation coaching to the UAE military, police, and navy.
+                </p>
+                <div class="text-xs text-sky-900 font-bold">✓ Speaking, Listening, Reading & Writing</div>
               </div>
-              <div class="text-xs font-bold text-sky-700 flex items-center justify-between pt-2 border-t border-slate-100">
-                <span>Tap to flip in 3D</span>
-                <span>↻ 180°</span>
-              </div>
-            </div>
-            <!-- Back -->
-            <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-sky-50 border-2 border-sky-400 shadow-lg flex flex-col justify-between">
-              <div class="text-xs font-extrabold uppercase tracking-wider text-sky-900">High-Performance Coaching</div>
-              <p class="text-sm text-slate-800 leading-relaxed font-medium">
-                Over 10 years of industry teaching experience across nationalities, including 5+ years in Dubai delivering disciplined, results-driven English and pronunciation coaching to the UAE military, police, and navy.
-              </p>
-              <div class="text-xs text-sky-900 font-bold">✓ Speaking, Listening, Reading & Writing</div>
             </div>
           </div>
         </div>
 
         <!-- Flip Card 3 -->
-        <div class="flip-card h-72 perspective-1000 cursor-pointer" onclick="toggleFlipCard(this)">
-          <div class="flip-card-inner relative w-full h-full">
-            <!-- Front -->
-            <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-slate-200/90 shadow-md hover:border-purple-400 hover:shadow-lg transition-all">
-              <div class="w-12 h-12 rounded-2xl bg-purple-50 border border-purple-200 flex items-center justify-center text-2xl">
-                💼
+        <div class="reveal-up delay-300">
+          <div class="flip-card h-72 perspective-1000 cursor-pointer" onclick="toggleFlipCard(this)">
+            <div class="flip-card-inner relative w-full h-full">
+              <!-- Front -->
+              <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-slate-200/90 shadow-md hover:border-purple-400 hover:shadow-lg transition-all">
+                <div class="w-12 h-12 rounded-2xl bg-purple-50 border border-purple-200 flex items-center justify-center text-2xl">
+                  💼
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-purple-800 uppercase tracking-wider">Postgraduate Degree</div>
+                  <h3 class="text-xl font-extrabold text-slate-900 mt-1">Master's in Business & HRM</h3>
+                  <p class="text-xs text-slate-600 mt-2">Executive & Workplace English Mastery</p>
+                </div>
+                <div class="text-xs font-bold text-sky-700 flex items-center justify-between pt-2 border-t border-slate-100">
+                  <span>Tap to flip in 3D</span>
+                  <span>↻ 180°</span>
+                </div>
               </div>
-              <div>
-                <div class="text-xs font-bold text-purple-800 uppercase tracking-wider">Postgraduate Degree</div>
-                <h3 class="text-xl font-extrabold text-slate-900 mt-1">Master's in Business & HRM</h3>
-                <p class="text-xs text-slate-600 mt-2">Executive & Workplace English Mastery</p>
+              <!-- Back -->
+              <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-purple-50 border-2 border-purple-400 shadow-lg flex flex-col justify-between">
+                <div class="text-xs font-extrabold uppercase tracking-wider text-purple-900">Career & Interview Edge</div>
+                <p class="text-sm text-slate-800 leading-relaxed font-medium">
+                  With a Master's in Business and Human Resource Management, Carys coaches professionals on job interviews, boardroom presentations, executive negotiations, and leadership communication.
+                </p>
+                <div class="text-xs text-purple-900 font-bold">✓ Ideal for Corporate Professionals</div>
               </div>
-              <div class="text-xs font-bold text-sky-700 flex items-center justify-between pt-2 border-t border-slate-100">
-                <span>Tap to flip in 3D</span>
-                <span>↻ 180°</span>
-              </div>
-            </div>
-            <!-- Back -->
-            <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-purple-50 border-2 border-purple-400 shadow-lg flex flex-col justify-between">
-              <div class="text-xs font-extrabold uppercase tracking-wider text-purple-900">Career & Interview Edge</div>
-              <p class="text-sm text-slate-800 leading-relaxed font-medium">
-                With a Master's in Business and Human Resource Management, Carys coaches professionals on job interviews, boardroom presentations, executive negotiations, and leadership communication.
-              </p>
-              <div class="text-xs text-purple-900 font-bold">✓ Ideal for Corporate Professionals</div>
             </div>
           </div>
         </div>
 
         <!-- Flip Card 4 -->
-        <div class="flip-card h-72 perspective-1000 cursor-pointer" onclick="toggleFlipCard(this)">
-          <div class="flip-card-inner relative w-full h-full">
-            <!-- Front -->
-            <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-slate-200/90 shadow-md hover:border-emerald-400 hover:shadow-lg transition-all">
-              <div class="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-2xl">
-                🎙️
+        <div class="reveal-up delay-400">
+          <div class="flip-card h-72 perspective-1000 cursor-pointer" onclick="toggleFlipCard(this)">
+            <div class="flip-card-inner relative w-full h-full">
+              <!-- Front -->
+              <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-slate-200/90 shadow-md hover:border-emerald-400 hover:shadow-lg transition-all">
+                <div class="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-2xl">
+                  🎙️
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-emerald-800 uppercase tracking-wider">Honours & TEFL</div>
+                  <h3 class="text-xl font-extrabold text-slate-900 mt-1">BA (Hons) Media, PR & TEFL</h3>
+                  <p class="text-xs text-slate-600 mt-2">Communication, Public Relations & Advertising</p>
+                </div>
+                <div class="text-xs font-bold text-sky-700 flex items-center justify-between pt-2 border-t border-slate-100">
+                  <span>Tap to flip in 3D</span>
+                  <span>↻ 180°</span>
+                </div>
               </div>
-              <div>
-                <div class="text-xs font-bold text-emerald-800 uppercase tracking-wider">Honours & TEFL</div>
-                <h3 class="text-xl font-extrabold text-slate-900 mt-1">BA (Hons) Media, PR & TEFL</h3>
-                <p class="text-xs text-slate-600 mt-2">Communication, Public Relations & Advertising</p>
+              <!-- Back -->
+              <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-emerald-50 border-2 border-emerald-400 shadow-lg flex flex-col justify-between">
+                <div class="text-xs font-extrabold uppercase tracking-wider text-emerald-900">Articulation & Persuasion</div>
+                <p class="text-sm text-slate-800 leading-relaxed font-medium">
+                  Combining a BA (Hons) in Communication, PR & Advertising with TEFL certification, Carys helps both adult learners and high school students (ages 12–18) speak with natural rhythm, tone, and confidence.
+                </p>
+                <div class="text-xs text-emerald-900 font-bold">✓ Adults & High School (Ages 12–18)</div>
               </div>
-              <div class="text-xs font-bold text-sky-700 flex items-center justify-between pt-2 border-t border-slate-100">
-                <span>Tap to flip in 3D</span>
-                <span>↻ 180°</span>
-              </div>
-            </div>
-            <!-- Back -->
-            <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-emerald-50 border-2 border-emerald-400 shadow-lg flex flex-col justify-between">
-              <div class="text-xs font-extrabold uppercase tracking-wider text-emerald-900">Articulation & Persuasion</div>
-              <p class="text-sm text-slate-800 leading-relaxed font-medium">
-                Combining a BA (Hons) in Communication, PR & Advertising with TEFL certification, Carys helps both adult learners and high school students (ages 12–18) speak with natural rhythm, tone, and confidence.
-              </p>
-              <div class="text-xs text-emerald-900 font-bold">✓ Adults & High School (Ages 12–18)</div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- Animated Stat Counter Strip -->
+      <div class="reveal-up delay-200 mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 p-6 sm:p-8 bg-slate-50 rounded-3xl border border-slate-200 shadow-xs">
+        <div class="text-center p-3">
+          <div class="text-3xl sm:text-4xl font-extrabold text-black font-['Raleway']"><span class="counter" data-target="10" data-suffix="+">0</span></div>
+          <div class="text-xs sm:text-sm font-semibold text-slate-600 mt-1 font-['Montserrat']">Years Global Experience</div>
+        </div>
+        <div class="text-center p-3">
+          <div class="text-3xl sm:text-4xl font-extrabold text-black font-['Raleway']"><span class="counter" data-target="5" data-suffix="+">0</span></div>
+          <div class="text-xs sm:text-sm font-semibold text-slate-600 mt-1 font-['Montserrat']">Years Training Dubai Defense</div>
+        </div>
+        <div class="text-center p-3">
+          <div class="text-3xl sm:text-4xl font-extrabold text-amber-600 font-['Raleway']"><span class="counter" data-target="5" data-prefix="€">0</span></div>
+          <div class="text-xs sm:text-sm font-semibold text-slate-600 mt-1 font-['Montserrat']">Base Group Rate / Class</div>
+        </div>
+        <div class="text-center p-3">
+          <div class="text-3xl sm:text-4xl font-extrabold text-emerald-600 font-['Raleway']"><span class="counter" data-target="100" data-suffix="%">0</span></div>
+          <div class="text-xs sm:text-sm font-semibold text-slate-600 mt-1 font-['Montserrat']">Cambridge CELTA Tailored</div>
         </div>
       </div>
     </div>
@@ -500,10 +592,10 @@
   <!-- SECTION 3: 3D PERSPECTIVE-TILT COURSE EXPLORER -->
   <section id="courses" class="py-20 relative bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+      <div class="reveal-up flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
         <div>
           <span class="text-xs font-bold uppercase tracking-widest text-sky-700">3D Interactive Element #3 • Spatial Tilt Cards</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold mt-1 text-slate-900">Tailored English & Accent Programs</h2>
+          <h2 class="text-3xl sm:text-4xl font-extrabold mt-1 text-slate-900">Tailored English &amp; Accent Programs</h2>
         </div>
 
         <!-- Audience Filter Tabs -->
@@ -533,7 +625,7 @@
   <!-- SECTION 4: 3D INTERACTIVE TUITION ESTIMATOR & FLIP SUMMARY (NO PAYMENT GATEWAY) -->
   <section id="pricing" class="py-20 relative bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-12">
+      <div class="reveal-up text-center max-w-3xl mx-auto mb-12">
         <span class="text-xs font-bold uppercase tracking-widest text-amber-700">3D Interactive Element #4 • Dynamic 3D Pricing Calculator</span>
         <h2 class="text-3xl sm:text-4xl font-extrabold mt-1 text-slate-900">Transparent Monthly Pricing — Zero Checkout Friction</h2>
         <p class="text-sm sm:text-base text-slate-600 mt-2">
@@ -543,7 +635,7 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         <!-- Left 7 Columns: Tier Cards & Weekly Frequency Slider -->
-        <div class="lg:col-span-7 space-y-6">
+        <div class="reveal-left lg:col-span-7 space-y-6">
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <!-- Group Tier -->
             <button id="tierBtn-group" onclick="selectPricingTier('group')" type="button" class="text-left p-5 rounded-3xl bg-white border-2 border-amber-500 shadow-sm transition-all relative">
@@ -607,7 +699,7 @@
         </div>
 
         <!-- Right 5 Columns: 3D Animated Summary Card -->
-        <div class="lg:col-span-5 perspective-1400">
+        <div class="reveal-right delay-200 lg:col-span-5 perspective-1400">
           <div id="pricing3dCard" class="tilt-card bg-white rounded-3xl p-7 border-2 border-amber-400 shadow-xl shadow-slate-200/80 space-y-6 transition-transform duration-500">
             <div class="flex items-center justify-between border-b border-slate-200 pb-4">
               <div>
@@ -654,10 +746,10 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
         <!-- Left 7 Columns: 3D Stacked-Card Placement Quiz -->
-        <div class="lg:col-span-7 space-y-6">
+        <div class="reveal-left lg:col-span-7 space-y-6">
           <div>
             <span class="text-xs font-bold uppercase tracking-widest text-sky-700">3D Interactive Element #5 • 3D Card-Stack Assessment</span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold mt-1 text-slate-900">Interactive 3D English & Accent Placement Check</h2>
+            <h2 class="text-3xl sm:text-4xl font-extrabold mt-1 text-slate-900">Interactive 3D English &amp; Accent Placement Check</h2>
             <p class="text-sm text-slate-600 mt-1">
               Not sure where you stand? Try this quick 5-card 3D self-check, then send your result to Carys to receive your full complimentary placement evaluation.
             </p>
@@ -669,7 +761,7 @@
         </div>
 
         <!-- Right 5 Columns: 3D Rotating Hardcover E-Guide Mockup -->
-        <div id="eguide" class="lg:col-span-5 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xl shadow-slate-200/60 flex flex-col items-center text-center space-y-6">
+        <div id="eguide" class="reveal-right delay-200 lg:col-span-5 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xl shadow-slate-200/60 flex flex-col items-center text-center space-y-6">
           <span class="text-xs font-bold uppercase tracking-widest text-amber-700">3D Interactive Element #6 • 3D Hardcover Book</span>
           <h3 class="text-2xl font-extrabold text-slate-900">Download Your Free Accent & Fluency E-Guide</h3>
           <p class="text-xs sm:text-sm text-slate-600">
@@ -744,35 +836,35 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
 
         <!-- Left 7 Columns: All 15 FAQs Extracted from accentmade.com -->
-        <div class="lg:col-span-7 space-y-6">
-          <div>
+        <div class="reveal-left lg:col-span-7 space-y-6">
+          <div class="reveal-up">
             <span class="text-xs font-bold uppercase tracking-widest text-amber-700">Complete Site FAQ Inventory</span>
             <h2 class="text-3xl font-extrabold mt-1 text-slate-900">Frequently Asked Questions</h2>
           </div>
 
           <!-- FAQ Filter Buttons -->
-          <div class="flex flex-wrap gap-2">
+          <div class="reveal-up delay-100 flex flex-wrap gap-2">
             <button onclick="filterFaq('all')" id="faqTab-all" type="button" class="px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-bold bg-amber-400 text-slate-950 flex items-center justify-center shadow-xs">
               All Questions (15)
             </button>
             <button onclick="filterFaq('general')" id="faqTab-general" type="button" class="px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-700 flex items-center justify-center shadow-xs">
-              General & Level (4)
+              General &amp; Level (4)
             </button>
             <button onclick="filterFaq('course')" id="faqTab-course" type="button" class="px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-700 flex items-center justify-center shadow-xs">
               Course Details (9)
             </button>
             <button onclick="filterFaq('special')" id="faqTab-special" type="button" class="px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-700 flex items-center justify-center shadow-xs">
-              Private & Exams (2)
+              Private &amp; Exams (2)
             </button>
           </div>
 
-          <div id="faqAccordionList" class="space-y-3">
+          <div id="faqAccordionList" class="reveal-up delay-200 space-y-3">
             <!-- Populated by JS -->
           </div>
         </div>
 
         <!-- Right 5 Columns: Direct Contact & Inquiry Form ("Let's Learn Together!") -->
-        <div id="contact" class="lg:col-span-5">
+        <div id="contact" class="reveal-right delay-300 lg:col-span-5">
           <div class="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-md sticky top-24 space-y-5">
             <div class="flex items-center gap-3">
               <img src="assets/logo.png" alt="Accent Made Logo" class="w-12 h-12 rounded-2xl object-contain border border-slate-200 bg-white shadow-xs shrink-0" />
@@ -1303,34 +1395,41 @@
         return cat === 'all' || c.category.indexOf(cat) !== -1;
       });
 
-      grid.innerHTML = filtered.map(function(c) {
+      grid.innerHTML = filtered.map(function(c, idx) {
         var bullets = c.highlights.map(function(h) {
           return '<li class="flex items-center gap-2 text-xs text-slate-700 font-medium"><span class="text-amber-600 font-bold">✦</span><span>' + h + '</span></li>';
         }).join('');
 
+        var delayClass = 'delay-' + (((idx % 4) + 1) * 100);
+
         return (
-          '<div class="tilt-card bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 hover:border-amber-400 hover:shadow-lg flex flex-col justify-between space-y-5 shadow-xs transition-all">' +
-            '<div class="space-y-3">' +
-              '<div class="flex items-center justify-between gap-2">' +
-                '<span class="px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold">' + c.badge + '</span>' +
-                '<span class="font-mono text-xs text-sky-700 font-bold">' + c.phonetic + '</span>' +
+          '<div class="reveal-up ' + delayClass + '">' +
+            '<div class="tilt-card bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 hover:border-amber-400 hover:shadow-lg flex flex-col justify-between space-y-5 shadow-xs transition-all h-full">' +
+              '<div class="space-y-3">' +
+                '<div class="flex items-center justify-between gap-2">' +
+                  '<span class="px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold">' + c.badge + '</span>' +
+                  '<span class="font-mono text-xs text-sky-700 font-bold">' + c.phonetic + '</span>' +
+                '</div>' +
+                '<h3 class="text-xl sm:text-2xl font-extrabold text-slate-900">' + c.title + '</h3>' +
+                '<div class="text-xs font-bold text-emerald-700">Suitable for: ' + c.audience + '</div>' +
+                '<p class="text-sm text-slate-600 leading-relaxed font-normal">' + c.desc + '</p>' +
+                '<ul class="space-y-1.5 pt-2">' + bullets + '</ul>' +
               '</div>' +
-              '<h3 class="text-xl sm:text-2xl font-extrabold text-slate-900">' + c.title + '</h3>' +
-              '<div class="text-xs font-bold text-emerald-700">Suitable for: ' + c.audience + '</div>' +
-              '<p class="text-sm text-slate-600 leading-relaxed font-normal">' + c.desc + '</p>' +
-              '<ul class="space-y-1.5 pt-2">' + bullets + '</ul>' +
-            '</div>' +
-            '<div class="pt-4 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3">' +
-              '<span class="text-xs text-slate-500 font-medium">Group (€5) • Trio (€10) • 1-on-1</span>' +
-              '<button type="button" onclick="openInquiryModal(\'' + c.title.replace(/'/g, "\\'") + '\')" class="px-4 py-2.5 min-h-[44px] rounded-xl bg-amber-50 border border-amber-300 text-amber-900 hover:bg-amber-400 hover:text-slate-950 font-bold text-xs transition-all flex items-center justify-center">' +
-                'Inquire About Course →' +
-              '</button>' +
+              '<div class="pt-4 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3">' +
+                '<span class="text-xs text-slate-500 font-medium">Group (€5) • Trio (€10) • 1-on-1</span>' +
+                '<button type="button" onclick="openInquiryModal(\'' + c.title.replace(/'/g, "\\'") + '\')" class="px-4 py-2.5 min-h-[44px] rounded-xl bg-amber-50 border border-amber-300 text-amber-900 hover:bg-amber-400 hover:text-slate-950 font-bold text-xs transition-all flex items-center justify-center">' +
+                  'Inquire About Course →' +
+                '</button>' +
+              '</div>' +
             '</div>' +
           '</div>'
         );
       }).join('');
 
       attach3dTiltEvents();
+      if (typeof initScrollReveal === 'function') {
+        initScrollReveal();
+      }
     };
 
     // ==========================================
@@ -1519,8 +1618,9 @@
       });
 
       list.innerHTML = items.map(function(f, idx) {
+        var delayClass = 'delay-' + (((idx % 4) + 1) * 100);
         return (
-          '<div class="bg-white rounded-2xl border border-slate-200 shadow-xs overflow-hidden transition-all">' +
+          '<div class="reveal-up ' + delayClass + ' bg-white rounded-2xl border border-slate-200 shadow-xs overflow-hidden transition-all">' +
             '<button type="button" onclick="toggleFaqItem(' + idx + ')" class="w-full text-left px-5 py-4 flex items-center justify-between gap-3 font-bold text-slate-900 text-sm hover:text-amber-700 transition-colors min-h-[44px]">' +
               '<span>Q. ' + f.q + '</span>' +
               '<span id="faqIcon-' + idx + '" class="text-amber-600 font-bold text-lg leading-none">+</span>' +
@@ -1531,6 +1631,10 @@
           '</div>'
         );
       }).join('');
+
+      if (typeof initScrollReveal === 'function') {
+        initScrollReveal();
+      }
     };
 
     window.toggleFaqItem = function(idx) {
@@ -1671,6 +1775,163 @@
       }, 3200);
     }
 
+    // ==========================================
+    // 10. SCROLL PROGRESS, NAVBAR MORPH & HERO PARALLAX ENGINE
+    // ==========================================
+    function setupScrollEngine() {
+      var header = document.getElementById('mainHeader');
+      var progressBar = document.getElementById('scrollProgressBar');
+      var heroLeft = document.getElementById('heroLeftColumn');
+      var heroPortrait = document.getElementById('heroPortraitParallax');
+      var ticking = false;
+
+      function onScroll() {
+        var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+
+        // 1. Top Scroll Progress Bar
+        if (progressBar) {
+          var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          var progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
+          progressBar.style.width = Math.min(100, Math.max(0, progress)) + '%';
+        }
+
+        // 2. Navbar Scroll Morph
+        if (header) {
+          if (scrollY >= 50) {
+            header.classList.add('header-scrolled');
+          } else {
+            header.classList.remove('header-scrolled');
+          }
+        }
+
+        // 3. Hero Scroll-Out Parallax
+        if (heroLeft || heroPortrait) {
+          var isMobile = window.innerWidth < 768;
+          var factor = isMobile ? 0.5 : 1.0;
+          if (scrollY < window.innerHeight) {
+            if (heroLeft) {
+              var translateY = scrollY * -0.15 * factor;
+              var opacity = Math.max(0, 1 - (scrollY / 700));
+              heroLeft.style.transform = 'translate3d(0, ' + translateY.toFixed(2) + 'px, 0)';
+              heroLeft.style.opacity = opacity.toFixed(3);
+            }
+            if (heroPortrait) {
+              var translateYPortrait = scrollY * 0.12 * factor;
+              heroPortrait.style.transform = 'translate3d(0, ' + translateYPortrait.toFixed(2) + 'px, 0)';
+            }
+          } else {
+            if (heroLeft) {
+              heroLeft.style.transform = 'translate3d(0, 0, 0)';
+              heroLeft.style.opacity = '1';
+            }
+            if (heroPortrait) {
+              heroPortrait.style.transform = 'translate3d(0, 0, 0)';
+            }
+          }
+        }
+
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(onScroll);
+          ticking = true;
+        }
+      }, { passive: true });
+
+      // Initial execution
+      onScroll();
+    }
+
+    // ==========================================
+    // 11. SCROLL REVEAL (INTERSECTION OBSERVER)
+    // ==========================================
+    function initScrollReveal() {
+      var revealElements = document.querySelectorAll('.reveal-up:not(.reveal-visible), .reveal-left:not(.reveal-visible), .reveal-right:not(.reveal-visible)');
+      if (!revealElements.length) return;
+
+      if (!('IntersectionObserver' in window)) {
+        revealElements.forEach(function(el) {
+          el.classList.add('reveal-visible');
+        });
+        return;
+      }
+
+      var observer = new IntersectionObserver(function(entries, obs) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, {
+        rootMargin: '0px 0px -50px 0px',
+        threshold: 0.1
+      });
+
+      revealElements.forEach(function(el) {
+        observer.observe(el);
+      });
+    }
+
+    // ==========================================
+    // 12. NUMBER COUNTERS (INTERSECTION OBSERVER)
+    // ==========================================
+    function animateNumberCounters() {
+      var counters = document.querySelectorAll('.counter[data-target]:not(.counted)');
+      if (!counters.length) return;
+
+      if (!('IntersectionObserver' in window)) {
+        counters.forEach(function(el) {
+          var target = parseFloat(el.getAttribute('data-target')) || 0;
+          var prefix = el.getAttribute('data-prefix') || '';
+          var suffix = el.getAttribute('data-suffix') || '';
+          el.textContent = prefix + target + suffix;
+          el.classList.add('counted');
+        });
+        return;
+      }
+
+      var observer = new IntersectionObserver(function(entries, obs) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var el = entry.target;
+            obs.unobserve(el);
+            el.classList.add('counted');
+            var target = parseFloat(el.getAttribute('data-target')) || 0;
+            var prefix = el.getAttribute('data-prefix') || '';
+            var suffix = el.getAttribute('data-suffix') || '';
+            var duration = 1200;
+            var startTime = null;
+
+            function step(timestamp) {
+              if (!startTime) startTime = timestamp;
+              var elapsed = timestamp - startTime;
+              var progress = Math.min(elapsed / duration, 1);
+              // Cubic ease-out: 1 - (1 - p)^3
+              var easeProgress = 1 - Math.pow(1 - progress, 3);
+              var current = Math.floor(easeProgress * target);
+              el.textContent = prefix + current + suffix;
+              if (progress < 1) {
+                window.requestAnimationFrame(step);
+              } else {
+                el.textContent = prefix + target + suffix;
+              }
+            }
+            window.requestAnimationFrame(step);
+          }
+        });
+      }, {
+        rootMargin: '0px 0px -40px 0px',
+        threshold: 0.2
+      });
+
+      counters.forEach(function(c) {
+        observer.observe(c);
+      });
+    }
+
     // Initialize everything on load
     window.addEventListener('DOMContentLoaded', function() {
       filterCourses('all');
@@ -1678,6 +1939,9 @@
       filterFaq('all');
       attachHeroInstructorParallax();
       attach3dTiltEvents();
+      setupScrollEngine();
+      initScrollReveal();
+      animateNumberCounters();
       setTimeout(initThreeHero, 20);
     });
   </script>
