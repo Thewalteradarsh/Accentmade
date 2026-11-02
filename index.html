@@ -169,6 +169,47 @@
     }
 
 
+    /* 3D Cutout Portrait & Badges */
+    .portrait-3d-shadow {
+      filter: drop-shadow(-15px 20px 25px rgba(0, 0, 0, 0.6));
+      -webkit-filter: drop-shadow(-15px 20px 25px rgba(0, 0, 0, 0.6));
+    }
+
+    @keyframes floatUpDown {
+      0%, 100% {
+        transform: translateZ(60px) translateY(0px);
+      }
+      50% {
+        transform: translateZ(60px) translateY(-14px);
+      }
+    }
+
+    @keyframes floatUpDownDelayed {
+      0%, 100% {
+        transform: translateZ(60px) translateY(0px);
+      }
+      50% {
+        transform: translateZ(60px) translateY(12px);
+      }
+    }
+
+    .badge-float-1 {
+      animation: floatUpDown 4s ease-in-out infinite;
+      will-change: transform;
+    }
+
+    .badge-float-2 {
+      animation: floatUpDownDelayed 4.5s ease-in-out 0.8s infinite;
+      will-change: transform;
+    }
+
+    #heroInstructorCard {
+      transform-style: preserve-3d;
+      perspective: 1000px;
+      transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+      will-change: transform;
+    }
+
   </style>
 </head>
 <body class="min-h-screen selection:bg-amber-100 selection:text-amber-900 bg-white text-slate-900">
@@ -301,59 +342,44 @@
           </div>
         </div>
 
-        <!-- Right Column: Interactive 3D Perspective-Tilt Instructor Studio Card -->
-        <div class="lg:col-span-5 flex justify-center perspective-1400 w-full mt-2 lg:mt-0">
-          <div id="heroInstructorCard" class="tilt-card relative w-full max-w-md bg-white rounded-3xl p-5 sm:p-6 shadow-xl shadow-slate-200/70 border border-slate-200/90">
-            <!-- Floating 3D Phonetic Badge Top-Left -->
-            <div class="float-badge absolute -top-4 left-1 sm:-left-5 px-3.5 py-2 rounded-2xl bg-white/95 border border-sky-300 shadow-lg flex items-center gap-2 z-20 max-w-[calc(100%-1rem)] sm:max-w-none">
-              <span class="text-sky-700 font-mono font-bold text-xs sm:text-sm shrink-0">/ˈæk.sənt/</span>
-              <span class="text-[10px] sm:text-[11px] text-slate-700 font-medium truncate sm:overflow-visible">RP & Modern British</span>
-            </div>
+        <!-- Right Column: Interactive 3D Parallax Cutout Portrait -->
+        <div id="heroInstructorWrapper" class="lg:col-span-5 flex justify-center items-end w-full mt-4 lg:mt-0 relative perspective-1000">
+          <div id="heroInstructorCard" class="relative w-full max-w-sm sm:max-w-md lg:max-w-none flex flex-col items-center justify-end" style="transform-style: preserve-3d; perspective: 1000px;">
 
-            <!-- Floating 3D Credential Badge Bottom-Right -->
-            <div class="float-badge-delayed absolute -bottom-4 right-1 sm:-right-4 px-3.5 py-2 rounded-2xl bg-white/95 border border-amber-300 shadow-lg flex items-center gap-2 z-20 max-w-[calc(100%-1rem)] sm:max-w-none">
-              <span class="text-amber-600 text-xs sm:text-sm shrink-0">🎓</span>
-              <span class="text-[10px] sm:text-xs font-bold text-slate-800 truncate sm:overflow-visible">MA • BA (Hons) • CELTA • TEFL</span>
-            </div>
+            <!-- Layer 2 (Front): Glassmorphic Badges Over Shoulder (Z: 60px) -->
+            <div class="absolute top-4 sm:top-8 left-1 sm:left-4 lg:-left-4 z-30 flex flex-col gap-2.5 sm:gap-3 pointer-events-auto" style="transform-style: preserve-3d; transform: translateZ(60px);">
+              <!-- Badge 1: Phonetic RP & Modern British -->
+              <div class="badge-float-1 px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-2xl bg-white/85 backdrop-blur-md border border-white/80 shadow-lg shadow-sky-950/10 flex items-center gap-2 select-none">
+                <span class="text-sky-700 font-mono font-bold text-xs sm:text-sm shrink-0">/ˈæk.sənt/</span>
+                <span class="text-[11px] sm:text-xs text-slate-700 font-semibold whitespace-nowrap">RP &amp; Modern British</span>
+              </div>
 
-            <!-- Instructor Portrait with 3D Depth -->
-            <div class="relative rounded-2xl overflow-hidden aspect-square mb-5 border border-slate-200 shadow-inner tilt-depth-20">
-              <img src="assets/carys_portrait.jpg" alt="Carys George — Accredited British English Language Trainer" class="w-full h-full object-cover" />
-              <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent p-4">
-                <div class="flex items-center justify-between">
-                  <div>
-                    <h2 class="text-lg font-bold text-white">Carys George</h2>
-                    <p class="text-xs text-amber-300 font-medium">Accredited English Language Trainer (UK)</p>
-                  </div>
-                  <span class="px-2.5 py-1 rounded-full bg-emerald-500/25 border border-emerald-400/50 text-emerald-300 text-[11px] font-bold">
-                    Accepting Students
-                  </span>
-                </div>
+              <!-- Badge 2: CELTA Qualified -->
+              <div class="badge-float-2 px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-2xl bg-white/85 backdrop-blur-md border border-white/80 shadow-lg shadow-amber-950/10 flex items-center gap-2 select-none">
+                <span class="text-amber-600 text-xs sm:text-sm shrink-0">🎓</span>
+                <span class="text-[11px] sm:text-xs font-bold text-slate-800 whitespace-nowrap">CELTA Qualified • UK Native</span>
               </div>
             </div>
 
-            <!-- Included In Every Class Mini-Grid -->
-            <div class="space-y-2.5 tilt-depth-40">
-              <div class="text-xs font-bold uppercase tracking-wider text-slate-500">Included in Every Class Package:</div>
-              <div class="grid grid-cols-2 gap-2 text-xs">
-                <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 flex items-center gap-2 font-medium">
-                  <span class="text-amber-600">🎯</span>
-                  <span>Free Placement Test</span>
-                </div>
-                <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 flex items-center gap-2 font-medium">
-                  <span class="text-sky-600">📝</span>
-                  <span>Weekly Homework</span>
-                </div>
-                <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 flex items-center gap-2 font-medium">
-                  <span class="text-emerald-600">💬</span>
-                  <span>WhatsApp Support</span>
-                </div>
-                <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 flex items-center gap-2 font-medium">
-                  <span class="text-purple-600">🏅</span>
-                  <span>Course Certificate</span>
-                </div>
+            <!-- Floating Status Pill Bottom-Right (Z: 40px) -->
+            <div class="absolute bottom-3 sm:bottom-6 right-2 sm:right-4 lg:-right-2 z-30 px-3.5 py-2 rounded-2xl bg-white/90 backdrop-blur-md border border-white/80 shadow-lg shadow-slate-900/10 flex items-center gap-2 select-none" style="transform-style: preserve-3d; transform: translateZ(40px);">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <div class="flex flex-col">
+                <span class="text-xs font-extrabold text-slate-900 leading-tight">Carys George</span>
+                <span class="text-[10px] text-amber-700 font-semibold leading-tight">Accredited UK Trainer</span>
               </div>
             </div>
+
+            <!-- Layer 1 (Middle): Transparent Cutout Portrait with Strong Drop Shadow (Z: 20px) -->
+            <div class="relative z-10 flex items-end justify-center w-full" style="transform-style: preserve-3d; transform: translateZ(20px);">
+              <img
+                src="assets/carys-portrait.png"
+                alt="Carys George — Accredited British English Language Trainer"
+                class="w-auto h-[45vh] max-h-[400px] md:h-[50vh] md:max-h-[500px] lg:h-[75vh] lg:max-h-[680px] object-contain object-bottom select-none pointer-events-none portrait-3d-shadow"
+                loading="eager"
+              />
+            </div>
+
           </div>
         </div>
       </div>
@@ -1205,12 +1231,59 @@
     };
 
     // ==========================================
-    // 3. 3D PERSPECTIVE TILT EFFECT FOR CARDS
+    // 3. 3D PARALLAX CUTOUT PORTRAIT (DESKTOP MOUSE-TRACKING & MOBILE TOUCH GUARD)
+    // ==========================================
+    function attachHeroInstructorParallax() {
+      var card = document.getElementById('heroInstructorCard');
+      var wrapper = document.getElementById('heroInstructorWrapper') || card;
+      if (!card || !wrapper) return;
+
+      function canHover() {
+        return window.innerWidth >= 1024 && window.matchMedia('(hover: hover)').matches;
+      }
+
+      function handleMouseMove(e) {
+        if (!canHover()) return;
+        var rect = card.getBoundingClientRect();
+        var centerX = rect.left + rect.width / 2;
+        var centerY = rect.top + rect.height / 2;
+
+        var deltaX = (e.clientX - centerX) / (rect.width / 2);
+        var deltaY = (e.clientY - centerY) / (rect.height / 2);
+
+        deltaX = Math.max(-1, Math.min(1, deltaX));
+        deltaY = Math.max(-1, Math.min(1, deltaY));
+
+        // Subtle rotateX & rotateY (max 8 degrees)
+        var maxDegrees = 8;
+        var rotateX = -deltaY * maxDegrees;
+        var rotateY = deltaX * maxDegrees;
+
+        card.style.transform = 'perspective(1000px) rotateX(' + rotateX.toFixed(2) + 'deg) rotateY(' + rotateY.toFixed(2) + 'deg)';
+      }
+
+      function handleMouseLeave() {
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+      }
+
+      wrapper.addEventListener('mousemove', handleMouseMove);
+      wrapper.addEventListener('mouseleave', handleMouseLeave);
+
+      window.addEventListener('resize', function() {
+        if (!canHover()) {
+          card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+        }
+      });
+    }
+
+    // ==========================================
+    // 3B. 3D PERSPECTIVE TILT EFFECT FOR OTHER CARDS
     // ==========================================
     function attach3dTiltEvents() {
       var cards = document.querySelectorAll('.tilt-card');
       cards.forEach(function(card) {
         card.addEventListener('mousemove', function(e) {
+          if (!window.matchMedia('(hover: hover)').matches) return;
           var rect = card.getBoundingClientRect();
           var x = e.clientX - rect.left;
           var y = e.clientY - rect.top;
@@ -1625,6 +1698,7 @@
       filterCourses('all');
       renderQuizStack();
       filterFaq('all');
+      attachHeroInstructorParallax();
       attach3dTiltEvents();
       setTimeout(initThreeHero, 20);
     });
