@@ -283,16 +283,16 @@
   <div id="scrollProgressBar" class="fixed top-0 left-0 h-[3px] bg-black z-[60] pointer-events-none transition-[width] duration-75" style="width: 0%;"></div>
 
   <!-- Split-Aware Transparent Navigation (Tomasz Gajda Reference with Scroll Morph) -->
-  <header id="mainHeader" class="fixed top-0 inset-x-0 z-50 bg-transparent px-4 py-3.5 sm:px-8 sm:py-6 lg:px-16 transition-all duration-300">
-    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+  <header id="mainHeader" class="fixed top-0 inset-x-0 z-50 bg-transparent px-4 py-3.5 sm:px-10 lg:px-20 transition-all duration-300">
+    <div class="max-w-[1440px] mx-auto flex items-center justify-between gap-4">
       <!-- Left Brand (Positioned Over #D7D7D7 Background) -->
       <a href="#hero" class="flex items-center gap-2.5 sm:gap-3 group shrink-0 min-h-[44px]">
         <img src="assets/logo.png" alt="Accent Made Logo" class="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-xl object-contain border border-black/15 shadow-xs bg-white p-0.5 group-hover:scale-105 transition-transform" />
         <span class="font-['Montserrat'] font-extrabold tracking-tight text-base sm:text-2xl text-[#000000] leading-none whitespace-nowrap">Accent Made</span>
       </a>
 
-      <!-- Desktop Nav & Action (Positioned over Right Black Diagonal) -->
-      <div class="hidden lg:flex items-center gap-8">
+      <!-- Desktop Nav & Action (Grouped Right Inside Black Diagonal) -->
+      <div class="hidden lg:flex ml-auto items-center gap-7 lg:pr-4">
         <nav class="flex items-center gap-7 text-sm font-semibold font-['Montserrat'] tracking-wide">
           <a href="#about" class="text-white hover:text-neutral-300 transition-colors py-2">Credentials</a>
           <a href="#courses" class="text-white hover:text-neutral-300 transition-colors py-2">Courses</a>
@@ -301,7 +301,7 @@
           <a href="#faq" class="text-white hover:text-neutral-300 transition-colors py-2">FAQ</a>
         </nav>
 
-        <button id="headerCtaBtn" onclick="openInquiryModal('Free Language Evaluation Request')" type="button" class="bg-white text-black font-['Montserrat'] font-bold uppercase text-xs tracking-wider px-6 py-3 rounded-full hover:bg-neutral-200 transition-all duration-200 shadow-sm active:scale-95">
+        <button id="headerCtaBtn" onclick="openInquiryModal('Free Language Evaluation Request')" type="button" class="bg-white text-black font-['Montserrat'] font-bold uppercase text-xs tracking-wider px-6 py-3 rounded-full hover:bg-neutral-200 transition-all duration-200 shadow-sm active:scale-95 shrink-0">
           FREE EVALUATION
         </button>
       </div>
@@ -342,33 +342,33 @@
     </div>
 
     <!-- Black Right Diagonal Panel (Desktop) -->
-    <div class="absolute inset-y-0 right-0 w-[56%] bg-black z-10 pointer-events-none hidden lg:block" style="clip-path: polygon(18% 0, 100% 0, 100% 100%, 0% 100%); -webkit-clip-path: polygon(18% 0, 100% 0, 100% 100%, 0% 100%);"></div>
+    <div class="absolute inset-y-0 right-0 lg:w-[54%] bg-black z-10 pointer-events-none hidden lg:block" style="clip-path: polygon(16% 0, 100% 0, 100% 100%, 0% 100%); -webkit-clip-path: polygon(16% 0, 100% 0, 100% 100%, 0% 100%);"></div>
 
     <!-- Black Bottom Diagonal Panel (Mobile & Tablet) -->
     <div class="absolute inset-x-0 bottom-0 h-[38svh] sm:h-[42svh] w-full bg-black z-10 pointer-events-none lg:hidden" style="clip-path: polygon(0 22%, 100% 0, 100% 100%, 0% 100%); -webkit-clip-path: polygon(0 22%, 100% 0, 100% 100%, 0% 100%);"></div>
 
     <!-- Content Container -->
-    <div class="max-w-7xl mx-auto w-full px-5 sm:px-8 lg:px-16 relative z-20 flex flex-col justify-between lg:grid lg:grid-cols-12 lg:items-center min-h-[100svh] lg:min-h-screen">
+    <div class="max-w-[1440px] mx-auto w-full px-5 sm:px-10 lg:px-20 relative z-20 flex flex-col justify-between lg:grid lg:grid-cols-12 lg:items-center min-h-[100svh] lg:min-h-screen">
 
       <!-- Left Column: Typography & CTAs (on #D7D7D7 Background) -->
       <div id="heroLeftColumn" class="lg:col-span-6 pt-20 pb-4 sm:pt-24 md:pt-28 md:pb-8 lg:py-0 flex flex-col justify-center will-change-transform">
         <!-- 1. Intro Line -->
-        <p class="font-['Raleway'] font-bold text-[#000000] text-xl md:text-[36px] leading-tight mb-1 md:mb-3">
+        <p class="font-['Raleway'] font-bold text-[#000000] text-xl md:text-2xl lg:text-[34px] leading-tight mb-1 md:mb-2">
           Hi, I am
         </p>
 
         <!-- 2. Main Name Heading -->
-        <h1 class="font-['Raleway'] font-extrabold text-[#000000] text-[42px] sm:text-6xl xl:text-[72px] tracking-tight leading-[1.05] mb-2 md:mb-3">
+        <h1 class="font-['Raleway'] font-extrabold text-[#000000] text-[42px] sm:text-6xl lg:text-[68px] xl:text-[76px] tracking-tight leading-[1.02] mb-2 md:mb-3">
           Carys George
         </h1>
 
         <!-- 3. Role / Value Subtitle -->
-        <p class="font-['Montserrat'] font-bold text-[#808080] text-sm sm:text-lg md:text-[21px] leading-snug mb-3 md:mb-5">
+        <p class="font-['Montserrat'] font-bold text-[#808080] text-sm sm:text-base lg:text-[19px] leading-snug mb-3 md:mb-5 max-w-[420px]">
           Native UK Accredited Trainer / CELTA &amp; UAE Military Specialist
         </p>
 
         <!-- 4. Concise Secondary Copy -->
-        <p class="font-['Montserrat'] font-medium text-neutral-700 text-xs sm:text-sm md:text-base max-w-md mb-4 md:mb-7 leading-relaxed">
+        <p class="font-['Montserrat'] font-medium text-neutral-700 text-xs sm:text-sm lg:text-[15px] max-w-[400px] mb-4 md:mb-7 leading-relaxed">
           Master British clarity, fluency &amp; accent confidence. 10+ years global experience with tailored Group (€5/class) and 1-on-1 coaching.
         </p>
 
@@ -411,13 +411,13 @@
       </div>
 
       <!-- Right Column: Carys Portrait Anchored on the Black Diagonal -->
-      <div id="heroInstructorWrapper" class="lg:col-span-6 relative h-[38svh] sm:h-[42svh] lg:h-full w-full flex items-end justify-center lg:justify-end self-end z-20">
+      <div id="heroInstructorWrapper" class="lg:col-span-6 relative h-[38svh] sm:h-[42svh] lg:h-full w-full flex items-end justify-center lg:justify-end self-end z-20 lg:pr-12 xl:pr-20">
         <div id="heroPortraitParallax" class="w-full flex justify-center lg:justify-end items-end will-change-transform">
           <div id="heroInstructorCard" class="relative w-full flex justify-center lg:justify-end items-end" style="transform-style: preserve-3d; perspective: 1000px;">
             <img
               src="assets/carys-portrait.png"
               alt="Carys George — Native UK British English Language Trainer"
-              class="-mt-10 sm:-mt-14 lg:mt-0 w-auto h-[38svh] max-h-[320px] sm:h-[42svh] sm:max-h-[380px] lg:h-[84vh] lg:max-h-[780px] object-contain object-bottom select-none drop-shadow-[0_20px_30px_rgba(0,0,0,0.85)] pointer-events-none"
+              class="-mt-10 sm:-mt-14 lg:mt-0 w-auto h-[38svh] max-h-[320px] sm:h-[42svh] sm:max-h-[380px] lg:h-[86vh] lg:max-h-[820px] object-contain object-bottom select-none drop-shadow-[0_20px_30px_rgba(0,0,0,0.85)] pointer-events-none"
               loading="eager"
             />
           </div>
