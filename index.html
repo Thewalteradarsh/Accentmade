@@ -292,8 +292,8 @@
       </a>
 
       <!-- Desktop Nav & Action (Grouped Right Inside Black Diagonal) -->
-      <div class="hidden lg:flex ml-auto items-center gap-7 lg:pr-4">
-        <nav class="flex items-center gap-7 text-sm font-semibold font-['Montserrat'] tracking-wide">
+      <div class="hidden lg:flex ml-auto items-center gap-5 xl:gap-7 lg:pr-4">
+        <nav class="flex items-center gap-5 xl:gap-7 text-[13px] xl:text-sm font-semibold font-['Montserrat'] tracking-wide">
           <a href="#about" class="text-white hover:text-neutral-300 transition-colors py-2">Credentials</a>
           <a href="#courses" class="text-white hover:text-neutral-300 transition-colors py-2">Courses</a>
           <a href="#pricing" class="text-white hover:text-neutral-300 transition-colors py-2">Estimator</a>
@@ -301,17 +301,17 @@
           <a href="#faq" class="text-white hover:text-neutral-300 transition-colors py-2">FAQ</a>
         </nav>
 
-        <button id="headerCtaBtn" onclick="openInquiryModal('Free Language Evaluation Request')" type="button" class="bg-white text-black font-['Montserrat'] font-bold uppercase text-xs tracking-wider px-6 py-3 rounded-full hover:bg-neutral-200 transition-all duration-200 shadow-sm active:scale-95 shrink-0">
+        <button id="headerCtaBtn" onclick="openInquiryModal('Free Language Evaluation Request')" type="button" class="bg-white text-black font-['Montserrat'] font-bold uppercase text-[11px] xl:text-xs tracking-wider px-5 py-2.5 xl:px-6 xl:py-3 rounded-full hover:bg-neutral-200 transition-all duration-200 shadow-sm active:scale-95 shrink-0">
           FREE EVALUATION
         </button>
       </div>
 
       <!-- Mobile Right Actions -->
       <div class="flex items-center gap-2 lg:hidden">
-        <button onclick="openInquiryModal('Free Language Evaluation Request')" type="button" class="px-3.5 py-1.5 rounded-full bg-black text-white font-['Montserrat'] font-bold text-[11px] uppercase tracking-wider shadow-sm hover:bg-neutral-800 transition active:scale-95">
+        <button onclick="openInquiryModal('Free Language Evaluation Request')" type="button" class="min-h-[40px] px-4 flex items-center justify-center rounded-full bg-black text-white font-['Montserrat'] font-bold text-[11px] uppercase tracking-wider shadow-sm hover:bg-neutral-800 transition active:scale-95">
           Evaluation
         </button>
-        <button id="mobileMenuBtn" onclick="toggleMobileMenu()" type="button" class="min-h-[38px] min-w-[38px] p-2 rounded-xl border border-black/20 bg-white/90 text-black flex items-center justify-center shadow-xs active:scale-95" aria-label="Toggle Menu" aria-expanded="false">
+        <button id="mobileMenuBtn" onclick="toggleMobileMenu()" type="button" class="min-h-[44px] min-w-[44px] p-2.5 rounded-xl border border-black/20 bg-white/90 text-black flex items-center justify-center shadow-xs active:scale-95" aria-label="Toggle Menu" aria-expanded="false">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
@@ -342,33 +342,33 @@
     </div>
 
     <!-- Black Right Diagonal Panel (Desktop) -->
-    <div class="absolute inset-y-0 right-0 lg:w-[54%] bg-black z-10 pointer-events-none hidden lg:block" style="clip-path: polygon(16% 0, 100% 0, 100% 100%, 0% 100%); -webkit-clip-path: polygon(16% 0, 100% 0, 100% 100%, 0% 100%);"></div>
+    <div class="absolute inset-y-0 right-0 lg:w-[58%] xl:w-[56%] bg-black z-10 pointer-events-none hidden lg:block" style="clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%); -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);"></div>
 
     <!-- Black Bottom Diagonal Panel (Mobile & Tablet) -->
-    <div class="absolute inset-x-0 bottom-0 h-[38svh] sm:h-[42svh] w-full bg-black z-10 pointer-events-none lg:hidden" style="clip-path: polygon(0 22%, 100% 0, 100% 100%, 0% 100%); -webkit-clip-path: polygon(0 22%, 100% 0, 100% 100%, 0% 100%);"></div>
+    <div class="absolute inset-x-0 bottom-0 h-[36svh] sm:h-[42svh] w-full bg-black z-10 pointer-events-none lg:hidden" style="clip-path: polygon(0 22%, 100% 0, 100% 100%, 0% 100%); -webkit-clip-path: polygon(0 22%, 100% 0, 100% 100%, 0% 100%);"></div>
 
     <!-- Content Container -->
     <div class="max-w-[1440px] mx-auto w-full px-5 sm:px-10 lg:px-20 relative z-20 flex flex-col justify-between lg:grid lg:grid-cols-12 lg:items-center min-h-[100svh] lg:min-h-screen">
 
       <!-- Left Column: Typography & CTAs (on #D7D7D7 Background) -->
-      <div id="heroLeftColumn" class="lg:col-span-6 pt-20 pb-4 sm:pt-24 md:pt-28 md:pb-8 lg:py-0 flex flex-col justify-center will-change-transform">
+      <div id="heroLeftColumn" class="lg:col-span-6 pt-16 sm:pt-20 pb-2 md:pt-24 md:pb-6 lg:py-0 flex flex-col justify-center will-change-transform">
         <!-- 1. Intro Line -->
-        <p class="font-['Raleway'] font-bold text-[#000000] text-xl md:text-2xl lg:text-[34px] leading-tight mb-1 md:mb-2">
+        <p class="font-['Raleway'] font-bold text-[#000000] text-xl lg:text-[26px] xl:text-[34px] leading-tight mb-1.5">
           Hi, I am
         </p>
 
         <!-- 2. Main Name Heading -->
-        <h1 class="font-['Raleway'] font-extrabold text-[#000000] text-[42px] sm:text-6xl lg:text-[68px] xl:text-[76px] tracking-tight leading-[1.02] mb-2 md:mb-3">
+        <h1 class="font-['Raleway'] font-extrabold text-[#000000] text-[42px] sm:text-5xl lg:text-[52px] xl:text-[68px] 2xl:text-[74px] tracking-tight leading-[1.03] mb-2.5">
           Carys George
         </h1>
 
         <!-- 3. Role / Value Subtitle -->
-        <p class="font-['Montserrat'] font-bold text-[#808080] text-sm sm:text-base lg:text-[19px] leading-snug mb-3 md:mb-5 max-w-[420px]">
+        <p class="font-['Montserrat'] font-bold text-[#808080] text-sm lg:text-[16px] xl:text-[19px] lg:max-w-[350px] xl:max-w-[420px] leading-snug mb-4">
           Native UK Accredited Trainer / CELTA &amp; UAE Military Specialist
         </p>
 
         <!-- 4. Concise Secondary Copy -->
-        <p class="font-['Montserrat'] font-medium text-neutral-700 text-xs sm:text-sm lg:text-[15px] max-w-[400px] mb-4 md:mb-7 leading-relaxed">
+        <p class="font-['Montserrat'] font-medium text-neutral-700 text-xs lg:text-[14px] xl:text-[15px] lg:max-w-[340px] xl:max-w-[400px] leading-relaxed mb-6">
           Master British clarity, fluency &amp; accent confidence. 10+ years global experience with tailored Group (€5/class) and 1-on-1 coaching.
         </p>
 
@@ -411,13 +411,13 @@
       </div>
 
       <!-- Right Column: Carys Portrait Anchored on the Black Diagonal -->
-      <div id="heroInstructorWrapper" class="lg:col-span-6 relative h-[38svh] sm:h-[42svh] lg:h-full w-full flex items-end justify-center lg:justify-end self-end z-20 lg:pr-12 xl:pr-20">
+      <div id="heroInstructorWrapper" class="lg:col-span-6 relative h-[36svh] sm:h-[42svh] lg:h-full w-full flex items-end justify-center lg:justify-end self-end z-20 lg:pr-12 xl:pr-20">
         <div id="heroPortraitParallax" class="w-full flex justify-center lg:justify-end items-end will-change-transform">
           <div id="heroInstructorCard" class="relative w-full flex justify-center lg:justify-end items-end" style="transform-style: preserve-3d; perspective: 1000px;">
             <img
               src="assets/carys-portrait.png"
               alt="Carys George — Native UK British English Language Trainer"
-              class="-mt-10 sm:-mt-14 lg:mt-0 w-auto h-[38svh] max-h-[320px] sm:h-[42svh] sm:max-h-[380px] lg:h-[86vh] lg:max-h-[820px] object-contain object-bottom select-none drop-shadow-[0_20px_30px_rgba(0,0,0,0.85)] pointer-events-none"
+              class="-mt-10 sm:-mt-14 lg:mt-0 w-auto h-[36svh] max-h-[310px] sm:h-[42svh] sm:max-h-[380px] lg:h-[86vh] lg:max-h-[820px] object-contain object-bottom select-none drop-shadow-[0_20px_30px_rgba(0,0,0,0.85)] pointer-events-none"
               loading="eager"
             />
           </div>
@@ -428,14 +428,14 @@
   </section>
 
   <!-- SECTION 2: 3D FLIP CREDENTIALS & INTERNATIONAL EXPERIENCE -->
-  <section id="about" class="py-20 relative bg-white">
+  <section id="about" class="py-24 relative bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="reveal-up flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
         <div>
-          <span class="text-xs font-bold uppercase tracking-widest text-amber-700">3D Interactive Element #2 • Flip Cards</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold mt-1 text-slate-900">Meet Carys George &amp; Flip Her Credentials in 3D</h2>
+          <span class="text-xs font-bold uppercase tracking-widest text-neutral-500 font-['Montserrat']">Credentials &amp; Pedigree</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-1 text-black font-['Raleway'] tracking-tight">Meet Carys George &amp; Flip Her Credentials in 3D</h2>
         </div>
-        <p class="text-sm text-slate-600 max-w-md">
+        <p class="text-sm text-neutral-600 max-w-md font-['Montserrat'] leading-relaxed">
           Click or tap any qualification card below to rotate it 180° in 3D space and see how Carys's background shapes your training.
         </p>
       </div>
@@ -447,27 +447,27 @@
           <div class="flip-card h-72 perspective-1000 cursor-pointer" onclick="toggleFlipCard(this)">
             <div class="flip-card-inner relative w-full h-full">
               <!-- Front -->
-              <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-slate-200/90 shadow-md hover:border-amber-400 hover:shadow-lg transition-all">
-                <div class="w-12 h-12 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-center text-2xl">
+              <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-neutral-200 shadow-sm hover:border-black hover:shadow-md transition-all">
+                <div class="w-12 h-12 rounded-2xl bg-[#F4F4F4] border border-neutral-200 flex items-center justify-center text-2xl">
                   🏛️
                 </div>
                 <div>
-                  <div class="text-xs font-bold text-amber-800 uppercase tracking-wider">Cambridge Qualified</div>
-                  <h3 class="text-xl font-extrabold text-slate-900 mt-1">CELTA Certified Trainer</h3>
-                  <p class="text-xs text-slate-600 mt-2">Cambridge English Language Teaching to Adults</p>
+                  <div class="text-xs font-bold text-neutral-500 uppercase tracking-wider font-['Montserrat']">Cambridge Qualified</div>
+                  <h3 class="text-xl font-extrabold text-black mt-1 font-['Raleway'] tracking-tight">CELTA Certified Trainer</h3>
+                  <p class="text-xs text-neutral-600 mt-2 font-['Montserrat']">Cambridge English Language Teaching to Adults</p>
                 </div>
-                <div class="text-xs font-bold text-sky-700 flex items-center justify-between pt-2 border-t border-slate-100">
+                <div class="text-xs font-bold text-black flex items-center justify-between pt-2 border-t border-neutral-100 font-['Montserrat']">
                   <span>Tap to flip in 3D</span>
                   <span>↻ 180°</span>
                 </div>
               </div>
               <!-- Back -->
-              <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-amber-50 border-2 border-amber-400 shadow-lg flex flex-col justify-between">
-                <div class="text-xs font-extrabold uppercase tracking-wider text-amber-900">Why CELTA Matters for You</div>
-                <p class="text-sm text-slate-800 leading-relaxed font-medium">
+              <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-black border-2 border-neutral-800 shadow-xl flex flex-col justify-between font-['Montserrat']">
+                <div class="text-xs font-extrabold uppercase tracking-wider text-amber-400">Why CELTA Matters for You</div>
+                <p class="text-sm text-neutral-200 leading-relaxed font-medium">
                   Issued by Cambridge Assessment English, CELTA is the gold-standard qualification for teaching adult learners—ensuring every lesson is diagnostic, communicative, and tailored to your exact fluency goals.
                 </p>
-                <div class="text-xs text-amber-900 font-bold">✓ Elementary to C2 Advanced Adults</div>
+                <div class="text-xs text-amber-300 font-bold">✓ Elementary to C2 Advanced Adults</div>
               </div>
             </div>
           </div>
@@ -478,27 +478,27 @@
           <div class="flip-card h-72 perspective-1000 cursor-pointer" onclick="toggleFlipCard(this)">
             <div class="flip-card-inner relative w-full h-full">
               <!-- Front -->
-              <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-slate-200/90 shadow-md hover:border-sky-400 hover:shadow-lg transition-all">
-                <div class="w-12 h-12 rounded-2xl bg-sky-50 border border-sky-200 flex items-center justify-center text-2xl">
+              <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-neutral-200 shadow-sm hover:border-black hover:shadow-md transition-all">
+                <div class="w-12 h-12 rounded-2xl bg-[#F4F4F4] border border-neutral-200 flex items-center justify-center text-2xl">
                   🌍
                 </div>
                 <div>
-                  <div class="text-xs font-bold text-sky-800 uppercase tracking-wider">Dubai & Global Career</div>
-                  <h3 class="text-xl font-extrabold text-slate-900 mt-1">5+ Years in Dubai (UAE)</h3>
-                  <p class="text-xs text-slate-600 mt-2">Trained UAE Military, Police & Navy Personnel</p>
+                  <div class="text-xs font-bold text-neutral-500 uppercase tracking-wider font-['Montserrat']">Dubai &amp; Global Career</div>
+                  <h3 class="text-xl font-extrabold text-black mt-1 font-['Raleway'] tracking-tight">5+ Years in Dubai (UAE)</h3>
+                  <p class="text-xs text-neutral-600 mt-2 font-['Montserrat']">Trained UAE Military, Police &amp; Navy Personnel</p>
                 </div>
-                <div class="text-xs font-bold text-sky-700 flex items-center justify-between pt-2 border-t border-slate-100">
+                <div class="text-xs font-bold text-black flex items-center justify-between pt-2 border-t border-neutral-100 font-['Montserrat']">
                   <span>Tap to flip in 3D</span>
                   <span>↻ 180°</span>
                 </div>
               </div>
               <!-- Back -->
-              <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-sky-50 border-2 border-sky-400 shadow-lg flex flex-col justify-between">
-                <div class="text-xs font-extrabold uppercase tracking-wider text-sky-900">High-Performance Coaching</div>
-                <p class="text-sm text-slate-800 leading-relaxed font-medium">
+              <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-black border-2 border-neutral-800 shadow-xl flex flex-col justify-between font-['Montserrat']">
+                <div class="text-xs font-extrabold uppercase tracking-wider text-amber-400">High-Performance Coaching</div>
+                <p class="text-sm text-neutral-200 leading-relaxed font-medium">
                   Over 10 years of industry teaching experience across nationalities, including 5+ years in Dubai delivering disciplined, results-driven English and pronunciation coaching to the UAE military, police, and navy.
                 </p>
-                <div class="text-xs text-sky-900 font-bold">✓ Speaking, Listening, Reading & Writing</div>
+                <div class="text-xs text-amber-300 font-bold">✓ Speaking, Listening, Reading &amp; Writing</div>
               </div>
             </div>
           </div>
@@ -509,27 +509,27 @@
           <div class="flip-card h-72 perspective-1000 cursor-pointer" onclick="toggleFlipCard(this)">
             <div class="flip-card-inner relative w-full h-full">
               <!-- Front -->
-              <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-slate-200/90 shadow-md hover:border-purple-400 hover:shadow-lg transition-all">
-                <div class="w-12 h-12 rounded-2xl bg-purple-50 border border-purple-200 flex items-center justify-center text-2xl">
+              <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-neutral-200 shadow-sm hover:border-black hover:shadow-md transition-all">
+                <div class="w-12 h-12 rounded-2xl bg-[#F4F4F4] border border-neutral-200 flex items-center justify-center text-2xl">
                   💼
                 </div>
                 <div>
-                  <div class="text-xs font-bold text-purple-800 uppercase tracking-wider">Postgraduate Degree</div>
-                  <h3 class="text-xl font-extrabold text-slate-900 mt-1">Master's in Business & HRM</h3>
-                  <p class="text-xs text-slate-600 mt-2">Executive & Workplace English Mastery</p>
+                  <div class="text-xs font-bold text-neutral-500 uppercase tracking-wider font-['Montserrat']">Postgraduate Degree</div>
+                  <h3 class="text-xl font-extrabold text-black mt-1 font-['Raleway'] tracking-tight">Master's in Business &amp; HRM</h3>
+                  <p class="text-xs text-neutral-600 mt-2 font-['Montserrat']">Executive &amp; Workplace English Mastery</p>
                 </div>
-                <div class="text-xs font-bold text-sky-700 flex items-center justify-between pt-2 border-t border-slate-100">
+                <div class="text-xs font-bold text-black flex items-center justify-between pt-2 border-t border-neutral-100 font-['Montserrat']">
                   <span>Tap to flip in 3D</span>
                   <span>↻ 180°</span>
                 </div>
               </div>
               <!-- Back -->
-              <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-purple-50 border-2 border-purple-400 shadow-lg flex flex-col justify-between">
-                <div class="text-xs font-extrabold uppercase tracking-wider text-purple-900">Career & Interview Edge</div>
-                <p class="text-sm text-slate-800 leading-relaxed font-medium">
+              <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-black border-2 border-neutral-800 shadow-xl flex flex-col justify-between font-['Montserrat']">
+                <div class="text-xs font-extrabold uppercase tracking-wider text-amber-400">Career &amp; Interview Edge</div>
+                <p class="text-sm text-neutral-200 leading-relaxed font-medium">
                   With a Master's in Business and Human Resource Management, Carys coaches professionals on job interviews, boardroom presentations, executive negotiations, and leadership communication.
                 </p>
-                <div class="text-xs text-purple-900 font-bold">✓ Ideal for Corporate Professionals</div>
+                <div class="text-xs text-amber-300 font-bold">✓ Ideal for Corporate Professionals</div>
               </div>
             </div>
           </div>
@@ -540,27 +540,27 @@
           <div class="flip-card h-72 perspective-1000 cursor-pointer" onclick="toggleFlipCard(this)">
             <div class="flip-card-inner relative w-full h-full">
               <!-- Front -->
-              <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-slate-200/90 shadow-md hover:border-emerald-400 hover:shadow-lg transition-all">
-                <div class="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-2xl">
+              <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-neutral-200 shadow-sm hover:border-black hover:shadow-md transition-all">
+                <div class="w-12 h-12 rounded-2xl bg-[#F4F4F4] border border-neutral-200 flex items-center justify-center text-2xl">
                   🎙️
                 </div>
                 <div>
-                  <div class="text-xs font-bold text-emerald-800 uppercase tracking-wider">Honours & TEFL</div>
-                  <h3 class="text-xl font-extrabold text-slate-900 mt-1">BA (Hons) Media, PR & TEFL</h3>
-                  <p class="text-xs text-slate-600 mt-2">Communication, Public Relations & Advertising</p>
+                  <div class="text-xs font-bold text-neutral-500 uppercase tracking-wider font-['Montserrat']">Honours &amp; TEFL</div>
+                  <h3 class="text-xl font-extrabold text-black mt-1 font-['Raleway'] tracking-tight">BA (Hons) Media, PR &amp; TEFL</h3>
+                  <p class="text-xs text-neutral-600 mt-2 font-['Montserrat']">Communication, Public Relations &amp; Advertising</p>
                 </div>
-                <div class="text-xs font-bold text-sky-700 flex items-center justify-between pt-2 border-t border-slate-100">
+                <div class="text-xs font-bold text-black flex items-center justify-between pt-2 border-t border-neutral-100 font-['Montserrat']">
                   <span>Tap to flip in 3D</span>
                   <span>↻ 180°</span>
                 </div>
               </div>
               <!-- Back -->
-              <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-emerald-50 border-2 border-emerald-400 shadow-lg flex flex-col justify-between">
-                <div class="text-xs font-extrabold uppercase tracking-wider text-emerald-900">Articulation & Persuasion</div>
-                <p class="text-sm text-slate-800 leading-relaxed font-medium">
-                  Combining a BA (Hons) in Communication, PR & Advertising with TEFL certification, Carys helps both adult learners and high school students (ages 12–18) speak with natural rhythm, tone, and confidence.
+              <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-black border-2 border-neutral-800 shadow-xl flex flex-col justify-between font-['Montserrat']">
+                <div class="text-xs font-extrabold uppercase tracking-wider text-amber-400">Articulation &amp; Persuasion</div>
+                <p class="text-sm text-neutral-200 leading-relaxed font-medium">
+                  Combining a BA (Hons) in Communication, PR &amp; Advertising with TEFL certification, Carys helps both adult learners and high school students (ages 12–18) speak with natural rhythm, tone, and confidence.
                 </p>
-                <div class="text-xs text-emerald-900 font-bold">✓ Adults & High School (Ages 12–18)</div>
+                <div class="text-xs text-amber-300 font-bold">✓ Adults &amp; High School (Ages 12–18)</div>
               </div>
             </div>
           </div>
@@ -568,48 +568,48 @@
       </div>
 
       <!-- Animated Stat Counter Strip -->
-      <div class="reveal-up delay-200 mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 p-6 sm:p-8 bg-slate-50 rounded-3xl border border-slate-200 shadow-xs">
+      <div class="reveal-up delay-200 mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 p-6 sm:p-8 bg-[#F4F4F4] rounded-3xl border border-neutral-200 shadow-xs">
         <div class="text-center p-3">
           <div class="text-3xl sm:text-4xl font-extrabold text-black font-['Raleway']"><span class="counter" data-target="10" data-suffix="+">0</span></div>
-          <div class="text-xs sm:text-sm font-semibold text-slate-600 mt-1 font-['Montserrat']">Years Global Experience</div>
+          <div class="text-xs sm:text-sm font-semibold text-neutral-600 mt-1 font-['Montserrat']">Years Global Experience</div>
         </div>
         <div class="text-center p-3">
           <div class="text-3xl sm:text-4xl font-extrabold text-black font-['Raleway']"><span class="counter" data-target="5" data-suffix="+">0</span></div>
-          <div class="text-xs sm:text-sm font-semibold text-slate-600 mt-1 font-['Montserrat']">Years Training Dubai Defense</div>
+          <div class="text-xs sm:text-sm font-semibold text-neutral-600 mt-1 font-['Montserrat']">Years Training Dubai Defense</div>
         </div>
         <div class="text-center p-3">
           <div class="text-3xl sm:text-4xl font-extrabold text-amber-600 font-['Raleway']"><span class="counter" data-target="5" data-prefix="€">0</span></div>
-          <div class="text-xs sm:text-sm font-semibold text-slate-600 mt-1 font-['Montserrat']">Base Group Rate / Class</div>
+          <div class="text-xs sm:text-sm font-semibold text-neutral-600 mt-1 font-['Montserrat']">Base Group Rate / Class</div>
         </div>
         <div class="text-center p-3">
-          <div class="text-3xl sm:text-4xl font-extrabold text-emerald-600 font-['Raleway']"><span class="counter" data-target="100" data-suffix="%">0</span></div>
-          <div class="text-xs sm:text-sm font-semibold text-slate-600 mt-1 font-['Montserrat']">Cambridge CELTA Tailored</div>
+          <div class="text-3xl sm:text-4xl font-extrabold text-black font-['Raleway']"><span class="counter" data-target="100" data-suffix="%">0</span></div>
+          <div class="text-xs sm:text-sm font-semibold text-neutral-600 mt-1 font-['Montserrat']">Cambridge CELTA Tailored</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- SECTION 3: 3D PERSPECTIVE-TILT COURSE EXPLORER -->
-  <section id="courses" class="py-20 relative bg-slate-50">
+  <section id="courses" class="py-24 relative bg-[#F4F4F4]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="reveal-up flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
         <div>
-          <span class="text-xs font-bold uppercase tracking-widest text-sky-700">3D Interactive Element #3 • Spatial Tilt Cards</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold mt-1 text-slate-900">Tailored English &amp; Accent Programs</h2>
+          <span class="text-xs font-bold uppercase tracking-widest text-neutral-500 font-['Montserrat']">Tailored Programs</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-1 text-black font-['Raleway'] tracking-tight">Tailored English &amp; Accent Programs</h2>
         </div>
 
         <!-- Audience Filter Tabs -->
         <div class="flex flex-wrap gap-2">
-          <button onclick="filterCourses('all')" id="courseTab-all" type="button" class="px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-bold bg-amber-400 text-slate-950 transition-all flex items-center justify-center shadow-xs">
+          <button onclick="filterCourses('all')" id="courseTab-all" type="button" class="px-4 py-2.5 min-h-[44px] rounded-full text-xs font-bold font-['Montserrat'] uppercase tracking-wider bg-black text-white transition-all flex items-center justify-center shadow-sm">
             All Programs (4)
           </button>
-          <button onclick="filterCourses('adults')" id="courseTab-adults" type="button" class="px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:border-amber-400 transition-all flex items-center justify-center shadow-xs">
+          <button onclick="filterCourses('adults')" id="courseTab-adults" type="button" class="px-4 py-2.5 min-h-[44px] rounded-full text-xs font-semibold font-['Montserrat'] uppercase tracking-wider bg-white border border-neutral-300 text-neutral-700 hover:border-black transition-all flex items-center justify-center shadow-xs">
             Adult Learners
           </button>
-          <button onclick="filterCourses('highschool')" id="courseTab-highschool" type="button" class="px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:border-amber-400 transition-all flex items-center justify-center shadow-xs">
+          <button onclick="filterCourses('highschool')" id="courseTab-highschool" type="button" class="px-4 py-2.5 min-h-[44px] rounded-full text-xs font-semibold font-['Montserrat'] uppercase tracking-wider bg-white border border-neutral-300 text-neutral-700 hover:border-black transition-all flex items-center justify-center shadow-xs">
             High School (12–18)
           </button>
-          <button onclick="filterCourses('exams')" id="courseTab-exams" type="button" class="px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:border-amber-400 transition-all flex items-center justify-center shadow-xs">
+          <button onclick="filterCourses('exams')" id="courseTab-exams" type="button" class="px-4 py-2.5 min-h-[44px] rounded-full text-xs font-semibold font-['Montserrat'] uppercase tracking-wider bg-white border border-neutral-300 text-neutral-700 hover:border-black transition-all flex items-center justify-center shadow-xs">
             IELTS / TOEFL / Business
           </button>
         </div>
@@ -623,12 +623,12 @@
   </section>
 
   <!-- SECTION 4: 3D INTERACTIVE TUITION ESTIMATOR & FLIP SUMMARY (NO PAYMENT GATEWAY) -->
-  <section id="pricing" class="py-20 relative bg-white">
+  <section id="pricing" class="py-24 relative bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="reveal-up text-center max-w-3xl mx-auto mb-12">
-        <span class="text-xs font-bold uppercase tracking-widest text-amber-700">3D Interactive Element #4 • Dynamic 3D Pricing Calculator</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold mt-1 text-slate-900">Transparent Monthly Pricing — Zero Checkout Friction</h2>
-        <p class="text-sm sm:text-base text-slate-600 mt-2">
+        <span class="text-xs font-bold uppercase tracking-widest text-neutral-500 font-['Montserrat']">Tuition Estimator</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-1 text-black font-['Raleway'] tracking-tight">Transparent Monthly Pricing — Zero Checkout Friction</h2>
+        <p class="text-sm sm:text-base text-neutral-600 font-['Montserrat'] mt-2">
           Select your preferred class format and weekly frequency below. Instead of an online payment gateway, lock in your schedule by sending a direct inquiry to Carys for a free placement evaluation first.
         </p>
       </div>
@@ -638,100 +638,100 @@
         <div class="reveal-left lg:col-span-7 space-y-6">
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <!-- Group Tier -->
-            <button id="tierBtn-group" onclick="selectPricingTier('group')" type="button" class="text-left p-5 rounded-3xl bg-white border-2 border-amber-500 shadow-sm transition-all relative">
-              <span class="px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 text-[11px] font-bold">Most Popular</span>
-              <h3 class="text-lg font-extrabold text-slate-900 mt-2">Group Classes</h3>
-              <p class="text-xs text-slate-500 font-medium">6 People per Group</p>
-              <div class="mt-4">
-                <span class="text-2xl font-extrabold text-amber-600">€5</span>
-                <span class="text-xs text-slate-500"> / class per person</span>
+            <button id="tierBtn-group" onclick="selectPricingTier('group')" type="button" class="text-left p-5 rounded-3xl bg-white border-2 border-black shadow-md transition-all relative scale-[1.02]">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 text-[11px] font-bold font-['Montserrat'] uppercase tracking-wider">Most Popular</span>
+              <h3 class="text-lg font-extrabold text-black font-['Raleway'] tracking-tight mt-2">Group Classes</h3>
+              <p class="text-xs text-neutral-500 font-medium font-['Montserrat']">6 People per Group</p>
+              <div class="mt-4 font-['Raleway']">
+                <span class="text-2xl font-extrabold text-black">€5</span>
+                <span class="text-xs text-neutral-500 font-['Montserrat']"> / class per person</span>
               </div>
-              <div class="text-xs text-emerald-700 font-bold mt-1">€20 / month (4 classes)</div>
+              <div class="text-xs text-black font-bold font-['Montserrat'] mt-1">€20 / month (4 classes)</div>
             </button>
 
             <!-- Semi-Private Tier -->
-            <button id="tierBtn-semi" onclick="selectPricingTier('semi')" type="button" class="text-left p-5 rounded-3xl bg-white border-2 border-slate-200 hover:border-slate-300 shadow-xs transition-all relative">
-              <span class="px-2.5 py-0.5 rounded-full bg-sky-100 text-sky-900 text-[11px] font-bold">3-Student Trio</span>
-              <h3 class="text-lg font-extrabold text-slate-900 mt-2">Semi-Private</h3>
-              <p class="text-xs text-slate-500 font-medium">3 People per Class</p>
-              <div class="mt-4">
-                <span class="text-2xl font-extrabold text-sky-600">€10</span>
-                <span class="text-xs text-slate-500"> / class per person</span>
+            <button id="tierBtn-semi" onclick="selectPricingTier('semi')" type="button" class="text-left p-5 rounded-3xl bg-white border-2 border-neutral-200 hover:border-neutral-400 shadow-xs transition-all relative">
+              <span class="px-2.5 py-0.5 rounded-full bg-neutral-100 text-black text-[11px] font-bold font-['Montserrat'] uppercase tracking-wider">3-Student Trio</span>
+              <h3 class="text-lg font-extrabold text-black font-['Raleway'] tracking-tight mt-2">Semi-Private</h3>
+              <p class="text-xs text-neutral-500 font-medium font-['Montserrat']">3 People per Class</p>
+              <div class="mt-4 font-['Raleway']">
+                <span class="text-2xl font-extrabold text-black">€10</span>
+                <span class="text-xs text-neutral-500 font-['Montserrat']"> / class per person</span>
               </div>
-              <div class="text-xs text-sky-700 font-bold mt-1">€40 / month (4 classes)</div>
+              <div class="text-xs text-neutral-700 font-bold font-['Montserrat'] mt-1">€40 / month (4 classes)</div>
             </button>
 
             <!-- Private 1-on-1 Tier -->
-            <button id="tierBtn-private" onclick="selectPricingTier('private')" type="button" class="text-left p-5 rounded-3xl bg-white border-2 border-slate-200 hover:border-slate-300 shadow-xs transition-all relative">
-              <span class="px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-900 text-[11px] font-bold">1-on-1 Bespoke</span>
-              <h3 class="text-lg font-extrabold text-slate-900 mt-2">Private Coaching</h3>
-              <p class="text-xs text-slate-500 font-medium">One-on-One Tailored</p>
-              <div class="mt-4">
-                <span class="text-xl font-extrabold text-purple-600">Custom</span>
-                <span class="text-xs text-slate-500"> hourly rate</span>
+            <button id="tierBtn-private" onclick="selectPricingTier('private')" type="button" class="text-left p-5 rounded-3xl bg-white border-2 border-neutral-200 hover:border-neutral-400 shadow-xs transition-all relative">
+              <span class="px-2.5 py-0.5 rounded-full bg-neutral-100 text-black text-[11px] font-bold font-['Montserrat'] uppercase tracking-wider">1-on-1 Bespoke</span>
+              <h3 class="text-lg font-extrabold text-black font-['Raleway'] tracking-tight mt-2">Private Coaching</h3>
+              <p class="text-xs text-neutral-500 font-medium font-['Montserrat']">One-on-One Tailored</p>
+              <div class="mt-4 font-['Raleway']">
+                <span class="text-xl font-extrabold text-black">Custom</span>
+                <span class="text-xs text-neutral-500 font-['Montserrat']"> hourly rate</span>
               </div>
-              <div class="text-xs text-purple-700 font-bold mt-1">Bespoke 4-class package</div>
+              <div class="text-xs text-neutral-700 font-bold font-['Montserrat'] mt-1">Bespoke 4-class package</div>
             </button>
           </div>
 
           <!-- Weekly Frequency Interactive Control -->
-          <div class="bg-slate-50 border border-slate-200 p-6 rounded-3xl space-y-4">
+          <div class="bg-[#F4F4F4] border border-neutral-200 p-6 rounded-3xl space-y-4">
             <div class="flex items-center justify-between">
               <div>
-                <label for="weeklyFreqRange" class="text-sm font-bold text-slate-900 block">Classes Per Week Frequency</label>
-                <span class="text-xs text-slate-600">If you require more than 1 class/week, monthly fees scale directly by class count.</span>
+                <label for="weeklyFreqRange" class="text-sm font-bold text-black block font-['Montserrat']">Classes Per Week Frequency</label>
+                <span class="text-xs text-neutral-600 font-['Montserrat']">If you require more than 1 class/week, monthly fees scale directly by class count.</span>
               </div>
-              <div class="px-3.5 py-1.5 rounded-xl bg-amber-100 border border-amber-300 text-amber-900 font-bold text-sm">
+              <div class="px-3.5 py-1.5 rounded-full bg-black text-white font-bold text-sm font-['Montserrat'] shrink-0">
                 <span id="freqDisplayBadge">1 Class / Week (4 / mo)</span>
               </div>
             </div>
 
-            <input id="weeklyFreqRange" type="range" min="1" max="5" value="1" oninput="updateFrequencySlider(this.value)" class="w-full accent-amber-500 cursor-pointer h-2 rounded-lg bg-slate-200" />
+            <input id="weeklyFreqRange" type="range" min="1" max="5" value="1" oninput="updateFrequencySlider(this.value)" class="w-full accent-black cursor-pointer h-2 rounded-lg bg-neutral-300" />
 
-            <div class="flex justify-between text-xs text-slate-600 font-semibold">
-              <span>1x / wk (4 classes)</span>
-              <span>2x / wk (8 classes)</span>
-              <span>3x / wk (12 classes)</span>
-              <span>4x / wk (16 classes)</span>
-              <span>5x / wk (20 classes)</span>
+            <div class="flex justify-between text-xs text-neutral-600 font-semibold font-['Montserrat']">
+              <span>1x<span class="hidden sm:inline"> / wk (4 classes)</span></span>
+              <span>2x<span class="hidden sm:inline"> / wk (8 classes)</span></span>
+              <span>3x<span class="hidden sm:inline"> / wk (12 classes)</span></span>
+              <span>4x<span class="hidden sm:inline"> / wk (16 classes)</span></span>
+              <span>5x<span class="hidden sm:inline"> / wk (20 classes)</span></span>
             </div>
           </div>
         </div>
 
         <!-- Right 5 Columns: 3D Animated Summary Card -->
         <div class="reveal-right delay-200 lg:col-span-5 perspective-1400">
-          <div id="pricing3dCard" class="tilt-card bg-white rounded-3xl p-7 border-2 border-amber-400 shadow-xl shadow-slate-200/80 space-y-6 transition-transform duration-500">
-            <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+          <div id="pricing3dCard" class="tilt-card bg-white rounded-3xl p-7 border-2 border-black shadow-xl space-y-6 transition-transform duration-500">
+            <div class="flex items-center justify-between border-b border-neutral-200 pb-4">
               <div>
-                <span class="text-xs uppercase tracking-wider text-amber-700 font-bold">3D Live Schedule Estimate</span>
-                <h3 id="summaryTierTitle" class="text-2xl font-extrabold text-slate-900 mt-0.5">Group Classes (6 People)</h3>
+                <span class="text-xs uppercase tracking-wider text-neutral-500 font-bold font-['Montserrat']">3D Live Schedule Estimate</span>
+                <h3 id="summaryTierTitle" class="text-2xl font-extrabold text-black font-['Raleway'] tracking-tight mt-0.5">Group Classes (6 People)</h3>
               </div>
-              <div class="w-12 h-12 rounded-2xl bg-amber-100 border border-amber-300 flex items-center justify-center text-xl">
+              <div class="w-12 h-12 rounded-2xl bg-neutral-100 border border-neutral-200 flex items-center justify-center text-xl">
                 ✨
               </div>
             </div>
 
             <div class="grid grid-cols-2 gap-4">
-              <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
-                <div class="text-xs text-slate-500 font-medium">Price Per Class</div>
-                <div id="summaryPerClass" class="text-2xl font-extrabold text-slate-900 mt-1">€5</div>
-                <div class="text-[11px] text-slate-500 font-medium">per person</div>
+              <div class="p-4 rounded-2xl bg-[#F4F4F4] border border-neutral-200 font-['Montserrat']">
+                <div class="text-xs text-neutral-500 font-medium">Price Per Class</div>
+                <div id="summaryPerClass" class="text-2xl font-extrabold text-black font-['Raleway'] mt-1">€5</div>
+                <div class="text-[11px] text-neutral-500 font-medium">per person</div>
               </div>
-              <div class="p-4 rounded-2xl bg-amber-50 border border-amber-300">
-                <div class="text-xs text-amber-900 font-bold">Monthly Total (<span id="summaryClassCount">4</span> Classes)</div>
-                <div id="summaryMonthlyTotal" class="text-2xl font-extrabold text-amber-600 mt-1">€20</div>
-                <div id="summaryBillingNote" class="text-[11px] text-amber-800 font-medium">billed monthly after evaluation</div>
+              <div class="p-4 rounded-2xl bg-black border border-neutral-800 text-white font-['Montserrat']">
+                <div class="text-xs text-neutral-400 font-bold">Monthly Total (<span id="summaryClassCount">4</span> Classes)</div>
+                <div id="summaryMonthlyTotal" class="text-2xl font-extrabold text-white font-['Raleway'] mt-1">€20</div>
+                <div id="summaryBillingNote" class="text-[11px] text-neutral-400 font-medium">billed monthly after evaluation</div>
               </div>
             </div>
 
-            <ul class="space-y-2 text-xs sm:text-sm text-slate-700 font-medium">
-              <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✔</span> Free Online Placement Test included before you start</li>
-              <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✔</span> Weekly homework & all learning materials provided</li>
-              <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✔</span> Direct WhatsApp support throughout the week</li>
-              <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✔</span> Certificate of Completion awarded</li>
+            <ul class="space-y-2 text-xs sm:text-sm text-neutral-700 font-medium font-['Montserrat']">
+              <li class="flex items-center gap-2"><span class="text-black font-bold">✔</span> Free Online Placement Test included before you start</li>
+              <li class="flex items-center gap-2"><span class="text-black font-bold">✔</span> Weekly homework &amp; all learning materials provided</li>
+              <li class="flex items-center gap-2"><span class="text-black font-bold">✔</span> Direct WhatsApp support throughout the week</li>
+              <li class="flex items-center gap-2"><span class="text-black font-bold">✔</span> Certificate of Completion awarded</li>
             </ul>
 
-            <button onclick="requestSelectedPricingSchedule()" type="button" class="w-full py-4 min-h-[44px] rounded-2xl bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-extrabold text-sm sm:text-base shadow-md shadow-amber-500/20 hover:brightness-105 active:scale-95 transition-all flex items-center justify-center">
+            <button onclick="requestSelectedPricingSchedule()" type="button" class="w-full py-4 min-h-[44px] rounded-full bg-black text-white hover:bg-neutral-800 font-['Montserrat'] font-bold text-xs sm:text-sm uppercase tracking-wider shadow-md transition-all active:scale-95 flex items-center justify-center">
               Request This Schedule (No Payment Needed) →
             </button>
           </div>
@@ -741,16 +741,16 @@
   </section>
 
   <!-- SECTION 5: 3D STACKED-CARD PLACEMENT QUIZ & 3D ROTATING E-GUIDE BOOK -->
-  <section id="placement" class="py-20 relative bg-slate-50">
+  <section id="placement" class="py-24 relative bg-[#F4F4F4]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
         <!-- Left 7 Columns: 3D Stacked-Card Placement Quiz -->
         <div class="reveal-left lg:col-span-7 space-y-6">
           <div>
-            <span class="text-xs font-bold uppercase tracking-widest text-sky-700">3D Interactive Element #5 • 3D Card-Stack Assessment</span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold mt-1 text-slate-900">Interactive 3D English &amp; Accent Placement Check</h2>
-            <p class="text-sm text-slate-600 mt-1">
+            <span class="text-xs font-bold uppercase tracking-widest text-neutral-500 font-['Montserrat']">3D Interactive Element #5 • 3D Card-Stack Assessment</span>
+            <h2 class="font-['Raleway'] font-extrabold tracking-tight text-3xl sm:text-4xl lg:text-5xl text-black mt-1">Interactive 3D English &amp; Accent Placement Check</h2>
+            <p class="text-sm text-neutral-600 mt-2 font-['Montserrat']">
               Not sure where you stand? Try this quick 5-card 3D self-check, then send your result to Carys to receive your full complimentary placement evaluation.
             </p>
           </div>
@@ -761,10 +761,10 @@
         </div>
 
         <!-- Right 5 Columns: 3D Rotating Hardcover E-Guide Mockup -->
-        <div id="eguide" class="reveal-right delay-200 lg:col-span-5 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xl shadow-slate-200/60 flex flex-col items-center text-center space-y-6">
-          <span class="text-xs font-bold uppercase tracking-widest text-amber-700">3D Interactive Element #6 • 3D Hardcover Book</span>
-          <h3 class="text-2xl font-extrabold text-slate-900">Download Your Free Accent & Fluency E-Guide</h3>
-          <p class="text-xs sm:text-sm text-slate-600">
+        <div id="eguide" class="reveal-right delay-200 lg:col-span-5 bg-white rounded-3xl p-6 sm:p-8 border border-neutral-200 shadow-xl flex flex-col items-center text-center space-y-6">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-700 font-['Montserrat']">3D Interactive Element #6 • 3D Hardcover Book</span>
+          <h3 class="font-['Raleway'] font-extrabold text-black text-2xl tracking-tight">Download Your Free Accent &amp; Fluency E-Guide</h3>
+          <p class="text-xs sm:text-sm text-neutral-600 font-['Montserrat']">
             Hover, tap, or click the button below to rotate the 3D E-Guide cover and request your free instant copy.
           </p>
 
@@ -774,7 +774,7 @@
               <!-- Front Cover -->
               <div class="book-front bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-950 border-2 border-amber-400/60 p-5 flex flex-col justify-between text-left shadow-2xl">
                 <div class="flex items-center justify-between">
-                  <span class="text-[10px] font-bold uppercase tracking-widest text-amber-400">Accent Made • UK</span>
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-amber-400 font-['Montserrat']">Accent Made • UK</span>
                   <span class="text-xs">🇬🇧</span>
                 </div>
                 <div class="my-auto space-y-2">
@@ -786,7 +786,7 @@
                     Phonetics, Rhythm & Everyday Confidence for Adult Learners
                   </p>
                 </div>
-                <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-[11px] text-amber-300 font-semibold">
+                <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-[11px] text-amber-300 font-semibold font-['Montserrat']">
                   <span>By Carys George (CELTA)</span>
                   <span>Free Guide</span>
                 </div>
@@ -794,7 +794,7 @@
 
               <!-- Book Spine -->
               <div class="book-spine bg-gradient-to-b from-amber-500 to-amber-700 flex items-center justify-center">
-                <span class="text-[10px] font-extrabold text-slate-950 tracking-widest uppercase -rotate-90 whitespace-nowrap">
+                <span class="text-[10px] font-extrabold text-slate-950 tracking-widest uppercase -rotate-90 whitespace-nowrap font-['Montserrat']">
                   Accent Made • Carys George
                 </span>
               </div>
@@ -804,23 +804,23 @@
 
               <!-- Back Cover -->
               <div class="book-back bg-slate-900 border-2 border-sky-400/50 p-5 flex flex-col justify-between text-left">
-                <div class="text-xs font-bold text-sky-400 uppercase">Inside This Free E-Guide:</div>
+                <div class="text-xs font-bold text-sky-400 uppercase font-['Montserrat']">Inside This Free E-Guide:</div>
                 <ul class="text-[11px] text-slate-200 space-y-2 my-auto">
                   <li>• 5 key British vowel & consonant shifts</li>
                   <li>• Word stress & natural sentence intonation</li>
                   <li>• Daily 10-minute shadowing routine</li>
                   <li>• IELTS & workplace speaking tips</li>
                 </ul>
-                <div class="text-[10px] text-amber-400 font-semibold">accentmade.com • @hello_accentmade</div>
+                <div class="text-[10px] text-amber-400 font-semibold font-['Montserrat']">accentmade.com • @hello_accentmade</div>
               </div>
             </div>
           </div>
 
           <div class="flex flex-wrap gap-2 justify-center w-full">
-            <button onclick="spin3dBook()" type="button" class="px-4 py-2.5 min-h-[44px] rounded-xl border border-slate-200 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold transition-all flex items-center justify-center shadow-xs">
+            <button onclick="spin3dBook()" type="button" class="px-5 py-3 min-h-[44px] rounded-full border border-neutral-300 bg-white hover:bg-neutral-100 text-black text-xs font-bold font-['Montserrat'] uppercase tracking-wider transition-all flex items-center justify-center shadow-xs active:scale-95">
               🔄 Flip 3D Book Cover
             </button>
-            <button onclick="openInquiryModal('Free E-Guide Instant Download')" type="button" class="px-5 py-2.5 min-h-[44px] rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-extrabold text-xs sm:text-sm hover:brightness-105 shadow-md shadow-amber-500/20 transition-all flex items-center justify-center">
+            <button onclick="openInquiryModal('Free E-Guide Instant Download')" type="button" class="px-6 py-3 min-h-[44px] rounded-full bg-black text-white hover:bg-neutral-800 text-xs font-['Montserrat'] font-bold uppercase tracking-wider shadow-md transition-all active:scale-95 flex items-center justify-center">
               📥 Get Free E-Guide Copy
             </button>
           </div>
@@ -831,29 +831,29 @@
   </section>
 
   <!-- SECTION 6: CLEAN CATEGORIZED FAQ & DIRECT INQUIRY HUB -->
-  <section id="faq" class="py-20 relative bg-white">
+  <section id="faq" class="py-24 relative bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
 
         <!-- Left 7 Columns: All 15 FAQs Extracted from accentmade.com -->
         <div class="reveal-left lg:col-span-7 space-y-6">
           <div class="reveal-up">
-            <span class="text-xs font-bold uppercase tracking-widest text-amber-700">Complete Site FAQ Inventory</span>
-            <h2 class="text-3xl font-extrabold mt-1 text-slate-900">Frequently Asked Questions</h2>
+            <span class="text-xs font-bold uppercase tracking-widest text-neutral-500 font-['Montserrat']">Complete Site FAQ Inventory</span>
+            <h2 class="font-['Raleway'] font-extrabold tracking-tight text-3xl sm:text-4xl lg:text-5xl text-black mt-1">Frequently Asked Questions</h2>
           </div>
 
           <!-- FAQ Filter Buttons -->
           <div class="reveal-up delay-100 flex flex-wrap gap-2">
-            <button onclick="filterFaq('all')" id="faqTab-all" type="button" class="px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-bold bg-amber-400 text-slate-950 flex items-center justify-center shadow-xs">
+            <button onclick="filterFaq('all')" id="faqTab-all" type="button" class="px-4 py-2.5 min-h-[44px] rounded-full text-xs font-bold font-['Montserrat'] uppercase tracking-wider bg-black text-white flex items-center justify-center shadow-sm">
               All Questions (15)
             </button>
-            <button onclick="filterFaq('general')" id="faqTab-general" type="button" class="px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-700 flex items-center justify-center shadow-xs">
+            <button onclick="filterFaq('general')" id="faqTab-general" type="button" class="px-4 py-2.5 min-h-[44px] rounded-full text-xs font-semibold font-['Montserrat'] uppercase tracking-wider bg-[#F4F4F4] hover:bg-neutral-200 border border-neutral-200 text-neutral-700 flex items-center justify-center shadow-xs transition-all">
               General &amp; Level (4)
             </button>
-            <button onclick="filterFaq('course')" id="faqTab-course" type="button" class="px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-700 flex items-center justify-center shadow-xs">
+            <button onclick="filterFaq('course')" id="faqTab-course" type="button" class="px-4 py-2.5 min-h-[44px] rounded-full text-xs font-semibold font-['Montserrat'] uppercase tracking-wider bg-[#F4F4F4] hover:bg-neutral-200 border border-neutral-200 text-neutral-700 flex items-center justify-center shadow-xs transition-all">
               Course Details (9)
             </button>
-            <button onclick="filterFaq('special')" id="faqTab-special" type="button" class="px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-700 flex items-center justify-center shadow-xs">
+            <button onclick="filterFaq('special')" id="faqTab-special" type="button" class="px-4 py-2.5 min-h-[44px] rounded-full text-xs font-semibold font-['Montserrat'] uppercase tracking-wider bg-[#F4F4F4] hover:bg-neutral-200 border border-neutral-200 text-neutral-700 flex items-center justify-center shadow-xs transition-all">
               Private &amp; Exams (2)
             </button>
           </div>
@@ -863,34 +863,34 @@
           </div>
         </div>
 
-        <!-- Right 5 Columns: Direct Contact & Inquiry Form ("Let's Learn Together!") -->
+        <!-- Right 5 Columns: Direct Contact & Inquiry Hub ("Let's Learn Together!") -->
         <div id="contact" class="reveal-right delay-300 lg:col-span-5">
-          <div class="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-md sticky top-24 space-y-5">
+          <div class="bg-[#F4F4F4] rounded-3xl p-6 sm:p-8 border border-neutral-200 shadow-md lg:sticky lg:top-24 space-y-5">
             <div class="flex items-center gap-3">
-              <img src="assets/logo.png" alt="Accent Made Logo" class="w-12 h-12 rounded-2xl object-contain border border-slate-200 bg-white shadow-xs shrink-0" />
+              <img src="assets/logo.png" alt="Accent Made Logo" class="w-12 h-12 rounded-2xl object-contain border border-neutral-200 bg-white shadow-xs shrink-0" />
               <div>
-                <span class="text-xs font-bold uppercase tracking-widest text-emerald-700">No Payment Gateway Required</span>
-                <h3 class="text-2xl font-extrabold text-slate-900 leading-tight">Let's Learn Together!</h3>
+                <span class="text-xs font-bold uppercase tracking-widest text-neutral-500 font-['Montserrat']">No Payment Gateway Required</span>
+                <h3 class="font-['Raleway'] font-extrabold text-black text-2xl tracking-tight leading-tight">Let's Learn Together!</h3>
               </div>
             </div>
-            <p class="text-xs sm:text-sm text-slate-600">
+            <p class="text-xs sm:text-sm text-neutral-600 font-['Montserrat']">
               Fill in the form below to request your free placement test, ask about class schedules, or book a 1-on-1 evaluation with Carys.
             </p>
 
             <form id="mainContactForm" onsubmit="handleContactSubmit(event)" class="space-y-4">
               <div>
-                <label for="contactName" class="text-xs font-bold text-slate-700 block mb-1">Your Full Name *</label>
-                <input id="contactName" type="text" required placeholder="e.g., Priya Sharma" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500" />
+                <label for="contactName" class="text-xs font-bold text-neutral-800 font-['Montserrat'] block mb-1">Your Full Name *</label>
+                <input id="contactName" type="text" required placeholder="e.g., Priya Sharma" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-neutral-300 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-black focus:ring-1 focus:ring-black font-['Montserrat']" />
               </div>
 
               <div>
-                <label for="contactEmail" class="text-xs font-bold text-slate-700 block mb-1">Email Address *</label>
-                <input id="contactEmail" type="email" required placeholder="you@example.com" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500" />
+                <label for="contactEmail" class="text-xs font-bold text-neutral-800 font-['Montserrat'] block mb-1">Email Address *</label>
+                <input id="contactEmail" type="email" required placeholder="you@example.com" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-neutral-300 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-black focus:ring-1 focus:ring-black font-['Montserrat']" />
               </div>
 
               <div>
-                <label for="contactTopic" class="text-xs font-bold text-slate-700 block mb-1">Interested Program / Tier</label>
-                <select id="contactTopic" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 text-sm text-slate-900 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500">
+                <label for="contactTopic" class="text-xs font-bold text-neutral-800 font-['Montserrat'] block mb-1">Interested Program / Tier</label>
+                <select id="contactTopic" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-neutral-300 text-sm text-neutral-900 focus:outline-none focus:border-black focus:ring-1 focus:ring-black font-['Montserrat']">
                   <option value="Free Placement Test & Language Evaluation">Free Placement Test & Language Evaluation</option>
                   <option value="Group Classes (€5/class • €20/month)">Group Classes (€5/class • €20/month)</option>
                   <option value="Semi-Private Classes (€10/class • €40/month)">Semi-Private Classes (€10/class • €40/month)</option>
@@ -902,35 +902,35 @@
               </div>
 
               <div>
-                <label for="contactMessage" class="text-xs font-bold text-slate-700 block mb-1">Your Goals or Preferred Schedule *</label>
-                <textarea id="contactMessage" rows="3" required placeholder="Tell Carys about your current English level, goals, and preferred weekly schedule..." class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500"></textarea>
+                <label for="contactMessage" class="text-xs font-bold text-neutral-800 font-['Montserrat'] block mb-1">Your Goals or Preferred Schedule *</label>
+                <textarea id="contactMessage" rows="3" required placeholder="Tell Carys about your current English level, goals, and preferred weekly schedule..." class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-neutral-300 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-black focus:ring-1 focus:ring-black font-['Montserrat']"></textarea>
               </div>
 
-              <button type="submit" class="w-full py-3.5 min-h-[44px] rounded-2xl bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-extrabold text-sm shadow-md shadow-amber-500/20 hover:brightness-105 transition-all flex items-center justify-center">
+              <button type="submit" class="w-full py-4 min-h-[44px] rounded-full bg-black text-white hover:bg-neutral-800 font-['Montserrat'] font-bold text-xs uppercase tracking-wider shadow-md transition-all active:scale-95 flex items-center justify-center">
                 Send Inquiry to Carys George →
               </button>
             </form>
 
-            <div id="contactSuccessBox" class="hidden p-4 rounded-2xl bg-emerald-50 border border-emerald-300 text-xs sm:text-sm text-emerald-900 space-y-2">
-              <div class="font-bold text-emerald-800">✓ Inquiry Ready for Carys!</div>
-              <p id="contactSuccessSummary" class="text-emerald-950"></p>
+            <div id="contactSuccessBox" class="hidden p-4 rounded-2xl bg-neutral-100 border border-neutral-300 text-xs sm:text-sm text-neutral-900 space-y-2 font-['Montserrat']">
+              <div class="font-bold text-black">✓ Inquiry Ready for Carys!</div>
+              <p id="contactSuccessSummary" class="text-neutral-700"></p>
               <div class="flex flex-wrap gap-2 pt-1">
-                <a id="mailtoDirectLink" href="mailto:improvemyaccent@gmail.com" class="px-3.5 py-2 rounded-lg bg-emerald-600 text-white font-bold text-xs hover:bg-emerald-700 transition-colors">
+                <a id="mailtoDirectLink" href="mailto:improvemyaccent@gmail.com" class="px-4 py-2.5 rounded-full bg-black text-white font-bold text-xs uppercase tracking-wider font-['Montserrat'] hover:bg-neutral-800 transition-colors">
                   Open in Email Client
                 </a>
-                <button onclick="copyInquiryEmail()" type="button" class="px-3.5 py-2 rounded-lg bg-white border border-slate-300 text-slate-800 font-semibold text-xs hover:bg-slate-50 transition-colors">
+                <button onclick="copyInquiryEmail()" type="button" class="px-4 py-2.5 rounded-full bg-white border border-neutral-300 text-neutral-800 font-bold text-xs uppercase tracking-wider font-['Montserrat'] hover:bg-neutral-100 transition-colors">
                   Copy Email: improvemyaccent@gmail.com
                 </button>
               </div>
             </div>
 
             <!-- Direct Contact Channels Footer -->
-            <div class="pt-4 border-t border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs text-slate-600">
+            <div class="pt-4 border-t border-neutral-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs text-neutral-600 font-['Montserrat']">
               <div>
-                📧 <a href="mailto:improvemyaccent@gmail.com" class="text-amber-700 hover:underline font-bold">improvemyaccent@gmail.com</a>
+                📧 <a href="mailto:improvemyaccent@gmail.com" class="text-black hover:underline font-bold">improvemyaccent@gmail.com</a>
               </div>
               <div>
-                📸 Instagram: <a href="https://www.instagram.com/hello_accentmade/" target="_blank" rel="noopener noreferrer" class="text-sky-700 hover:underline font-bold">@hello_accentmade</a>
+                📸 Instagram: <a href="https://www.instagram.com/hello_accentmade/" target="_blank" rel="noopener noreferrer" class="text-neutral-800 hover:underline font-bold">@hello_accentmade</a>
               </div>
             </div>
           </div>
@@ -941,50 +941,52 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="py-10 border-t border-slate-200 bg-slate-50 text-xs text-slate-600">
+  <footer class="py-10 border-t border-neutral-200 bg-[#F4F4F4] text-xs text-neutral-600 font-['Montserrat']">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-3">
-        <img src="assets/logo.png" alt="Accent Made Logo" class="w-9 h-9 rounded-xl object-contain border border-slate-200 bg-white shrink-0 shadow-xs" />
+        <img src="assets/logo.png" alt="Accent Made Logo" class="w-9 h-9 rounded-xl object-contain border border-neutral-200 bg-white shrink-0 shadow-xs" />
         <div>
-          <span class="font-bold text-slate-900 block leading-tight">AccentMade.com</span>
-          <span class="text-slate-500">Carys George (CELTA, TEFL, MA, BA Hons)</span>
+          <span class="font-bold text-black block leading-tight">AccentMade.com</span>
+          <span class="text-neutral-500">Carys George (CELTA, TEFL, MA, BA Hons)</span>
         </div>
       </div>
-      <div class="text-slate-500">
+      <div class="text-neutral-500">
         Copyright © 2024–2026 AccentMade.com. All rights reserved.
       </div>
     </div>
   </footer>
 
   <!-- INQUIRY MODAL -->
-  <div id="inquiryModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-900/50 backdrop-blur-sm">
-    <div class="bg-white rounded-3xl max-w-md w-full p-6 border border-slate-200 shadow-2xl space-y-4 relative text-slate-900">
-      <button onclick="closeInquiryModal()" type="button" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-600 hover:text-slate-900 transition-colors" aria-label="Close modal">
+  <div id="inquiryModal" class="fixed inset-0 z-[70] hidden items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 border border-neutral-200 shadow-2xl space-y-4 relative text-neutral-900">
+      <button onclick="closeInquiryModal()" type="button" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-neutral-100 hover:bg-neutral-200 flex items-center justify-center text-neutral-600 hover:text-black transition-colors" aria-label="Close modal">
         ✕
       </button>
       <div class="flex items-center gap-3">
-        <img src="assets/logo.png" alt="Accent Made Logo" class="w-10 h-10 rounded-xl object-contain border border-slate-200 bg-white shadow-xs shrink-0" />
+        <img src="assets/logo.png" alt="Accent Made Logo" class="w-10 h-10 rounded-xl object-contain border border-neutral-200 bg-white shadow-xs shrink-0" />
         <div>
-          <div class="text-[11px] font-bold uppercase tracking-wider text-amber-700">Direct Inquiry • No Payment Required</div>
-          <h3 id="modalTitleText" class="text-lg font-extrabold text-slate-900 leading-snug">Request Free Language Evaluation</h3>
+          <div class="text-[11px] font-bold uppercase tracking-wider text-amber-700 font-['Montserrat']">Direct Inquiry • No Payment Required</div>
+          <h3 id="modalTitleText" class="font-['Raleway'] font-extrabold text-black text-lg leading-snug">Request Free Language Evaluation</h3>
         </div>
       </div>
-      <p class="text-xs text-slate-600">
+      <p class="text-xs text-neutral-600 font-['Montserrat']">
         Your request will pre-fill the inquiry form below so Carys can send your free placement test or confirm your class schedule via email or WhatsApp.
       </p>
       <div class="space-y-3">
-        <input id="modalNameInput" type="text" placeholder="Your Name" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500" />
-        <input id="modalEmailInput" type="email" placeholder="Your Email Address" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500" />
-        <textarea id="modalNotesInput" rows="3" placeholder="Any specific goals (e.g., Accent Reduction, IELTS, Business English)?" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500"></textarea>
-        <button onclick="submitModalInquiry()" type="button" class="w-full py-3.5 min-h-[44px] rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-extrabold text-sm hover:brightness-105 shadow-md shadow-amber-500/20 transition-all flex items-center justify-center">
-          Confirm & Prepare Inquiry
+        <input id="modalNameInput" type="text" placeholder="Your Name" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-neutral-300 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-black focus:ring-1 focus:ring-black font-['Montserrat']" />
+        <input id="modalEmailInput" type="email" placeholder="Your Email Address" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-neutral-300 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-black focus:ring-1 focus:ring-black font-['Montserrat']" />
+        <textarea id="modalNotesInput" rows="3" placeholder="Any specific goals (e.g., Accent Reduction, IELTS, Business English)?" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-neutral-300 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-black focus:ring-1 focus:ring-black font-['Montserrat']"></textarea>
+        <button onclick="submitModalInquiry()" type="button" class="w-full py-3.5 min-h-[44px] rounded-full bg-black text-white hover:bg-neutral-800 font-['Montserrat'] font-bold text-xs uppercase tracking-wider shadow-md transition-all active:scale-95 flex items-center justify-center">
+          Confirm &amp; Prepare Inquiry
         </button>
       </div>
     </div>
   </div>
 
   <!-- Toast Notification -->
-  <div id="toastBanner" class="fixed bottom-5 right-5 z-50 hidden px-4 py-3 rounded-2xl bg-slate-900/95 border border-amber-400/50 text-xs sm:text-sm font-semibold text-white shadow-2xl">
+  <div id="toastBanner" class="fixed bottom-5 right-5 z-[80] hidden px-4 py-3 rounded-2xl bg-neutral-950/95 border border-amber-400/50 text-xs sm:text-sm font-semibold text-white shadow-2xl font-['Montserrat']">
+    <span id="toastMessage">Saved!</span>
+  </div>
     <span id="toastMessage">Saved!</span>
   </div>
 
@@ -1382,9 +1384,9 @@
         var tab = document.getElementById('courseTab-' + key);
         if (!tab) return;
         if (key === cat) {
-          tab.className = 'px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-bold bg-amber-400 text-slate-950 transition-all flex items-center justify-center shadow-xs';
+          tab.className = 'px-4 py-2.5 min-h-[44px] rounded-full text-xs font-bold font-[\'Montserrat\'] uppercase tracking-wider bg-black text-white transition-all flex items-center justify-center shadow-sm';
         } else {
-          tab.className = 'px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:border-amber-400 transition-all flex items-center justify-center shadow-xs';
+          tab.className = 'px-4 py-2.5 min-h-[44px] rounded-full text-xs font-semibold font-[\'Montserrat\'] uppercase tracking-wider bg-white border border-neutral-300 text-neutral-700 hover:border-black transition-all flex items-center justify-center shadow-xs';
         }
       });
 
@@ -1397,27 +1399,27 @@
 
       grid.innerHTML = filtered.map(function(c, idx) {
         var bullets = c.highlights.map(function(h) {
-          return '<li class="flex items-center gap-2 text-xs text-slate-700 font-medium"><span class="text-amber-600 font-bold">✦</span><span>' + h + '</span></li>';
+          return '<li class="flex items-center gap-2 text-xs text-neutral-700 font-medium font-[\'Montserrat\']"><span class="text-amber-600 font-bold">✦</span><span>' + h + '</span></li>';
         }).join('');
 
         var delayClass = 'delay-' + (((idx % 4) + 1) * 100);
 
         return (
           '<div class="reveal-up ' + delayClass + '">' +
-            '<div class="tilt-card bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 hover:border-amber-400 hover:shadow-lg flex flex-col justify-between space-y-5 shadow-xs transition-all h-full">' +
+            '<div class="tilt-card bg-white rounded-3xl p-6 sm:p-7 border border-neutral-200 hover:border-black hover:shadow-xl flex flex-col justify-between space-y-5 shadow-xs transition-all h-full">' +
               '<div class="space-y-3">' +
                 '<div class="flex items-center justify-between gap-2">' +
-                  '<span class="px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold">' + c.badge + '</span>' +
-                  '<span class="font-mono text-xs text-sky-700 font-bold">' + c.phonetic + '</span>' +
+                  '<span class="px-3 py-1 rounded-full bg-neutral-100 border border-neutral-300 text-neutral-800 text-xs font-bold font-[\'Montserrat\']">' + c.badge + '</span>' +
+                  '<span class="font-mono text-xs text-neutral-800 font-bold">' + c.phonetic + '</span>' +
                 '</div>' +
-                '<h3 class="text-xl sm:text-2xl font-extrabold text-slate-900">' + c.title + '</h3>' +
-                '<div class="text-xs font-bold text-emerald-700">Suitable for: ' + c.audience + '</div>' +
-                '<p class="text-sm text-slate-600 leading-relaxed font-normal">' + c.desc + '</p>' +
+                '<h3 class="font-[\'Raleway\'] text-xl sm:text-2xl font-extrabold text-black">' + c.title + '</h3>' +
+                '<div class="text-xs font-bold text-neutral-700 font-[\'Montserrat\']">Suitable for: ' + c.audience + '</div>' +
+                '<p class="text-sm text-neutral-600 font-[\'Montserrat\'] leading-relaxed font-normal">' + c.desc + '</p>' +
                 '<ul class="space-y-1.5 pt-2">' + bullets + '</ul>' +
               '</div>' +
-              '<div class="pt-4 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3">' +
-                '<span class="text-xs text-slate-500 font-medium">Group (€5) • Trio (€10) • 1-on-1</span>' +
-                '<button type="button" onclick="openInquiryModal(\'' + c.title.replace(/'/g, "\\'") + '\')" class="px-4 py-2.5 min-h-[44px] rounded-xl bg-amber-50 border border-amber-300 text-amber-900 hover:bg-amber-400 hover:text-slate-950 font-bold text-xs transition-all flex items-center justify-center">' +
+              '<div class="pt-4 border-t border-neutral-200 flex flex-wrap items-center justify-between gap-3">' +
+                '<span class="text-xs text-neutral-500 font-medium font-[\'Montserrat\']">Group (€5) • Trio (€10) • 1-on-1</span>' +
+                '<button type="button" onclick="openInquiryModal(\'' + c.title.replace(/'/g, "\\'") + '\')" class="px-5 py-2.5 min-h-[44px] rounded-full bg-black text-white hover:bg-neutral-800 font-[\'Montserrat\'] font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center shadow-sm active:scale-95">' +
                   'Inquire About Course →' +
                 '</button>' +
               '</div>' +
@@ -1430,6 +1432,15 @@
       if (typeof initScrollReveal === 'function') {
         initScrollReveal();
       }
+      window.requestAnimationFrame(function() {
+        var cards = grid.querySelectorAll('.reveal-up');
+        cards.forEach(function(el) {
+          var rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            el.classList.add('reveal-visible');
+          }
+        });
+      });
     };
 
     // ==========================================
@@ -1444,9 +1455,9 @@
         var btn = document.getElementById('tierBtn-' + t);
         if (!btn) return;
         if (t === tier) {
-          btn.className = 'text-left p-5 rounded-3xl bg-white border-2 border-amber-500 shadow-md transition-all relative scale-[1.02]';
+          btn.className = 'text-left p-5 rounded-3xl bg-white border-2 border-black shadow-md transition-all relative scale-[1.02]';
         } else {
-          btn.className = 'text-left p-5 rounded-3xl bg-white border-2 border-slate-200 hover:border-slate-300 shadow-xs transition-all relative';
+          btn.className = 'text-left p-5 rounded-3xl bg-white border-2 border-neutral-200 hover:border-neutral-400 shadow-xs transition-all relative';
         }
       });
       updatePricingSummaryCard(true);
@@ -1522,19 +1533,19 @@
       if (currentQuizIndex >= QUIZ_QUESTIONS.length) {
         var level = quizScore >= 4 ? 'B2–C1 Upper-Intermediate / Advanced' : (quizScore >= 2 ? 'B1 Intermediate' : 'A1–A2 Elementary / Pre-Intermediate');
         stage.innerHTML =
-          '<div class="bg-white rounded-3xl p-7 border-2 border-emerald-500 shadow-xl space-y-4 text-slate-900">' +
+          '<div class="bg-white rounded-3xl p-7 border-2 border-black shadow-xl space-y-4 text-neutral-900 font-[\'Montserrat\']">' +
             '<div class="flex items-center justify-between">' +
-              '<span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">Assessment Complete</span>' +
-              '<span class="text-sm font-bold text-amber-600">Score: ' + quizScore + ' / 4 Core Items</span>' +
+              '<span class="px-3 py-1 rounded-full bg-neutral-100 text-neutral-900 border border-neutral-300 text-xs font-bold uppercase tracking-wider">Assessment Complete</span>' +
+              '<span class="text-sm font-bold text-black">Score: ' + quizScore + ' / 4 Core Items</span>' +
             '</div>' +
-            '<h3 class="text-2xl font-black text-slate-900">Estimated Level: ' + level + '</h3>' +
-            '<p class="text-sm text-slate-600">Primary Goal Selected: <strong class="text-slate-900">' + (quizSelectedGoal || 'British Accent & Fluency') + '</strong></p>' +
-            '<p class="text-xs text-slate-500">Send this snapshot to Carys to receive your full complimentary placement test and personalized class recommendation.</p>' +
+            '<h3 class="font-[\'Raleway\'] text-2xl font-extrabold text-black">Estimated Level: ' + level + '</h3>' +
+            '<p class="text-sm text-neutral-600">Primary Goal Selected: <strong class="text-black">' + (quizSelectedGoal || 'British Accent & Fluency') + '</strong></p>' +
+            '<p class="text-xs text-neutral-500">Send this snapshot to Carys to receive your full complimentary placement test and personalized class recommendation.</p>' +
             '<div class="flex flex-wrap gap-3 pt-2">' +
-              '<button type="button" onclick="openInquiryModal(\'Placement Check Result: ' + level.replace(/'/g, "\\'") + ' — Goal: ' + (quizSelectedGoal || 'General Fluency').replace(/'/g, "\\'") + '\')" class="px-5 py-3 min-h-[44px] rounded-xl bg-amber-400 hover:bg-amber-500 text-slate-950 font-extrabold text-xs sm:text-sm shadow-sm transition-colors flex items-center justify-center">' +
+              '<button type="button" onclick="openInquiryModal(\'Placement Check Result: ' + level.replace(/'/g, "\\'") + ' — Goal: ' + (quizSelectedGoal || 'General Fluency').replace(/'/g, "\\'") + '\')" class="px-6 py-3.5 min-h-[44px] rounded-full bg-black hover:bg-neutral-800 text-white font-bold text-xs uppercase tracking-wider shadow-md transition-all active:scale-95 flex items-center justify-center">' +
                 'Send Result to Carys for Free Evaluation →' +
               '</button>' +
-              '<button type="button" onclick="resetQuizDeck()" class="px-4 py-3 min-h-[44px] rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-800 text-xs font-bold transition-colors flex items-center justify-center">' +
+              '<button type="button" onclick="resetQuizDeck()" class="px-5 py-3.5 min-h-[44px] rounded-full bg-white hover:bg-neutral-100 border border-neutral-300 text-neutral-800 text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center">' +
                 '↻ Retake Quiz' +
               '</button>' +
             '</div>' +
@@ -1545,20 +1556,20 @@
       var item = QUIZ_QUESTIONS[currentQuizIndex];
       var optionsHtml = item.options.map(function(opt, idx) {
         return (
-          '<button type="button" onclick="answerQuizCard(' + idx + ')" class="w-full text-left p-3.5 sm:p-4 rounded-2xl bg-slate-50 hover:bg-amber-50 border border-slate-200 hover:border-amber-400 text-xs sm:text-sm font-semibold text-slate-800 hover:text-slate-950 transition-all flex items-center justify-between group min-h-[44px]">' +
+          '<button type="button" onclick="answerQuizCard(' + idx + ')" class="w-full text-left p-3.5 sm:p-4 rounded-2xl bg-white hover:bg-neutral-50 border border-neutral-200 hover:border-black text-xs sm:text-sm font-semibold font-[\'Montserrat\'] text-neutral-800 hover:text-black transition-all flex items-center justify-between group min-h-[44px]">' +
             '<span>' + opt + '</span>' +
-            '<span class="text-amber-600 font-bold opacity-0 group-hover:opacity-100 transition-opacity">Select →</span>' +
+            '<span class="text-black font-bold opacity-0 group-hover:opacity-100 transition-opacity">Select →</span>' +
           '</button>'
         );
       }).join('');
 
       stage.innerHTML =
-        '<div id="activeQuizCard" class="quiz-card-3d bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-xl space-y-4 text-slate-900">' +
-          '<div class="flex items-center justify-between text-xs text-slate-500">' +
-            '<span class="font-bold text-sky-700 uppercase tracking-wider">Card ' + (currentQuizIndex + 1) + ' of ' + QUIZ_QUESTIONS.length + '</span>' +
-            '<span class="font-medium text-slate-500">Interactive Placement Deck</span>' +
+        '<div id="activeQuizCard" class="quiz-card-3d bg-white rounded-3xl p-6 sm:p-7 border border-neutral-200/90 shadow-xl space-y-4 text-neutral-900 font-[\'Montserrat\']">' +
+          '<div class="flex items-center justify-between text-xs text-neutral-500">' +
+            '<span class="font-bold text-black uppercase tracking-wider">Card ' + (currentQuizIndex + 1) + ' of ' + QUIZ_QUESTIONS.length + '</span>' +
+            '<span class="font-medium text-neutral-500">Interactive Placement Deck</span>' +
           '</div>' +
-          '<h3 class="text-lg sm:text-xl font-bold text-slate-900">' + item.q + '</h3>' +
+          '<h3 class="font-[\'Raleway\'] text-lg sm:text-xl font-bold text-black">' + item.q + '</h3>' +
           '<div class="space-y-2.5">' + optionsHtml + '</div>' +
         '</div>';
     }
@@ -1606,8 +1617,8 @@
         var btn = document.getElementById('faqTab-' + k);
         if (!btn) return;
         btn.className = (k === cat)
-          ? 'px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-bold bg-amber-400 text-slate-950 flex items-center justify-center shadow-xs'
-          : 'px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-700 flex items-center justify-center shadow-xs';
+          ? 'px-4 py-2.5 min-h-[44px] rounded-full text-xs font-bold font-[\'Montserrat\'] uppercase tracking-wider bg-black text-white flex items-center justify-center shadow-sm'
+          : 'px-4 py-2.5 min-h-[44px] rounded-full text-xs font-semibold font-[\'Montserrat\'] uppercase tracking-wider bg-[#F4F4F4] hover:bg-neutral-200 border border-neutral-200 text-neutral-700 flex items-center justify-center shadow-xs transition-all';
       });
 
       var list = document.getElementById('faqAccordionList');
@@ -1620,12 +1631,12 @@
       list.innerHTML = items.map(function(f, idx) {
         var delayClass = 'delay-' + (((idx % 4) + 1) * 100);
         return (
-          '<div class="reveal-up ' + delayClass + ' bg-white rounded-2xl border border-slate-200 shadow-xs overflow-hidden transition-all">' +
-            '<button type="button" onclick="toggleFaqItem(' + idx + ')" class="w-full text-left px-5 py-4 flex items-center justify-between gap-3 font-bold text-slate-900 text-sm hover:text-amber-700 transition-colors min-h-[44px]">' +
+          '<div class="reveal-up ' + delayClass + ' bg-white rounded-2xl border border-neutral-200 shadow-xs overflow-hidden transition-all">' +
+            '<button type="button" onclick="toggleFaqItem(' + idx + ')" class="w-full text-left px-5 py-4 flex items-center justify-between gap-3 font-bold font-[\'Montserrat\'] text-black text-sm hover:text-neutral-700 transition-colors min-h-[44px]">' +
               '<span>Q. ' + f.q + '</span>' +
-              '<span id="faqIcon-' + idx + '" class="text-amber-600 font-bold text-lg leading-none">+</span>' +
+              '<span id="faqIcon-' + idx + '" class="text-black font-bold text-lg leading-none">+</span>' +
             '</button>' +
-            '<div id="faqBody-' + idx + '" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3 bg-slate-50/50">' +
+            '<div id="faqBody-' + idx + '" class="hidden px-5 pb-5 text-xs sm:text-sm text-neutral-600 font-[\'Montserrat\'] leading-relaxed border-t border-neutral-100 pt-3 bg-neutral-50/50">' +
               f.a +
             '</div>' +
           '</div>'
@@ -1635,6 +1646,15 @@
       if (typeof initScrollReveal === 'function') {
         initScrollReveal();
       }
+      window.requestAnimationFrame(function() {
+        var items = list.querySelectorAll('.reveal-up');
+        items.forEach(function(el) {
+          var rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            el.classList.add('reveal-visible');
+          }
+        });
+      });
     };
 
     window.toggleFaqItem = function(idx) {
@@ -1847,6 +1867,7 @@
     // ==========================================
     // 11. SCROLL REVEAL (INTERSECTION OBSERVER)
     // ==========================================
+    var scrollObserver = null;
     function initScrollReveal() {
       var revealElements = document.querySelectorAll('.reveal-up:not(.reveal-visible), .reveal-left:not(.reveal-visible), .reveal-right:not(.reveal-visible)');
       if (!revealElements.length) return;
@@ -1858,7 +1879,11 @@
         return;
       }
 
-      var observer = new IntersectionObserver(function(entries, obs) {
+      if (scrollObserver) {
+        scrollObserver.disconnect();
+      }
+
+      scrollObserver = new IntersectionObserver(function(entries, obs) {
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
             entry.target.classList.add('reveal-visible');
@@ -1871,7 +1896,7 @@
       });
 
       revealElements.forEach(function(el) {
-        observer.observe(el);
+        scrollObserver.observe(el);
       });
     }
 
