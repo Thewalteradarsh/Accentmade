@@ -927,6 +927,14 @@
                 <textarea id="contactMessage" rows="3" required placeholder="Tell Carys about your current English level, goals, and preferred weekly schedule..." class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-neutral-300 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-black focus:ring-1 focus:ring-black font-['Montserrat']"></textarea>
               </div>
 
+              <!-- Explicit DPDP / GDPR Consent Checkbox -->
+              <div class="flex items-start gap-2.5 pt-1">
+                <input id="contactConsentCheck" type="checkbox" required class="mt-1 w-4 h-4 rounded border-neutral-300 text-black focus:ring-black accent-black cursor-pointer shrink-0" />
+                <label for="contactConsentCheck" class="text-[11px] leading-snug text-neutral-600 font-['Montserrat'] cursor-pointer select-none">
+                  I agree to the processing of my personal data (Name, Email, WhatsApp) to arrange my language evaluation or deliver learning materials, as outlined in the <button type="button" onclick="openLegalModal('privacy')" class="underline hover:text-black font-bold text-neutral-900 inline">Privacy Policy</button>. I understand I can withdraw consent at any time.
+                </label>
+              </div>
+
               <button type="submit" class="w-full py-4 min-h-[44px] rounded-full bg-black text-white hover:bg-neutral-800 font-['Montserrat'] font-bold text-xs uppercase tracking-wider shadow-md transition-all active:scale-95 flex items-center justify-center">
                 Send Inquiry to Carys George →
               </button>
@@ -965,26 +973,63 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="py-10 border-t border-neutral-200 bg-[#F4F4F4] text-xs text-neutral-600 font-['Montserrat']">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-3">
-        <img src="assets/logo.png" alt="Accent Made Logo" class="w-9 h-9 rounded-xl object-contain border border-neutral-200 bg-white shrink-0 shadow-xs" />
-        <div>
-          <span class="font-bold text-black block leading-tight">AccentMade.com</span>
-          <span class="text-neutral-500">Carys George (CELTA, TEFL, MA, BA Hons)</span>
+  <footer class="py-12 border-t border-neutral-200 bg-[#F4F4F4] text-xs text-neutral-600 font-['Montserrat']">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+
+      <!-- Top Row: Brand Info + Instagram Action -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <img src="assets/logo.png" alt="Accent Made Logo" class="w-9 h-9 rounded-xl object-contain border border-neutral-200 bg-white shrink-0 shadow-xs" />
+          <div>
+            <span class="font-bold text-black block leading-tight">AccentMade.com</span>
+            <span class="text-neutral-500">Carys George (CELTA, TEFL, MA, BA Hons) • Native UK British English Trainer</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="https://www.instagram.com/hello_accentmade" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-300 bg-white hover:bg-neutral-100 text-black font-bold text-xs uppercase tracking-wider transition-all shadow-xs hover:border-black active:scale-95" title="Follow Carys on Instagram (@hello_accentmade)">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            <span>Instagram</span>
+          </a>
         </div>
       </div>
-      <div class="flex items-center gap-3">
-        <a href="https://www.instagram.com/hello_accentmade" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-300 bg-white hover:bg-neutral-100 text-black font-bold text-xs uppercase tracking-wider transition-all shadow-xs hover:border-black active:scale-95" title="Follow Carys on Instagram (@hello_accentmade)">
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-          </svg>
-          <span>Instagram</span>
-        </a>
+
+      <!-- Legal Links Bar & DPDP Compliance Row -->
+      <div class="pt-5 border-t border-neutral-300/80 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[11px] sm:text-xs">
+        <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-neutral-700 font-semibold">
+          <button type="button" onclick="openLegalModal('privacy')" class="hover:text-black hover:underline transition-colors">
+            Privacy Policy &amp; DPDP Notice
+          </button>
+          <span class="text-neutral-300 hidden sm:inline">•</span>
+          <button type="button" onclick="openLegalModal('terms')" class="hover:text-black hover:underline transition-colors">
+            Terms of Service &amp; Class Policy
+          </button>
+          <span class="text-neutral-300 hidden sm:inline">•</span>
+          <button type="button" onclick="openLegalModal('cookies')" class="hover:text-black hover:underline transition-colors">
+            Cookie Policy
+          </button>
+          <span class="text-neutral-300 hidden sm:inline">•</span>
+          <button type="button" onclick="openLegalModal('privacy', 'dataPrincipalRights')" class="text-amber-800 hover:text-black hover:underline font-bold transition-colors">
+            Withdraw Consent / Delete My Data
+          </button>
+        </div>
+
+        <div class="text-neutral-500">
+          Grievance Officer: <a href="mailto:contact@accentmade.com" class="text-black font-semibold hover:underline">contact@accentmade.com</a> (72h SLA)
+        </div>
       </div>
-      <div class="text-neutral-500">
-        Copyright © 2024–2026 AccentMade.com. All rights reserved.
+
+      <!-- Copyright & Disclaimer -->
+      <div class="pt-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-[11px] text-neutral-500">
+        <div>
+          Copyright © 2024–2026 AccentMade.com. All rights reserved. Compliant with India DPDP Act (2023), UK GDPR &amp; UAE Federal Decree-Law No. 45/2021.
+        </div>
+        <div>
+          Zero Third-Party Advertising Trackers
+        </div>
       </div>
+
     </div>
   </footer>
 
@@ -1008,6 +1053,15 @@
         <input id="modalNameInput" type="text" placeholder="Your Name" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-neutral-300 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-black focus:ring-1 focus:ring-black font-['Montserrat']" />
         <input id="modalEmailInput" type="email" placeholder="Your Email Address" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-neutral-300 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-black focus:ring-1 focus:ring-black font-['Montserrat']" />
         <textarea id="modalNotesInput" rows="3" placeholder="Any specific goals (e.g., Accent Reduction, IELTS, Business English)?" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-neutral-300 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-black focus:ring-1 focus:ring-black font-['Montserrat']"></textarea>
+        
+        <!-- Explicit DPDP / GDPR Consent Checkbox -->
+        <div class="flex items-start gap-2.5 pt-1">
+          <input id="modalConsentCheck" type="checkbox" required class="mt-0.5 w-4 h-4 rounded border-neutral-300 text-black focus:ring-black accent-black cursor-pointer shrink-0" />
+          <label for="modalConsentCheck" class="text-[11px] leading-snug text-neutral-600 font-['Montserrat'] cursor-pointer select-none">
+            I agree to the processing of my personal data (Name, Email, WhatsApp) to arrange my language evaluation or deliver learning materials, as outlined in the <button type="button" onclick="openLegalModal('privacy')" class="underline hover:text-black font-bold text-neutral-900 inline">Privacy Policy</button>. I understand I can withdraw consent at any time.
+          </label>
+        </div>
+
         <button onclick="submitModalInquiry()" type="button" class="w-full py-3.5 min-h-[44px] rounded-full bg-black text-white hover:bg-neutral-800 font-['Montserrat'] font-bold text-xs uppercase tracking-wider shadow-md transition-all active:scale-95 flex items-center justify-center">
           Confirm &amp; Prepare Inquiry
         </button>
@@ -1015,10 +1069,217 @@
     </div>
   </div>
 
+  <!-- REUSABLE LEGAL & DPDP COMPLIANCE MODAL -->
+  <div id="legalModal" class="fixed inset-0 z-[75] hidden items-center justify-center p-3 sm:p-6 bg-slate-900/60 backdrop-blur-sm">
+    <div class="bg-white text-black rounded-2xl max-w-3xl w-full max-h-[85vh] sm:max-h-[80vh] flex flex-col border border-neutral-300 shadow-2xl relative font-['Montserrat'] overflow-hidden">
+      
+      <!-- Modal Header -->
+      <div class="px-6 sm:px-8 pt-6 pb-4 border-b border-neutral-200 flex items-start justify-between gap-4 shrink-0 bg-white">
+        <div>
+          <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-neutral-100 border border-neutral-300 text-[10px] font-bold uppercase tracking-wider text-neutral-800 mb-1">
+            <span>🛡️ Legal &amp; Data Protection Hub</span>
+            <span>• DPDP 2023 &amp; UK/UAE GDPR</span>
+          </div>
+          <h2 id="legalModalHeading" class="font-['Raleway'] font-extrabold text-black text-xl sm:text-2xl tracking-tight leading-tight">
+            Legal &amp; Privacy Information
+          </h2>
+        </div>
+        <button onclick="closeLegalModal()" type="button" class="w-9 h-9 rounded-full bg-neutral-100 hover:bg-neutral-200 flex items-center justify-center text-neutral-700 hover:text-black transition-colors shrink-0" aria-label="Close legal modal">
+          ✕
+        </button>
+      </div>
+
+      <!-- Modal Tabs Switcher -->
+      <div class="px-6 sm:px-8 py-3 bg-[#F4F4F4] border-b border-neutral-200 flex flex-wrap gap-2 shrink-0">
+        <button id="legalTabBtn-privacy" onclick="switchLegalTab('privacy')" type="button" class="px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-black text-white transition-all shadow-xs">
+          Privacy &amp; DPDP Notice
+        </button>
+        <button id="legalTabBtn-terms" onclick="switchLegalTab('terms')" type="button" class="px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-white border border-neutral-300 text-neutral-700 hover:border-black transition-all shadow-xs">
+          Terms &amp; Class Policy
+        </button>
+        <button id="legalTabBtn-cookies" onclick="switchLegalTab('cookies')" type="button" class="px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-white border border-neutral-300 text-neutral-700 hover:border-black transition-all shadow-xs">
+          Cookie Notice
+        </button>
+      </div>
+
+      <!-- Modal Body (Scrollable) -->
+      <div id="legalModalScrollBody" class="px-6 sm:px-8 py-6 overflow-y-auto space-y-6 text-xs sm:text-sm leading-relaxed text-neutral-800">
+        
+        <!-- TAB 1: Privacy & Data Protection Notice -->
+        <div id="legalContent-privacy" class="space-y-5">
+          <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200">
+            <h3 class="font-['Raleway'] font-bold text-base text-black mb-1">Notice under Digital Personal Data Protection Act (2023) &amp; UK/UAE GDPR</h3>
+            <p class="text-xs text-neutral-600">
+              Accent Made values your personal sovereignty. This notice explains what personal information we collect, why we need it, and how you retain full control over your data.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-black uppercase tracking-wider text-xs mb-1">1. Data Fiduciary &amp; Controller Identity</h4>
+            <p>
+              The Data Fiduciary (Controller) is <strong>Accent Made</strong>, operated as an accredited educational practice by <strong>Carys George</strong> (CELTA, TEFL, MA, BA Hons).
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-black uppercase tracking-wider text-xs mb-1">2. Personal Data We Collect</h4>
+            <p>We process only data strictly necessary to provide customized language instruction:</p>
+            <ul class="list-disc list-inside mt-1.5 space-y-1 text-neutral-700">
+              <li><strong>Contact Coordinates:</strong> Full Name, Email Address, and WhatsApp/Phone Number.</li>
+              <li><strong>Academic Diagnostics:</strong> Self-selected English level, placement check responses, phonetics audio notes, and learning objectives (e.g. IELTS, British accent reduction, Corporate English).</li>
+              <li><strong>Schedule Preferences:</strong> Requested weekly class frequency and group vs. private tuition preferences.</li>
+              <li><strong>Zero Financial or Payment Data:</strong> No payment card numbers, CVVs, UPI IDs, or banking credentials are collected on this website. Tuition arrangements are coordinated directly between the student and trainer without online gateway storage.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-black uppercase tracking-wider text-xs mb-1">3. Specified Purpose of Processing</h4>
+            <p>
+              Personal data is collected and processed solely for:
+            </p>
+            <ul class="list-disc list-inside mt-1.5 space-y-1 text-neutral-700">
+              <li>Evaluating student proficiency and assigning suitable cohort placement (Group, Semi-Private, or 1-on-1).</li>
+              <li>Delivering requested digital study materials (including the complimentary <em>Accent &amp; Fluency Blueprint</em> E-Guide).</li>
+              <li>Communicating class schedules, Zoom/Google Meet links, and diagnostic homework feedback over email or WhatsApp.</li>
+            </ul>
+            <p class="mt-2 text-neutral-700">
+              Your data is <strong>never sold, leased, rented, or shared with third-party data brokers or marketing affiliates</strong>.
+            </p>
+          </div>
+
+          <!-- Highlighted Data Principal Rights & Withdrawal Section -->
+          <div id="dataPrincipalRights" class="p-5 rounded-2xl bg-amber-50/70 border border-amber-300/80 space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="text-amber-800 font-bold text-sm">⚖️ 4. Data Principal Rights &amp; Consent Withdrawal (DPDP 2023)</span>
+            </div>
+            <p class="text-xs text-neutral-800">
+              Under Section 6(1) and Sections 11–14 of the Digital Personal Data Protection Act 2023, UK GDPR Articles 15–22, and UAE Data Protection Law, you enjoy the following enforceable rights:
+            </p>
+            <ul class="list-disc list-inside space-y-1 text-xs text-neutral-700">
+              <li><strong>Right to Access:</strong> Request a full summary of personal data currently processed by Accent Made.</li>
+              <li><strong>Right to Correction &amp; Erasure:</strong> Rectify inaccurate details or demand immediate deletion ("Right to be Forgotten") of all your information.</li>
+              <li><strong>Right to Withdraw Consent:</strong> You have the absolute right to withdraw consent at any time without affecting past lawful processing.</li>
+              <li><strong>Right of Grievance Redressal:</strong> Direct access to our designated Grievance Officer with guaranteed timely resolution.</li>
+            </ul>
+            <div class="pt-2 border-t border-amber-200 text-xs">
+              <strong>How to Withdraw Consent or Delete Your Records:</strong><br />
+              Email our dedicated Data Protection &amp; Grievance desk at <a href="mailto:contact@accentmade.com?subject=DPDP%20Consent%20Withdrawal%20%2F%20Data%20Erasure%20Request" class="text-black underline font-bold">contact@accentmade.com</a> with the subject line <em>"DPDP / GDPR Data Erasure Request"</em>. We will process your erasure across all email and WhatsApp registers within our mandatory 72-hour turnaround window.
+            </div>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-black uppercase tracking-wider text-xs mb-1">5. Grievance Officer &amp; SLA Commitment</h4>
+            <p>
+              In accordance with Section 13(1) of the DPDP Act 2023:
+            </p>
+            <div class="mt-1.5 p-3 rounded-xl bg-neutral-100 border border-neutral-200 space-y-1 text-xs">
+              <div><strong>Designated Grievance Contact:</strong> Carys George / Accent Made Compliance Desk</div>
+              <div><strong>Email:</strong> <a href="mailto:contact@accentmade.com" class="text-black underline font-bold">contact@accentmade.com</a></div>
+              <div><strong>Secondary Channel:</strong> <a href="mailto:improvemyaccent@gmail.com" class="text-black underline font-semibold">improvemyaccent@gmail.com</a></div>
+              <div><strong>Response Window (SLA):</strong> Acknowledgment within 24 hours, resolution within 72 hours.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: Terms of Service & Class Policy -->
+        <div id="legalContent-terms" class="hidden space-y-5">
+          <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200">
+            <h3 class="font-['Raleway'] font-bold text-base text-black mb-1">Terms of Service &amp; Class Participation Policy</h3>
+            <p class="text-xs text-neutral-600">
+              Guidelines governing course registration, interactive estimates, class attendance, and curriculum copyright.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-black uppercase tracking-wider text-xs mb-1">1. Non-Binding Nature of Estimator Calculations</h4>
+            <p>
+              Calculations displayed on the Interactive 3D Tuition Estimator (€5 per class for 6-person Group, €10 per class for 3-person Semi-Private, or Custom 1-on-1 rates) are informational estimates intended to assist prospective students with planning. They do not constitute an automatic contractual offer. Final enrollment, cohort placement, and class scheduling are confirmed only following mutual evaluation and availability review with Carys George.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-black uppercase tracking-wider text-xs mb-1">2. Attendance, Rescheduling &amp; 24-Hour Notice Rule</h4>
+            <p>
+              To maintain fair scheduling for all learners and the trainer:
+            </p>
+            <ul class="list-disc list-inside mt-1.5 space-y-1 text-neutral-700">
+              <li><strong>Private 1-on-1 Sessions:</strong> Must be rescheduled with at least <strong>24 hours advance written notice</strong> via email or WhatsApp. Sessions cancelled with less than 24 hours notice are considered forfeited.</li>
+              <li><strong>Semi-Private (Trio) Classes:</strong> Rescheduling requires unanimous consent of all 3 student members and trainer with 24 hours advance notice.</li>
+              <li><strong>Group Cohorts (6 max):</strong> Group classes operate on predetermined weekly schedules and cannot be individually rescheduled. Comprehensive lesson summaries and practice homework will be provided for any missed session.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-black uppercase tracking-wider text-xs mb-1">3. Intellectual Property &amp; E-Guide Copyright</h4>
+            <p>
+              All curriculum frameworks, phonetic audio demonstrations, diagnostic checklists, and the <em>British Accent &amp; Fluency Blueprint</em> E-Guide are the exclusive intellectual property of Carys George (Accent Made). Downloading or receiving materials grants you an individual, non-transferable license for personal self-study only. Commercial reproduction, redistribution, or public upload is strictly prohibited.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-black uppercase tracking-wider text-xs mb-1">4. Community Code of Conduct</h4>
+            <p>
+              Accent Made welcomes an international cohort of adult learners. Respectful, professional, and courteous decorum is required across all live classrooms, discussion sessions, and cohort WhatsApp groups. Any form of harassment, discrimination, or disruptive conduct may result in immediate termination of tuition without refund.
+            </p>
+          </div>
+        </div>
+
+        <!-- TAB 3: Cookie Notice -->
+        <div id="legalContent-cookies" class="hidden space-y-5">
+          <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200">
+            <h3 class="font-['Raleway'] font-bold text-base text-black mb-1">Cookie &amp; Local Storage Policy</h3>
+            <p class="text-xs text-neutral-600">
+              A transparent explanation of technical cookies and browser storage used on AccentMade.com.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-black uppercase tracking-wider text-xs mb-1">1. Zero Third-Party Advertising Trackers</h4>
+            <p>
+              Accent Made does <strong>NOT</strong> use third-party advertising tracking pixels, cross-site behavior trackers, profiling scripts, or remarketing tags (e.g. Meta Pixel, TikTok Pixel, Google Ads Remarketing). We do not monetize user tracking.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-black uppercase tracking-wider text-xs mb-1">2. Strictly Necessary Functional Storage</h4>
+            <p>
+              We utilize minimal client-side browser storage (such as session variables or local state) solely for core website functionality:
+            </p>
+            <ul class="list-disc list-inside mt-1.5 space-y-1 text-neutral-700">
+              <li>Preserving your 3D Interactive Quiz progress as you navigate between cards.</li>
+              <li>Remembering your selected frequency slider position in the tuition calculator.</li>
+              <li>Managing modal dialog display state (open/close).</li>
+            </ul>
+            <p class="mt-2 text-neutral-700">
+              These functional mechanisms expire automatically and do not identify you across other external websites.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-black uppercase tracking-wider text-xs mb-1">3. Managing Your Browser Settings</h4>
+            <p>
+              You can configure your browser to block or alert you about cookies or local storage at any time through your browser preferences (Chrome, Safari, Firefox, Edge). Because we do not use tracking cookies, your experience remains fully functional.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="px-6 sm:px-8 py-4 border-t border-neutral-200 bg-neutral-50 flex flex-col sm:flex-row items-center justify-between gap-3 shrink-0">
+        <div class="text-[11px] text-neutral-500">
+          DPDP Act / GDPR Inquiries: <a href="mailto:contact@accentmade.com" class="text-black font-semibold hover:underline">contact@accentmade.com</a>
+        </div>
+        <button onclick="closeLegalModal()" type="button" class="w-full sm:w-auto px-6 py-2.5 rounded-full bg-black text-white hover:bg-neutral-800 font-['Montserrat'] font-bold text-xs uppercase tracking-wider transition-all shadow-xs active:scale-95">
+          Close Notice
+        </button>
+      </div>
+
+    </div>
+  </div>
+
   <!-- Toast Notification -->
   <div id="toastBanner" class="fixed bottom-5 right-5 z-[80] hidden px-4 py-3 rounded-2xl bg-neutral-950/95 border border-amber-400/50 text-xs sm:text-sm font-semibold text-white shadow-2xl font-['Montserrat']">
-    <span id="toastMessage">Saved!</span>
-  </div>
     <span id="toastMessage">Saved!</span>
   </div>
 
@@ -1728,17 +1989,84 @@
       if (modal && e.target === modal) {
         closeInquiryModal();
       }
+      var legalModal = document.getElementById('legalModal');
+      if (legalModal && e.target === legalModal) {
+        closeLegalModal();
+      }
     });
 
     // Close on Escape key
     window.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') {
         closeInquiryModal();
+        closeLegalModal();
         closeMobileMenu();
       }
     });
 
+    // ==========================================
+    // 9B. LEGAL MODAL & DPDP TAB ENGINE
+    // ==========================================
+    window.openLegalModal = function(tab, targetSectionId) {
+      var modal = document.getElementById('legalModal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+      if (tab) {
+        switchLegalTab(tab);
+      }
+      if (targetSectionId) {
+        setTimeout(function() {
+          var targetEl = document.getElementById(targetSectionId);
+          if (targetEl) {
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 120);
+      }
+    };
+
+    window.closeLegalModal = function() {
+      var modal = document.getElementById('legalModal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    };
+
+    window.switchLegalTab = function(tabKey) {
+      ['privacy', 'terms', 'cookies'].forEach(function(k) {
+        var btn = document.getElementById('legalTabBtn-' + k);
+        var content = document.getElementById('legalContent-' + k);
+        if (btn) {
+          if (k === tabKey) {
+            btn.className = 'px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-black text-white transition-all shadow-xs';
+          } else {
+            btn.className = 'px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-white border border-neutral-300 text-neutral-700 hover:border-black transition-all shadow-xs';
+          }
+        }
+        if (content) {
+          if (k === tabKey) {
+            content.classList.remove('hidden');
+          } else {
+            content.classList.add('hidden');
+          }
+        }
+      });
+      var scrollContainer = document.getElementById('legalModalScrollBody');
+      if (scrollContainer) {
+        scrollContainer.scrollTop = 0;
+      }
+    };
+
     window.submitModalInquiry = function() {
+      var consentCheck = document.getElementById('modalConsentCheck');
+      if (consentCheck && !consentCheck.checked) {
+        showToast('⚠️ Please accept the privacy consent checkbox to continue.');
+        consentCheck.focus();
+        return;
+      }
+
       var name = (document.getElementById('modalNameInput') || {}).value || '';
       var email = (document.getElementById('modalEmailInput') || {}).value || '';
       var notes = (document.getElementById('modalNotesInput') || {}).value || '';
@@ -1746,12 +2074,14 @@
       var contactName = document.getElementById('contactName');
       var contactEmail = document.getElementById('contactEmail');
       var contactMessage = document.getElementById('contactMessage');
+      var mainConsent = document.getElementById('contactConsentCheck');
 
       if (contactName && name) contactName.value = name;
       if (contactEmail && email) contactEmail.value = email;
       if (contactMessage) {
         contactMessage.value = 'Inquiry Topic: ' + currentModalTopic + (notes ? '\nNotes: ' + notes : '');
       }
+      if (mainConsent) mainConsent.checked = true;
 
       closeInquiryModal();
       var contactSection = document.getElementById('contact');
@@ -1761,6 +2091,13 @@
 
     window.handleContactSubmit = function(e) {
       if (e) e.preventDefault();
+      var consentCheck = document.getElementById('contactConsentCheck');
+      if (consentCheck && !consentCheck.checked) {
+        showToast('⚠️ Please accept the privacy consent checkbox to continue.');
+        consentCheck.focus();
+        return;
+      }
+
       var name = (document.getElementById('contactName') || {}).value || 'Student';
       var email = (document.getElementById('contactEmail') || {}).value || '';
       var topic = (document.getElementById('contactTopic') || {}).value || 'Course Inquiry';
