@@ -345,7 +345,7 @@
   </header>
 
   <!-- HERO SECTION WITH TOMASZ GAJDA DIAGONAL SPLIT REFERENCE -->
-  <section id="hero" class="relative min-h-[100svh] h-auto lg:min-h-screen w-full bg-[#D7D7D7] overflow-hidden flex flex-col justify-between lg:flex-row lg:items-center">
+  <section id="hero" class="relative min-h-[100svh] h-auto lg:min-h-screen w-full bg-[#D7D7D7] overflow-hidden flex flex-col justify-start lg:flex-row lg:items-center">
 
     <!-- Hidden container preserving 3D stage and Three.js hooks to prevent console errors -->
     <div class="hidden" style="display: none;" aria-hidden="true">
@@ -359,36 +359,43 @@
     <!-- Black Right Diagonal Panel (Desktop) -->
     <div class="absolute inset-y-0 right-0 lg:w-[58%] xl:w-[56%] bg-black z-10 pointer-events-none hidden lg:block" style="clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%); -webkit-clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);"></div>
 
-    <!-- Black Bottom Diagonal Panel (Mobile & Tablet) -->
-    <div class="absolute inset-x-0 bottom-0 h-[38svh] min-h-[260px] max-h-[380px] w-full bg-black z-10 pointer-events-none lg:hidden" style="clip-path: polygon(0 22%, 100% 0, 100% 100%, 0% 100%); -webkit-clip-path: polygon(0 22%, 100% 0, 100% 100%, 0% 100%);"></div>
+    <!-- Mobile Top Black Diagonal Portrait Stage (< 1024px) -->
+    <div class="lg:hidden w-full h-[36svh] min-h-[260px] max-h-[340px] bg-black relative overflow-hidden flex items-end justify-center pt-16 z-20" style="clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%); -webkit-clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);">
+      <img
+        src="assets/carys-portrait.png"
+        alt="Carys George — Native UK British English Language Trainer"
+        class="h-[88%] w-auto object-contain object-bottom select-none drop-shadow-[0_20px_30px_rgba(0,0,0,0.85)] pointer-events-none"
+        loading="eager"
+      />
+    </div>
 
     <!-- Content Container -->
-    <div class="max-w-[1440px] mx-auto w-full px-5 sm:px-10 lg:px-20 relative z-20 flex flex-col justify-between lg:grid lg:grid-cols-12 lg:items-center min-h-[100svh] lg:min-h-screen">
+    <div class="max-w-[1440px] mx-auto w-full px-0 sm:px-6 lg:px-20 relative z-20 flex flex-col lg:grid lg:grid-cols-12 lg:items-center min-h-0 lg:min-h-screen">
 
       <!-- Left Column: Typography & CTAs (on #D7D7D7 Background) -->
-      <div id="heroLeftColumn" class="lg:col-span-6 w-full pt-24 pb-8 lg:py-0 lg:max-w-[400px] xl:max-w-[480px] 2xl:max-w-[540px] flex flex-col justify-center will-change-transform">
+      <div id="heroLeftColumn" class="w-full px-6 pt-4 pb-10 bg-[#D7D7D7] text-black lg:col-span-6 lg:px-0 lg:pt-0 lg:pb-0 lg:bg-transparent lg:max-w-[400px] xl:max-w-[480px] 2xl:max-w-[540px] flex flex-col justify-center will-change-transform">
         <!-- Eyebrow -->
-        <p class="font-['Montserrat'] font-bold text-neutral-700 text-xs sm:text-sm tracking-[0.2em] uppercase mb-2">
+        <p class="font-['Montserrat'] font-bold text-neutral-600 text-[11px] lg:text-xs xl:text-sm tracking-[0.2em] uppercase mb-1.5">
           ACCENT MADE
         </p>
 
         <!-- Main Headline -->
-        <h1 class="font-['Raleway'] font-extrabold text-[#000000] text-[32px] sm:text-[42px] lg:text-[40px] xl:text-[52px] 2xl:text-[60px] tracking-tight leading-[1.05] mb-3">
+        <h1 class="font-['Raleway'] font-extrabold text-[#000000] text-[30px] sm:text-[38px] lg:text-[40px] xl:text-[52px] 2xl:text-[60px] tracking-tight leading-[1.08] lg:leading-[1.05] mb-3">
           Speak with confidence. Be understood. Stand out.
         </h1>
 
         <!-- Opening Hook -->
-        <div class="font-['Montserrat'] font-medium text-neutral-800 text-sm sm:text-base leading-relaxed space-y-2 mb-4">
-          <p class="font-semibold text-black">
+        <div class="font-['Montserrat'] text-sm sm:text-base leading-relaxed mb-2.5 space-y-1.5">
+          <p class="font-semibold text-neutral-800">
             English is more than grammar.
           </p>
-          <p>
+          <p class="font-medium text-neutral-700">
             It's how you introduce yourself, communicate your ideas, handle a difficult conversation, build relationships and make an impression.
           </p>
         </div>
 
         <!-- Core Description -->
-        <div class="font-['Montserrat'] text-xs sm:text-sm text-neutral-700 leading-relaxed space-y-2 mb-6">
+        <div class="font-['Montserrat'] text-[13px] sm:text-sm text-neutral-700 leading-relaxed space-y-2 mb-5">
           <p>
             Accent Made helps ambitious professionals, students and organisations communicate with greater clarity, confidence and impact.
           </p>
@@ -429,25 +436,25 @@
             <a href="https://www.instagram.com/hello_accentmade" target="_blank" rel="noopener noreferrer" title="Follow Carys on Instagram (@hello_accentmade)" class="w-11 h-11 md:w-[48px] md:h-[48px] bg-[#C4C4C4] hover:bg-[#b0b0b0] text-black flex items-center justify-center rounded-sm shadow-[0_4px_8px_rgba(0,0,0,0.18)] transition active:scale-95" aria-label="Instagram Profile">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
+             </svg>
+           </a>
+         </div>
+       </div>
+     </div>
 
-      <!-- Right Column: Carys Portrait Anchored on the Black Diagonal -->
-      <div id="heroInstructorWrapper" class="lg:col-span-6 relative w-full h-[38svh] min-h-[260px] max-h-[380px] lg:h-full flex items-end justify-center lg:justify-end self-end z-20 lg:pr-12 xl:pr-20">
-        <div id="heroPortraitParallax" class="w-full flex justify-center lg:justify-end items-end will-change-transform">
-          <div id="heroInstructorCard" class="relative w-full flex justify-center lg:justify-end items-end" style="transform-style: preserve-3d; perspective: 1000px;">
-            <img
-              src="assets/carys-portrait.png"
-              alt="Carys George — Native UK British English Language Trainer"
-              class="-mt-8 sm:-mt-12 lg:mt-0 w-auto h-[38svh] min-h-[260px] max-h-[380px] lg:h-[86vh] lg:max-h-[820px] object-contain object-bottom select-none drop-shadow-[0_20px_30px_rgba(0,0,0,0.85)] pointer-events-none"
-              loading="eager"
-            />
-          </div>
-        </div>
-      </div>
+     <!-- Right Column: Carys Portrait Anchored on the Black Diagonal (Desktop Only) -->
+     <div id="heroInstructorWrapper" class="hidden lg:flex lg:col-span-6 relative w-full lg:h-full items-end justify-end self-end z-20 lg:pr-12 xl:pr-20">
+       <div id="heroPortraitParallax" class="w-full flex justify-end items-end will-change-transform">
+         <div id="heroInstructorCard" class="relative w-full flex justify-end items-end" style="transform-style: preserve-3d; perspective: 1000px;">
+           <img
+             src="assets/carys-portrait.png"
+             alt="Carys George — Native UK British English Language Trainer"
+             class="lg:mt-0 w-auto lg:h-[86vh] lg:max-h-[820px] object-contain object-bottom select-none drop-shadow-[0_20px_30px_rgba(0,0,0,0.85)] pointer-events-none"
+             loading="eager"
+           />
+         </div>
+       </div>
+     </div>
 
     </div>
   </section>
@@ -3286,28 +3293,33 @@
           }
         }
 
-        // 3. Hero Scroll-Out Parallax
+        // 3. Hero Scroll-Out Parallax (Desktop Only)
         if (heroLeft || heroPortrait) {
-          var isMobile = window.innerWidth < 768;
-          var factor = isMobile ? 0.5 : 1.0;
-          if (scrollY < window.innerHeight) {
-            if (heroLeft) {
-              var translateY = scrollY * -0.15 * factor;
-              var opacity = Math.max(0, 1 - (scrollY / 700));
-              heroLeft.style.transform = 'translate3d(0, ' + translateY.toFixed(2) + 'px, 0)';
-              heroLeft.style.opacity = opacity.toFixed(3);
-            }
-            if (heroPortrait) {
-              var translateYPortrait = scrollY * 0.12 * factor;
-              heroPortrait.style.transform = 'translate3d(0, ' + translateYPortrait.toFixed(2) + 'px, 0)';
+          if (window.innerWidth >= 1024) {
+            if (scrollY < window.innerHeight) {
+              if (heroLeft) {
+                var translateY = scrollY * -0.15;
+                var opacity = Math.max(0, 1 - (scrollY / 700));
+                heroLeft.style.transform = 'translate3d(0, ' + translateY.toFixed(2) + 'px, 0)';
+                heroLeft.style.opacity = opacity.toFixed(3);
+              }
+              if (heroPortrait) {
+                var translateYPortrait = scrollY * 0.12;
+                heroPortrait.style.transform = 'translate3d(0, ' + translateYPortrait.toFixed(2) + 'px, 0)';
+              }
+            } else {
+              if (heroLeft) {
+                heroLeft.style.transform = 'translate3d(0, 0, 0)';
+                heroLeft.style.opacity = '1';
+              }
+              if (heroPortrait) {
+                heroPortrait.style.transform = 'translate3d(0, 0, 0)';
+              }
             }
           } else {
             if (heroLeft) {
-              heroLeft.style.transform = 'translate3d(0, 0, 0)';
+              heroLeft.style.transform = 'none';
               heroLeft.style.opacity = '1';
-            }
-            if (heroPortrait) {
-              heroPortrait.style.transform = 'translate3d(0, 0, 0)';
             }
           }
         }
