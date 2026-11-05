@@ -296,7 +296,7 @@
 
   <!-- Split-Aware Transparent Navigation (Tomasz Gajda Reference with Scroll Morph) -->
   <header id="mainHeader" class="fixed top-0 inset-x-0 z-50 bg-transparent py-3.5 transition-all duration-300">
-    <div class="max-w-[1440px] mx-auto w-full px-5 sm:px-10 lg:px-20 flex items-center justify-between gap-4">
+    <div class="w-full pl-5 sm:pl-8 lg:pl-12 xl:pl-16 2xl:pl-20 pr-4 sm:pr-8 lg:pr-10 xl:pr-16 2xl:pr-20 flex items-center justify-between gap-4">
       <!-- Left Brand (Positioned Over #D7D7D7 Background) -->
       <a href="#hero" class="flex items-center gap-2.5 sm:gap-3 group shrink-0 min-h-[44px]">
         <img src="assets/logo.png" alt="Accent Made Logo" class="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-xl object-contain border border-black/15 shadow-xs bg-white p-0.5 group-hover:scale-105 transition-transform" />
@@ -304,8 +304,8 @@
       </a>
 
       <!-- Desktop Nav & Action (Grouped Right Inside Black Diagonal) -->
-      <div class="hidden lg:flex ml-auto items-center gap-4 xl:gap-6 lg:pr-2 xl:pr-0">
-        <nav class="flex items-center gap-4 xl:gap-5 text-[13px] xl:text-sm font-semibold font-['Montserrat'] tracking-wide">
+      <div class="hidden lg:flex ml-auto items-center gap-3.5 xl:gap-6">
+        <nav class="flex items-center gap-3.5 xl:gap-5 text-[12.5px] xl:text-sm font-semibold font-['Montserrat'] tracking-wide">
           <a href="#hero" class="text-white hover:text-neutral-300 transition-colors py-2">Home</a>
           <a href="founder.html" class="text-white hover:text-neutral-300 transition-colors py-2">Founder</a>
           <a href="#courses" class="text-white hover:text-neutral-300 transition-colors py-2">Courses</a>
@@ -319,7 +319,7 @@
           </svg>
         </a>
 
-        <button id="headerCtaBtn" onclick="openInquiryModal('Book a Consultation')" type="button" class="bg-white text-black font-['Montserrat'] font-bold uppercase text-[11px] xl:text-xs tracking-wider px-5 py-2.5 xl:px-6 xl:py-3 rounded-full hover:bg-neutral-200 transition-all duration-200 shadow-sm active:scale-95 shrink-0">
+        <button id="headerCtaBtn" onclick="openInquiryModal('Book a Consultation')" type="button" class="bg-white text-black font-['Montserrat'] font-bold uppercase text-[11px] xl:text-xs tracking-wider px-4 py-2.5 xl:px-6 xl:py-3 rounded-full hover:bg-neutral-200 transition-all duration-200 shadow-sm active:scale-95 shrink-0">
           Book a Consultation
         </button>
       </div>
@@ -368,7 +368,7 @@
     </div>
 
     <!-- Black Right Diagonal Panel (Desktop) -->
-    <div class="absolute inset-y-0 right-0 lg:w-[60%] xl:w-[58%] bg-black z-10 pointer-events-none hidden lg:block" style="clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%); -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);"></div>
+    <div class="absolute inset-0 bg-black z-10 pointer-events-none hidden lg:block" style="clip-path: polygon(49% 0, 100% 0, 100% 100%, 43% 100%); -webkit-clip-path: polygon(49% 0, 100% 0, 100% 100%, 43% 100%);"></div>
 
     <!-- Mobile Portrait Wrapper with Left-to-Right Angled Black Wedge (< 1024px) -->
     <div class="relative w-full h-[250px] sm:h-[300px] mt-16 bg-[#D7D7D7] overflow-hidden lg:hidden">
@@ -387,13 +387,13 @@
     </div>
 
     <!-- Content Container -->
-    <div class="max-w-[1440px] mx-auto w-full px-5 sm:px-10 lg:px-20 relative z-20 flex flex-col lg:grid lg:grid-cols-12 lg:items-center min-h-0 lg:min-h-screen">
+    <div class="w-full pl-5 sm:pl-8 lg:pl-12 xl:pl-16 2xl:pl-20 pr-0 relative z-20 flex flex-col lg:grid lg:grid-cols-12 lg:items-center min-h-0 lg:min-h-screen">
 
       <!-- Left Column: Typography & CTAs (on #D7D7D7 Background) -->
       <div id="heroLeftColumn" class="w-full px-0 pt-1 pb-6 bg-[#D7D7D7] text-black lg:col-span-6 lg:px-0 lg:pt-20 lg:pb-12 xl:pt-24 xl:pb-16 lg:bg-transparent lg:max-w-[440px] xl:max-w-[500px] 2xl:max-w-[540px] flex flex-col justify-center will-change-transform">
 
         <!-- Main Headline -->
-        <h1 class="font-['Raleway'] font-extrabold text-[28px] sm:text-[34px] lg:text-[40px] xl:text-[52px] 2xl:text-[60px] tracking-tight leading-[1.06] lg:leading-[1.05] text-black mb-2">
+        <h1 class="font-['Raleway'] font-extrabold text-[28px] sm:text-[34px] lg:text-[36px] xl:text-[46px] 2xl:text-[54px] tracking-tight leading-[1.08] lg:leading-[1.05] text-black mb-2 max-w-[420px] lg:max-w-[430px] xl:max-w-[480px] 2xl:max-w-[500px]">
           Speak with confidence. Be understood. Stand out.
         </h1>
 
@@ -403,7 +403,7 @@
         </p>
 
         <!-- Intro Copy (Constrained Cleanly Inside #D7D7D7 Zone) -->
-        <div class="max-w-[440px] xl:max-w-[480px] 2xl:max-w-[510px] space-y-2 mb-2">
+        <div class="max-w-[390px] lg:max-w-[410px] xl:max-w-[460px] 2xl:max-w-[480px] space-y-2 mb-2">
           <p class="font-['Montserrat'] text-[12.5px] lg:text-[14px] xl:text-[15px] leading-[1.42] lg:leading-relaxed text-neutral-800">
             It's how you introduce yourself, communicate your ideas, handle a difficult conversation, build relationships and make an impression.
           </p>
