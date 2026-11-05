@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Carys George — Founder Profile | Accent Made</title>
+  <meta name="description" content="Meet Carys George, Cambridge CELTA-qualified British English trainer with 10+ years of global experience including UAE military & defense coaching. Discover the Accent Made philosophy." />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Editorial & Geometric Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Base Brutalist & Editorial Styling */
+    html, body {
+      font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+      width: 100%;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Raleway', sans-serif;
+    }
+
+    /* 3D Tilt Card Container */
+    .tilt-card {
+      transform-style: preserve-3d;
+      transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.2s ease;
+      will-change: transform;
+    }
+
+    /* Scroll Reveal Classes */
+    .reveal-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-24px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(24px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .is-revealed {
+      opacity: 1 !important;
+      transform: translate(0, 0) !important;
+    }
+
+    .delay-100 { transition-delay: 100ms; }
+    .delay-150 { transition-delay: 150ms; }
+    .delay-200 { transition-delay: 200ms; }
+    .delay-250 { transition-delay: 250ms; }
+    .delay-300 { transition-delay: 300ms; }
+    .delay-350 { transition-delay: 350ms; }
+    .delay-400 { transition-delay: 400ms; }
+    .delay-450 { transition-delay: 450ms; }
+  </style>
+</head>
+<body class="min-h-screen selection:bg-amber-100 selection:text-amber-900 bg-white text-slate-900">
+
+  <!-- Top Scroll Progress Bar -->
+  <div id="scrollProgressBar" class="fixed top-0 left-0 h-[3px] bg-black z-[60] pointer-events-none transition-[width] duration-75" style="width: 0%;"></div>
+
+  <!-- Dedicated Header Navigation -->
+  <header id="mainHeader" class="fixed top-0 inset-x-0 z-50 bg-[#D7D7D7]/95 backdrop-blur-md border-b border-neutral-300 px-4 py-3.5 sm:px-10 lg:px-20 transition-all duration-300">
+    <div class="max-w-[1440px] mx-auto flex items-center justify-between gap-4">
+      <!-- Left Brand Link to Home -->
+      <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 group shrink-0 min-h-[44px]">
+        <img src="assets/logo.png" alt="Accent Made Logo" class="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-xl object-contain border border-black/15 shadow-xs bg-white p-0.5 group-hover:scale-105 transition-transform" />
+        <span class="font-['Montserrat'] font-extrabold tracking-tight text-base sm:text-2xl text-[#000000] leading-none whitespace-nowrap">Accent Made</span>
+      </a>
+
+      <!-- Desktop Nav & Action -->
+      <div class="hidden lg:flex ml-auto items-center gap-4 xl:gap-6">
+        <nav class="flex items-center gap-2 xl:gap-4 text-[13px] xl:text-sm font-semibold font-['Montserrat'] tracking-wide text-neutral-800">
+          <a href="index.html#hero" class="hover:text-black transition-colors px-3 py-2 rounded-lg hover:bg-black/5">Home</a>
+          <a href="founder.html" class="bg-black text-white px-3.5 py-1.5 rounded-full font-bold shadow-xs">Founder</a>
+          <a href="index.html#courses" class="hover:text-black transition-colors px-3 py-2 rounded-lg hover:bg-black/5">Courses</a>
+          <a href="index.html#team" class="hover:text-black transition-colors px-3 py-2 rounded-lg hover:bg-black/5">The Team</a>
+          <a href="index.html#corporate" class="hover:text-black transition-colors px-3 py-2 rounded-lg hover:bg-black/5">Corporate</a>
+        </nav>
+
+        <a href="https://www.instagram.com/hello_accentmade" target="_blank" rel="noopener noreferrer" title="Follow Carys on Instagram (@hello_accentmade)" class="text-neutral-800 hover:text-black transition-colors p-2 flex items-center justify-center rounded-full hover:bg-black/5 shrink-0" aria-label="Instagram Profile">
+          <svg class="w-4 h-4 xl:w-5 xl:h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+
+        <button onclick="openInquiryModal('Founder Profile Page')" type="button" class="bg-black text-white font-['Montserrat'] font-bold uppercase text-[11px] xl:text-xs tracking-wider px-5 py-2.5 xl:px-6 xl:py-3 rounded-full hover:bg-neutral-800 transition-all duration-200 shadow-sm active:scale-95 shrink-0">
+          Book a Consultation
+        </button>
+      </div>
+
+      <!-- Mobile Right Actions -->
+      <div class="flex items-center gap-2 lg:hidden">
+        <button onclick="openInquiryModal('Founder Profile Page')" type="button" class="bg-black text-white rounded-full px-4 py-2 text-xs font-bold uppercase tracking-wider shadow-sm hover:bg-neutral-800 transition active:scale-95 shrink-0">
+          Consultation
+        </button>
+        <button id="mobileMenuBtn" onclick="toggleMobileMenu()" type="button" class="min-h-[44px] min-w-[44px] p-2.5 rounded-xl border border-black/20 bg-white/90 text-black flex items-center justify-center shadow-xs active:scale-95" aria-label="Toggle Menu" aria-expanded="false">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-neutral-950/95 backdrop-blur-md border border-neutral-800 mt-3 rounded-2xl px-5 py-4 space-y-1 text-sm shadow-2xl text-white font-['Montserrat']">
+      <a href="index.html#hero" onclick="closeMobileMenu()" class="block py-3 px-3 min-h-[48px] flex items-center rounded-xl hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold transition-colors">Home</a>
+      <a href="founder.html" onclick="closeMobileMenu()" class="block py-3 px-3 min-h-[48px] flex items-center rounded-xl bg-white/10 text-white font-bold transition-colors">Founder (Current)</a>
+      <a href="index.html#courses" onclick="closeMobileMenu()" class="block py-3 px-3 min-h-[48px] flex items-center rounded-xl hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold transition-colors">Courses</a>
+      <a href="index.html#team" onclick="closeMobileMenu()" class="block py-3 px-3 min-h-[48px] flex items-center rounded-xl hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold transition-colors">The Team</a>
+      <a href="index.html#corporate" onclick="closeMobileMenu()" class="block py-3 px-3 min-h-[48px] flex items-center rounded-xl hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold transition-colors">Corporate</a>
+      <div class="pt-2 mt-1 border-t border-neutral-800">
+        <a href="https://www.instagram.com/hello_accentmade" target="_blank" rel="noopener noreferrer" onclick="closeMobileMenu()" class="flex items-center gap-2.5 py-3 px-3 min-h-[48px] rounded-xl hover:bg-neutral-800 text-amber-400 hover:text-amber-300 font-semibold transition-colors">
+          <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          <span>Instagram (@hello_accentmade)</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB & HERO BANNER -->
+  <section class="pt-28 pb-10 sm:pt-36 sm:pb-14 bg-[#D7D7D7] border-b border-neutral-300">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <!-- Breadcrumbs -->
+      <nav class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-neutral-600 mb-4 font-['Montserrat']" aria-label="Breadcrumb">
+        <a href="index.html" class="hover:text-black transition-colors">Home</a>
+        <span class="text-neutral-400">/</span>
+        <span class="text-black font-bold">Founder Profile</span>
+      </nav>
+
+      <span class="text-xs font-bold uppercase tracking-widest text-neutral-600 font-['Montserrat'] block mb-2">ABOUT THE FOUNDER</span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black font-['Raleway'] tracking-tight leading-[1.05] mb-3">
+        Meet Carys George
+      </h1>
+      <p class="text-base sm:text-lg lg:text-xl font-semibold text-neutral-800 font-['Montserrat'] max-w-3xl">
+        Founder | Communication &amp; Accent Coach | CELTA-Qualified English Trainer
+      </p>
+    </div>
+  </section>
+
+  <!-- MAIN FOUNDER DOSSIER & BIOGRAPHY -->
+  <main class="py-16 sm:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 space-y-20">
+
+      <!-- Section A: Portrait Visual & 5 Verbatim Bio Paragraphs -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+        
+        <!-- Portrait Visual Column -->
+        <div class="reveal-left lg:col-span-5 flex justify-center sticky top-28">
+          <div class="tilt-card relative w-full max-w-md rounded-3xl overflow-hidden border-2 border-black bg-neutral-900 shadow-2xl">
+            <img
+              src="assets/carys-portrait.png"
+              alt="Carys George - Founder of Accent Made"
+              class="w-full h-auto object-cover object-top select-none"
+            />
+            <div class="p-5 bg-black/90 text-white font-['Montserrat'] border-t border-neutral-800">
+              <div class="text-base font-extrabold font-['Raleway']">Carys George</div>
+              <div class="text-xs text-amber-400 font-semibold mt-0.5">Cambridge CELTA • Native UK English Trainer</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 Bio Paragraphs Column (100% Verbatim) -->
+        <div class="reveal-right delay-100 lg:col-span-7 space-y-5 font-['Montserrat'] text-neutral-700 text-sm sm:text-base leading-relaxed">
+          <p class="text-base sm:text-lg font-semibold text-black leading-relaxed">
+            Accent Made was founded by Carys George, a British English trainer with more than a decade of experience helping people communicate confidently across cultures.
+          </p>
+          <p>
+            Carys has worked with learners and professionals from a wide range of nationalities and backgrounds, including extensive experience in the UAE, UK and Ireland.
+          </p>
+          <p>
+            She spent over five years teaching in Dubai, where she had the privilege of working with members of the UAE military, police and navy. Her extensive teaching experience allows her to deliver tailored lessons across all key language skills, including speaking, listening, reading and writing, as well as pronunciation and accent reduction.
+          </p>
+          <p>
+            Her career has taken her from classrooms to corporate environments, from working with international professionals to supporting students developing English as an additional language.
+          </p>
+          <p>
+            Today, based in Kerala, Carys combines her international teaching experience with a deep understanding of the challenges faced by Indian professionals communicating in English on a global stage.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Section B: Methodology Block -->
+      <div class="reveal-up p-8 sm:p-12 rounded-3xl bg-[#F4F4F4] border border-neutral-200 shadow-sm space-y-6">
+        <div class="max-w-3xl space-y-4">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-black font-['Raleway'] tracking-tight">
+            A different approach to English training
+          </h2>
+          <div class="font-['Montserrat'] text-neutral-700 text-sm sm:text-base leading-relaxed space-y-2">
+            <p>
+              Carys believes that learning English isn't simply about memorising vocabulary or completing grammar exercises.
+            </p>
+            <p class="font-semibold text-black">
+              It's about becoming comfortable enough to actually use the language.
+            </p>
+            <p>
+              Her approach combines:
+            </p>
+          </div>
+        </div>
+
+        <!-- Formula Badge -->
+        <div class="inline-flex flex-wrap items-center gap-2 sm:gap-3 p-3.5 sm:p-4 rounded-2xl bg-black text-white font-['Raleway'] font-extrabold text-sm sm:text-lg tracking-tight shadow-md">
+          <span class="text-white">Pronunciation</span>
+          <span class="text-amber-400 font-bold">+</span>
+          <span class="text-white">Communication</span>
+          <span class="text-amber-400 font-bold">+</span>
+          <span class="text-white">Confidence</span>
+          <span class="text-amber-400 font-bold">+</span>
+          <span class="text-amber-400">Personality</span>
+        </div>
+
+        <p class="font-['Montserrat'] text-neutral-600 text-xs sm:text-sm leading-relaxed max-w-3xl">
+          Rather than trying to erase someone's identity or make everyone sound the same, Accent Made focuses on clear, confident and effective communication.
+        </p>
+      </div>
+
+      <!-- Section C: "Why Carys?" Credentials, Quote & Philosophy -->
+      <div class="space-y-12">
+        <div class="reveal-up max-w-3xl">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black font-['Raleway'] tracking-tight">
+            Why Carys?
+          </h2>
+        </div>
+
+        <!-- 8 Credential Bullets in 1-col mobile / 2-col tablet / 4-col desktop grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="reveal-up delay-100 p-5 rounded-2xl bg-[#F4F4F4] border border-neutral-200 shadow-xs flex items-center gap-3 font-['Montserrat'] text-xs sm:text-sm font-semibold text-neutral-900">
+            <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs shrink-0 font-bold">✓</span>
+            <span>British native English speaker</span>
+          </div>
+          <div class="reveal-up delay-150 p-5 rounded-2xl bg-[#F4F4F4] border border-neutral-200 shadow-xs flex items-center gap-3 font-['Montserrat'] text-xs sm:text-sm font-semibold text-neutral-900">
+            <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs shrink-0 font-bold">✓</span>
+            <span>CELTA qualified</span>
+          </div>
+          <div class="reveal-up delay-200 p-5 rounded-2xl bg-[#F4F4F4] border border-neutral-200 shadow-xs flex items-center gap-3 font-['Montserrat'] text-xs sm:text-sm font-semibold text-neutral-900">
+            <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs shrink-0 font-bold">✓</span>
+            <span>10+ years of English teaching and training experience</span>
+          </div>
+          <div class="reveal-up delay-250 p-5 rounded-2xl bg-[#F4F4F4] border border-neutral-200 shadow-xs flex items-center gap-3 font-['Montserrat'] text-xs sm:text-sm font-semibold text-neutral-900">
+            <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs shrink-0 font-bold">✓</span>
+            <span>Experience working across the UK, Ireland, UAE and India</span>
+          </div>
+          <div class="reveal-up delay-300 p-5 rounded-2xl bg-[#F4F4F4] border border-neutral-200 shadow-xs flex items-center gap-3 font-['Montserrat'] text-xs sm:text-sm font-semibold text-neutral-900">
+            <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs shrink-0 font-bold">✓</span>
+            <span>Experience teaching professionals and international learners</span>
+          </div>
+          <div class="reveal-up delay-350 p-5 rounded-2xl bg-[#F4F4F4] border border-neutral-200 shadow-xs flex items-center gap-3 font-['Montserrat'] text-xs sm:text-sm font-semibold text-neutral-900">
+            <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs shrink-0 font-bold">✓</span>
+            <span>Extensive experience in EAL education</span>
+          </div>
+          <div class="reveal-up delay-400 p-5 rounded-2xl bg-[#F4F4F4] border border-neutral-200 shadow-xs flex items-center gap-3 font-['Montserrat'] text-xs sm:text-sm font-semibold text-neutral-900">
+            <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs shrink-0 font-bold">✓</span>
+            <span>Specialist interest in pronunciation and accent development</span>
+          </div>
+          <div class="reveal-up delay-450 p-5 rounded-2xl bg-[#F4F4F4] border border-neutral-200 shadow-xs flex items-center gap-3 font-['Montserrat'] text-xs sm:text-sm font-semibold text-neutral-900">
+            <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs shrink-0 font-bold">✓</span>
+            <span>Experienced public speaker and digital English educator</span>
+          </div>
+        </div>
+
+        <!-- Additional Paragraph -->
+        <div class="reveal-up p-6 rounded-2xl bg-[#F4F4F4] border border-neutral-200 text-sm font-['Montserrat'] text-neutral-700 leading-relaxed">
+          Carys also creates educational English content for a growing online audience, helping thousands of learners improve their English through practical, engaging and accessible content.
+        </div>
+
+        <!-- Pull-Quote Box & Quote Story Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-4">
+          <!-- Pull-Quote Box -->
+          <div class="reveal-left lg:col-span-5 p-8 sm:p-10 rounded-3xl bg-black text-white shadow-xl relative">
+            <div class="text-4xl text-amber-400 font-serif leading-none mb-3">“</div>
+            <blockquote class="font-['Raleway'] font-bold text-lg sm:text-xl text-white leading-relaxed">
+              I want my learners to leave every session feeling that they can do something they couldn't do before.
+            </blockquote>
+            <div class="mt-4 pt-4 border-t border-neutral-800 text-xs font-semibold text-neutral-400 font-['Montserrat']">
+              — Carys George, Founder
+            </div>
+          </div>
+
+          <!-- Quote Story Copy -->
+          <div class="reveal-right delay-100 lg:col-span-7 space-y-3 font-['Montserrat'] text-sm sm:text-base text-neutral-700 leading-relaxed">
+            <p>
+              For Carys, the most rewarding part of training isn't simply seeing someone learn a new word or improve a pronunciation sound.
+            </p>
+            <p class="font-semibold text-black">
+              It's seeing someone who once stayed quiet in a meeting finally speak.
+            </p>
+            <p>
+              Someone who avoided phone calls finally pick up the phone.
+            </p>
+            <p>
+              Someone who worried about their accent finally realise that their voice is not the problem - they simply need the tools to use it effectively.
+            </p>
+          </div>
+        </div>
+
+        <!-- Philosophy Callout Card -->
+        <div class="reveal-up p-8 sm:p-10 rounded-3xl bg-[#D7D7D7] border border-neutral-400 text-black shadow-md space-y-3">
+          <span class="text-xs font-bold uppercase tracking-widest text-neutral-700 font-['Montserrat']">Our Core Belief</span>
+          <h3 class="text-2xl sm:text-3xl font-extrabold font-['Raleway'] tracking-tight">
+            The Accent Made philosophy
+          </h3>
+          <div class="font-['Montserrat'] font-bold text-base sm:text-lg text-neutral-900 leading-relaxed space-y-1">
+            <p>We don't teach you to become someone else.</p>
+            <p class="text-black font-extrabold">We help you communicate the best version of yourself.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Section D: High-Contrast Brutalist Bottom CTA Block -->
+      <div class="reveal-up p-8 sm:p-12 lg:p-16 rounded-3xl bg-black text-white shadow-2xl relative overflow-hidden">
+        <!-- Subtle background accent -->
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-amber-400/10 blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-3xl space-y-6">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-400 font-['Montserrat']">TAKE THE NEXT STEP</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-['Raleway'] tracking-tight leading-tight">
+            Ready to communicate with greater clarity and confidence?
+          </h2>
+          <p class="text-sm sm:text-base text-neutral-300 font-['Montserrat'] leading-relaxed">
+            Whether you want to refine your British English accent, speak spontaneously without translating, or prepare for high-stakes international presentations, book a consultation directly with Carys or explore our tailored programmes.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+            <button onclick="openInquiryModal('Founder Profile Page CTA')" type="button" class="px-8 py-4 rounded-full bg-white text-black font-['Montserrat'] font-bold text-xs uppercase tracking-wider hover:bg-neutral-200 transition shadow-md active:scale-95 text-center flex items-center justify-center">
+              Book a Consultation
+            </button>
+            <a href="index.html#courses" class="px-8 py-4 rounded-full bg-transparent text-white border border-white hover:bg-white/10 font-['Montserrat'] font-bold text-xs uppercase tracking-wider transition active:scale-95 text-center flex items-center justify-center">
+              Explore Our Courses &rarr;
+            </a>
+            <a href="index.html" class="px-4 py-2 text-neutral-400 hover:text-white text-xs font-semibold font-['Montserrat'] transition text-center flex items-center justify-center sm:ml-auto">
+              &larr; Back to Home
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-12 border-t border-neutral-200 bg-[#F4F4F4] text-xs text-neutral-600 font-['Montserrat']">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+
+      <!-- Top Row: Brand Info + Instagram Action -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <img src="assets/logo.png" alt="Accent Made Logo" class="w-9 h-9 rounded-xl object-contain border border-neutral-200 bg-white shrink-0 shadow-xs" />
+          <div>
+            <span class="font-bold text-black block leading-tight">AccentMade.com</span>
+            <span class="text-neutral-500">Carys George (CELTA, TEFL, MA, BA Hons) • Native UK British English Trainer</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="https://www.instagram.com/hello_accentmade" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-300 bg-white hover:bg-neutral-100 text-black font-bold text-xs uppercase tracking-wider transition-all shadow-xs hover:border-black active:scale-95" title="Follow Carys on Instagram (@hello_accentmade)">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            <span>Instagram</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Legal Links Bar & DPDP Compliance Row -->
+      <div class="pt-5 border-t border-neutral-300/80 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[11px] sm:text-xs">
+        <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-neutral-700 font-semibold">
+          <button type="button" onclick="openLegalModal('privacy')" class="hover:text-black hover:underline transition-colors">
+            Privacy Policy &amp; DPDP Notice
+          </button>
+          <span class="text-neutral-300 hidden sm:inline">•</span>
+          <button type="button" onclick="openLegalModal('terms')" class="hover:text-black hover:underline transition-colors">
+            Terms of Service &amp; Class Policy
+          </button>
+          <span class="text-neutral-300 hidden sm:inline">•</span>
+          <button type="button" onclick="openLegalModal('cookies')" class="hover:text-black hover:underline transition-colors">
+            Cookie Policy
+          </button>
+          <span class="text-neutral-300 hidden sm:inline">•</span>
+          <button type="button" onclick="openLegalModal('privacy', 'dataPrincipalRights')" class="text-amber-800 hover:text-black hover:underline font-bold transition-colors">
+            Withdraw Consent / Delete My Data
+          </button>
+        </div>
+
+        <div class="text-neutral-500">
+          Grievance Officer: <a href="mailto:contact@accentmade.com" class="text-black font-semibold hover:underline">contact@accentmade.com</a> (72h SLA)
+        </div>
+      </div>
+
+      <!-- Copyright & Disclaimer -->
+      <div class="pt-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-[11px] text-neutral-500">
+        <div>
+          Copyright © 2024–2026 AccentMade.com. All rights reserved. Compliant with India DPDP Act (2023), UK GDPR &amp; UAE Federal Decree-Law No. 45/2021.
+        </div>
+        <div>
+          Zero Third-Party Advertising Trackers
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- INQUIRY MODAL -->
+  <div id="inquiryModal" class="fixed inset-0 z-[70] hidden items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 border border-neutral-200 shadow-2xl space-y-4 relative text-neutral-900">
+      <button onclick="closeInquiryModal()" type="button" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-neutral-100 hover:bg-neutral-200 flex items-center justify-center text-neutral-600 hover:text-black transition-colors" aria-label="Close modal">
+        ✕
+      </button>
+      <div class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="Accent Made Logo" class="w-10 h-10 rounded-xl object-contain border border-neutral-200 bg-white shadow-xs shrink-0" />
+        <div>
+          <div class="text-[11px] font-bold uppercase tracking-wider text-amber-700 font-['Montserrat']">Direct Inquiry • No Payment Required</div>
+          <h3 id="modalTitleText" class="font-['Raleway'] font-extrabold text-black text-lg leading-snug">Request Free Language Evaluation</h3>
+        </div>
+      </div>
+      <p class="text-xs text-neutral-600 font-['Montserrat']">
+        Your request will connect directly with Carys George so she can confirm your class schedule or send your complimentary placement assessment.
+      </p>
+      <div class="space-y-3">
+        <input id="modalNameInput" type="text" placeholder="Your Name" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-neutral-300 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-black focus:ring-1 focus:ring-black font-['Montserrat']" />
+        <input id="modalEmailInput" type="email" placeholder="Your Email Address" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-neutral-300 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-black focus:ring-1 focus:ring-black font-['Montserrat']" />
+        <textarea id="modalNotesInput" rows="3" placeholder="Any specific goals (e.g., Accent Reduction, IELTS, Business English)?" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-neutral-300 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-black focus:ring-1 focus:ring-black font-['Montserrat']"></textarea>
+        
+        <!-- Explicit DPDP / GDPR Consent Checkbox -->
+        <div class="flex items-start gap-2.5 pt-1">
+          <input id="modalConsentCheck" type="checkbox" required class="mt-0.5 w-4 h-4 rounded border-neutral-300 text-black focus:ring-black accent-black cursor-pointer shrink-0" />
+          <label for="modalConsentCheck" class="text-[11px] leading-snug text-neutral-600 font-['Montserrat'] cursor-pointer select-none">
+            I agree to the processing of my personal data (Name, Email, WhatsApp) to arrange my language evaluation or deliver learning materials, as outlined in the <button type="button" onclick="openLegalModal('privacy')" class="underline hover:text-black font-bold text-neutral-900 inline">Privacy Policy</button>. I understand I can withdraw consent at any time.
+          </label>
+        </div>
+
+        <button onclick="submitModalInquiry()" type="button" class="w-full py-3.5 min-h-[44px] rounded-full bg-black text-white hover:bg-neutral-800 font-['Montserrat'] font-bold text-xs uppercase tracking-wider shadow-md transition-all active:scale-95 flex items-center justify-center">
+          Confirm &amp; Send Inquiry
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- REUSABLE LEGAL & DPDP COMPLIANCE MODAL -->
+  <div id="legalModal" class="fixed inset-0 z-[75] hidden items-center justify-center p-3 sm:p-6 bg-slate-900/60 backdrop-blur-sm">
+    <div class="bg-white text-black rounded-2xl max-w-3xl w-full max-h-[85vh] sm:max-h-[80vh] flex flex-col border border-neutral-300 shadow-2xl relative font-['Montserrat'] overflow-hidden">
+      
+      <!-- Modal Header -->
+      <div class="px-6 sm:px-8 pt-6 pb-4 border-b border-neutral-200 flex items-start justify-between gap-4 shrink-0 bg-white">
+        <div>
+          <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-neutral-100 border border-neutral-300 text-[10px] font-bold uppercase tracking-wider text-neutral-800 mb-1">
+            <span>🛡️ Legal &amp; Data Protection Hub</span>
+            <span>• DPDP 2023 &amp; UK/UAE GDPR</span>
+          </div>
+          <h2 id="legalModalHeading" class="font-['Raleway'] font-extrabold text-black text-xl sm:text-2xl tracking-tight leading-tight">
+            Legal &amp; Privacy Information
+          </h2>
+        </div>
+        <button onclick="closeLegalModal()" type="button" class="w-9 h-9 rounded-full bg-neutral-100 hover:bg-neutral-200 flex items-center justify-center text-neutral-700 hover:text-black transition-colors shrink-0" aria-label="Close legal modal">
+          ✕
+        </button>
+      </div>
+
+      <!-- Modal Tabs Switcher -->
+      <div class="px-6 sm:px-8 py-3 bg-[#F4F4F4] border-b border-neutral-200 flex flex-wrap gap-2 shrink-0">
+        <button id="legalTabBtn-privacy" onclick="switchLegalTab('privacy')" type="button" class="px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-black text-white transition-all shadow-xs">
+          Privacy &amp; DPDP Notice
+        </button>
+        <button id="legalTabBtn-terms" onclick="switchLegalTab('terms')" type="button" class="px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-white border border-neutral-300 text-neutral-700 hover:border-black transition-all shadow-xs">
+          Terms &amp; Class Policy
+        </button>
+        <button id="legalTabBtn-cookies" onclick="switchLegalTab('cookies')" type="button" class="px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-white border border-neutral-300 text-neutral-700 hover:border-black transition-all shadow-xs">
+          Cookie Notice
+        </button>
+      </div>
+
+      <!-- Modal Body (Scrollable) -->
+      <div id="legalModalScrollBody" class="px-6 sm:px-8 py-6 overflow-y-auto space-y-6 text-xs sm:text-sm leading-relaxed text-neutral-800">
+        
+        <!-- TAB 1: Privacy & Data Protection Notice -->
+        <div id="legalContent-privacy" class="space-y-5">
+          <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200">
+            <h3 class="font-['Raleway'] font-bold text-base text-black mb-1">Notice under Digital Personal Data Protection Act (2023) &amp; UK/UAE GDPR</h3>
+            <p class="text-xs text-neutral-600">
+              Accent Made values your personal sovereignty. This notice explains what personal information we collect, why we need it, and how you retain full control over your data.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-black uppercase tracking-wider text-xs mb-1">1. Data Fiduciary &amp; Controller Identity</h4>
+            <p>
+              The Data Fiduciary (Controller) is <strong>Accent Made</strong>, operated as an accredited educational practice by <strong>Carys George</strong> (CELTA, TEFL, MA, BA Hons).
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-black uppercase tracking-wider text-xs mb-1">2. Personal Data We Collect</h4>
+            <p>We process only data strictly necessary to provide customized language instruction:</p>
+            <ul class="list-disc list-inside mt-1.5 space-y-1 text-neutral-700">
+              <li><strong>Contact Coordinates:</strong> Full Name, Email Address, and WhatsApp/Phone Number.</li>
+              <li><strong>Academic Diagnostics:</strong> Self-selected English level, placement check responses, phonetics audio notes, and learning objectives (e.g. IELTS, British accent reduction, Corporate English).</li>
+              <li><strong>Schedule Preferences:</strong> Requested weekly class frequency and group vs. private tuition preferences.</li>
+              <li><strong>Zero Financial or Payment Data:</strong> No payment card numbers, CVVs, UPI IDs, or banking credentials are collected on this website. Tuition arrangements are coordinated directly between the student and trainer without online gateway storage.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-black uppercase tracking-wider text-xs mb-1">3. Specified Purpose of Processing</h4>
+            <p>
+              Personal data is collected and processed solely for:
+            </p>
+            <ul class="list-disc list-inside mt-1.5 space-y-1 text-neutral-700">
+              <li>Evaluating student proficiency and assigning suitable cohort placement (Group, Semi-Private, or 1-on-1).</li>
+              <li>Delivering requested digital study materials (including the complimentary <em>Accent &amp; Fluency Blueprint</em> E-Guide).</li>
+              <li>Communicating class schedules, Zoom/Google Meet links, and diagnostic homework feedback over email or WhatsApp.</li>
+            </ul>
+            <p class="mt-2 text-neutral-700">
+              Your data is <strong>never sold, leased, rented, or shared with third-party data brokers or marketing affiliates</strong>.
+            </p>
+          </div>
+
+          <!-- Highlighted Data Principal Rights & Withdrawal Section -->
+          <div id="dataPrincipalRights" class="p-5 rounded-2xl bg-amber-50/70 border border-amber-300/80 space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="text-amber-800 font-bold text-sm">⚖️ 4. Data Principal Rights &amp; Consent Withdrawal (DPDP 2023)</span>
+            </div>
+            <p class="text-xs text-neutral-800">
+              Under Section 6(1) and Sections 11–14 of the Digital Personal Data Protection Act 2023, UK GDPR Articles 15–22, and UAE Data Protection Law, you enjoy the following enforceable rights:
+            </p>
+            <ul class="list-disc list-inside space-y-1 text-xs text-neutral-700">
+              <li><strong>Right to Access:</strong> Request a full summary of personal data currently processed by Accent Made.</li>
+              <li><strong>Right to Correction &amp; Erasure:</strong> Rectify inaccurate details or demand immediate deletion ("Right to be Forgotten") of all your information.</li>
+              <li><strong>Right to Withdraw Consent:</strong> You have the absolute right to withdraw consent at any time without affecting past lawful processing.</li>
+              <li><strong>Right of Grievance Redressal:</strong> Direct access to our designated Grievance Officer with guaranteed timely resolution.</li>
+            </ul>
+            <div class="pt-2 border-t border-amber-200 text-xs">
+              <strong>How to Withdraw Consent or Delete Your Records:</strong><br />
+              Email our dedicated Data Protection &amp; Grievance desk at <a href="mailto:contact@accentmade.com?subject=DPDP%20Consent%20Withdrawal%20%2F%20Data%20Erasure%20Request" class="text-black underline font-bold">contact@accentmade.com</a> with the subject line <em>"DPDP / GDPR Data Erasure Request"</em>. We will process your erasure across all email and WhatsApp registers within our mandatory 72-hour turnaround window.
+            </div>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-black uppercase tracking-wider text-xs mb-1">5. Grievance Officer &amp; SLA Commitment</h4>
+            <p>
+              In accordance with Section 13(1) of the DPDP Act 2023:
+            </p>
+            <div class="mt-1.5 p-3 rounded-xl bg-neutral-100 border border-neutral-200 space-y-1 text-xs">
+              <div><strong>Designated Grievance Contact:</strong> Carys George / Accent Made Compliance Desk</div>
+              <div><strong>Email:</strong> <a href="mailto:contact@accentmade.com" class="text-black underline font-bold">contact@accentmade.com</a></div>
+              <div><strong>Secondary Channel:</strong> <a href="mailto:improvemyaccent@gmail.com" class="text-black underline font-semibold">improvemyaccent@gmail.com</a></div>
+              <div><strong>Response Window (SLA):</strong> Acknowledgment within 24 hours, resolution within 72 hours.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: Terms of Service & Class Policy -->
+        <div id="legalContent-terms" class="hidden space-y-5">
+          <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200">
+            <h3 class="font-['Raleway'] font-bold text-base text-black mb-1">Terms of Service &amp; Class Participation Policy</h3>
+            <p class="text-xs text-neutral-600">
+              Guidelines governing course registration, consultations, class attendance, and curriculum copyright.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-black uppercase tracking-wider text-xs mb-1">1. Course Inquiries &amp; Consultations</h4>
+            <p>
+              Course inquiries, placement consultations, and initial proficiency evaluations are informational and intended to assess student goals. Final enrollment, cohort placement, and class scheduling are confirmed following mutual evaluation and availability review with Carys George.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-black uppercase tracking-wider text-xs mb-1">2. Attendance, Rescheduling &amp; 24-Hour Notice Rule</h4>
+            <p>
+              To maintain fair scheduling for all learners and the trainer:
+            </p>
+            <ul class="list-disc list-inside mt-1.5 space-y-1 text-neutral-700">
+              <li><strong>Private 1-on-1 Sessions:</strong> Must be rescheduled with at least <strong>24 hours advance written notice</strong> via email or WhatsApp. Sessions cancelled with less than 24 hours notice are considered forfeited.</li>
+              <li><strong>Semi-Private (Trio) Classes:</strong> Rescheduling requires unanimous consent of all 3 student members and trainer with 24 hours advance notice.</li>
+              <li><strong>Group Cohorts (6 max):</strong> Group classes operate on predetermined weekly schedules and cannot be individually rescheduled. Comprehensive lesson summaries and practice homework will be provided for any missed session.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-black uppercase tracking-wider text-xs mb-1">3. Intellectual Property &amp; E-Guide Copyright</h4>
+            <p>
+              All curriculum frameworks, phonetic audio demonstrations, diagnostic checklists, and the <em>British Accent &amp; Fluency Blueprint</em> E-Guide are the exclusive intellectual property of Carys George (Accent Made). Downloading or receiving materials grants you an individual, non-transferable license for personal self-study only. Commercial reproduction, redistribution, or public upload is strictly prohibited.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-black uppercase tracking-wider text-xs mb-1">4. Community Code of Conduct</h4>
+            <p>
+              Accent Made welcomes an international cohort of adult learners. Respectful, professional, and courteous decorum is required across all live classrooms, discussion sessions, and cohort WhatsApp groups. Any form of harassment, discrimination, or disruptive conduct may result in immediate termination of tuition without refund.
+            </p>
+          </div>
+        </div>
+
+        <!-- TAB 3: Cookie Notice -->
+        <div id="legalContent-cookies" class="hidden space-y-5">
+          <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200">
+            <h3 class="font-['Raleway'] font-bold text-base text-black mb-1">Cookie &amp; Local Storage Policy</h3>
+            <p class="text-xs text-neutral-600">
+              A transparent explanation of technical cookies and browser storage used on AccentMade.com.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-black uppercase tracking-wider text-xs mb-1">1. Zero Third-Party Advertising Trackers</h4>
+            <p>
+              Accent Made does <strong>NOT</strong> use third-party advertising tracking pixels, cross-site behavior trackers, profiling scripts, or remarketing tags (e.g. Meta Pixel, TikTok Pixel, Google Ads Remarketing). We do not monetize user tracking.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-black uppercase tracking-wider text-xs mb-1">2. Strictly Necessary Functional Storage</h4>
+            <p>
+              We utilize minimal client-side browser storage (such as session variables or local state) solely for core website functionality:
+            </p>
+            <ul class="list-disc list-inside mt-1.5 space-y-1 text-neutral-700">
+              <li>Managing modal dialog display state (open/close).</li>
+              <li>Preserving user contact form inputs while preparing direct inquiries.</li>
+            </ul>
+            <p class="mt-2 text-neutral-700">
+              These functional mechanisms expire automatically and do not identify you across other external websites.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-black uppercase tracking-wider text-xs mb-1">3. Managing Your Browser Settings</h4>
+            <p>
+              You can configure your browser to block or alert you about cookies or local storage at any time through your browser preferences (Chrome, Safari, Firefox, Edge). Because we do not use tracking cookies, your experience remains fully functional.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="px-6 sm:px-8 py-3.5 bg-[#F4F4F4] border-t border-neutral-200 flex items-center justify-between text-xs text-neutral-500 shrink-0">
+        <div>Official Regulatory Policy • Accent Made</div>
+        <button onclick="closeLegalModal()" type="button" class="px-5 py-2 rounded-full bg-black text-white hover:bg-neutral-800 font-bold uppercase tracking-wider transition-all">
+          Close Window
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toastNotification" class="fixed bottom-6 right-6 z-[80] hidden px-5 py-3 rounded-2xl bg-black text-white text-xs font-semibold shadow-2xl transition-all font-['Montserrat'] border border-neutral-800">
+    Notification
+  </div>
+
+  <script>
+    // ==========================================
+    // 1. MOBILE DRAWER CONTROLS
+    // ==========================================
+    window.toggleMobileMenu = function() {
+      var menu = document.getElementById('mobileMenu');
+      var btn = document.getElementById('mobileMenuBtn');
+      if (!menu) return;
+      var isHidden = menu.classList.contains('hidden');
+      if (isHidden) {
+        menu.classList.remove('hidden');
+        if (btn) btn.setAttribute('aria-expanded', 'true');
+      } else {
+        menu.classList.add('hidden');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      }
+    };
+
+    window.closeMobileMenu = function() {
+      var menu = document.getElementById('mobileMenu');
+      var btn = document.getElementById('mobileMenuBtn');
+      if (menu) menu.classList.add('hidden');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    };
+
+    // ==========================================
+    // 2. SCROLL PROGRESS BAR
+    // ==========================================
+    window.addEventListener('scroll', function() {
+      var winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+      var bar = document.getElementById('scrollProgressBar');
+      if (bar) bar.style.width = scrolled + '%';
+    }, { passive: true });
+
+    // ==========================================
+    // 3. TOAST NOTIFICATION
+    // ==========================================
+    window.showToast = function(msg) {
+      var toast = document.getElementById('toastNotification');
+      if (!toast) return;
+      toast.textContent = msg;
+      toast.classList.remove('hidden');
+      setTimeout(function() {
+        toast.classList.add('hidden');
+      }, 3500);
+    };
+
+    // ==========================================
+    // 4. INQUIRY MODAL HANDLERS
+    // ==========================================
+    var currentModalTopic = 'Founder Profile Consultation';
+
+    window.openInquiryModal = function(topic) {
+      currentModalTopic = topic || 'Founder Profile Consultation';
+      var title = document.getElementById('modalTitleText');
+      if (title) title.textContent = currentModalTopic;
+      var modal = document.getElementById('inquiryModal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+    };
+
+    window.closeInquiryModal = function() {
+      var modal = document.getElementById('inquiryModal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    };
+
+    window.submitModalInquiry = function() {
+      var consentCheck = document.getElementById('modalConsentCheck');
+      if (consentCheck && !consentCheck.checked) {
+        showToast('⚠️ Please accept the privacy consent checkbox to continue.');
+        consentCheck.focus();
+        return;
+      }
+
+      var name = (document.getElementById('modalNameInput') || {}).value || 'Prospective Student';
+      var email = (document.getElementById('modalEmailInput') || {}).value || '';
+      var notes = (document.getElementById('modalNotesInput') || {}).value || '';
+
+      var subject = encodeURIComponent('Accent Made Founder Inquiry: ' + currentModalTopic + ' (' + name + ')');
+      var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nTopic: ' + currentModalTopic + '\n\nNotes / Questions:\n' + notes);
+      
+      closeInquiryModal();
+      showToast('✓ Redirecting to email Carys George...');
+      setTimeout(function() {
+        window.location.href = 'mailto:improvemyaccent@gmail.com?subject=' + subject + '&body=' + body;
+      }, 600);
+    };
+
+    // ==========================================
+    // 5. LEGAL MODAL & TABS HANDLER
+    // ==========================================
+    window.openLegalModal = function(initialTab, anchorId) {
+      var modal = document.getElementById('legalModal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+      switchLegalTab(initialTab || 'privacy');
+      if (anchorId) {
+        setTimeout(function() {
+          var el = document.getElementById(anchorId);
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 120);
+      }
+    };
+
+    window.closeLegalModal = function() {
+      var modal = document.getElementById('legalModal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    };
+
+    window.switchLegalTab = function(tabKey) {
+      ['privacy', 'terms', 'cookies'].forEach(function(k) {
+        var btn = document.getElementById('legalTabBtn-' + k);
+        var content = document.getElementById('legalContent-' + k);
+        if (btn) {
+          if (k === tabKey) {
+            btn.className = 'px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-black text-white transition-all shadow-xs';
+          } else {
+            btn.className = 'px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-white border border-neutral-300 text-neutral-700 hover:border-black transition-all shadow-xs';
+          }
+        }
+        if (content) {
+          if (k === tabKey) {
+            content.classList.remove('hidden');
+          } else {
+            content.classList.add('hidden');
+          }
+        }
+      });
+      var scrollBody = document.getElementById('legalModalScrollBody');
+      if (scrollBody) scrollBody.scrollTop = 0;
+    };
+
+    // ==========================================
+    // 6. SCROLL REVEAL OBSERVER
+    // ==========================================
+    document.addEventListener('DOMContentLoaded', function() {
+      var revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-revealed');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        revealElements.forEach(function(el) {
+          observer.observe(el);
+        });
+      } else {
+        revealElements.forEach(function(el) {
+          el.classList.add('is-revealed');
+        });
+      }
+
+      // ==========================================
+      // 7. 3D TILT EFFECT (DESKTOP ONLY)
+      // ==========================================
+      if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+        var tiltCards = document.querySelectorAll('.tilt-card');
+        tiltCards.forEach(function(card) {
+          card.addEventListener('mousemove', function(e) {
+            var rect = card.getBoundingClientRect();
+            var x = e.clientX - rect.left;
+            var y = e.clientY - rect.top;
+            var cx = rect.width / 2;
+            var cy = rect.height / 2;
+            var dx = (x - cx) / cx;
+            var dy = (y - cy) / cy;
+            card.style.transform = 'perspective(1000px) rotateX(' + (-dy * 6) + 'deg) rotateY(' + (dx * 6) + 'deg) scale3d(1.02, 1.02, 1.02)';
+          });
+          card.addEventListener('mouseleave', function() {
+            card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
