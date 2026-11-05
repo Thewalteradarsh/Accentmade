@@ -276,6 +276,17 @@
     .delay-300 { transition-delay: 300ms; }
     .delay-400 { transition-delay: 400ms; }
 
+    /* Hero Stacking Context Guarantee */
+    #heroInstructorWrapper canvas, #threeHeroContainer canvas {
+      position: absolute !important;
+      z-index: 10 !important;
+      pointer-events: none !important;
+    }
+    #heroPortraitParallax, #heroInstructorCard, #heroInstructorCard img {
+      position: relative !important;
+      z-index: 20 !important;
+    }
+
   </style>
 </head>
 <body class="min-h-screen selection:bg-amber-100 selection:text-amber-900 bg-white text-slate-900">
@@ -284,8 +295,8 @@
   <div id="scrollProgressBar" class="fixed top-0 left-0 h-[3px] bg-black z-[60] pointer-events-none transition-[width] duration-75" style="width: 0%;"></div>
 
   <!-- Split-Aware Transparent Navigation (Tomasz Gajda Reference with Scroll Morph) -->
-  <header id="mainHeader" class="fixed top-0 inset-x-0 z-50 bg-transparent px-4 py-3.5 sm:px-10 lg:px-20 transition-all duration-300">
-    <div class="max-w-[1440px] mx-auto flex items-center justify-between gap-4">
+  <header id="mainHeader" class="fixed top-0 inset-x-0 z-50 bg-transparent py-3.5 transition-all duration-300">
+    <div class="max-w-[1440px] mx-auto w-full px-5 sm:px-10 lg:px-20 flex items-center justify-between gap-4">
       <!-- Left Brand (Positioned Over #D7D7D7 Background) -->
       <a href="#hero" class="flex items-center gap-2.5 sm:gap-3 group shrink-0 min-h-[44px]">
         <img src="assets/logo.png" alt="Accent Made Logo" class="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-xl object-contain border border-black/15 shadow-xs bg-white p-0.5 group-hover:scale-105 transition-transform" />
@@ -293,8 +304,8 @@
       </a>
 
       <!-- Desktop Nav & Action (Grouped Right Inside Black Diagonal) -->
-      <div class="hidden lg:flex ml-auto items-center gap-4 xl:gap-6 lg:pr-4">
-        <nav class="flex items-center gap-4 xl:gap-6 text-[13px] xl:text-sm font-semibold font-['Montserrat'] tracking-wide">
+      <div class="hidden lg:flex ml-auto items-center gap-4 xl:gap-6 lg:pr-2 xl:pr-0">
+        <nav class="flex items-center gap-4 xl:gap-5 text-[13px] xl:text-sm font-semibold font-['Montserrat'] tracking-wide">
           <a href="#hero" class="text-white hover:text-neutral-300 transition-colors py-2">Home</a>
           <a href="founder.html" class="text-white hover:text-neutral-300 transition-colors py-2">Founder</a>
           <a href="#courses" class="text-white hover:text-neutral-300 transition-colors py-2">Courses</a>
@@ -357,7 +368,7 @@
     </div>
 
     <!-- Black Right Diagonal Panel (Desktop) -->
-    <div class="absolute inset-y-0 right-0 lg:w-[58%] xl:w-[56%] bg-black z-10 pointer-events-none hidden lg:block" style="clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%); -webkit-clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);"></div>
+    <div class="absolute inset-y-0 right-0 lg:w-[60%] xl:w-[58%] bg-black z-10 pointer-events-none hidden lg:block" style="clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%); -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);"></div>
 
     <!-- Mobile Portrait Wrapper with Left-to-Right Angled Black Wedge (< 1024px) -->
     <div class="relative w-full h-[250px] sm:h-[300px] mt-16 bg-[#D7D7D7] overflow-hidden lg:hidden">
@@ -376,10 +387,10 @@
     </div>
 
     <!-- Content Container -->
-    <div class="max-w-[1440px] mx-auto w-full px-0 sm:px-6 lg:px-20 relative z-20 flex flex-col lg:grid lg:grid-cols-12 lg:items-center min-h-0 lg:min-h-screen">
+    <div class="max-w-[1440px] mx-auto w-full px-5 sm:px-10 lg:px-20 relative z-20 flex flex-col lg:grid lg:grid-cols-12 lg:items-center min-h-0 lg:min-h-screen">
 
       <!-- Left Column: Typography & CTAs (on #D7D7D7 Background) -->
-      <div id="heroLeftColumn" class="w-full px-5 pt-1 pb-6 bg-[#D7D7D7] text-black lg:col-span-6 lg:px-0 lg:pt-0 lg:pb-0 lg:bg-transparent lg:max-w-[400px] xl:max-w-[480px] 2xl:max-w-[540px] flex flex-col justify-center will-change-transform">
+      <div id="heroLeftColumn" class="w-full px-0 pt-1 pb-6 bg-[#D7D7D7] text-black lg:col-span-6 lg:px-0 lg:pt-20 lg:pb-12 xl:pt-24 xl:pb-16 lg:bg-transparent lg:max-w-[440px] xl:max-w-[500px] 2xl:max-w-[540px] flex flex-col justify-center will-change-transform">
 
         <!-- Main Headline -->
         <h1 class="font-['Raleway'] font-extrabold text-[28px] sm:text-[34px] lg:text-[40px] xl:text-[52px] 2xl:text-[60px] tracking-tight leading-[1.06] lg:leading-[1.05] text-black mb-2">
@@ -387,22 +398,24 @@
         </h1>
 
         <!-- Sub-hook -->
-        <p class="font-['Montserrat'] font-bold text-[13px] lg:text-sm text-black mb-1.5">
+        <p class="font-['Montserrat'] font-bold text-[13px] lg:text-sm text-black mb-2">
           English is more than grammar.
         </p>
 
-        <!-- Intro Copy -->
-        <p class="font-['Montserrat'] text-[12.5px] lg:text-[14px] xl:text-[15px] leading-[1.42] lg:leading-relaxed text-neutral-800 mb-1.5">
-          It's how you introduce yourself, communicate your ideas, handle a difficult conversation, build relationships and make an impression.
-        </p>
+        <!-- Intro Copy (Constrained Cleanly Inside #D7D7D7 Zone) -->
+        <div class="max-w-[440px] xl:max-w-[480px] 2xl:max-w-[510px] space-y-2 mb-2">
+          <p class="font-['Montserrat'] text-[12.5px] lg:text-[14px] xl:text-[15px] leading-[1.42] lg:leading-relaxed text-neutral-800">
+            It's how you introduce yourself, communicate your ideas, handle a difficult conversation, build relationships and make an impression.
+          </p>
 
-        <p class="font-['Montserrat'] text-[12.5px] lg:text-[14px] xl:text-[15px] leading-[1.42] lg:leading-relaxed text-neutral-800 mb-1.5">
-          Accent Made helps ambitious professionals, students and organisations communicate with greater clarity, confidence and impact.
-        </p>
+          <p class="font-['Montserrat'] text-[12.5px] lg:text-[14px] xl:text-[15px] leading-[1.42] lg:leading-relaxed text-neutral-800">
+            Accent Made helps ambitious professionals, students and organisations communicate with greater clarity, confidence and impact.
+          </p>
 
-        <p class="hidden sm:block font-['Montserrat'] text-[12.5px] lg:text-[14px] xl:text-[15px] leading-[1.42] lg:leading-relaxed text-neutral-800 mb-1.5">
-          From accent and pronunciation training to professional communication and personality development, our programmes are designed to help you sound more natural, feel more confident and communicate effectively in an international environment.
-        </p>
+          <p class="hidden sm:block font-['Montserrat'] text-[12.5px] lg:text-[14px] xl:text-[15px] leading-[1.42] lg:leading-relaxed text-neutral-800">
+            From accent and pronunciation training to professional communication and personality development, our programmes are designed to help you sound more natural, feel more confident and communicate effectively in an international environment.
+          </p>
+        </div>
 
         <!-- Hero Buttons -->
         <div class="flex flex-col sm:flex-row gap-2.5 mt-3 mb-4 w-full">
@@ -439,19 +452,23 @@
          </div>
      </div>
 
-     <!-- Right Column: Carys Portrait Anchored on the Black Diagonal (Desktop Only) -->
-     <div id="heroInstructorWrapper" class="hidden lg:flex lg:col-span-6 relative w-full lg:h-full items-end justify-end self-end z-20 lg:pr-12 xl:pr-20">
-       <div id="heroPortraitParallax" class="w-full flex justify-end items-end will-change-transform">
-         <div id="heroInstructorCard" class="relative w-full flex justify-end items-end" style="transform-style: preserve-3d; perspective: 1000px;">
-           <img
-             src="assets/carys-portrait.png"
-             alt="Carys George — Native UK British English Language Trainer"
-             class="lg:mt-0 w-auto lg:h-[86vh] lg:max-h-[820px] object-contain object-bottom select-none drop-shadow-[0_20px_30px_rgba(0,0,0,0.85)] pointer-events-none"
-             loading="eager"
-           />
-         </div>
-       </div>
-     </div>
+      <!-- Right Column: Carys Portrait Anchored on the Black Diagonal (Desktop Only) -->
+      <div id="heroInstructorWrapper" class="hidden lg:flex lg:col-span-6 relative w-full lg:h-full items-end justify-end self-end z-20 lg:pr-8 xl:pr-14">
+        <!-- Background Particle Layer (z-10, pointer-events-none) -->
+        <div class="absolute inset-0 z-10 pointer-events-none overflow-hidden flex items-end justify-end" style="transform: translateZ(0px);"></div>
+
+        <!-- Foreground Portrait Layer (z-20, translateZ: 30px) -->
+        <div id="heroPortraitParallax" class="relative z-20 w-full flex justify-end items-end will-change-transform" style="transform-style: preserve-3d; transform: translateZ(30px);">
+          <div id="heroInstructorCard" class="relative z-20 w-full flex justify-end items-end" style="transform-style: preserve-3d; perspective: 1000px;">
+            <img
+              src="assets/carys-portrait.png"
+              alt="Carys George — Native UK British English Language Trainer"
+              class="relative z-20 lg:mt-0 w-auto lg:h-[91vh] lg:max-h-[890px] xl:h-[93vh] xl:max-h-[930px] object-contain object-bottom select-none drop-shadow-[0_20px_30px_rgba(0,0,0,0.85)] pointer-events-none"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </div>
 
     </div>
   </section>
