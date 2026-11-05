@@ -713,8 +713,9 @@
     </div>
   </section>
 
-  <!-- SECTION 2: ABOUT THE FOUNDER (`#about`) -->
+  <!-- SECTION 2: ABOUT THE FOUNDER (`#about` / `#founder`) -->
   <section id="about" class="py-24 relative bg-white">
+    <div id="founder" class="scroll-mt-28"></div>
     <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 space-y-20">
       
       <!-- Part A: Section Header & Founder Biography 2-Column Split -->
@@ -746,39 +747,47 @@
           </div>
 
           <!-- Executive Founder Snapshot Column -->
-          <div class="reveal-right delay-100 lg:col-span-7 space-y-5 font-['Montserrat'] text-neutral-700">
+          <div class="reveal-right delay-100 lg:col-span-7 space-y-6 font-['Montserrat'] text-neutral-700">
+            <!-- Lead Summary (Verbatim Extract) -->
             <div class="space-y-3">
               <p class="text-base sm:text-lg font-bold text-black leading-snug">
-                Accent Made was founded by Carys George, a British English trainer with more than a decade of experience helping people communicate confidently across cultures.
+                Accent Made was founded by Carys George, a Cambridge CELTA-qualified British English trainer with more than a decade of experience helping people communicate confidently across cultures.
               </p>
               <p class="text-sm sm:text-base text-neutral-700 leading-relaxed">
                 She spent over five years teaching in Dubai, where she had the privilege of working with members of the UAE military, police and navy, delivering tailored lessons across pronunciation, accent reduction, and executive communication.
               </p>
+              <p class="text-sm sm:text-base text-neutral-700 leading-relaxed">
+                Today, based in Kerala, Carys combines her international teaching experience with a deep understanding of the challenges faced by Indian professionals communicating in English on a global stage.
+              </p>
             </div>
 
-            <!-- Brutalist Credential Badges -->
-            <div class="flex flex-wrap gap-2.5 pt-1">
-              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black text-white text-xs font-bold font-['Montserrat'] shadow-xs">
-                <span>✓</span> Cambridge CELTA Qualified
-              </span>
-              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-neutral-200 text-black text-xs font-bold font-['Montserrat'] shadow-xs">
-                <span>✓</span> Native UK Trainer
-              </span>
-              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-neutral-200 text-black text-xs font-bold font-['Montserrat'] shadow-xs">
-                <span>✓</span> 5+ Yrs UAE Defense &amp; Executive Coaching
-              </span>
-              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-neutral-200 text-black text-xs font-bold font-['Montserrat'] shadow-xs">
-                <span>✓</span> 10+ Yrs Global Experience
-              </span>
+            <!-- 2x2 Brutalist Credential Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
+              <div class="border border-black/15 bg-white p-4 rounded-xl shadow-xs">
+                <div class="text-xs font-extrabold uppercase tracking-wider text-black font-['Raleway']">Cambridge CELTA</div>
+                <div class="text-xs text-neutral-600 font-['Montserrat'] mt-0.5">Certified Native UK Trainer</div>
+              </div>
+              <div class="border border-black/15 bg-white p-4 rounded-xl shadow-xs">
+                <div class="text-xs font-extrabold uppercase tracking-wider text-black font-['Raleway']">10+ Years Experience</div>
+                <div class="text-xs text-neutral-600 font-['Montserrat'] mt-0.5">Global Language &amp; Accent Coaching</div>
+              </div>
+              <div class="border border-black/15 bg-white p-4 rounded-xl shadow-xs">
+                <div class="text-xs font-extrabold uppercase tracking-wider text-black font-['Raleway']">5 Years in Dubai</div>
+                <div class="text-xs text-neutral-600 font-['Montserrat'] mt-0.5">UAE Military, Police &amp; Navy Trainer</div>
+              </div>
+              <div class="border border-black/15 bg-white p-4 rounded-xl shadow-xs">
+                <div class="text-xs font-extrabold uppercase tracking-wider text-black font-['Raleway']">Global Executive Focus</div>
+                <div class="text-xs text-neutral-600 font-['Montserrat'] mt-0.5">Tailored for Indian Professionals</div>
+              </div>
             </div>
 
-            <!-- CTAs: Read Full Founder Profile & Book a Consultation -->
-            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-3">
-              <a href="founder.html" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-black text-white hover:bg-neutral-800 font-['Montserrat'] font-bold text-xs uppercase tracking-wider shadow-md transition-all active:scale-95 text-center">
+            <!-- Primary Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
+              <a href="founder.html" class="inline-flex items-center justify-center gap-3 bg-black text-white px-7 py-4 font-['Montserrat'] text-xs font-bold uppercase tracking-widest hover:bg-neutral-800 transition active:scale-95 shadow-md rounded-full text-center">
                 <span>Read Full Founder Profile</span>
                 <span class="text-sm">&rarr;</span>
               </a>
-              <button onclick="openInquiryModal('Meet Carys George Consultation')" type="button" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white text-black border border-black hover:bg-neutral-100 font-['Montserrat'] font-bold text-xs uppercase tracking-wider shadow-xs transition-all active:scale-95 text-center">
+              <button onclick="openInquiryModal('Meet Carys George Consultation')" type="button" class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full bg-white text-black border border-black hover:bg-neutral-100 font-['Montserrat'] font-bold text-xs uppercase tracking-widest shadow-xs transition-all active:scale-95 text-center">
                 Book a Consultation
               </button>
             </div>
