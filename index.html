@@ -27,6 +27,7 @@
       background-color: #ffffff !important;
       color: #0f172a !important;
       overflow-x: hidden;
+      width: 100%;
       max-width: 100vw;
     }
 
@@ -294,11 +295,11 @@
       <!-- Desktop Nav & Action (Grouped Right Inside Black Diagonal) -->
       <div class="hidden lg:flex ml-auto items-center gap-4 xl:gap-6 lg:pr-4">
         <nav class="flex items-center gap-4 xl:gap-6 text-[13px] xl:text-sm font-semibold font-['Montserrat'] tracking-wide">
-          <a href="#about" class="text-white hover:text-neutral-300 transition-colors py-2">Credentials</a>
+          <a href="#hero" class="text-white hover:text-neutral-300 transition-colors py-2">Home</a>
+          <a href="#about" class="text-white hover:text-neutral-300 transition-colors py-2">Founder</a>
           <a href="#courses" class="text-white hover:text-neutral-300 transition-colors py-2">Courses</a>
-          <a href="#pricing" class="text-white hover:text-neutral-300 transition-colors py-2">Estimator</a>
-          <a href="#placement" class="text-white hover:text-neutral-300 transition-colors py-2">Quiz &amp; E-Guide</a>
-          <a href="#faq" class="text-white hover:text-neutral-300 transition-colors py-2">FAQ</a>
+          <a href="#team" class="text-white hover:text-neutral-300 transition-colors py-2">The Team</a>
+          <a href="#corporate" class="text-white hover:text-neutral-300 transition-colors py-2">Corporate</a>
         </nav>
 
         <a href="https://www.instagram.com/hello_accentmade" target="_blank" rel="noopener noreferrer" title="Follow Carys on Instagram (@hello_accentmade)" class="text-white hover:text-amber-400 transition-colors p-2 flex items-center justify-center rounded-full hover:bg-white/10 shrink-0" aria-label="Instagram Profile">
@@ -307,15 +308,15 @@
           </svg>
         </a>
 
-        <button id="headerCtaBtn" onclick="openInquiryModal('Free Language Evaluation Request')" type="button" class="bg-white text-black font-['Montserrat'] font-bold uppercase text-[11px] xl:text-xs tracking-wider px-5 py-2.5 xl:px-6 xl:py-3 rounded-full hover:bg-neutral-200 transition-all duration-200 shadow-sm active:scale-95 shrink-0">
-          FREE EVALUATION
+        <button id="headerCtaBtn" onclick="openInquiryModal('Book a Consultation')" type="button" class="bg-white text-black font-['Montserrat'] font-bold uppercase text-[11px] xl:text-xs tracking-wider px-5 py-2.5 xl:px-6 xl:py-3 rounded-full hover:bg-neutral-200 transition-all duration-200 shadow-sm active:scale-95 shrink-0">
+          Book a Consultation
         </button>
       </div>
 
       <!-- Mobile Right Actions -->
       <div class="flex items-center gap-2 lg:hidden">
-        <button onclick="openInquiryModal('Free Language Evaluation Request')" type="button" class="min-h-[40px] px-4 flex items-center justify-center rounded-full bg-black text-white font-['Montserrat'] font-bold text-[11px] uppercase tracking-wider shadow-sm hover:bg-neutral-800 transition active:scale-95">
-          Evaluation
+        <button onclick="openInquiryModal('Book a Consultation')" type="button" class="min-h-[40px] px-4 flex items-center justify-center rounded-full bg-black text-white font-['Montserrat'] font-bold text-[11px] uppercase tracking-wider shadow-sm hover:bg-neutral-800 transition active:scale-95">
+          Consultation
         </button>
         <button id="mobileMenuBtn" onclick="toggleMobileMenu()" type="button" class="min-h-[44px] min-w-[44px] p-2.5 rounded-xl border border-black/20 bg-white/90 text-black flex items-center justify-center shadow-xs active:scale-95" aria-label="Toggle Menu" aria-expanded="false">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -327,13 +328,13 @@
 
     <!-- Mobile Nav Drawer -->
     <div id="mobileMenu" class="hidden lg:hidden bg-neutral-950/95 backdrop-blur-md border border-neutral-800 mt-3 rounded-2xl px-5 py-4 space-y-1 text-sm shadow-2xl text-white font-['Montserrat']">
-      <a href="#about" onclick="closeMobileMenu()" class="block py-2.5 px-3 rounded-xl hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold transition-colors">Credentials</a>
-      <a href="#courses" onclick="closeMobileMenu()" class="block py-2.5 px-3 rounded-xl hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold transition-colors">Courses</a>
-      <a href="#pricing" onclick="closeMobileMenu()" class="block py-2.5 px-3 rounded-xl hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold transition-colors">Estimator</a>
-      <a href="#placement" onclick="closeMobileMenu()" class="block py-2.5 px-3 rounded-xl hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold transition-colors">Quiz &amp; E-Guide</a>
-      <a href="#faq" onclick="closeMobileMenu()" class="block py-2.5 px-3 rounded-xl hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold transition-colors">FAQ</a>
+      <a href="#hero" onclick="closeMobileMenu()" class="block py-3 px-3 min-h-[48px] flex items-center rounded-xl hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold transition-colors">Home</a>
+      <a href="#about" onclick="closeMobileMenu()" class="block py-3 px-3 min-h-[48px] flex items-center rounded-xl hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold transition-colors">Founder</a>
+      <a href="#courses" onclick="closeMobileMenu()" class="block py-3 px-3 min-h-[48px] flex items-center rounded-xl hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold transition-colors">Courses</a>
+      <a href="#team" onclick="closeMobileMenu()" class="block py-3 px-3 min-h-[48px] flex items-center rounded-xl hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold transition-colors">The Team</a>
+      <a href="#corporate" onclick="closeMobileMenu()" class="block py-3 px-3 min-h-[48px] flex items-center rounded-xl hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold transition-colors">Corporate</a>
       <div class="pt-2 mt-1 border-t border-neutral-800">
-        <a href="https://www.instagram.com/hello_accentmade" target="_blank" rel="noopener noreferrer" onclick="closeMobileMenu()" class="flex items-center gap-2.5 py-2.5 px-3 rounded-xl hover:bg-neutral-800 text-amber-400 hover:text-amber-300 font-semibold transition-colors">
+        <a href="https://www.instagram.com/hello_accentmade" target="_blank" rel="noopener noreferrer" onclick="closeMobileMenu()" class="flex items-center gap-2.5 py-3 px-3 min-h-[48px] rounded-xl hover:bg-neutral-800 text-amber-400 hover:text-amber-300 font-semibold transition-colors">
           <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24">
             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
           </svg>
@@ -344,7 +345,7 @@
   </header>
 
   <!-- HERO SECTION WITH TOMASZ GAJDA DIAGONAL SPLIT REFERENCE -->
-  <section id="hero" class="relative min-h-[100svh] lg:min-h-screen w-full bg-[#D7D7D7] overflow-hidden flex flex-col justify-between lg:flex-row lg:items-center">
+  <section id="hero" class="relative min-h-[100svh] h-auto lg:min-h-screen w-full bg-[#D7D7D7] overflow-hidden flex flex-col justify-between lg:flex-row lg:items-center">
 
     <!-- Hidden container preserving 3D stage and Three.js hooks to prevent console errors -->
     <div class="hidden" style="display: none;" aria-hidden="true">
@@ -356,89 +357,92 @@
     </div>
 
     <!-- Black Right Diagonal Panel (Desktop) -->
-    <div class="absolute inset-y-0 right-0 lg:w-[58%] xl:w-[56%] bg-black z-10 pointer-events-none hidden lg:block" style="clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%); -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);"></div>
+    <div class="absolute inset-y-0 right-0 lg:w-[58%] xl:w-[56%] bg-black z-10 pointer-events-none hidden lg:block" style="clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%); -webkit-clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);"></div>
 
     <!-- Black Bottom Diagonal Panel (Mobile & Tablet) -->
-    <div class="absolute inset-x-0 bottom-0 h-[36svh] sm:h-[42svh] w-full bg-black z-10 pointer-events-none lg:hidden" style="clip-path: polygon(0 22%, 100% 0, 100% 100%, 0% 100%); -webkit-clip-path: polygon(0 22%, 100% 0, 100% 100%, 0% 100%);"></div>
+    <div class="absolute inset-x-0 bottom-0 h-[38svh] min-h-[260px] max-h-[380px] w-full bg-black z-10 pointer-events-none lg:hidden" style="clip-path: polygon(0 22%, 100% 0, 100% 100%, 0% 100%); -webkit-clip-path: polygon(0 22%, 100% 0, 100% 100%, 0% 100%);"></div>
 
     <!-- Content Container -->
     <div class="max-w-[1440px] mx-auto w-full px-5 sm:px-10 lg:px-20 relative z-20 flex flex-col justify-between lg:grid lg:grid-cols-12 lg:items-center min-h-[100svh] lg:min-h-screen">
 
       <!-- Left Column: Typography & CTAs (on #D7D7D7 Background) -->
-      <div id="heroLeftColumn" class="lg:col-span-6 pt-16 sm:pt-20 pb-2 md:pt-24 md:pb-6 lg:py-0 flex flex-col justify-center will-change-transform">
-        <!-- 1. Intro Line -->
-        <p class="font-['Raleway'] font-bold text-[#000000] text-xl lg:text-[26px] xl:text-[34px] leading-tight mb-1.5">
-          Hi, I am
+      <div id="heroLeftColumn" class="lg:col-span-6 w-full pt-24 pb-8 lg:py-0 lg:max-w-[400px] xl:max-w-[480px] 2xl:max-w-[540px] flex flex-col justify-center will-change-transform">
+        <!-- Eyebrow -->
+        <p class="font-['Montserrat'] font-bold text-neutral-700 text-xs sm:text-sm tracking-[0.2em] uppercase mb-2">
+          ACCENT MADE
         </p>
 
-        <!-- 2. Main Name Heading -->
-        <h1 class="font-['Raleway'] font-extrabold text-[#000000] text-[42px] sm:text-5xl lg:text-[52px] xl:text-[68px] 2xl:text-[74px] tracking-tight leading-[1.03] mb-2.5">
-          Carys George
+        <!-- Main Headline -->
+        <h1 class="font-['Raleway'] font-extrabold text-[#000000] text-[32px] sm:text-[42px] lg:text-[40px] xl:text-[52px] 2xl:text-[60px] tracking-tight leading-[1.05] mb-3">
+          Speak with confidence. Be understood. Stand out.
         </h1>
 
-        <!-- 3. Role / Value Subtitle -->
-        <p class="font-['Montserrat'] font-bold text-[#808080] text-sm lg:text-[16px] xl:text-[19px] lg:max-w-[350px] xl:max-w-[420px] leading-snug mb-4">
-          Native UK Accredited Trainer / CELTA &amp; UAE Military Specialist
-        </p>
+        <!-- Opening Hook -->
+        <div class="font-['Montserrat'] font-medium text-neutral-800 text-sm sm:text-base leading-relaxed space-y-2 mb-4">
+          <p class="font-semibold text-black">
+            English is more than grammar.
+          </p>
+          <p>
+            It's how you introduce yourself, communicate your ideas, handle a difficult conversation, build relationships and make an impression.
+          </p>
+        </div>
 
-        <!-- 4. Concise Secondary Copy -->
-        <p class="font-['Montserrat'] font-medium text-neutral-700 text-xs lg:text-[14px] xl:text-[15px] lg:max-w-[340px] xl:max-w-[400px] leading-relaxed mb-6">
-          Master British clarity, fluency &amp; accent confidence. 10+ years global experience with tailored Group (€5/class) and 1-on-1 coaching.
-        </p>
+        <!-- Core Description -->
+        <div class="font-['Montserrat'] text-xs sm:text-sm text-neutral-700 leading-relaxed space-y-2 mb-6">
+          <p>
+            Accent Made helps ambitious professionals, students and organisations communicate with greater clarity, confidence and impact.
+          </p>
+          <p>
+            From accent and pronunciation training to professional communication and personality development, our programmes are designed to help you sound more natural, feel more confident and communicate effectively in an international environment.
+          </p>
+        </div>
 
-        <!-- 5. Primary CTAs + Square Icon Tiles -->
+        <!-- Hero Buttons + Square Icon Tiles -->
         <div>
-          <!-- 4 Square Icon Tiles (Tomasz Gajda Reference Style) -->
-          <div class="flex items-center gap-3 md:gap-4 mb-4 md:mb-5">
-            <!-- Tile 1: Book Evaluation (@/Email) -->
-            <button onclick="openInquiryModal('Free Language Evaluation')" title="Book Free Evaluation" type="button" class="w-11 h-11 md:w-[52px] md:h-[52px] bg-[#C4C4C4] hover:bg-[#b0b0b0] text-black flex items-center justify-center rounded-sm shadow-[0_4px_8px_rgba(0,0,0,0.18)] transition active:scale-95">
-              <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-              </svg>
+          <!-- Hero CTA Buttons -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto mb-4">
+            <button onclick="openInquiryModal('Book a Consultation')" type="button" class="min-h-[48px] px-6 py-3.5 rounded-full bg-black text-white font-['Montserrat'] font-bold text-xs uppercase tracking-wider hover:bg-neutral-800 shadow-md transition-all active:scale-95 flex items-center justify-center">
+              Book a Consultation
             </button>
-
-            <!-- Tile 2: Take Placement Quiz -->
-            <a href="#placement" title="Take Placement Quiz" class="w-11 h-11 md:w-[52px] md:h-[52px] bg-[#C4C4C4] hover:bg-[#b0b0b0] text-black flex items-center justify-center rounded-sm shadow-[0_4px_8px_rgba(0,0,0,0.18)] transition active:scale-95">
-              <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
-              </svg>
-            </a>
-
-            <!-- Tile 3: Free E-Guide -->
-            <a href="#placement" title="Free Accent E-Guide" class="w-11 h-11 md:w-[52px] md:h-[52px] bg-[#C4C4C4] hover:bg-[#b0b0b0] text-black flex items-center justify-center rounded-sm shadow-[0_4px_8px_rgba(0,0,0,0.18)] transition active:scale-95">
-              <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-              </svg>
-            </a>
-
-            <!-- Tile 4: Instagram Profile (@hello_accentmade) -->
-            <a href="https://www.instagram.com/hello_accentmade" target="_blank" rel="noopener noreferrer" title="Follow Carys on Instagram (@hello_accentmade)" class="w-11 h-11 md:w-[52px] md:h-[52px] bg-[#C4C4C4] hover:bg-[#b0b0b0] text-black flex items-center justify-center rounded-sm shadow-[0_4px_8px_rgba(0,0,0,0.18)] transition active:scale-95" aria-label="Instagram Profile">
-              <svg class="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-              </svg>
+            <a href="#courses" class="min-h-[48px] px-6 py-3.5 rounded-full bg-white/90 border border-neutral-400 hover:border-black text-black font-['Montserrat'] font-bold text-xs uppercase tracking-wider hover:bg-white shadow-xs transition-all active:scale-95 flex items-center justify-center">
+              Explore Our Courses <span class="ml-1.5 text-sm">&rarr;</span>
             </a>
           </div>
 
-          <!-- Trigger Links / Buttons -->
-          <div class="flex flex-wrap items-center gap-3 sm:gap-4 mb-2 md:mb-0">
-            <button onclick="openInquiryModal('Free Language Evaluation')" type="button" class="px-5 py-2.5 md:px-7 md:py-3.5 rounded-full bg-black text-white font-['Montserrat'] font-bold text-xs uppercase tracking-wider hover:bg-neutral-800 shadow-md transition-all active:scale-95">
-              Book Evaluation
+          <!-- 4 Square Icon Tiles (Tomasz Gajda Reference Style) -->
+          <div class="flex items-center gap-3 md:gap-4 pt-1">
+            <button onclick="openInquiryModal('Free Language Evaluation')" title="Book Free Evaluation" type="button" class="w-11 h-11 md:w-[48px] md:h-[48px] bg-[#C4C4C4] hover:bg-[#b0b0b0] text-black flex items-center justify-center rounded-sm shadow-[0_4px_8px_rgba(0,0,0,0.18)] transition active:scale-95">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
             </button>
-            <a href="#courses" class="text-xs font-['Montserrat'] font-bold text-black uppercase tracking-wider hover:underline flex items-center gap-1.5 py-1.5 md:py-2">
-              Explore Courses <span class="text-sm">&rarr;</span>
+            <a href="#placement" title="Take Placement Quiz" class="w-11 h-11 md:w-[48px] md:h-[48px] bg-[#C4C4C4] hover:bg-[#b0b0b0] text-black flex items-center justify-center rounded-sm shadow-[0_4px_8px_rgba(0,0,0,0.18)] transition active:scale-95">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+              </svg>
+            </a>
+            <a href="#placement" title="Free Accent E-Guide" class="w-11 h-11 md:w-[48px] md:h-[48px] bg-[#C4C4C4] hover:bg-[#b0b0b0] text-black flex items-center justify-center rounded-sm shadow-[0_4px_8px_rgba(0,0,0,0.18)] transition active:scale-95">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/hello_accentmade" target="_blank" rel="noopener noreferrer" title="Follow Carys on Instagram (@hello_accentmade)" class="w-11 h-11 md:w-[48px] md:h-[48px] bg-[#C4C4C4] hover:bg-[#b0b0b0] text-black flex items-center justify-center rounded-sm shadow-[0_4px_8px_rgba(0,0,0,0.18)] transition active:scale-95" aria-label="Instagram Profile">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
             </a>
           </div>
         </div>
       </div>
 
       <!-- Right Column: Carys Portrait Anchored on the Black Diagonal -->
-      <div id="heroInstructorWrapper" class="lg:col-span-6 relative h-[36svh] sm:h-[42svh] lg:h-full w-full flex items-end justify-center lg:justify-end self-end z-20 lg:pr-12 xl:pr-20">
+      <div id="heroInstructorWrapper" class="lg:col-span-6 relative w-full h-[38svh] min-h-[260px] max-h-[380px] lg:h-full flex items-end justify-center lg:justify-end self-end z-20 lg:pr-12 xl:pr-20">
         <div id="heroPortraitParallax" class="w-full flex justify-center lg:justify-end items-end will-change-transform">
           <div id="heroInstructorCard" class="relative w-full flex justify-center lg:justify-end items-end" style="transform-style: preserve-3d; perspective: 1000px;">
             <img
               src="assets/carys-portrait.png"
               alt="Carys George — Native UK British English Language Trainer"
-              class="-mt-10 sm:-mt-14 lg:mt-0 w-auto h-[36svh] max-h-[310px] sm:h-[42svh] sm:max-h-[380px] lg:h-[86vh] lg:max-h-[820px] object-contain object-bottom select-none drop-shadow-[0_20px_30px_rgba(0,0,0,0.85)] pointer-events-none"
+              class="-mt-8 sm:-mt-12 lg:mt-0 w-auto h-[38svh] min-h-[260px] max-h-[380px] lg:h-[86vh] lg:max-h-[820px] object-contain object-bottom select-none drop-shadow-[0_20px_30px_rgba(0,0,0,0.85)] pointer-events-none"
               loading="eager"
             />
           </div>
@@ -448,198 +452,1287 @@
     </div>
   </section>
 
-  <!-- SECTION 2: 3D FLIP CREDENTIALS & INTERNATIONAL EXPERIENCE -->
-  <section id="about" class="py-24 relative bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="reveal-up flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-        <div>
-          <span class="text-xs font-bold uppercase tracking-widest text-neutral-500 font-['Montserrat']">Credentials &amp; Pedigree</span>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-1 text-black font-['Raleway'] tracking-tight">Meet Carys George &amp; Flip Her Credentials in 3D</h2>
+  <!-- SECTION 1B: HOME SUB-BLOCK 1 — REAL-WORLD & CROSS-BORDER COMMUNICATION -->
+  <section class="py-20 lg:py-24 relative bg-white border-b border-neutral-200">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 space-y-14">
+      
+      <!-- Top Part: Real World -->
+      <div class="reveal-up max-w-3xl">
+        <span class="text-xs font-bold uppercase tracking-widest text-neutral-500 font-['Montserrat']">Real-World Fluency</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-2 text-black font-['Raleway'] tracking-tight">
+          English that works in the real world.
+        </h2>
+        <div class="mt-5 space-y-3 font-['Montserrat'] text-neutral-700 text-sm sm:text-base leading-relaxed">
+          <p class="font-bold text-black text-base sm:text-lg">
+            You may know English.
+          </p>
+          <p class="font-semibold text-neutral-800">
+            But do you feel confident using it?
+          </p>
+          <p>
+            At Accent Made, we go beyond traditional spoken-English classes. Our training focuses on the skills that actually make a difference when you are communicating with colleagues, clients, employers, customers and people from different cultures.
+          </p>
         </div>
-        <p class="text-sm text-neutral-600 max-w-md font-['Montserrat'] leading-relaxed">
-          Click or tap any qualification card below to rotate it 180° in 3D space and see how Carys's background shapes your training.
+      </div>
+
+      <!-- Middle Part: Across Borders -->
+      <div class="reveal-up delay-100 max-w-3xl">
+        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black font-['Raleway'] tracking-tight">
+          We help people communicate across borders.
+        </h3>
+        <div class="mt-4 space-y-3 font-['Montserrat'] text-neutral-700 text-sm sm:text-base leading-relaxed">
+          <p>
+            Accent Made combines English language training, accent and pronunciation coaching, professional communication, cultural intelligence and personality development to help individuals and organisations communicate with greater confidence and impact.
+          </p>
+          <p>
+            Because successful international communication isn't just about speaking the right words.
+          </p>
+          <p class="font-semibold text-black">
+            It's about understanding the person you're speaking to.
+          </p>
+        </div>
+      </div>
+
+      <!-- Full-Width Highlight Banner -->
+      <div class="reveal-up delay-200 p-8 sm:p-12 lg:p-14 bg-black text-white rounded-3xl shadow-xl flex items-center justify-center text-center">
+        <p class="font-['Raleway'] font-extrabold text-xl sm:text-2xl lg:text-3xl tracking-tight leading-snug max-w-4xl">
+          Speak clearly. Communicate confidently. Understand cultures. Make an impact.
         </p>
       </div>
 
-      <!-- 4 Interactive 3D Flip Cards -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Flip Card 1 -->
-        <div class="reveal-up delay-100">
-          <div class="flip-card h-72 perspective-1000 cursor-pointer" onclick="toggleFlipCard(this)">
-            <div class="flip-card-inner relative w-full h-full">
-              <!-- Front -->
-              <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-neutral-200 shadow-sm hover:border-black hover:shadow-md transition-all">
-                <div class="w-12 h-12 rounded-2xl bg-[#F4F4F4] border border-neutral-200 flex items-center justify-center text-2xl">
-                  🏛️
-                </div>
-                <div>
-                  <div class="text-xs font-bold text-neutral-500 uppercase tracking-wider font-['Montserrat']">Cambridge Qualified</div>
-                  <h3 class="text-xl font-extrabold text-black mt-1 font-['Raleway'] tracking-tight">CELTA Certified Trainer</h3>
-                  <p class="text-xs text-neutral-600 mt-2 font-['Montserrat']">Cambridge English Language Teaching to Adults</p>
-                </div>
-                <div class="text-xs font-bold text-black flex items-center justify-between pt-2 border-t border-neutral-100 font-['Montserrat']">
-                  <span>Tap to flip in 3D</span>
-                  <span>↻ 180°</span>
-                </div>
-              </div>
-              <!-- Back -->
-              <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-black border-2 border-neutral-800 shadow-xl flex flex-col justify-between font-['Montserrat']">
-                <div class="text-xs font-extrabold uppercase tracking-wider text-amber-400">Why CELTA Matters for You</div>
-                <p class="text-sm text-neutral-200 leading-relaxed font-medium">
-                  Issued by Cambridge Assessment English, CELTA is the gold-standard qualification for teaching adult learners—ensuring every lesson is diagnostic, communicative, and tailored to your exact fluency goals.
-                </p>
-                <div class="text-xs text-amber-300 font-bold">✓ Elementary to C2 Advanced Adults</div>
-              </div>
-            </div>
-          </div>
-        </div>
+    </div>
+  </section>
 
-        <!-- Flip Card 2 -->
-        <div class="reveal-up delay-200">
-          <div class="flip-card h-72 perspective-1000 cursor-pointer" onclick="toggleFlipCard(this)">
-            <div class="flip-card-inner relative w-full h-full">
-              <!-- Front -->
-              <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-neutral-200 shadow-sm hover:border-black hover:shadow-md transition-all">
-                <div class="w-12 h-12 rounded-2xl bg-[#F4F4F4] border border-neutral-200 flex items-center justify-center text-2xl">
-                  🌍
-                </div>
-                <div>
-                  <div class="text-xs font-bold text-neutral-500 uppercase tracking-wider font-['Montserrat']">Dubai &amp; Global Career</div>
-                  <h3 class="text-xl font-extrabold text-black mt-1 font-['Raleway'] tracking-tight">5+ Years in Dubai (UAE)</h3>
-                  <p class="text-xs text-neutral-600 mt-2 font-['Montserrat']">Trained UAE Military, Police &amp; Navy Personnel</p>
-                </div>
-                <div class="text-xs font-bold text-black flex items-center justify-between pt-2 border-t border-neutral-100 font-['Montserrat']">
-                  <span>Tap to flip in 3D</span>
-                  <span>↻ 180°</span>
-                </div>
-              </div>
-              <!-- Back -->
-              <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-black border-2 border-neutral-800 shadow-xl flex flex-col justify-between font-['Montserrat']">
-                <div class="text-xs font-extrabold uppercase tracking-wider text-amber-400">High-Performance Coaching</div>
-                <p class="text-sm text-neutral-200 leading-relaxed font-medium">
-                  Over 10 years of industry teaching experience across nationalities, including 5+ years in Dubai delivering disciplined, results-driven English and pronunciation coaching to the UAE military, police, and navy.
-                </p>
-                <div class="text-xs text-amber-300 font-bold">✓ Speaking, Listening, Reading &amp; Writing</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Flip Card 3 -->
-        <div class="reveal-up delay-300">
-          <div class="flip-card h-72 perspective-1000 cursor-pointer" onclick="toggleFlipCard(this)">
-            <div class="flip-card-inner relative w-full h-full">
-              <!-- Front -->
-              <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-neutral-200 shadow-sm hover:border-black hover:shadow-md transition-all">
-                <div class="w-12 h-12 rounded-2xl bg-[#F4F4F4] border border-neutral-200 flex items-center justify-center text-2xl">
-                  💼
-                </div>
-                <div>
-                  <div class="text-xs font-bold text-neutral-500 uppercase tracking-wider font-['Montserrat']">Postgraduate Degree</div>
-                  <h3 class="text-xl font-extrabold text-black mt-1 font-['Raleway'] tracking-tight">Master's in Business &amp; HRM</h3>
-                  <p class="text-xs text-neutral-600 mt-2 font-['Montserrat']">Executive &amp; Workplace English Mastery</p>
-                </div>
-                <div class="text-xs font-bold text-black flex items-center justify-between pt-2 border-t border-neutral-100 font-['Montserrat']">
-                  <span>Tap to flip in 3D</span>
-                  <span>↻ 180°</span>
-                </div>
-              </div>
-              <!-- Back -->
-              <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-black border-2 border-neutral-800 shadow-xl flex flex-col justify-between font-['Montserrat']">
-                <div class="text-xs font-extrabold uppercase tracking-wider text-amber-400">Career &amp; Interview Edge</div>
-                <p class="text-sm text-neutral-200 leading-relaxed font-medium">
-                  With a Master's in Business and Human Resource Management, Carys coaches professionals on job interviews, boardroom presentations, executive negotiations, and leadership communication.
-                </p>
-                <div class="text-xs text-amber-300 font-bold">✓ Ideal for Corporate Professionals</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Flip Card 4 -->
-        <div class="reveal-up delay-400">
-          <div class="flip-card h-72 perspective-1000 cursor-pointer" onclick="toggleFlipCard(this)">
-            <div class="flip-card-inner relative w-full h-full">
-              <!-- Front -->
-              <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-neutral-200 shadow-sm hover:border-black hover:shadow-md transition-all">
-                <div class="w-12 h-12 rounded-2xl bg-[#F4F4F4] border border-neutral-200 flex items-center justify-center text-2xl">
-                  🎙️
-                </div>
-                <div>
-                  <div class="text-xs font-bold text-neutral-500 uppercase tracking-wider font-['Montserrat']">Honours &amp; TEFL</div>
-                  <h3 class="text-xl font-extrabold text-black mt-1 font-['Raleway'] tracking-tight">BA (Hons) Media, PR &amp; TEFL</h3>
-                  <p class="text-xs text-neutral-600 mt-2 font-['Montserrat']">Communication, Public Relations &amp; Advertising</p>
-                </div>
-                <div class="text-xs font-bold text-black flex items-center justify-between pt-2 border-t border-neutral-100 font-['Montserrat']">
-                  <span>Tap to flip in 3D</span>
-                  <span>↻ 180°</span>
-                </div>
-              </div>
-              <!-- Back -->
-              <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-black border-2 border-neutral-800 shadow-xl flex flex-col justify-between font-['Montserrat']">
-                <div class="text-xs font-extrabold uppercase tracking-wider text-amber-400">Articulation &amp; Persuasion</div>
-                <p class="text-sm text-neutral-200 leading-relaxed font-medium">
-                  Combining a BA (Hons) in Communication, PR &amp; Advertising with TEFL certification, Carys helps both adult learners and high school students (ages 12–18) speak with natural rhythm, tone, and confidence.
-                </p>
-                <div class="text-xs text-amber-300 font-bold">✓ Adults &amp; High School (Ages 12–18)</div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <!-- SECTION 1C: HOME SUB-BLOCK 2 — WHAT WE HELP YOU DEVELOP (5 RESPONSIVE CARDS) -->
+  <section class="py-20 lg:py-24 relative bg-[#F4F4F4] border-b border-neutral-200">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="reveal-up max-w-3xl mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-neutral-500 font-['Montserrat']">Core Capabilities</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-2 text-black font-['Raleway'] tracking-tight">
+          What we help you develop
+        </h2>
       </div>
 
-      <!-- Animated Stat Counter Strip -->
-      <div class="reveal-up delay-200 mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 p-6 sm:p-8 bg-[#F4F4F4] rounded-3xl border border-neutral-200 shadow-xs">
-        <div class="text-center p-3">
-          <div class="text-3xl sm:text-4xl font-extrabold text-black font-['Raleway']"><span class="counter" data-target="10" data-suffix="+">0</span></div>
-          <div class="text-xs sm:text-sm font-semibold text-neutral-600 mt-1 font-['Montserrat']">Years Global Experience</div>
+      <!-- 5-Card Responsive Grid with Equal Height -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7 items-stretch">
+        
+        <!-- Card 1 -->
+        <div class="reveal-up delay-100">
+          <div class="tilt-card h-full flex flex-col justify-between p-6 sm:p-8 bg-white rounded-3xl border border-neutral-200 hover:border-black shadow-xs hover:shadow-xl transition-all">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-[#F4F4F4] border border-neutral-200 flex items-center justify-center text-xl font-bold font-['Raleway'] text-black">
+                01
+              </div>
+              <h3 class="text-xl sm:text-2xl font-extrabold text-black font-['Raleway'] tracking-tight">
+                Speak Clearly
+              </h3>
+              <p class="text-sm text-neutral-600 font-['Montserrat'] leading-relaxed">
+                Improve pronunciation, rhythm, intonation and clarity so your English is easier to understand.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-neutral-100 text-xs font-bold uppercase tracking-wider text-neutral-400 font-['Montserrat']">
+              Pronunciation &amp; Rhythm
+            </div>
+          </div>
         </div>
-        <div class="text-center p-3">
-          <div class="text-3xl sm:text-4xl font-extrabold text-black font-['Raleway']"><span class="counter" data-target="5" data-suffix="+">0</span></div>
-          <div class="text-xs sm:text-sm font-semibold text-neutral-600 mt-1 font-['Montserrat']">Years Training Dubai Defense</div>
+
+        <!-- Card 2 -->
+        <div class="reveal-up delay-200">
+          <div class="tilt-card h-full flex flex-col justify-between p-6 sm:p-8 bg-white rounded-3xl border border-neutral-200 hover:border-black shadow-xs hover:shadow-xl transition-all">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-[#F4F4F4] border border-neutral-200 flex items-center justify-center text-xl font-bold font-['Raleway'] text-black">
+                02
+              </div>
+              <h3 class="text-xl sm:text-2xl font-extrabold text-black font-['Raleway'] tracking-tight">
+                Communicate Confidently
+              </h3>
+              <p class="text-sm text-neutral-600 font-['Montserrat'] leading-relaxed">
+                Move beyond translating in your head and learn to express yourself naturally and spontaneously.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-neutral-100 text-xs font-bold uppercase tracking-wider text-neutral-400 font-['Montserrat']">
+              Natural Expression
+            </div>
+          </div>
         </div>
-        <div class="text-center p-3">
-          <div class="text-3xl sm:text-4xl font-extrabold text-amber-600 font-['Raleway']"><span class="counter" data-target="5" data-prefix="€">0</span></div>
-          <div class="text-xs sm:text-sm font-semibold text-neutral-600 mt-1 font-['Montserrat']">Base Group Rate / Class</div>
+
+        <!-- Card 3 -->
+        <div class="reveal-up delay-300">
+          <div class="tilt-card h-full flex flex-col justify-between p-6 sm:p-8 bg-white rounded-3xl border border-neutral-200 hover:border-black shadow-xs hover:shadow-xl transition-all">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-[#F4F4F4] border border-neutral-200 flex items-center justify-center text-xl font-bold font-['Raleway'] text-black">
+                03
+              </div>
+              <h3 class="text-xl sm:text-2xl font-extrabold text-black font-['Raleway'] tracking-tight">
+                Sound Professional
+              </h3>
+              <p class="text-sm text-neutral-600 font-['Montserrat'] leading-relaxed">
+                Develop the language, tone and communication skills needed for meetings, presentations, interviews and the workplace.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-neutral-100 text-xs font-bold uppercase tracking-wider text-neutral-400 font-['Montserrat']">
+              Workplace &amp; Tone
+            </div>
+          </div>
         </div>
-        <div class="text-center p-3">
-          <div class="text-3xl sm:text-4xl font-extrabold text-black font-['Raleway']"><span class="counter" data-target="100" data-suffix="%">0</span></div>
-          <div class="text-xs sm:text-sm font-semibold text-neutral-600 mt-1 font-['Montserrat']">Cambridge CELTA Tailored</div>
+
+        <!-- Card 4 -->
+        <div class="reveal-up delay-400">
+          <div class="tilt-card h-full flex flex-col justify-between p-6 sm:p-8 bg-white rounded-3xl border border-neutral-200 hover:border-black shadow-xs hover:shadow-xl transition-all">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-[#F4F4F4] border border-neutral-200 flex items-center justify-center text-xl font-bold font-['Raleway'] text-black">
+                04
+              </div>
+              <h3 class="text-xl sm:text-2xl font-extrabold text-black font-['Raleway'] tracking-tight">
+                Build Your Presence
+              </h3>
+              <p class="text-sm text-neutral-600 font-['Montserrat'] leading-relaxed">
+                Learn how to use your voice, body language and communication style to create a stronger professional impression.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-neutral-100 text-xs font-bold uppercase tracking-wider text-neutral-400 font-['Montserrat']">
+              Voice &amp; Body Language
+            </div>
+          </div>
         </div>
+
+        <!-- Card 5 -->
+        <div class="reveal-up delay-500 sm:col-span-2 lg:col-span-1">
+          <div class="tilt-card h-full flex flex-col justify-between p-6 sm:p-8 bg-white rounded-3xl border border-neutral-200 hover:border-black shadow-xs hover:shadow-xl transition-all">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-[#F4F4F4] border border-neutral-200 flex items-center justify-center text-xl font-bold font-['Raleway'] text-black">
+                05
+              </div>
+              <h3 class="text-xl sm:text-2xl font-extrabold text-black font-['Raleway'] tracking-tight">
+                Think in English
+              </h3>
+              <p class="text-sm text-neutral-600 font-['Montserrat'] leading-relaxed">
+                Reduce hesitation and build the ability to formulate your thoughts directly in English.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-neutral-100 text-xs font-bold uppercase tracking-wider text-neutral-400 font-['Montserrat']">
+              Direct Formulation
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- SECTION 3: 3D PERSPECTIVE-TILT COURSE EXPLORER -->
-  <section id="courses" class="py-24 relative bg-[#F4F4F4]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="reveal-up flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
-        <div>
-          <span class="text-xs font-bold uppercase tracking-widest text-neutral-500 font-['Montserrat']">Tailored Programs</span>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-1 text-black font-['Raleway'] tracking-tight">Tailored English &amp; Accent Programs</h2>
+  <!-- SECTION 1D: HOME SUB-BLOCK 3 — MORE THAN ENGLISH. IT'S ABOUT HOW YOU SHOW UP. -->
+  <section class="py-20 lg:py-24 relative bg-white border-b border-neutral-200">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left 7 Columns: Headline & Checklist -->
+        <div class="reveal-left lg:col-span-7 space-y-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-neutral-500 font-['Montserrat']">Total Impact</span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-2 text-black font-['Raleway'] tracking-tight">
+              More than English. It's about how you show up.
+            </h2>
+          </div>
+          
+          <div class="font-['Montserrat'] text-sm sm:text-base text-neutral-700 leading-relaxed">
+            <p>
+              At Accent Made, we believe effective communication can change how people experience you.
+            </p>
+            <p class="font-bold text-black mt-2">
+              It can help you:
+            </p>
+          </div>
+
+          <!-- 8 Bullet Points in 1-col mobile / 2-col tablet & desktop checklist -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+            <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-[#F4F4F4] border border-neutral-200 font-['Montserrat'] text-xs sm:text-sm font-semibold text-neutral-900">
+              <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs shrink-0 font-bold">✓</span>
+              <span>contribute confidently in meetings</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-[#F4F4F4] border border-neutral-200 font-['Montserrat'] text-xs sm:text-sm font-semibold text-neutral-900">
+              <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs shrink-0 font-bold">✓</span>
+              <span>communicate with international clients</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-[#F4F4F4] border border-neutral-200 font-['Montserrat'] text-xs sm:text-sm font-semibold text-neutral-900">
+              <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs shrink-0 font-bold">✓</span>
+              <span>perform better in interviews</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-[#F4F4F4] border border-neutral-200 font-['Montserrat'] text-xs sm:text-sm font-semibold text-neutral-900">
+              <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs shrink-0 font-bold">✓</span>
+              <span>build professional relationships</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-[#F4F4F4] border border-neutral-200 font-['Montserrat'] text-xs sm:text-sm font-semibold text-neutral-900">
+              <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs shrink-0 font-bold">✓</span>
+              <span>speak without constantly worrying about mistakes</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-[#F4F4F4] border border-neutral-200 font-['Montserrat'] text-xs sm:text-sm font-semibold text-neutral-900">
+              <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs shrink-0 font-bold">✓</span>
+              <span>feel more comfortable in social situations</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-[#F4F4F4] border border-neutral-200 font-['Montserrat'] text-xs sm:text-sm font-semibold text-neutral-900">
+              <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs shrink-0 font-bold">✓</span>
+              <span>express your personality in English</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-[#F4F4F4] border border-neutral-200 font-['Montserrat'] text-xs sm:text-sm font-semibold text-neutral-900">
+              <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs shrink-0 font-bold">✓</span>
+              <span>make yourself understood more easily</span>
+            </div>
+          </div>
         </div>
 
-        <!-- Audience Filter Tabs -->
-        <div class="flex flex-wrap gap-2">
-          <button onclick="filterCourses('all')" id="courseTab-all" type="button" class="px-4 py-2.5 min-h-[44px] rounded-full text-xs font-bold font-['Montserrat'] uppercase tracking-wider bg-black text-white transition-all flex items-center justify-center shadow-sm">
-            All Programs (4)
-          </button>
-          <button onclick="filterCourses('adults')" id="courseTab-adults" type="button" class="px-4 py-2.5 min-h-[44px] rounded-full text-xs font-semibold font-['Montserrat'] uppercase tracking-wider bg-white border border-neutral-300 text-neutral-700 hover:border-black transition-all flex items-center justify-center shadow-xs">
-            Adult Learners
-          </button>
-          <button onclick="filterCourses('highschool')" id="courseTab-highschool" type="button" class="px-4 py-2.5 min-h-[44px] rounded-full text-xs font-semibold font-['Montserrat'] uppercase tracking-wider bg-white border border-neutral-300 text-neutral-700 hover:border-black transition-all flex items-center justify-center shadow-xs">
-            High School (12–18)
-          </button>
-          <button onclick="filterCourses('exams')" id="courseTab-exams" type="button" class="px-4 py-2.5 min-h-[44px] rounded-full text-xs font-semibold font-['Montserrat'] uppercase tracking-wider bg-white border border-neutral-300 text-neutral-700 hover:border-black transition-all flex items-center justify-center shadow-xs">
-            IELTS / TOEFL / Business
-          </button>
+        <!-- Right 5 Columns: Callout Card & Action Buttons -->
+        <div class="reveal-right delay-200 lg:col-span-5">
+          <div class="p-8 sm:p-10 rounded-3xl bg-neutral-900 text-white space-y-6 shadow-2xl border border-neutral-800">
+            <span class="px-3 py-1 rounded-full bg-amber-400/20 text-amber-300 text-xs font-bold uppercase tracking-wider font-['Montserrat'] inline-block">
+              Confidence Transformation
+            </span>
+            <div class="space-y-3 font-['Raleway']">
+              <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                Your English shouldn't hold you back.
+              </h3>
+              <p class="text-base sm:text-lg text-neutral-300 font-bold font-['Montserrat']">
+                Ready to communicate with confidence?
+              </p>
+            </div>
+            <div class="pt-2 flex flex-col sm:flex-row gap-3">
+              <a href="#courses" class="min-h-[48px] px-6 py-3.5 rounded-full bg-white text-black font-['Montserrat'] font-bold text-xs uppercase tracking-wider hover:bg-neutral-100 shadow-md transition-all active:scale-95 flex items-center justify-center">
+                Explore Our Courses
+              </a>
+              <button onclick="openInquiryModal('Book a Consultation')" type="button" class="min-h-[48px] px-6 py-3.5 rounded-full bg-amber-500 hover:bg-amber-400 text-black font-['Montserrat'] font-bold text-xs uppercase tracking-wider shadow-md transition-all active:scale-95 flex items-center justify-center">
+                Book a Consultation
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: ABOUT THE FOUNDER (`#about`) -->
+  <section id="about" class="py-24 relative bg-white">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 space-y-20">
+      
+      <!-- Part A: Section Header & Founder Biography 2-Column Split -->
+      <div class="space-y-12">
+        <div class="reveal-up max-w-3xl">
+          <span class="text-xs font-bold uppercase tracking-widest text-neutral-500 font-['Montserrat']">ABOUT THE FOUNDER</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-1 text-black font-['Raleway'] tracking-tight">
+            Meet Carys George
+          </h2>
+          <p class="text-sm sm:text-base font-bold text-neutral-700 font-['Montserrat'] mt-2">
+            Founder | Communication &amp; Accent Coach | CELTA-Qualified English Trainer
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <!-- Portrait Visual Column -->
+          <div class="reveal-left lg:col-span-5 flex justify-center">
+            <div class="tilt-card relative w-full max-w-md rounded-3xl overflow-hidden border-2 border-black bg-neutral-900 shadow-2xl">
+              <img
+                src="assets/carys-portrait.png"
+                alt="Carys George - Founder of Accent Made"
+                class="w-full h-auto object-cover object-top select-none"
+              />
+              <div class="p-5 bg-black/90 text-white font-['Montserrat'] border-t border-neutral-800">
+                <div class="text-base font-extrabold font-['Raleway']">Carys George</div>
+                <div class="text-xs text-amber-400 font-semibold mt-0.5">Cambridge CELTA • Native UK English Trainer</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5 Bio Paragraphs Column -->
+          <div class="reveal-right delay-100 lg:col-span-7 space-y-4 font-['Montserrat'] text-neutral-700 text-sm sm:text-[15px] leading-relaxed">
+            <p>
+              Accent Made was founded by Carys George, a British English trainer with more than a decade of experience helping people communicate confidently across cultures.
+            </p>
+            <p>
+              Carys has worked with learners and professionals from a wide range of nationalities and backgrounds, including extensive experience in the UAE, UK and Ireland.
+            </p>
+            <p>
+              She spent over five years teaching in Dubai, where she had the privilege of working with members of the UAE military, police and navy. Her extensive teaching experience allows her to deliver tailored lessons across all key language skills, including speaking, listening, reading and writing, as well as pronunciation and accent reduction.
+            </p>
+            <p>
+              Her career has taken her from classrooms to corporate environments, from working with international professionals to supporting students developing English as an additional language.
+            </p>
+            <p>
+              Today, based in Kerala, Carys combines her international teaching experience with a deep understanding of the challenges faced by Indian professionals communicating in English on a global stage.
+            </p>
+          </div>
         </div>
       </div>
 
-      <!-- 3D Tilt Course Grid -->
-      <div id="coursesGrid" class="grid grid-cols-1 md:grid-cols-2 gap-6 perspective-1400">
-        <!-- Rendered dynamically by JS with 3D mouse/touch perspective tilt -->
+      <!-- Part B: Methodology Block -->
+      <div class="reveal-up p-8 sm:p-12 rounded-3xl bg-[#F4F4F4] border border-neutral-200 shadow-sm space-y-6">
+        <div class="max-w-3xl space-y-4">
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-black font-['Raleway'] tracking-tight">
+            A different approach to English training
+          </h3>
+          <div class="font-['Montserrat'] text-neutral-700 text-sm sm:text-base leading-relaxed space-y-2">
+            <p>
+              Carys believes that learning English isn't simply about memorising vocabulary or completing grammar exercises.
+            </p>
+            <p class="font-semibold text-black">
+              It's about becoming comfortable enough to actually use the language.
+            </p>
+            <p>
+              Her approach combines:
+            </p>
+          </div>
+        </div>
+
+        <!-- Formula Badge -->
+        <div class="inline-flex flex-wrap items-center gap-2 sm:gap-3 p-3 sm:p-4 rounded-2xl bg-black text-white font-['Raleway'] font-extrabold text-sm sm:text-lg tracking-tight shadow-md">
+          <span class="text-white">Pronunciation</span>
+          <span class="text-amber-400 font-bold">+</span>
+          <span class="text-white">Communication</span>
+          <span class="text-amber-400 font-bold">+</span>
+          <span class="text-white">Confidence</span>
+          <span class="text-amber-400 font-bold">+</span>
+          <span class="text-amber-400">Personality</span>
+        </div>
+
+        <p class="font-['Montserrat'] text-neutral-600 text-xs sm:text-sm leading-relaxed max-w-3xl">
+          Rather than trying to erase someone's identity or make everyone sound the same, Accent Made focuses on clear, confident and effective communication.
+        </p>
       </div>
+
+      <!-- Part C: "Why Carys?" Credentials, Quote & Philosophy -->
+      <div class="space-y-12">
+        <div class="reveal-up max-w-3xl">
+          <h3 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black font-['Raleway'] tracking-tight">
+            Why Carys?
+          </h3>
+        </div>
+
+        <!-- 8 Credential Bullets in 1-col mobile / 2-col tablet / 4-col desktop grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="reveal-up delay-100 p-5 rounded-2xl bg-white border border-neutral-200 shadow-xs flex items-center gap-3 font-['Montserrat'] text-xs sm:text-sm font-semibold text-neutral-900">
+            <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs shrink-0 font-bold">✓</span>
+            <span>British native English speaker</span>
+          </div>
+          <div class="reveal-up delay-150 p-5 rounded-2xl bg-white border border-neutral-200 shadow-xs flex items-center gap-3 font-['Montserrat'] text-xs sm:text-sm font-semibold text-neutral-900">
+            <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs shrink-0 font-bold">✓</span>
+            <span>CELTA qualified</span>
+          </div>
+          <div class="reveal-up delay-200 p-5 rounded-2xl bg-white border border-neutral-200 shadow-xs flex items-center gap-3 font-['Montserrat'] text-xs sm:text-sm font-semibold text-neutral-900">
+            <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs shrink-0 font-bold">✓</span>
+            <span>10+ years of English teaching and training experience</span>
+          </div>
+          <div class="reveal-up delay-250 p-5 rounded-2xl bg-white border border-neutral-200 shadow-xs flex items-center gap-3 font-['Montserrat'] text-xs sm:text-sm font-semibold text-neutral-900">
+            <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs shrink-0 font-bold">✓</span>
+            <span>Experience working across the UK, Ireland, UAE and India</span>
+          </div>
+          <div class="reveal-up delay-300 p-5 rounded-2xl bg-white border border-neutral-200 shadow-xs flex items-center gap-3 font-['Montserrat'] text-xs sm:text-sm font-semibold text-neutral-900">
+            <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs shrink-0 font-bold">✓</span>
+            <span>Experience teaching professionals and international learners</span>
+          </div>
+          <div class="reveal-up delay-350 p-5 rounded-2xl bg-white border border-neutral-200 shadow-xs flex items-center gap-3 font-['Montserrat'] text-xs sm:text-sm font-semibold text-neutral-900">
+            <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs shrink-0 font-bold">✓</span>
+            <span>Extensive experience in EAL education</span>
+          </div>
+          <div class="reveal-up delay-400 p-5 rounded-2xl bg-white border border-neutral-200 shadow-xs flex items-center gap-3 font-['Montserrat'] text-xs sm:text-sm font-semibold text-neutral-900">
+            <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs shrink-0 font-bold">✓</span>
+            <span>Specialist interest in pronunciation and accent development</span>
+          </div>
+          <div class="reveal-up delay-450 p-5 rounded-2xl bg-white border border-neutral-200 shadow-xs flex items-center gap-3 font-['Montserrat'] text-xs sm:text-sm font-semibold text-neutral-900">
+            <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs shrink-0 font-bold">✓</span>
+            <span>Experienced public speaker and digital English educator</span>
+          </div>
+        </div>
+
+        <!-- Additional Paragraph -->
+        <div class="reveal-up p-5 rounded-2xl bg-[#F4F4F4] border border-neutral-200 text-sm font-['Montserrat'] text-neutral-700 leading-relaxed">
+          Carys also creates educational English content for a growing online audience, helping thousands of learners improve their English through practical, engaging and accessible content.
+        </div>
+
+        <!-- Pull-Quote Box & Quote Story Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-4">
+          <!-- Pull-Quote Box -->
+          <div class="reveal-left lg:col-span-5 p-8 sm:p-10 rounded-3xl bg-black text-white shadow-xl relative">
+            <div class="text-4xl text-amber-400 font-serif leading-none mb-3">“</div>
+            <blockquote class="font-['Raleway'] font-bold text-lg sm:text-xl text-white leading-relaxed">
+              I want my learners to leave every session feeling that they can do something they couldn't do before.
+            </blockquote>
+            <div class="mt-4 pt-4 border-t border-neutral-800 text-xs font-semibold text-neutral-400 font-['Montserrat']">
+              — Carys George, Founder
+            </div>
+          </div>
+
+          <!-- Quote Story Copy -->
+          <div class="reveal-right delay-100 lg:col-span-7 space-y-3 font-['Montserrat'] text-sm sm:text-base text-neutral-700 leading-relaxed">
+            <p>
+              For Carys, the most rewarding part of training isn't simply seeing someone learn a new word or improve a pronunciation sound.
+            </p>
+            <p class="font-semibold text-black">
+              It's seeing someone who once stayed quiet in a meeting finally speak.
+            </p>
+            <p>
+              Someone who avoided phone calls finally pick up the phone.
+            </p>
+            <p>
+              Someone who worried about their accent finally realise that their voice is not the problem - they simply need the tools to use it effectively.
+            </p>
+          </div>
+        </div>
+
+        <!-- Philosophy Callout Card -->
+        <div class="reveal-up p-8 sm:p-10 rounded-3xl bg-[#D7D7D7] border border-neutral-400 text-black shadow-md space-y-3">
+          <span class="text-xs font-bold uppercase tracking-widest text-neutral-700 font-['Montserrat']">Our Core Belief</span>
+          <h4 class="text-2xl sm:text-3xl font-extrabold font-['Raleway'] tracking-tight">
+            The Accent Made philosophy
+          </h4>
+          <div class="font-['Montserrat'] font-bold text-base sm:text-lg text-neutral-900 leading-relaxed space-y-1">
+            <p>We don't teach you to become someone else.</p>
+            <p class="text-black font-extrabold">We help you communicate the best version of yourself.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 4 Interactive 3D Flip Cards & Stats Strip (Preserved) -->
+      <div class="space-y-8 pt-8 border-t border-neutral-200">
+        <div class="reveal-up flex flex-col md:flex-row md:items-end justify-between gap-4">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-neutral-500 font-['Montserrat']">3D Credentials Showcase</span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold mt-1 text-black font-['Raleway'] tracking-tight">Explore Key Qualifications in 3D</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-neutral-600 max-w-md font-['Montserrat']">
+            Tap any qualification card below to rotate it 180° in 3D space.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Flip Card 1 -->
+          <div class="reveal-up delay-100">
+            <div class="flip-card h-72 perspective-1000 cursor-pointer" onclick="toggleFlipCard(this)">
+              <div class="flip-card-inner relative w-full h-full">
+                <!-- Front -->
+                <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-neutral-200 shadow-sm hover:border-black hover:shadow-md transition-all">
+                  <div class="w-12 h-12 rounded-2xl bg-[#F4F4F4] border border-neutral-200 flex items-center justify-center text-2xl">
+                    🏛️
+                  </div>
+                  <div>
+                    <div class="text-xs font-bold text-neutral-500 uppercase tracking-wider font-['Montserrat']">Cambridge Qualified</div>
+                    <h4 class="text-xl font-extrabold text-black mt-1 font-['Raleway'] tracking-tight">CELTA Certified Trainer</h4>
+                    <p class="text-xs text-neutral-600 mt-2 font-['Montserrat']">Cambridge English Language Teaching to Adults</p>
+                  </div>
+                  <div class="text-xs font-bold text-black flex items-center justify-between pt-2 border-t border-neutral-100 font-['Montserrat']">
+                    <span>Tap to flip in 3D</span>
+                    <span>↻ 180°</span>
+                  </div>
+                </div>
+                <!-- Back -->
+                <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-black border-2 border-neutral-800 shadow-xl flex flex-col justify-between font-['Montserrat']">
+                  <div class="text-xs font-extrabold uppercase tracking-wider text-amber-400">Why CELTA Matters for You</div>
+                  <p class="text-sm text-neutral-200 leading-relaxed font-medium">
+                    Issued by Cambridge Assessment English, CELTA is the gold-standard qualification for teaching adult learners—ensuring every lesson is diagnostic, communicative, and tailored to your exact fluency goals.
+                  </p>
+                  <div class="text-xs text-amber-300 font-bold">✓ Elementary to C2 Advanced Adults</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flip Card 2 -->
+          <div class="reveal-up delay-200">
+            <div class="flip-card h-72 perspective-1000 cursor-pointer" onclick="toggleFlipCard(this)">
+              <div class="flip-card-inner relative w-full h-full">
+                <!-- Front -->
+                <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-neutral-200 shadow-sm hover:border-black hover:shadow-md transition-all">
+                  <div class="w-12 h-12 rounded-2xl bg-[#F4F4F4] border border-neutral-200 flex items-center justify-center text-2xl">
+                    🌍
+                  </div>
+                  <div>
+                    <div class="text-xs font-bold text-neutral-500 uppercase tracking-wider font-['Montserrat']">Dubai &amp; Global Career</div>
+                    <h4 class="text-xl font-extrabold text-black mt-1 font-['Raleway'] tracking-tight">5+ Years in Dubai (UAE)</h4>
+                    <p class="text-xs text-neutral-600 mt-2 font-['Montserrat']">Trained UAE Military, Police &amp; Navy Personnel</p>
+                  </div>
+                  <div class="text-xs font-bold text-black flex items-center justify-between pt-2 border-t border-neutral-100 font-['Montserrat']">
+                    <span>Tap to flip in 3D</span>
+                    <span>↻ 180°</span>
+                  </div>
+                </div>
+                <!-- Back -->
+                <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-black border-2 border-neutral-800 shadow-xl flex flex-col justify-between font-['Montserrat']">
+                  <div class="text-xs font-extrabold uppercase tracking-wider text-amber-400">High-Performance Coaching</div>
+                  <p class="text-sm text-neutral-200 leading-relaxed font-medium">
+                    Over 10 years of industry teaching experience across nationalities, including 5+ years in Dubai delivering disciplined, results-driven English and pronunciation coaching to the UAE military, police, and navy.
+                  </p>
+                  <div class="text-xs text-amber-300 font-bold">✓ Speaking, Listening, Reading &amp; Writing</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flip Card 3 -->
+          <div class="reveal-up delay-300">
+            <div class="flip-card h-72 perspective-1000 cursor-pointer" onclick="toggleFlipCard(this)">
+              <div class="flip-card-inner relative w-full h-full">
+                <!-- Front -->
+                <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-neutral-200 shadow-sm hover:border-black hover:shadow-md transition-all">
+                  <div class="w-12 h-12 rounded-2xl bg-[#F4F4F4] border border-neutral-200 flex items-center justify-center text-2xl">
+                    💼
+                  </div>
+                  <div>
+                    <div class="text-xs font-bold text-neutral-500 uppercase tracking-wider font-['Montserrat']">Postgraduate Degree</div>
+                    <h4 class="text-xl font-extrabold text-black mt-1 font-['Raleway'] tracking-tight">Master's in Business &amp; HRM</h4>
+                    <p class="text-xs text-neutral-600 mt-2 font-['Montserrat']">Executive &amp; Workplace English Mastery</p>
+                  </div>
+                  <div class="text-xs font-bold text-black flex items-center justify-between pt-2 border-t border-neutral-100 font-['Montserrat']">
+                    <span>Tap to flip in 3D</span>
+                    <span>↻ 180°</span>
+                  </div>
+                </div>
+                <!-- Back -->
+                <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-black border-2 border-neutral-800 shadow-xl flex flex-col justify-between font-['Montserrat']">
+                  <div class="text-xs font-extrabold uppercase tracking-wider text-amber-400">Career &amp; Interview Edge</div>
+                  <p class="text-sm text-neutral-200 leading-relaxed font-medium">
+                    With a Master's in Business and Human Resource Management, Carys coaches professionals on job interviews, boardroom presentations, executive negotiations, and leadership communication.
+                  </p>
+                  <div class="text-xs text-amber-300 font-bold">✓ Ideal for Corporate Professionals</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flip Card 4 -->
+          <div class="reveal-up delay-400">
+            <div class="flip-card h-72 perspective-1000 cursor-pointer" onclick="toggleFlipCard(this)">
+              <div class="flip-card-inner relative w-full h-full">
+                <!-- Front -->
+                <div class="backface-hidden absolute inset-0 bg-white rounded-3xl p-6 flex flex-col justify-between border border-neutral-200 shadow-sm hover:border-black hover:shadow-md transition-all">
+                  <div class="w-12 h-12 rounded-2xl bg-[#F4F4F4] border border-neutral-200 flex items-center justify-center text-2xl">
+                    🎙️
+                  </div>
+                  <div>
+                    <div class="text-xs font-bold text-neutral-500 uppercase tracking-wider font-['Montserrat']">Honours &amp; TEFL</div>
+                    <h4 class="text-xl font-extrabold text-black mt-1 font-['Raleway'] tracking-tight">BA (Hons) Media, PR &amp; TEFL</h4>
+                    <p class="text-xs text-neutral-600 mt-2 font-['Montserrat']">Communication, Public Relations &amp; Advertising</p>
+                  </div>
+                  <div class="text-xs font-bold text-black flex items-center justify-between pt-2 border-t border-neutral-100 font-['Montserrat']">
+                    <span>Tap to flip in 3D</span>
+                    <span>↻ 180°</span>
+                  </div>
+                </div>
+                <!-- Back -->
+                <div class="backface-hidden rotate-y-180 absolute inset-0 rounded-3xl p-6 bg-black border-2 border-neutral-800 shadow-xl flex flex-col justify-between font-['Montserrat']">
+                  <div class="text-xs font-extrabold uppercase tracking-wider text-amber-400">Articulation &amp; Persuasion</div>
+                  <p class="text-sm text-neutral-200 leading-relaxed font-medium">
+                    Combining a BA (Hons) in Communication, PR &amp; Advertising with TEFL certification, Carys helps both adult learners and high school students (ages 12–18) speak with natural rhythm, tone, and confidence.
+                  </p>
+                  <div class="text-xs text-amber-300 font-bold">✓ Adults &amp; High School (Ages 12–18)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Animated Stat Counter Strip -->
+        <div class="reveal-up delay-200 mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 p-6 sm:p-8 bg-[#F4F4F4] rounded-3xl border border-neutral-200 shadow-xs">
+          <div class="text-center p-3">
+            <div class="text-3xl sm:text-4xl font-extrabold text-black font-['Raleway']"><span class="counter" data-target="10" data-suffix="+">0</span></div>
+            <div class="text-xs sm:text-sm font-semibold text-neutral-600 mt-1 font-['Montserrat']">Years Global Experience</div>
+          </div>
+          <div class="text-center p-3">
+            <div class="text-3xl sm:text-4xl font-extrabold text-black font-['Raleway']"><span class="counter" data-target="5" data-suffix="+">0</span></div>
+            <div class="text-xs sm:text-sm font-semibold text-neutral-600 mt-1 font-['Montserrat']">Years Training Dubai Defense</div>
+          </div>
+          <div class="text-center p-3">
+            <div class="text-3xl sm:text-4xl font-extrabold text-amber-600 font-['Raleway']"><span class="counter" data-target="5" data-prefix="€">0</span></div>
+            <div class="text-xs sm:text-sm font-semibold text-neutral-600 mt-1 font-['Montserrat']">Base Group Rate / Class</div>
+          </div>
+          <div class="text-center p-3">
+            <div class="text-3xl sm:text-4xl font-extrabold text-black font-['Raleway']"><span class="counter" data-target="100" data-suffix="%">0</span></div>
+            <div class="text-xs sm:text-sm font-semibold text-neutral-600 mt-1 font-['Montserrat']">Cambridge CELTA Tailored</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 3: COURSES & TRAINING (`#courses`) -->
+  <section id="courses" class="py-24 relative bg-[#F4F4F4] border-b border-neutral-200">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 space-y-16">
+      
+      <!-- Section Header -->
+      <div class="reveal-up max-w-3xl space-y-3">
+        <span class="text-xs font-bold uppercase tracking-widest text-neutral-500 font-['Montserrat']">COURSES &amp; TRAINING</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-black font-['Raleway'] tracking-tight">
+          Training designed around real communication
+        </h2>
+        <p class="text-sm sm:text-base text-neutral-600 font-['Montserrat'] leading-relaxed pt-1">
+          Whether you want to improve your everyday English, communicate more effectively at work or develop a clearer international accent, Accent Made offers practical training designed around your goals.
+        </p>
+      </div>
+
+      <!-- 6 Course Cards Responsive Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+        
+        <!-- Course 1 -->
+        <div class="reveal-up delay-100">
+          <div class="tilt-card h-full flex flex-col justify-between p-7 sm:p-8 bg-white rounded-3xl border border-neutral-200 hover:border-black shadow-xs hover:shadow-xl transition-all space-y-5">
+            <div class="space-y-4">
+              <span class="px-3 py-1 rounded-full bg-neutral-100 border border-neutral-300 text-neutral-900 text-xs font-bold font-['Montserrat'] inline-block">
+                Course 01
+              </span>
+              <h3 class="text-xl sm:text-2xl font-extrabold text-black font-['Raleway'] tracking-tight">
+                1. Spoken English &amp; Communication
+              </h3>
+              <div class="text-xs font-bold uppercase tracking-wider text-amber-700 font-['Montserrat']">
+                Speak naturally. Think faster. Communicate confidently.
+              </div>
+              <p class="text-xs sm:text-sm text-neutral-600 font-['Montserrat'] leading-relaxed">
+                Designed for learners who understand English but struggle to speak spontaneously.
+              </p>
+              <div class="pt-2">
+                <div class="text-xs font-bold text-black uppercase tracking-wider font-['Montserrat'] mb-2">You'll develop:</div>
+                <ul class="space-y-1.5 text-xs text-neutral-700 font-medium font-['Montserrat']">
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> conversational fluency</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> vocabulary</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> sentence formation</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> confidence</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> listening skills</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> everyday expressions</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> natural conversational English</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> thinking directly in English</li>
+                </ul>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-neutral-100 space-y-4">
+              <p class="text-xs text-neutral-500 font-['Montserrat'] italic">
+                Ideal for: professionals, students, job seekers and anyone who wants to become a more confident English speaker.
+              </p>
+              <button onclick="openInquiryModal('Spoken English & Communication')" type="button" class="w-full py-3 min-h-[44px] rounded-full bg-black text-white hover:bg-neutral-800 font-['Montserrat'] font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center shadow-xs active:scale-95">
+                Inquire About Course →
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="reveal-up delay-200">
+          <div class="tilt-card h-full flex flex-col justify-between p-7 sm:p-8 bg-white rounded-3xl border border-neutral-200 hover:border-black shadow-xs hover:shadow-xl transition-all space-y-5">
+            <div class="space-y-4">
+              <span class="px-3 py-1 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs font-bold font-['Montserrat'] inline-block">
+                Signature Program
+              </span>
+              <h3 class="text-xl sm:text-2xl font-extrabold text-black font-['Raleway'] tracking-tight">
+                2. Accent &amp; Pronunciation Training
+              </h3>
+              <div class="text-xs font-bold uppercase tracking-wider text-amber-700 font-['Montserrat']">
+                Speak clearly. Be understood.
+              </div>
+              <p class="text-xs sm:text-sm text-neutral-600 font-['Montserrat'] leading-relaxed">
+                Accent training at Accent Made focuses on the features that have the biggest impact on intelligibility.
+              </p>
+              <div class="pt-2">
+                <div class="text-xs font-bold text-black uppercase tracking-wider font-['Montserrat'] mb-2">Training can include:</div>
+                <!-- Compact Responsive 2-Column Sub-Grid for 12 Bullets -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-3 gap-y-1.5 text-xs text-neutral-700 font-medium font-['Montserrat']">
+                  <div class="flex items-center gap-1.5"><span class="text-black font-bold">✓</span> individual sounds</div>
+                  <div class="flex items-center gap-1.5"><span class="text-black font-bold">✓</span> vowel sounds</div>
+                  <div class="flex items-center gap-1.5"><span class="text-black font-bold">✓</span> consonants</div>
+                  <div class="flex items-center gap-1.5"><span class="text-black font-bold">✓</span> word stress</div>
+                  <div class="flex items-center gap-1.5"><span class="text-black font-bold">✓</span> sentence stress</div>
+                  <div class="flex items-center gap-1.5"><span class="text-black font-bold">✓</span> rhythm</div>
+                  <div class="flex items-center gap-1.5"><span class="text-black font-bold">✓</span> intonation</div>
+                  <div class="flex items-center gap-1.5"><span class="text-black font-bold">✓</span> connected speech</div>
+                  <div class="flex items-center gap-1.5"><span class="text-black font-bold">✓</span> linking</div>
+                  <div class="flex items-center gap-1.5"><span class="text-black font-bold">✓</span> reductions</div>
+                  <div class="flex items-center gap-1.5"><span class="text-black font-bold">✓</span> sound combinations</div>
+                  <div class="flex items-center gap-1.5"><span class="text-black font-bold">✓</span> mother-tongue influence</div>
+                </div>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-neutral-100 space-y-4">
+              <div class="text-xs text-neutral-600 font-['Montserrat'] leading-relaxed bg-[#F4F4F4] p-3 rounded-xl border border-neutral-200">
+                <p>The objective isn't to make you sound "foreign" or "native".</p>
+                <p class="font-bold text-black mt-1">The objective is to help you sound clear, natural and confident.</p>
+              </div>
+              <button onclick="openInquiryModal('Accent & Pronunciation Training')" type="button" class="w-full py-3 min-h-[44px] rounded-full bg-black text-white hover:bg-neutral-800 font-['Montserrat'] font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center shadow-xs active:scale-95">
+                Inquire About Course →
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 3 -->
+        <div class="reveal-up delay-300">
+          <div class="tilt-card h-full flex flex-col justify-between p-7 sm:p-8 bg-white rounded-3xl border border-neutral-200 hover:border-black shadow-xs hover:shadow-xl transition-all space-y-5">
+            <div class="space-y-4">
+              <span class="px-3 py-1 rounded-full bg-neutral-100 border border-neutral-300 text-neutral-900 text-xs font-bold font-['Montserrat'] inline-block">
+                Course 03
+              </span>
+              <h3 class="text-xl sm:text-2xl font-extrabold text-black font-['Raleway'] tracking-tight">
+                3. Professional &amp; Business English
+              </h3>
+              <div class="text-xs font-bold uppercase tracking-wider text-amber-700 font-['Montserrat']">
+                English for the way you work.
+              </div>
+              <p class="text-xs sm:text-sm text-neutral-600 font-['Montserrat'] leading-relaxed">
+                Communicating professionally requires more than knowing the right grammar.
+              </p>
+              <div class="pt-2">
+                <div class="text-xs font-bold text-black uppercase tracking-wider font-['Montserrat'] mb-2">Learn how to:</div>
+                <!-- Compact Responsive 2-Column Sub-Grid for 11 Bullets -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-3 gap-y-1.5 text-xs text-neutral-700 font-medium font-['Montserrat']">
+                  <div class="flex items-center gap-1.5"><span class="text-black font-bold">✓</span> participate in meetings</div>
+                  <div class="flex items-center gap-1.5"><span class="text-black font-bold">✓</span> international clients</div>
+                  <div class="flex items-center gap-1.5"><span class="text-black font-bold">✓</span> make presentations</div>
+                  <div class="flex items-center gap-1.5"><span class="text-black font-bold">✓</span> give opinions</div>
+                  <div class="flex items-center gap-1.5"><span class="text-black font-bold">✓</span> disagree professionally</div>
+                  <div class="flex items-center gap-1.5"><span class="text-black font-bold">✓</span> difficult conversations</div>
+                  <div class="flex items-center gap-1.5"><span class="text-black font-bold">✓</span> write emails</div>
+                  <div class="flex items-center gap-1.5"><span class="text-black font-bold">✓</span> make phone calls</div>
+                  <div class="flex items-center gap-1.5"><span class="text-black font-bold">✓</span> network</div>
+                  <div class="flex items-center gap-1.5"><span class="text-black font-bold">✓</span> explain ideas clearly</div>
+                  <div class="flex items-center gap-1.5 sm:col-span-2"><span class="text-black font-bold">✓</span> communicate across cultures</div>
+                </div>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-neutral-100 space-y-4">
+              <p class="text-xs text-neutral-500 font-['Montserrat'] italic">
+                Tailored for workplace meetings, executive presence &amp; global business collaboration.
+              </p>
+              <button onclick="openInquiryModal('Professional & Business English')" type="button" class="w-full py-3 min-h-[44px] rounded-full bg-black text-white hover:bg-neutral-800 font-['Montserrat'] font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center shadow-xs active:scale-95">
+                Inquire About Course →
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 4 -->
+        <div class="reveal-up delay-400">
+          <div class="tilt-card h-full flex flex-col justify-between p-7 sm:p-8 bg-white rounded-3xl border border-neutral-200 hover:border-black shadow-xs hover:shadow-xl transition-all space-y-5">
+            <div class="space-y-4">
+              <span class="px-3 py-1 rounded-full bg-neutral-100 border border-neutral-300 text-neutral-900 text-xs font-bold font-['Montserrat'] inline-block">
+                Course 04
+              </span>
+              <h3 class="text-xl sm:text-2xl font-extrabold text-black font-['Raleway'] tracking-tight">
+                4. Interview &amp; Career Communication
+              </h3>
+              <div class="text-xs font-bold uppercase tracking-wider text-amber-700 font-['Montserrat']">
+                Your experience deserves to be heard.
+              </div>
+              <div class="text-xs sm:text-sm text-neutral-600 font-['Montserrat'] leading-relaxed space-y-1">
+                <p>You may have the qualifications and experience.</p>
+                <p class="font-semibold text-black">Now you need to communicate them effectively.</p>
+              </div>
+              <div class="pt-2">
+                <div class="text-xs font-bold text-black uppercase tracking-wider font-['Montserrat'] mb-2">Training can include:</div>
+                <ul class="space-y-1.5 text-xs text-neutral-700 font-medium font-['Montserrat']">
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> interview questions</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> answering with confidence</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> professional vocabulary</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> personal introductions</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> talking about your experience</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> storytelling</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> body language</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> voice and delivery</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> handling difficult questions</li>
+                </ul>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-neutral-100 space-y-4">
+              <p class="text-xs text-neutral-500 font-['Montserrat'] italic">
+                Stand out in multinational job interviews, promotion pitches &amp; panel presentations.
+              </p>
+              <button onclick="openInquiryModal('Interview & Career Communication')" type="button" class="w-full py-3 min-h-[44px] rounded-full bg-black text-white hover:bg-neutral-800 font-['Montserrat'] font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center shadow-xs active:scale-95">
+                Inquire About Course →
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 5 -->
+        <div class="reveal-up delay-500">
+          <div class="tilt-card h-full flex flex-col justify-between p-7 sm:p-8 bg-white rounded-3xl border border-neutral-200 hover:border-black shadow-xs hover:shadow-xl transition-all space-y-5">
+            <div class="space-y-4">
+              <span class="px-3 py-1 rounded-full bg-neutral-100 border border-neutral-300 text-neutral-900 text-xs font-bold font-['Montserrat'] inline-block">
+                Course 05
+              </span>
+              <h3 class="text-xl sm:text-2xl font-extrabold text-black font-['Raleway'] tracking-tight">
+                5. Personality Development &amp; Communication
+              </h3>
+              <div class="text-xs font-bold uppercase tracking-wider text-amber-700 font-['Montserrat']">
+                Become a stronger communicator not just a better English speaker.
+              </div>
+              <p class="text-xs sm:text-sm text-neutral-600 font-['Montserrat'] leading-relaxed">
+                Our personality-development programmes combine English communication with confidence, presence and interpersonal skills.
+              </p>
+              <div class="pt-2">
+                <div class="text-xs font-bold text-black uppercase tracking-wider font-['Montserrat'] mb-2">You'll explore:</div>
+                <ul class="space-y-1.5 text-xs text-neutral-700 font-medium font-['Montserrat']">
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> confidence</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> self-expression</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> body language</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> conversation skills</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> professional presence</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> networking</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> public speaking</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> assertive communication</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> social confidence</li>
+                </ul>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-neutral-100 space-y-4">
+              <p class="text-xs text-neutral-600 font-['Montserrat'] italic font-medium">
+                Because great communication isn't only about the words you use.
+              </p>
+              <button onclick="openInquiryModal('Personality Development & Communication')" type="button" class="w-full py-3 min-h-[44px] rounded-full bg-black text-white hover:bg-neutral-800 font-['Montserrat'] font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center shadow-xs active:scale-95">
+                Inquire About Course →
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 6 -->
+        <div class="reveal-up delay-600">
+          <div class="tilt-card h-full flex flex-col justify-between p-7 sm:p-8 bg-white rounded-3xl border border-neutral-200 hover:border-black shadow-xs hover:shadow-xl transition-all space-y-5">
+            <div class="space-y-4">
+              <span class="px-3 py-1 rounded-full bg-neutral-100 border border-neutral-300 text-neutral-900 text-xs font-bold font-['Montserrat'] inline-block">
+                Course 06
+              </span>
+              <h3 class="text-xl sm:text-2xl font-extrabold text-black font-['Raleway'] tracking-tight">
+                6. Corporate Training
+              </h3>
+              <div class="text-xs font-bold uppercase tracking-wider text-amber-700 font-['Montserrat']">
+                Give your team the confidence to communicate globally.
+              </div>
+              <p class="text-xs sm:text-sm text-neutral-600 font-['Montserrat'] leading-relaxed">
+                Accent Made works with organisations to develop communication skills across teams.
+              </p>
+              <div class="pt-2">
+                <div class="text-xs font-bold text-black uppercase tracking-wider font-['Montserrat'] mb-2">Programmes can be tailored for:</div>
+                <ul class="space-y-1.5 text-xs text-neutral-700 font-medium font-['Montserrat']">
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> customer service teams</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> hospitality</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> healthcare</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> pharmaceutical organisations</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> sales teams</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> international-facing professionals</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> management</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> graduates</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> customer-support teams</li>
+                </ul>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-neutral-100 space-y-4">
+              <p class="text-xs text-neutral-600 font-['Montserrat'] italic font-medium">
+                Programmes can be delivered online, in person or as intensive workshops.
+              </p>
+              <button onclick="openInquiryModal('Corporate Training')" type="button" class="w-full py-3 min-h-[44px] rounded-full bg-black text-white hover:bg-neutral-800 font-['Montserrat'] font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center shadow-xs active:scale-95">
+                Inquire About Course →
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Courses Bottom Callout Banner -->
+      <div class="reveal-up p-8 sm:p-12 rounded-3xl bg-black text-white shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div class="space-y-2 max-w-2xl">
+          <h3 class="text-2xl sm:text-3xl font-extrabold font-['Raleway'] tracking-tight">
+            Looking for something specific?
+          </h3>
+          <div class="font-['Montserrat'] text-neutral-300 text-sm sm:text-base leading-relaxed space-y-1">
+            <p>Every organisation has different communication challenges.</p>
+            <p class="text-white font-bold">Let's create a programme around yours.</p>
+          </div>
+        </div>
+        <a href="#corporate" class="min-h-[48px] px-8 py-3.5 rounded-full bg-white text-black font-['Montserrat'] font-bold text-xs uppercase tracking-wider hover:bg-neutral-100 shadow-md transition-all active:scale-95 flex items-center justify-center shrink-0">
+          Talk to Us About Corporate Training →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 4: THE TEAM (`#team`) -->
+  <section id="team" class="py-24 relative bg-white border-b border-neutral-200">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 space-y-16">
+      
+      <!-- Section Header -->
+      <div class="reveal-up max-w-3xl space-y-3">
+        <span class="text-xs font-bold uppercase tracking-widest text-neutral-500 font-['Montserrat']">THE TEAM</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-black font-['Raleway'] tracking-tight">
+          Meet the Accent Made Team
+        </h2>
+        <div class="text-base sm:text-lg font-bold text-neutral-800 font-['Montserrat']">
+          Experts in communication. Passionate about people.
+        </div>
+        <div class="font-['Montserrat'] text-neutral-600 text-sm sm:text-base leading-relaxed space-y-2 pt-2">
+          <p>
+            Behind Accent Made is a team of experienced trainers and communication professionals who share one belief:
+          </p>
+          <p class="font-bold text-black">
+            Everyone can become a more confident communicator with the right guidance and practice.
+          </p>
+          <p>
+            We combine language expertise with real-world professional experience to create training that is practical, engaging and relevant.
+          </p>
+        </div>
+      </div>
+
+      <!-- Responsive 2-Column Team Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+        
+        <!-- Card 1: Carys George -->
+        <div class="reveal-left">
+          <div class="tilt-card h-full flex flex-col justify-between p-8 sm:p-10 rounded-3xl bg-[#F4F4F4] border border-neutral-200 hover:border-black shadow-xs hover:shadow-xl transition-all space-y-6">
+            <div class="space-y-4">
+              <div class="flex items-center gap-4">
+                <img
+                  src="assets/carys-portrait.png"
+                  alt="Carys George"
+                  class="w-16 h-16 rounded-2xl object-cover object-top border-2 border-black bg-neutral-900 shadow-sm shrink-0"
+                />
+                <div>
+                  <h3 class="text-2xl font-extrabold text-black font-['Raleway'] tracking-tight">Carys George</h3>
+                  <div class="text-xs font-bold text-neutral-600 font-['Montserrat']">Founder &amp; Lead Communication Trainer</div>
+                </div>
+              </div>
+
+              <div class="inline-block px-3 py-1.5 rounded-xl bg-white border border-neutral-300 text-xs font-semibold text-neutral-800 font-['Montserrat']">
+                British English trainer | CELTA Qualified | Accent &amp; Communication Specialist
+              </div>
+
+              <div class="font-['Montserrat'] text-neutral-700 text-sm leading-relaxed space-y-2">
+                <p>
+                  Carys leads Accent Made's communication, pronunciation and personality-development programmes.
+                </p>
+                <p>
+                  With 10+ years of teaching and training experience across international environments, she brings a practical, learner-focused approach to every programme.
+                </p>
+              </div>
+
+              <div class="pt-2">
+                <div class="text-xs font-bold text-black uppercase tracking-wider font-['Montserrat'] mb-2">Her particular areas of expertise include:</div>
+                <ul class="space-y-1.5 text-xs text-neutral-700 font-medium font-['Montserrat']">
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> accent and pronunciation</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> spoken English</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> professional communication</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> confidence building</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> personality development</li>
+                  <li class="flex items-center gap-2"><span class="text-black font-bold">✓</span> international communication</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-neutral-200">
+              <button onclick="openInquiryModal('Consultation with Carys George')" type="button" class="w-full py-3 min-h-[44px] rounded-full bg-black text-white hover:bg-neutral-800 font-['Montserrat'] font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center shadow-xs active:scale-95">
+                Book Session with Carys →
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Our Trainers -->
+        <div class="reveal-right delay-100">
+          <div class="tilt-card h-full flex flex-col justify-between p-8 sm:p-10 rounded-3xl bg-white border-2 border-black shadow-lg hover:shadow-2xl transition-all space-y-6">
+            <div class="space-y-5">
+              <div class="flex items-center gap-3">
+                <div class="w-14 h-14 rounded-2xl bg-black text-white flex items-center justify-center text-2xl font-bold font-['Raleway']">
+                  AM
+                </div>
+                <div>
+                  <h3 class="text-2xl font-extrabold text-black font-['Raleway'] tracking-tight">Our Trainers</h3>
+                  <div class="text-xs font-bold text-neutral-500 font-['Montserrat']">Accredited Communication Specialists</div>
+                </div>
+              </div>
+
+              <div class="font-['Montserrat'] text-neutral-700 text-sm leading-relaxed space-y-3">
+                <p>
+                  Accent Made's wider training team brings experience across different areas of English language, communication and professional development.
+                </p>
+                <p>
+                  Our trainers are selected not only for their qualifications and experience, but also for their ability to connect with people, create a supportive learning environment and bring out the best in learners.
+                </p>
+              </div>
+
+              <div class="pt-2 space-y-3">
+                <div class="text-xs font-bold text-black uppercase tracking-wider font-['Montserrat']">
+                  Depending on the programme, learners may work with specialist trainers in areas including:
+                </div>
+                <!-- Responsive Flex-Wrap Tag Pills -->
+                <div class="flex flex-wrap gap-2 pt-1 font-['Montserrat'] text-xs font-semibold">
+                  <span class="px-3.5 py-1.5 rounded-full bg-[#F4F4F4] border border-neutral-300 text-neutral-900">English Language</span>
+                  <span class="px-3.5 py-1.5 rounded-full bg-[#F4F4F4] border border-neutral-300 text-neutral-900">Pronunciation</span>
+                  <span class="px-3.5 py-1.5 rounded-full bg-[#F4F4F4] border border-neutral-300 text-neutral-900">Business Communication</span>
+                  <span class="px-3.5 py-1.5 rounded-full bg-[#F4F4F4] border border-neutral-300 text-neutral-900">Interview Skills</span>
+                  <span class="px-3.5 py-1.5 rounded-full bg-[#F4F4F4] border border-neutral-300 text-neutral-900">Public Speaking</span>
+                  <span class="px-3.5 py-1.5 rounded-full bg-[#F4F4F4] border border-neutral-300 text-neutral-900">Professional Development</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-neutral-100">
+              <button onclick="openInquiryModal('Team Training Consultation')" type="button" class="w-full py-3 min-h-[44px] rounded-full bg-neutral-900 text-white hover:bg-black font-['Montserrat'] font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center shadow-xs active:scale-95">
+                Inquire About Team Training →
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Team Closing Banner -->
+      <div class="reveal-up p-8 sm:p-12 rounded-3xl bg-[#F4F4F4] border border-neutral-200 text-center space-y-3">
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-black font-['Raleway'] tracking-tight">
+          One team. One goal.
+        </h3>
+        <div class="font-['Montserrat'] text-neutral-700 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto space-y-1">
+          <p class="font-bold text-black text-base sm:text-lg">
+            To help people communicate with greater confidence, clarity and impact.
+          </p>
+          <p>Because the best trainer isn't simply someone who knows English.</p>
+          <p class="font-semibold text-neutral-900">It's someone who can help you believe you can use it.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 5: CORPORATE TRAINING (`#corporate`) -->
+  <section id="corporate" class="py-24 relative bg-white border-b border-neutral-200">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 space-y-20">
+      
+      <!-- Section Header -->
+      <div class="reveal-up max-w-3xl space-y-3">
+        <span class="text-xs font-bold uppercase tracking-widest text-neutral-500 font-['Montserrat']">CORPORATE TRAINING</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-black font-['Raleway'] tracking-tight">
+          Communication Training for Modern Teams
+        </h2>
+        <div class="font-['Montserrat'] text-neutral-700 text-sm sm:text-base leading-relaxed space-y-2 pt-2">
+          <p class="font-bold text-black text-base sm:text-lg">
+            Your people represent your organisation every time they communicate.
+          </p>
+          <p>
+            In a global workplace, communication can influence everything from customer satisfaction and sales to teamwork, leadership and professional relationships.
+          </p>
+          <p>
+            Accent Made creates customised communication programmes for organisations that want their teams to communicate with greater clarity, confidence and professionalism.
+          </p>
+        </div>
+      </div>
+
+      <!-- Sub-Block A: Training for real workplace situations (7 Responsive Cards) -->
+      <div class="space-y-8">
+        <div class="reveal-up max-w-3xl space-y-2">
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-black font-['Raleway'] tracking-tight">
+            Training for real workplace situations
+          </h3>
+          <p class="font-['Montserrat'] text-neutral-600 text-sm sm:text-base">
+            Rather than generic English lessons, our corporate programmes can be built around the situations your employees actually encounter. For example:
+          </p>
+        </div>
+
+        <!-- 7 Workplace Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+          <!-- Card 1 -->
+          <div class="reveal-up delay-100">
+            <div class="tilt-card h-full p-6 bg-[#F4F4F4] rounded-3xl border border-neutral-200 hover:border-black shadow-xs hover:shadow-lg transition-all space-y-2 flex flex-col justify-between">
+              <div>
+                <div class="w-10 h-10 rounded-xl bg-white border border-neutral-200 flex items-center justify-center font-bold text-black mb-3">01</div>
+                <h4 class="text-lg font-bold text-black font-['Raleway']">Customer Communication</h4>
+                <p class="text-xs sm:text-sm text-neutral-600 font-['Montserrat'] leading-relaxed mt-1">
+                  Helping teams communicate confidently with international customers.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="reveal-up delay-150">
+            <div class="tilt-card h-full p-6 bg-[#F4F4F4] rounded-3xl border border-neutral-200 hover:border-black shadow-xs hover:shadow-lg transition-all space-y-2 flex flex-col justify-between">
+              <div>
+                <div class="w-10 h-10 rounded-xl bg-white border border-neutral-200 flex items-center justify-center font-bold text-black mb-3">02</div>
+                <h4 class="text-lg font-bold text-black font-['Raleway']">International Client Interaction</h4>
+                <p class="text-xs sm:text-sm text-neutral-600 font-['Montserrat'] leading-relaxed mt-1">
+                  Developing clarity, professionalism and cultural awareness when working with global clients.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="reveal-up delay-200">
+            <div class="tilt-card h-full p-6 bg-[#F4F4F4] rounded-3xl border border-neutral-200 hover:border-black shadow-xs hover:shadow-lg transition-all space-y-2 flex flex-col justify-between">
+              <div>
+                <div class="w-10 h-10 rounded-xl bg-white border border-neutral-200 flex items-center justify-center font-bold text-black mb-3">03</div>
+                <h4 class="text-lg font-bold text-black font-['Raleway']">Professional English</h4>
+                <p class="text-xs sm:text-sm text-neutral-600 font-['Montserrat'] leading-relaxed mt-1">
+                  Meetings, emails, presentations, telephone communication and workplace conversations.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="reveal-up delay-250">
+            <div class="tilt-card h-full p-6 bg-[#F4F4F4] rounded-3xl border border-neutral-200 hover:border-black shadow-xs hover:shadow-lg transition-all space-y-2 flex flex-col justify-between">
+              <div>
+                <div class="w-10 h-10 rounded-xl bg-white border border-neutral-200 flex items-center justify-center font-bold text-black mb-3">04</div>
+                <h4 class="text-lg font-bold text-black font-['Raleway']">Accent &amp; Intelligibility</h4>
+                <p class="text-xs sm:text-sm text-neutral-600 font-['Montserrat'] leading-relaxed mt-1">
+                  Helping employees communicate more clearly and confidently with international colleagues and customers.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="reveal-up delay-300">
+            <div class="tilt-card h-full p-6 bg-[#F4F4F4] rounded-3xl border border-neutral-200 hover:border-black shadow-xs hover:shadow-lg transition-all space-y-2 flex flex-col justify-between">
+              <div>
+                <div class="w-10 h-10 rounded-xl bg-white border border-neutral-200 flex items-center justify-center font-bold text-black mb-3">05</div>
+                <h4 class="text-lg font-bold text-black font-['Raleway']">Hospitality Communication</h4>
+                <p class="text-xs sm:text-sm text-neutral-600 font-['Montserrat'] leading-relaxed mt-1">
+                  English and communication training designed around guest interaction and service environments.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="reveal-up delay-350">
+            <div class="tilt-card h-full p-6 bg-[#F4F4F4] rounded-3xl border border-neutral-200 hover:border-black shadow-xs hover:shadow-lg transition-all space-y-2 flex flex-col justify-between">
+              <div>
+                <div class="w-10 h-10 rounded-xl bg-white border border-neutral-200 flex items-center justify-center font-bold text-black mb-3">06</div>
+                <h4 class="text-lg font-bold text-black font-['Raleway']">Presentation &amp; Public Speaking</h4>
+                <p class="text-xs sm:text-sm text-neutral-600 font-['Montserrat'] leading-relaxed mt-1">
+                  Helping professionals communicate ideas with greater confidence and impact.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="reveal-up delay-400 sm:col-span-2 lg:col-span-1 xl:col-span-2">
+            <div class="tilt-card h-full p-6 bg-[#F4F4F4] rounded-3xl border border-neutral-200 hover:border-black shadow-xs hover:shadow-lg transition-all space-y-2 flex flex-col justify-between">
+              <div>
+                <div class="w-10 h-10 rounded-xl bg-white border border-neutral-200 flex items-center justify-center font-bold text-black mb-3">07</div>
+                <h4 class="text-lg font-bold text-black font-['Raleway']">Team Communication</h4>
+                <p class="text-xs sm:text-sm text-neutral-600 font-['Montserrat'] leading-relaxed mt-1">
+                  Building stronger communication, collaboration and interpersonal skills across departments.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub-Block B: Customisation Block -->
+      <div class="reveal-up p-8 sm:p-12 rounded-3xl bg-black text-white shadow-xl space-y-3">
+        <span class="text-xs font-bold uppercase tracking-widest text-amber-400 font-['Montserrat']">Bespoke Curriculum</span>
+        <h3 class="text-2xl sm:text-3xl font-extrabold font-['Raleway'] tracking-tight">
+          Your organisation. Your challenges. Your programme.
+        </h3>
+        <div class="font-['Montserrat'] text-neutral-300 text-sm sm:text-base leading-relaxed space-y-2 max-w-3xl pt-1">
+          <p>
+            No two teams communicate in exactly the same way.
+          </p>
+          <p>
+            That's why our corporate training can be customised around your industry, workforce, communication challenges and objectives.
+          </p>
+        </div>
+      </div>
+
+      <!-- Sub-Block C: Available formats (5 Responsive Cards) -->
+      <div class="space-y-8">
+        <div class="reveal-up max-w-3xl">
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-black font-['Raleway'] tracking-tight">
+            Available formats
+          </h3>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 items-stretch">
+          <!-- Format 1 -->
+          <div class="reveal-up delay-100">
+            <div class="tilt-card h-full p-6 sm:p-8 bg-white rounded-3xl border border-neutral-200 hover:border-black shadow-xs hover:shadow-lg transition-all flex flex-col justify-between">
+              <div class="space-y-3">
+                <span class="text-xs font-bold uppercase tracking-wider text-neutral-400 font-['Montserrat']">Format 01</span>
+                <h4 class="text-xl font-bold text-black font-['Raleway']">Workshops</h4>
+                <p class="text-sm text-neutral-600 font-['Montserrat'] leading-relaxed">
+                  Focused sessions addressing a specific communication skill.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Format 2 -->
+          <div class="reveal-up delay-200">
+            <div class="tilt-card h-full p-6 sm:p-8 bg-white rounded-3xl border border-neutral-200 hover:border-black shadow-xs hover:shadow-lg transition-all flex flex-col justify-between">
+              <div class="space-y-3">
+                <span class="text-xs font-bold uppercase tracking-wider text-neutral-400 font-['Montserrat']">Format 02</span>
+                <h4 class="text-xl font-bold text-black font-['Raleway']">Intensive Training Programmes</h4>
+                <p class="text-sm text-neutral-600 font-['Montserrat'] leading-relaxed">
+                  Multi-session programmes designed to create measurable development.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Format 3 -->
+          <div class="reveal-up delay-300">
+            <div class="tilt-card h-full p-6 sm:p-8 bg-white rounded-3xl border border-neutral-200 hover:border-black shadow-xs hover:shadow-lg transition-all flex flex-col justify-between">
+              <div class="space-y-3">
+                <span class="text-xs font-bold uppercase tracking-wider text-neutral-400 font-['Montserrat']">Format 03</span>
+                <h4 class="text-xl font-bold text-black font-['Raleway']">One-to-One Coaching</h4>
+                <p class="text-sm text-neutral-600 font-['Montserrat'] leading-relaxed">
+                  Individualised support for senior professionals and key employees.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Format 4 -->
+          <div class="reveal-up delay-400">
+            <div class="tilt-card h-full p-6 sm:p-8 bg-white rounded-3xl border border-neutral-200 hover:border-black shadow-xs hover:shadow-lg transition-all flex flex-col justify-between">
+              <div class="space-y-3">
+                <span class="text-xs font-bold uppercase tracking-wider text-neutral-400 font-['Montserrat']">Format 04</span>
+                <h4 class="text-xl font-bold text-black font-['Raleway']">Team Programmes</h4>
+                <p class="text-sm text-neutral-600 font-['Montserrat'] leading-relaxed">
+                  Group training focused on practical workplace communication.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Format 5 -->
+          <div class="reveal-up delay-500 sm:col-span-2 lg:col-span-1">
+            <div class="tilt-card h-full p-6 sm:p-8 bg-white rounded-3xl border border-neutral-200 hover:border-black shadow-xs hover:shadow-lg transition-all flex flex-col justify-between">
+              <div class="space-y-3">
+                <span class="text-xs font-bold uppercase tracking-wider text-neutral-400 font-['Montserrat']">Format 05</span>
+                <h4 class="text-xl font-bold text-black font-['Raleway']">Online or In-Person</h4>
+                <p class="text-sm text-neutral-600 font-['Montserrat'] leading-relaxed">
+                  Flexible delivery for local and international organisations.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub-Block D: Corporate Closing Call to Action -->
+      <div class="reveal-up p-8 sm:p-12 rounded-3xl bg-[#D7D7D7] border border-neutral-400 shadow-md flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div class="space-y-2 max-w-2xl">
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-black font-['Raleway'] tracking-tight">
+            Ready to strengthen communication across your team?
+          </h3>
+          <p class="font-['Montserrat'] font-bold text-neutral-800 text-base sm:text-lg">
+            Let's talk about what your organisation needs.
+          </p>
+        </div>
+        <button onclick="openInquiryModal('Corporate Training Consultation')" type="button" class="min-h-[48px] px-8 py-3.5 rounded-full bg-black text-white hover:bg-neutral-800 font-['Montserrat'] font-bold text-xs uppercase tracking-wider shadow-md transition-all active:scale-95 flex items-center justify-center shrink-0">
+          Talk to Us About Corporate Training →
+        </button>
+      </div>
+
     </div>
   </section>
 
@@ -1604,7 +2697,7 @@
       if (!card || !wrapper) return;
 
       function canHover() {
-        return window.innerWidth >= 1024 && window.matchMedia('(hover: hover)').matches;
+        return window.innerWidth >= 1024 && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
       }
 
       function handleMouseMove(e) {
@@ -1648,7 +2741,7 @@
       var cards = document.querySelectorAll('.tilt-card');
       cards.forEach(function(card) {
         card.addEventListener('mousemove', function(e) {
-          if (!window.matchMedia('(hover: hover)').matches) return;
+          if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
           var rect = card.getBoundingClientRect();
           var x = e.clientX - rect.left;
           var y = e.clientY - rect.top;
