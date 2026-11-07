@@ -112,21 +112,33 @@
         <button onclick="openInquiryModal('Founder Profile Page')" type="button" class="bg-black text-white rounded-full px-4 py-2 text-xs font-bold uppercase tracking-wider shadow-sm hover:bg-neutral-800 transition active:scale-95 shrink-0">
           Consultation
         </button>
-        <button id="mobileMenuBtn" onclick="toggleMobileMenu()" type="button" class="min-h-[44px] min-w-[44px] p-2.5 rounded-xl border border-black/20 bg-white/90 text-black flex items-center justify-center shadow-xs active:scale-95" aria-label="Toggle Menu" aria-expanded="false">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <button id="mobileMenuBtn" onclick="toggleMobileMenu()" type="button" class="min-h-[44px] min-w-[44px] p-2.5 rounded-xl border border-black/20 bg-white/90 text-black flex items-center justify-center shadow-xs active:scale-95 transition" aria-label="Toggle Menu" aria-expanded="false">
+          <!-- 3-Line Hamburger Icon -->
+          <svg class="menu-icon-open w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <!-- Crisp Close Icon -->
+          <svg class="menu-icon-close hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
           </svg>
         </button>
       </div>
     </div>
 
     <!-- Mobile Nav Drawer -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-neutral-950/95 backdrop-blur-md border border-neutral-800 mt-3 rounded-2xl px-5 py-4 space-y-1 text-sm shadow-2xl text-white font-['Montserrat']">
-      <a href="index.html#hero" onclick="closeMobileMenu()" class="block py-3 px-3 min-h-[48px] flex items-center rounded-xl hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold transition-colors">Home</a>
-      <a href="founder.html" onclick="closeMobileMenu()" class="block py-3 px-3 min-h-[48px] flex items-center rounded-xl bg-white/10 text-white font-bold transition-colors">Founder (Current)</a>
-      <a href="index.html#courses" onclick="closeMobileMenu()" class="block py-3 px-3 min-h-[48px] flex items-center rounded-xl hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold transition-colors">Courses</a>
-      <a href="index.html#team" onclick="closeMobileMenu()" class="block py-3 px-3 min-h-[48px] flex items-center rounded-xl hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold transition-colors">The Team</a>
-      <a href="index.html#corporate" onclick="closeMobileMenu()" class="block py-3 px-3 min-h-[48px] flex items-center rounded-xl hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold transition-colors">Corporate</a>
+    <div id="mobileMenu" class="hidden lg:hidden relative bg-neutral-950/95 backdrop-blur-md border border-neutral-800 mt-3 rounded-2xl px-5 py-4 space-y-1 text-sm shadow-2xl text-white font-['Montserrat']">
+      <!-- Dedicated "✕" Close Button Anchored to Top-Right -->
+      <button onclick="closeMobileMenu()" type="button" class="absolute top-4 right-4 w-10 h-10 rounded-lg border border-white/15 bg-white/5 text-white hover:bg-white/15 active:scale-95 transition flex items-center justify-center shrink-0 z-10" aria-label="Close navigation menu">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+
+      <a href="index.html#hero" onclick="closeMobileMenu()" class="block py-3 px-3 pr-14 min-h-[48px] flex items-center rounded-xl hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold transition-colors">Home</a>
+      <a href="founder.html" onclick="closeMobileMenu()" class="block py-3 px-3 pr-14 min-h-[48px] flex items-center rounded-xl bg-white/10 text-white font-bold transition-colors">Founder (Current)</a>
+      <a href="index.html#courses" onclick="closeMobileMenu()" class="block py-3 px-3 pr-14 min-h-[48px] flex items-center rounded-xl hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold transition-colors">Courses</a>
+      <a href="index.html#team" onclick="closeMobileMenu()" class="block py-3 px-3 pr-14 min-h-[48px] flex items-center rounded-xl hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold transition-colors">The Team</a>
+      <a href="index.html#corporate" onclick="closeMobileMenu()" class="block py-3 px-3 pr-14 min-h-[48px] flex items-center rounded-xl hover:bg-neutral-800 text-neutral-200 hover:text-white font-semibold transition-colors">Corporate</a>
       <div class="pt-2 mt-1 border-t border-neutral-800">
         <a href="https://www.instagram.com/hello_accentmade" target="_blank" rel="noopener noreferrer" onclick="closeMobileMenu()" class="flex items-center gap-2.5 py-3 px-3 min-h-[48px] rounded-xl hover:bg-neutral-800 text-amber-400 hover:text-amber-300 font-semibold transition-colors">
           <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24">
@@ -679,10 +691,15 @@
       var isHidden = menu.classList.contains('hidden');
       if (isHidden) {
         menu.classList.remove('hidden');
-        if (btn) btn.setAttribute('aria-expanded', 'true');
+        if (btn) {
+          btn.setAttribute('aria-expanded', 'true');
+          var openIcon = btn.querySelector('.menu-icon-open');
+          var closeIcon = btn.querySelector('.menu-icon-close');
+          if (openIcon) openIcon.classList.add('hidden');
+          if (closeIcon) closeIcon.classList.remove('hidden');
+        }
       } else {
-        menu.classList.add('hidden');
-        if (btn) btn.setAttribute('aria-expanded', 'false');
+        closeMobileMenu();
       }
     };
 
@@ -690,8 +707,38 @@
       var menu = document.getElementById('mobileMenu');
       var btn = document.getElementById('mobileMenuBtn');
       if (menu) menu.classList.add('hidden');
-      if (btn) btn.setAttribute('aria-expanded', 'false');
+      if (btn) {
+        btn.setAttribute('aria-expanded', 'false');
+        var openIcon = btn.querySelector('.menu-icon-open');
+        var closeIcon = btn.querySelector('.menu-icon-close');
+        if (openIcon) openIcon.classList.remove('hidden');
+        if (closeIcon) closeIcon.classList.add('hidden');
+      }
     };
+
+    // Close on Escape key or outside click
+    window.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        if (typeof closeInquiryModal === 'function') closeInquiryModal();
+        if (typeof closeLegalModal === 'function') closeLegalModal();
+        closeMobileMenu();
+      }
+    });
+
+    document.addEventListener('click', function(e) {
+      var menu = document.getElementById('mobileMenu');
+      var btn = document.getElementById('mobileMenuBtn');
+      if (!menu || menu.classList.contains('hidden')) return;
+      if (!menu.contains(e.target) && (!btn || !btn.contains(e.target))) {
+        closeMobileMenu();
+      }
+    });
+
+    window.addEventListener('resize', function() {
+      if (window.innerWidth >= 1024) {
+        closeMobileMenu();
+      }
+    });
 
     // ==========================================
     // 2. SCROLL PROGRESS BAR
