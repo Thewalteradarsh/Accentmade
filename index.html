@@ -2875,7 +2875,8 @@
       showToast('✓ Pre-filled your inquiry for Carys below!');
     };
 
-    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwFr1i7Wkfx4G6XyEyiAwpbyVJMnYd0hxCQq67AnL2UpXhoUSB8OGHTq_L-kaPorIw/exec";
+    const scriptURL = "https://script.google.com/macros/s/AKfycbyKoDmCQqVS2NE8plkELBsbCQZZv7H5KSLjxqfBGGChTEfH4XBzYwxxYuGonSVTbAs1/exec";
+    const GOOGLE_SCRIPT_URL = scriptURL;
     const BUSINESS_WHATSAPP_NUMBER = "917411583906";
 
     window.handleContactSubmit = function(e) {
@@ -2918,24 +2919,20 @@
         submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
       }
 
-      // Dispatch payload to Google Apps Script (Google Sheets + Email Trigger)
-      var payload = {
-        name: name,
-        email: email,
-        whatsapp: whatsapp,
-        program: topic,
-        message: msg,
-        consent: consentCheck && consentCheck.checked ? 'Yes' : 'No',
-        timestamp: new Date().toISOString()
-      };
+      // Dispatch payload to Google Apps Script (Google Sheets + Email Trigger) using URLSearchParams
+      var formData = new URLSearchParams();
+      formData.append('name', name);
+      formData.append('email', email);
+      formData.append('whatsapp', whatsapp);
+      formData.append('program', topic);
+      formData.append('message', msg);
+      formData.append('consent', consentCheck && consentCheck.checked ? 'Yes' : 'No');
+      formData.append('timestamp', new Date().toISOString());
 
-      fetch(GOOGLE_SCRIPT_URL, {
+      fetch(scriptURL, {
         method: 'POST',
         mode: 'no-cors',
-        headers: {
-          'Content-Type': 'text/plain;charset=utf-8'
-        },
-        body: JSON.stringify(payload)
+        body: formData
       }).catch(function(err) {
         console.warn('Google Script dispatch notice:', err);
       });
