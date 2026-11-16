@@ -2941,15 +2941,16 @@
       });
 
       // Construct pre-filled WhatsApp message
-      var waText = 
-        "Hi Carys, I would like to schedule a consultation / language evaluation.\n\n" +
-        "• Name: " + name + "\n" +
-        "• Email: " + email + "\n" +
-        "• WhatsApp: " + whatsapp + "\n" +
-        "• Program: " + topic + "\n" +
-        "• Goals / Schedule: " + msg;
-
-      var waUrl = "https://wa.me/" + BUSINESS_WHATSAPP_NUMBER + "?text=" + encodeURIComponent(waText);
+      const program = topic;
+      const message = msg;
+      const waText =
+        `Hello Carys, I just submitted a consultation inquiry on the Accent Made website.\n\n` +
+        `*Name:* ${name}\n` +
+        `*Email:* ${email}\n` +
+        `*WhatsApp:* ${whatsapp}\n` +
+        `*Interested Program:* ${program}\n` +
+        `*Goals / Preferred Schedule:* ${message}`;
+      const waUrl = `https://wa.me/${BUSINESS_WHATSAPP_NUMBER}?text=${encodeURIComponent(waText)}`;
 
       var waLink = document.getElementById('whatsappDirectLink');
       if (waLink) {
@@ -2960,13 +2961,13 @@
 
       var mailto = document.getElementById('mailtoDirectLink');
       if (mailto) {
-        var emailSubject = encodeURIComponent('Accent Made Inquiry: ' + topic + ' (' + name + ')');
+        var emailSubject = encodeURIComponent('Accent Made Inquiry: ' + program + ' (' + name + ')');
         var emailBody = encodeURIComponent(
           'Name: ' + name + '\n' +
           'Email: ' + email + '\n' +
-          'WhatsApp/Phone: ' + whatsapp + '\n' +
-          'Program: ' + topic + '\n\n' +
-          'Message / Goals:\n' + msg
+          'WhatsApp: ' + whatsapp + '\n' +
+          'Interested Program: ' + program + '\n\n' +
+          'Goals / Preferred Schedule:\n' + message
         );
         mailto.setAttribute('href', 'mailto:improvemyaccent@gmail.com?subject=' + emailSubject + '&body=' + emailBody);
       }
